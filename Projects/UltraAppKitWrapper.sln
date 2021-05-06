@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraAppKit.Core", "C#\UltraAppKit.Core.csproj", "{B01A1942-CA8C-49E0-88B2-04E8D8A32C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraAppKit.Core.Sample", "UltraAppKit.Core.Sample\UltraAppKit.Core.Sample.csproj", "{286C619D-3A78-4FFD-B982-8404FC6C3F67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B01A1942-CA8C-49E0-88B2-04E8D8A32C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01A1942-CA8C-49E0-88B2-04E8D8A32C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01A1942-CA8C-49E0-88B2-04E8D8A32C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01A1942-CA8C-49E0-88B2-04E8D8A32C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286C619D-3A78-4FFD-B982-8404FC6C3F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286C619D-3A78-4FFD-B982-8404FC6C3F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286C619D-3A78-4FFD-B982-8404FC6C3F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286C619D-3A78-4FFD-B982-8404FC6C3F67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B062C18B-0B04-4109-80BC-688C7F5F5E33}
+	EndGlobalSection
+EndGlobal
