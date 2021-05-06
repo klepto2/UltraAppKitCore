@@ -2931,6 +2931,141 @@ class UltraAppKitPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_GetAddress")]
   public static extern global::System.IntPtr Object_GetAddress(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsAsset")]
+  public static extern global::System.IntPtr Object_AsAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsBuffer")]
+  public static extern global::System.IntPtr Object_AsBuffer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsClock")]
+  public static extern global::System.IntPtr Object_AsClock(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsDisplay")]
+  public static extern global::System.IntPtr Object_AsDisplay(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsFileSystemWatcher")]
+  public static extern global::System.IntPtr Object_AsFileSystemWatcher(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsGameEngine")]
+  public static extern global::System.IntPtr Object_AsGameEngine(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsIDSystem")]
+  public static extern global::System.IntPtr Object_AsIDSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsInterface")]
+  public static extern global::System.IntPtr Object_AsInterface(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsLanguage")]
+  public static extern global::System.IntPtr Object_AsLanguage(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsLoader")]
+  public static extern global::System.IntPtr Object_AsLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsMutex")]
+  public static extern global::System.IntPtr Object_AsMutex(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsProcess")]
+  public static extern global::System.IntPtr Object_AsProcess(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsStream")]
+  public static extern global::System.IntPtr Object_AsStream(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsString")]
+  public static extern global::System.IntPtr Object_AsString(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsThread")]
+  public static extern global::System.IntPtr Object_AsThread(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTimer")]
+  public static extern global::System.IntPtr Object_AsTimer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsWString")]
+  public static extern global::System.IntPtr Object_AsWString(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsWidget")]
+  public static extern global::System.IntPtr Object_AsWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsWidgetItem")]
+  public static extern global::System.IntPtr Object_AsWidgetItem(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsWindow")]
+  public static extern global::System.IntPtr Object_AsWindow(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsBufferStream")]
+  public static extern global::System.IntPtr Object_AsBufferStream(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsButton")]
+  public static extern global::System.IntPtr Object_AsButton(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsComboBox")]
+  public static extern global::System.IntPtr Object_AsComboBox(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsDDSTextureLoader")]
+  public static extern global::System.IntPtr Object_AsDDSTextureLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsFont")]
+  public static extern global::System.IntPtr Object_AsFont(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsIcon")]
+  public static extern global::System.IntPtr Object_AsIcon(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsLabel")]
+  public static extern global::System.IntPtr Object_AsLabel(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsListBox")]
+  public static extern global::System.IntPtr Object_AsListBox(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsMenu")]
+  public static extern global::System.IntPtr Object_AsMenu(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsMenuPanel")]
+  public static extern global::System.IntPtr Object_AsMenuPanel(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsPackage")]
+  public static extern global::System.IntPtr Object_AsPackage(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsPanel")]
+  public static extern global::System.IntPtr Object_AsPanel(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsPipeStream")]
+  public static extern global::System.IntPtr Object_AsPipeStream(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsPixmap")]
+  public static extern global::System.IntPtr Object_AsPixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsPlugin")]
+  public static extern global::System.IntPtr Object_AsPlugin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsProgressBar")]
+  public static extern global::System.IntPtr Object_AsProgressBar(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsSlider")]
+  public static extern global::System.IntPtr Object_AsSlider(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsStreamBuffer")]
+  public static extern global::System.IntPtr Object_AsStreamBuffer(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTabber")]
+  public static extern global::System.IntPtr Object_AsTabber(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTextArea")]
+  public static extern global::System.IntPtr Object_AsTextArea(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTextField")]
+  public static extern global::System.IntPtr Object_AsTextField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTreeView")]
+  public static extern global::System.IntPtr Object_AsTreeView(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsTreeViewNode")]
+  public static extern global::System.IntPtr Object_AsTreeViewNode(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_AsObject")]
+  public static extern global::System.IntPtr Object_AsObject(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_Object_CompareWith")]
+  public static extern bool Object_CompareWith(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("UltraAppKit", EntryPoint="CSharp_new_String__SWIG_0")]
   public static extern global::System.IntPtr new_String__SWIG_0();
 

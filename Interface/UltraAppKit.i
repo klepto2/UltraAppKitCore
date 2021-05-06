@@ -64,7 +64,7 @@ namespace UltraEngine
 %include "Vectors.i"
 %include "WeakPtr.i"
 %include "Maps.i"
-%include "ObjectExtension.i"
+%include "ObjectExtensions.i"
 %include "includes.i"
 
 

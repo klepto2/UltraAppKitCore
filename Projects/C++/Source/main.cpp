@@ -2540,6 +2540,142 @@ SWIGINTERN std::map< float,std::map< std::wstring,std::weak_ptr< UltraEngine::Pi
 SWIGINTERN void std_map_Sl_float_Sc_std_map_Sl_std_wstring_Sc_std_weak_ptr_Sl_UltraEngine_Pixmap_Sg__Sg__Sg__destroy_iterator(std::map< float,std::map< std::wstring,std::weak_ptr< UltraEngine::Pixmap > > > *self,std::map< float,std::map< std::wstring,std::weak_ptr< UltraEngine::Pixmap >,std::less< std::wstring > >,std::less< float > >::iterator *swigiterator){
         delete swigiterator;
       }
+SWIGINTERN std::shared_ptr< UltraEngine::Asset > UltraEngine_Object_AsAsset(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Asset>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Buffer > UltraEngine_Object_AsBuffer(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Buffer>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Clock > UltraEngine_Object_AsClock(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Clock>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Display > UltraEngine_Object_AsDisplay(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Display>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::FileSystemWatcher > UltraEngine_Object_AsFileSystemWatcher(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::FileSystemWatcher>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::GameEngine > UltraEngine_Object_AsGameEngine(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::GameEngine>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::IDSystem > UltraEngine_Object_AsIDSystem(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::IDSystem>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Interface > UltraEngine_Object_AsInterface(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Interface>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Language > UltraEngine_Object_AsLanguage(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Language>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Loader > UltraEngine_Object_AsLoader(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Loader>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Mutex > UltraEngine_Object_AsMutex(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Mutex>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Process > UltraEngine_Object_AsProcess(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Process>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Stream > UltraEngine_Object_AsStream(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Stream>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::String > UltraEngine_Object_AsString(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::String>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Thread > UltraEngine_Object_AsThread(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Thread>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Timer > UltraEngine_Object_AsTimer(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Timer>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::WString > UltraEngine_Object_AsWString(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::WString>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Widget > UltraEngine_Object_AsWidget(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Widget>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::WidgetItem > UltraEngine_Object_AsWidgetItem(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::WidgetItem>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Window > UltraEngine_Object_AsWindow(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Window>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::BufferStream > UltraEngine_Object_AsBufferStream(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::BufferStream>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Button > UltraEngine_Object_AsButton(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Button>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::ComboBox > UltraEngine_Object_AsComboBox(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::ComboBox>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::DDSTextureLoader > UltraEngine_Object_AsDDSTextureLoader(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::DDSTextureLoader>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Font > UltraEngine_Object_AsFont(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Font>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Icon > UltraEngine_Object_AsIcon(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Icon>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Label > UltraEngine_Object_AsLabel(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Label>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::ListBox > UltraEngine_Object_AsListBox(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::ListBox>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Menu > UltraEngine_Object_AsMenu(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Menu>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::MenuPanel > UltraEngine_Object_AsMenuPanel(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::MenuPanel>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Package > UltraEngine_Object_AsPackage(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Package>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Panel > UltraEngine_Object_AsPanel(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Panel>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::PipeStream > UltraEngine_Object_AsPipeStream(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::PipeStream>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Pixmap > UltraEngine_Object_AsPixmap(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Pixmap>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Plugin > UltraEngine_Object_AsPlugin(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Plugin>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::ProgressBar > UltraEngine_Object_AsProgressBar(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::ProgressBar>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Slider > UltraEngine_Object_AsSlider(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Slider>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::StreamBuffer > UltraEngine_Object_AsStreamBuffer(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::StreamBuffer>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Tabber > UltraEngine_Object_AsTabber(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Tabber>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::TextArea > UltraEngine_Object_AsTextArea(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::TextArea>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::TextField > UltraEngine_Object_AsTextField(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::TextField>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::TreeView > UltraEngine_Object_AsTreeView(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::TreeView>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::TreeViewNode > UltraEngine_Object_AsTreeViewNode(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::TreeViewNode>();
+    }
+SWIGINTERN std::shared_ptr< UltraEngine::Object > UltraEngine_Object_AsObject(UltraEngine::Object *self){
+    return (self)->As<UltraEngine::Object>();
+    }
+SWIGINTERN bool UltraEngine_Object_CompareWith(UltraEngine::Object *self,UltraEngine::Object *a){
+    if(a == self) return true;
+    return &a == &self;
+}
 
 
 /* ---------------------------------------------------
@@ -17456,6 +17592,686 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Object_GetAddress(void * jarg1) {
   arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
   result = (arg1)->GetAddress();
   jresult = new std::shared_ptr<  UltraEngine::String >(new UltraEngine::String((UltraEngine::String &)result)); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsAsset(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Asset > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsAsset(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Asset >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsBuffer(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Buffer > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsBuffer(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Buffer >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsClock(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Clock > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsClock(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Clock >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsDisplay(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Display > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsDisplay(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Display >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsFileSystemWatcher(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::FileSystemWatcher > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsFileSystemWatcher(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::FileSystemWatcher >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsGameEngine(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::GameEngine > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsGameEngine(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::GameEngine >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsIDSystem(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::IDSystem > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsIDSystem(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::IDSystem >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsInterface(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Interface > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsInterface(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Interface >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsLanguage(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Language > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsLanguage(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Language >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsLoader(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Loader > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsLoader(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Loader >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsMutex(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Mutex > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsMutex(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Mutex >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsProcess(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Process > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsProcess(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Process >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsStream(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Stream > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsStream(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Stream >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsString(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::String > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsString(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::String >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsThread(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Thread > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsThread(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Thread >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTimer(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Timer > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTimer(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Timer >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsWString(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::WString > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsWString(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::WString >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsWidget(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Widget > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsWidget(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Widget >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsWidgetItem(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::WidgetItem > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsWidgetItem(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::WidgetItem >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsWindow(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Window > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsWindow(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Window >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsBufferStream(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::BufferStream > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsBufferStream(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::BufferStream >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsButton(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Button > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsButton(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Button >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsComboBox(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::ComboBox > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsComboBox(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::ComboBox >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsDDSTextureLoader(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::DDSTextureLoader > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsDDSTextureLoader(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::DDSTextureLoader >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsFont(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Font > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsFont(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Font >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsIcon(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Icon > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsIcon(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Icon >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsLabel(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Label > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsLabel(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Label >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsListBox(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::ListBox > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsListBox(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::ListBox >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsMenu(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Menu > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsMenu(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Menu >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsMenuPanel(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::MenuPanel > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsMenuPanel(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::MenuPanel >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsPackage(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Package > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsPackage(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Package >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsPanel(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Panel > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsPanel(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Panel >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsPipeStream(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::PipeStream > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsPipeStream(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::PipeStream >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsPixmap(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Pixmap > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsPixmap(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Pixmap >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsPlugin(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Plugin > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsPlugin(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Plugin >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsProgressBar(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::ProgressBar > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsProgressBar(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::ProgressBar >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsSlider(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Slider > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsSlider(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Slider >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsStreamBuffer(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::StreamBuffer > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsStreamBuffer(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::StreamBuffer >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTabber(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Tabber > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTabber(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Tabber >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTextArea(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::TextArea > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTextArea(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::TextArea >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTextField(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::TextField > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTextField(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::TextField >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTreeView(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::TreeView > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTreeView(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::TreeView >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsTreeViewNode(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::TreeViewNode > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsTreeViewNode(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::TreeViewNode >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_Object_AsObject(void * jarg1) {
+  void * jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Object > result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  result = UltraEngine_Object_AsObject(arg1);
+  jresult = result ? new std::shared_ptr< UltraEngine::Object >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Object_CompareWith(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  UltraEngine::Object *arg1 = (UltraEngine::Object *) 0 ;
+  UltraEngine::Object *arg2 = (UltraEngine::Object *) 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg1 = 0 ;
+  std::shared_ptr< UltraEngine::Object > *smartarg2 = 0 ;
+  bool result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Object > *)jarg1;
+  arg1 = (UltraEngine::Object *)(smartarg1 ? smartarg1->get() : 0); 
+  
+  smartarg2 = (std::shared_ptr<  UltraEngine::Object > *)jarg2;
+  arg2 = (UltraEngine::Object *)(smartarg2 ? smartarg2->get() : 0); 
+  result = (bool)UltraEngine_Object_CompareWith(arg1,arg2);
+  jresult = result; 
   return jresult;
 }
 
