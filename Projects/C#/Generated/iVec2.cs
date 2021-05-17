@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class iVec2 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,110 +37,150 @@ public class iVec2 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_iVec2(swigCPtr);
+          PInvoke.delete_iVec2(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+    public static iVec2 operator+(iVec2 arg1, iVec2 arg2) {
+        return arg1.Plus(arg2);
+    }
+
+    public static iVec2 operator-(iVec2 arg1, iVec2 arg2) {
+        return arg1.Minus(arg2);
+    }
+
+    public static iVec2 operator-(iVec2 arg1) {
+        return arg1.Minus();
+    }
+
+     public static bool operator==(iVec2 arg1, iVec2 arg2) {
+         if ((object)arg1 == null)
+            return (object)arg2 == null;
+
+        if ((object)arg2 == null)
+            return (object)arg1 == null;
+
+        return arg1.EqualEqual(arg2);
+    }
+
+    public static bool operator!=(iVec2 arg1, iVec2 arg2) {
+        return !(arg1 == arg2);
+    }
+
+    public static bool operator<(iVec2 arg1, iVec2 arg2) {
+        return arg1.LessThan(arg2);
+    }
+
+    public static bool operator>(iVec2 arg1, iVec2 arg2) {
+        return !arg1.LessThan(arg2) && !arg1.EqualEqual(arg2);
+    }
+
+    public override string ToString() {
+        return _ToWString();
+    }
+
   public int x {
     set {
-      UltraAppKitPINVOKE.iVec2_x_set(swigCPtr, value);
+      PInvoke.iVec2_x_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec2_x_get(swigCPtr);
+      int ret = PInvoke.iVec2_x_get(swigCPtr);
       return ret;
     } 
   }
 
   public int r {
     set {
-      UltraAppKitPINVOKE.iVec2_r_set(swigCPtr, value);
+      PInvoke.iVec2_r_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec2_r_get(swigCPtr);
+      int ret = PInvoke.iVec2_r_get(swigCPtr);
       return ret;
     } 
   }
 
   public int y {
     set {
-      UltraAppKitPINVOKE.iVec2_y_set(swigCPtr, value);
+      PInvoke.iVec2_y_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec2_y_get(swigCPtr);
+      int ret = PInvoke.iVec2_y_get(swigCPtr);
       return ret;
     } 
   }
 
   public int g {
     set {
-      UltraAppKitPINVOKE.iVec2_g_set(swigCPtr, value);
+      PInvoke.iVec2_g_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec2_g_get(swigCPtr);
+      int ret = PInvoke.iVec2_g_get(swigCPtr);
       return ret;
     } 
   }
 
-  public iVec2() : this(UltraAppKitPINVOKE.new_iVec2__SWIG_0(), true) {
+  public iVec2() : this(PInvoke.new_iVec2__SWIG_0(), true) {
   }
 
-  public iVec2(int x) : this(UltraAppKitPINVOKE.new_iVec2__SWIG_1(x), true) {
+  public iVec2(int x) : this(PInvoke.new_iVec2__SWIG_1(x), true) {
   }
 
-  public iVec2(int x, int y) : this(UltraAppKitPINVOKE.new_iVec2__SWIG_2(x, y), true) {
+  public iVec2(int x, int y) : this(PInvoke.new_iVec2__SWIG_2(x, y), true) {
   }
 
-  public iVec2 Minus() {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.iVec2_Minus__SWIG_0(swigCPtr), true);
+  private iVec2 Minus() {
+    iVec2 ret = new iVec2(PInvoke.iVec2_Minus__SWIG_0(swigCPtr), true);
     return ret;
   }
 
-  public iVec2 Plus(iVec2 v) {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.iVec2_Plus(swigCPtr, iVec2.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private iVec2 Plus(iVec2 v) {
+    iVec2 ret = new iVec2(PInvoke.iVec2_Plus(swigCPtr, iVec2.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public iVec2 Minus(iVec2 v) {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.iVec2_Minus__SWIG_1(swigCPtr, iVec2.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private iVec2 Minus(iVec2 v) {
+    iVec2 ret = new iVec2(PInvoke.iVec2_Minus__SWIG_1(swigCPtr, iVec2.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void PlusEqual(iVec2 v) {
-    UltraAppKitPINVOKE.iVec2_PlusEqual(swigCPtr, iVec2.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void PlusEqual(iVec2 v) {
+    PInvoke.iVec2_PlusEqual(swigCPtr, iVec2.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public void MinusEqual(iVec2 v) {
-    UltraAppKitPINVOKE.iVec2_MinusEqual(swigCPtr, iVec2.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void MinusEqual(iVec2 v) {
+    PInvoke.iVec2_MinusEqual(swigCPtr, iVec2.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public bool LessThan(iVec2 v) {
-    bool ret = UltraAppKitPINVOKE.iVec2_LessThan(swigCPtr, iVec2.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool LessThan(iVec2 v) {
+    bool ret = PInvoke.iVec2_LessThan(swigCPtr, iVec2.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_int IndexInto(uint n) {
-    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(UltraAppKitPINVOKE.iVec2_IndexInto(swigCPtr, n), false);
+  private bool NotEqual(iVec2 v) {
+    bool ret = PInvoke.iVec2_NotEqual(swigCPtr, iVec2.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool NotEqual(iVec2 v) {
-    bool ret = UltraAppKitPINVOKE.iVec2_NotEqual(swigCPtr, iVec2.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool EqualEqual(iVec2 v) {
+    bool ret = PInvoke.iVec2_EqualEqual(swigCPtr, iVec2.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool EqualEqual(iVec2 v) {
-    bool ret = UltraAppKitPINVOKE.iVec2_EqualEqual(swigCPtr, iVec2.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private string _ToWString() {
+    string ret = PInvoke.iVec2__ToWString(swigCPtr);
     return ret;
   }
+
+}
 
 }

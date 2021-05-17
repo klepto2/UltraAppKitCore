@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum PanelStyle {
   PANEL_DEFAULT = 0,
   PANEL_BORDER = 1,
   PANEL_GROUP = 2
+}
+
 }

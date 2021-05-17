@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class WidgetItem : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal WidgetItem(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.WidgetItem_SWIGSmartPtrUpcast(cPtr), true) {
+  internal WidgetItem(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.WidgetItem_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class WidgetItem : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_WidgetItem(swigCPtr);
+          PInvoke.delete_WidgetItem(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,80 +38,82 @@ public class WidgetItem : Object {
 
   public float iconscale {
     set {
-      UltraAppKitPINVOKE.WidgetItem_iconscale_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_iconscale_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = UltraAppKitPINVOKE.WidgetItem_iconscale_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      float ret = PInvoke.WidgetItem_iconscale_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WString text {
     set {
-      UltraAppKitPINVOKE.WidgetItem_text_set(swigCPtr, WString.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_text_set(swigCPtr, WString.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.WidgetItem_text_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.WidgetItem_text_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon {
     set {
-      UltraAppKitPINVOKE.WidgetItem_icon_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_icon_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetItem_icon_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.WidgetItem_icon_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Pixmap pixmap {
     set {
-      UltraAppKitPINVOKE.WidgetItem_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetItem_pixmap_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.WidgetItem_pixmap_get(swigCPtr);
       Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Object extra {
     set {
-      UltraAppKitPINVOKE.WidgetItem_extra_set(swigCPtr, Object.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_extra_set(swigCPtr, Object.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetItem_extra_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.WidgetItem_extra_get(swigCPtr);
       Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetState state {
     set {
-      UltraAppKitPINVOKE.WidgetItem_state_set(swigCPtr, (int)value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetItem_state_set(swigCPtr, (int)value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      WidgetState ret = (WidgetState)UltraAppKitPINVOKE.WidgetItem_state_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WidgetState ret = (WidgetState)PInvoke.WidgetItem_state_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public WidgetItem() : this(UltraAppKitPINVOKE.new_WidgetItem(), true) {
+  public WidgetItem() : this(PInvoke.new_WidgetItem(), true) {
   }
+
+}
 
 }

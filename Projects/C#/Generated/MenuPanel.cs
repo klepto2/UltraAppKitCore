@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MenuPanel : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal MenuPanel(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.MenuPanel_SWIGSmartPtrUpcast(cPtr), true) {
+  internal MenuPanel(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.MenuPanel_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class MenuPanel : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_MenuPanel(swigCPtr);
+          PInvoke.delete_MenuPanel(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,32 +36,34 @@ public class MenuPanel : Widget {
     }
   }
 
-  public MenuPanel() : this(UltraAppKitPINVOKE.new_MenuPanel(), true) {
+  public MenuPanel() : this(PInvoke.new_MenuPanel(), true) {
   }
 
   public override void MouseLeave(int x, int y) {
-    UltraAppKitPINVOKE.MenuPanel_MouseLeave(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MenuPanel_MouseLeave(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseMove(int x, int y) {
-    UltraAppKitPINVOKE.MenuPanel_MouseMove(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MenuPanel_MouseMove(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseUp(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.MenuPanel_MouseUp(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MenuPanel_MouseUp(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseDown(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.MenuPanel_MouseDown(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MenuPanel_MouseDown(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.MenuPanel_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MenuPanel_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

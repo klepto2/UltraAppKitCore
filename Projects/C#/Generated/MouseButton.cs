@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum MouseButton {
   MOUSE_LEFT = 1,
@@ -15,4 +16,6 @@ public enum MouseButton {
   MOUSE_MIDDLE = 4,
   MOUSE_BACK = 5,
   MOUSE_FORWARD
+}
+
 }

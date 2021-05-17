@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Font : Asset {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Font(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Font_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Font(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Font_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Font : Asset {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Font(swigCPtr);
+          PInvoke.delete_Font(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,26 +36,28 @@ public class Font : Asset {
     }
   }
 
-  public Font() : this(UltraAppKitPINVOKE.new_Font(), true) {
+  public Font() : this(PInvoke.new_Font(), true) {
   }
 
   public virtual int GetTextWidth(string text, int size) {
-    int ret = UltraAppKitPINVOKE.Font_GetTextWidth__SWIG_0(swigCPtr, text, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Font_GetTextWidth__SWIG_0(swigCPtr, text, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float GetHeight(int size) {
-    float ret = UltraAppKitPINVOKE.Font_GetHeight(swigCPtr, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Font_GetHeight(swigCPtr, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override Asset Copy() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Font_Copy(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Font_Copy(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

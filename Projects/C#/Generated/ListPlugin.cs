@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class ListPlugin : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<PluginWeakPtr>
  {
@@ -37,7 +38,7 @@ public class ListPlugin : global::System.IDisposable, global::System.Collections
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_ListPlugin(swigCPtr);
+          PInvoke.delete_ListPlugin(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -358,82 +359,84 @@ public class ListPlugin : global::System.IDisposable, global::System.Collections
   }
 
   private void push_front(PluginWeakPtr x) {
-    UltraAppKitPINVOKE.ListPlugin_push_front(swigCPtr, PluginWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListPlugin_push_front(swigCPtr, PluginWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private void push_back(PluginWeakPtr x) {
-    UltraAppKitPINVOKE.ListPlugin_push_back(swigCPtr, PluginWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListPlugin_push_back(swigCPtr, PluginWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveFirst() {
-    UltraAppKitPINVOKE.ListPlugin_RemoveFirst(swigCPtr);
+    PInvoke.ListPlugin_RemoveFirst(swigCPtr);
   }
 
   public void RemoveLast() {
-    UltraAppKitPINVOKE.ListPlugin_RemoveLast(swigCPtr);
+    PInvoke.ListPlugin_RemoveLast(swigCPtr);
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.ListPlugin_size(swigCPtr);
+    uint ret = PInvoke.ListPlugin_size(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.ListPlugin_Clear(swigCPtr);
+    PInvoke.ListPlugin_Clear(swigCPtr);
   }
 
   private PluginWeakPtr getItem(global::System.IntPtr iter) {
-    PluginWeakPtr ret = new PluginWeakPtr(UltraAppKitPINVOKE.ListPlugin_getItem(swigCPtr, iter), false);
+    PluginWeakPtr ret = new PluginWeakPtr(PInvoke.ListPlugin_getItem(swigCPtr, iter), false);
     return ret;
   }
 
   private void setItem(global::System.IntPtr iter, PluginWeakPtr val) {
-    UltraAppKitPINVOKE.ListPlugin_setItem(swigCPtr, iter, PluginWeakPtr.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListPlugin_setItem(swigCPtr, iter, PluginWeakPtr.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private global::System.IntPtr getFirstIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListPlugin_getFirstIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListPlugin_getFirstIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getLastIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListPlugin_getLastIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListPlugin_getLastIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getNextIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListPlugin_getNextIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListPlugin_getNextIter(swigCPtr, iter);
     return ret;
   }
 
   private global::System.IntPtr getPrevIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListPlugin_getPrevIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListPlugin_getPrevIter(swigCPtr, iter);
     return ret;
   }
 
   public global::System.IntPtr insertNode(global::System.IntPtr iter, PluginWeakPtr value) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListPlugin_insertNode(swigCPtr, iter, PluginWeakPtr.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    global::System.IntPtr ret = PInvoke.ListPlugin_insertNode(swigCPtr, iter, PluginWeakPtr.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void eraseIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListPlugin_eraseIter(swigCPtr, iter);
+    PInvoke.ListPlugin_eraseIter(swigCPtr, iter);
   }
 
   private void deleteIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListPlugin_deleteIter(swigCPtr, iter);
+    PInvoke.ListPlugin_deleteIter(swigCPtr, iter);
   }
 
   public bool equals(global::System.IntPtr iter1, global::System.IntPtr iter2) {
-    bool ret = UltraAppKitPINVOKE.ListPlugin_equals(swigCPtr, iter1, iter2);
+    bool ret = PInvoke.ListPlugin_equals(swigCPtr, iter1, iter2);
     return ret;
   }
 
-  public ListPlugin() : this(UltraAppKitPINVOKE.new_ListPlugin(), true) {
+  public ListPlugin() : this(PInvoke.new_ListPlugin(), true) {
   }
+
+}
 
 }

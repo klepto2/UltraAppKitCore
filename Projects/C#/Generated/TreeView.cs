@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class TreeView : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal TreeView(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.TreeView_SWIGSmartPtrUpcast(cPtr), true) {
+  internal TreeView(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.TreeView_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class TreeView : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_TreeView(swigCPtr);
+          PInvoke.delete_TreeView(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,135 +38,137 @@ public class TreeView : Widget {
 
   public TreeViewNode root {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.TreeView_root_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.TreeView_root_get(swigCPtr);
       TreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeViewNode(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public TreeView() : this(UltraAppKitPINVOKE.new_TreeView(), true) {
+  public TreeView() : this(PInvoke.new_TreeView(), true) {
   }
 
   public virtual new void UpdateColors() {
-    UltraAppKitPINVOKE.TreeView_UpdateColors(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_UpdateColors(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseWheel(int delta, int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseWheel(swigCPtr, delta, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseWheel(swigCPtr, delta, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SelectNode(Widget node, bool selected) {
-    UltraAppKitPINVOKE.TreeView_SelectNode__SWIG_0(swigCPtr, Widget.getCPtr(node), selected);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_SelectNode__SWIG_0(swigCPtr, Widget.getCPtr(node), selected);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SelectNode(Widget node) {
-    UltraAppKitPINVOKE.TreeView_SelectNode__SWIG_1(swigCPtr, Widget.getCPtr(node));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_SelectNode__SWIG_1(swigCPtr, Widget.getCPtr(node));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void FilterItems(WString filter) {
-    UltraAppKitPINVOKE.TreeView_FilterItems(swigCPtr, WString.getCPtr(filter));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_FilterItems(swigCPtr, WString.getCPtr(filter));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual TreeViewNode GetSelectedNode() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.TreeView_GetSelectedNode(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.TreeView_GetSelectedNode(swigCPtr);
     TreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual VectorTreeViewNode GetSelectedNodes() {
-    VectorTreeViewNode ret = new VectorTreeViewNode(UltraAppKitPINVOKE.TreeView_GetSelectedNodes(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    VectorTreeViewNode ret = new VectorTreeViewNode(PInvoke.TreeView_GetSelectedNodes(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void MouseDown(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseDown(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseDown(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void DoubleClick(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TreeView_DoubleClick(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_DoubleClick(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseUp(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseUp(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseUp(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseMove(int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseMove(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseMove(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void GainFocus() {
-    UltraAppKitPINVOKE.TreeView_GainFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_GainFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void LoseFocus() {
-    UltraAppKitPINVOKE.TreeView_LoseFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_LoseFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseEnter(int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseEnter(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseEnter(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseLeave(int x, int y) {
-    UltraAppKitPINVOKE.TreeView_MouseLeave(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_MouseLeave(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyDown(KeyCode key) {
-    UltraAppKitPINVOKE.TreeView_KeyDown(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_KeyDown(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyUp(KeyCode key) {
-    UltraAppKitPINVOKE.TreeView_KeyUp(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_KeyUp(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyChar(int keychar) {
-    UltraAppKitPINVOKE.TreeView_KeyChar(swigCPtr, keychar);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_KeyChar(swigCPtr, keychar);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void UpdateLayout() {
-    UltraAppKitPINVOKE.TreeView_UpdateLayout(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_UpdateLayout(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.TreeView_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TreeView_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int DrawNode(TreeViewNode node, int index, int level) {
-    int ret = UltraAppKitPINVOKE.TreeView_DrawNode__SWIG_0(swigCPtr, TreeViewNode.getCPtr(node), index, level);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.TreeView_DrawNode__SWIG_0(swigCPtr, TreeViewNode.getCPtr(node), index, level);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int DrawNode(TreeViewNode node, int index) {
-    int ret = UltraAppKitPINVOKE.TreeView_DrawNode__SWIG_1(swigCPtr, TreeViewNode.getCPtr(node), index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.TreeView_DrawNode__SWIG_1(swigCPtr, TreeViewNode.getCPtr(node), index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int DrawNode(TreeViewNode node) {
-    int ret = UltraAppKitPINVOKE.TreeView_DrawNode__SWIG_2(swigCPtr, TreeViewNode.getCPtr(node));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.TreeView_DrawNode__SWIG_2(swigCPtr, TreeViewNode.getCPtr(node));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

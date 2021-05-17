@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Clock : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Clock(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Clock_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Clock(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Clock_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Clock : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Clock(swigCPtr);
+          PInvoke.delete_Clock(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,45 +36,47 @@ public class Clock : Object {
     }
   }
 
-  public Clock(int frequency) : this(UltraAppKitPINVOKE.new_Clock(frequency), true) {
+  public Clock(int frequency) : this(PInvoke.new_Clock(frequency), true) {
   }
 
   public ulong GetTime() {
-    ulong ret = UltraAppKitPINVOKE.Clock_GetTime(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Clock_GetTime(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Tick() {
-    UltraAppKitPINVOKE.Clock_Tick__SWIG_0(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Clock_Tick__SWIG_0(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void Tick(int frequency) {
-    UltraAppKitPINVOKE.Clock_Tick__SWIG_1(swigCPtr, frequency);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Clock_Tick__SWIG_1(swigCPtr, frequency);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public float GetSpeed() {
-    float ret = UltraAppKitPINVOKE.Clock_GetSpeed(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Clock_GetSpeed(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Pause() {
-    UltraAppKitPINVOKE.Clock_Pause(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Clock_Pause(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Paused() {
-    bool ret = UltraAppKitPINVOKE.Clock_Paused(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Clock_Paused(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Resume() {
-    UltraAppKitPINVOKE.Clock_Resume(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Clock_Resume(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class GameEngine : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal GameEngine(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.GameEngine_SWIGSmartPtrUpcast(cPtr), true) {
+  internal GameEngine(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.GameEngine_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class GameEngine : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_GameEngine(swigCPtr);
+          PInvoke.delete_GameEngine(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,371 +38,389 @@ public class GameEngine : Object {
 
   public bool disableWindowsKey {
     set {
-      UltraAppKitPINVOKE.GameEngine_disableWindowsKey_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_disableWindowsKey_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.GameEngine_disableWindowsKey_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.GameEngine_disableWindowsKey_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Window timerwindow {
     set {
-      UltraAppKitPINVOKE.GameEngine_timerwindow_set(swigCPtr, Window.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_timerwindow_set(swigCPtr, Window.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_timerwindow_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.GameEngine_timerwindow_get(swigCPtr);
       Window ret = (cPtr == global::System.IntPtr.Zero) ? null : new Window(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public MapTimer timers {
     set {
-      UltraAppKitPINVOKE.GameEngine_timers_set(swigCPtr, MapTimer.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_timers_set(swigCPtr, MapTimer.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_timers_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_timers_get(swigCPtr);
       MapTimer ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapTimer(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public IDSystem timerIDs {
     set {
-      UltraAppKitPINVOKE.GameEngine_timerIDs_set(swigCPtr, IDSystem.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_timerIDs_set(swigCPtr, IDSystem.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      IDSystem ret = new IDSystem(UltraAppKitPINVOKE.GameEngine_timerIDs_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      IDSystem ret = new IDSystem(PInvoke.GameEngine_timerIDs_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public IDSystem EventIDSystem {
     set {
-      UltraAppKitPINVOKE.GameEngine_EventIDSystem_set(swigCPtr, IDSystem.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_EventIDSystem_set(swigCPtr, IDSystem.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      IDSystem ret = new IDSystem(UltraAppKitPINVOKE.GameEngine_EventIDSystem_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      IDSystem ret = new IDSystem(PInvoke.GameEngine_EventIDSystem_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Mutex vmmessagemutex {
     set {
-      UltraAppKitPINVOKE.GameEngine_vmmessagemutex_set(swigCPtr, Mutex.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_vmmessagemutex_set(swigCPtr, Mutex.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_vmmessagemutex_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.GameEngine_vmmessagemutex_get(swigCPtr);
       Mutex ret = (cPtr == global::System.IntPtr.Zero) ? null : new Mutex(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ListWidget widgets {
     set {
-      UltraAppKitPINVOKE.GameEngine_widgets_set(swigCPtr, ListWidget.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_widgets_set(swigCPtr, ListWidget.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_widgets_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_widgets_get(swigCPtr);
       ListWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListWidget(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public MapWindow windowhandle {
     set {
-      UltraAppKitPINVOKE.GameEngine_windowhandle_set(swigCPtr, MapWindow.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_windowhandle_set(swigCPtr, MapWindow.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_windowhandle_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_windowhandle_get(swigCPtr);
       MapWindow ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapWindow(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_nlohmann__json settings {
+  public JSONWrapper settings {
     set {
-      UltraAppKitPINVOKE.GameEngine_settings_set(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_settings_set(swigCPtr, JSONWrapper.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_nlohmann__json ret = new SWIGTYPE_p_nlohmann__json(UltraAppKitPINVOKE.GameEngine_settings_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_settings_get(swigCPtr);
+      JSONWrapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new JSONWrapper(cPtr, false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorFloat bonematrices {
     set {
-      UltraAppKitPINVOKE.GameEngine_bonematrices_set(swigCPtr, VectorFloat.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_bonematrices_set(swigCPtr, VectorFloat.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_bonematrices_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_bonematrices_get(swigCPtr);
       VectorFloat ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorFloat(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorLoader textureloaders {
     set {
-      UltraAppKitPINVOKE.GameEngine_textureloaders_set(swigCPtr, VectorLoader.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_textureloaders_set(swigCPtr, VectorLoader.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_textureloaders_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_textureloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorLoader modelloaders {
     set {
-      UltraAppKitPINVOKE.GameEngine_modelloaders_set(swigCPtr, VectorLoader.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_modelloaders_set(swigCPtr, VectorLoader.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_modelloaders_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_modelloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorLoader soundloaders {
     set {
-      UltraAppKitPINVOKE.GameEngine_soundloaders_set(swigCPtr, VectorLoader.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_soundloaders_set(swigCPtr, VectorLoader.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_soundloaders_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_soundloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorLoader materialloaders {
     set {
-      UltraAppKitPINVOKE.GameEngine_materialloaders_set(swigCPtr, VectorLoader.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_materialloaders_set(swigCPtr, VectorLoader.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_materialloaders_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_materialloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Mutex PrintMutex {
     set {
-      UltraAppKitPINVOKE.GameEngine_PrintMutex_set(swigCPtr, Mutex.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_PrintMutex_set(swigCPtr, Mutex.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_PrintMutex_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.GameEngine_PrintMutex_get(swigCPtr);
       Mutex ret = (cPtr == global::System.IntPtr.Zero) ? null : new Mutex(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float DPIScaling {
     set {
-      UltraAppKitPINVOKE.GameEngine_DPIScaling_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_DPIScaling_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = UltraAppKitPINVOKE.GameEngine_DPIScaling_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      float ret = PInvoke.GameEngine_DPIScaling_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ListEvent eventqueue {
     set {
-      UltraAppKitPINVOKE.GameEngine_eventqueue_set(swigCPtr, ListEvent.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_eventqueue_set(swigCPtr, ListEvent.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_eventqueue_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_eventqueue_get(swigCPtr);
       ListEvent ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListEvent(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public MapProperties properties {
     set {
-      UltraAppKitPINVOKE.GameEngine_properties_set(swigCPtr, MapProperties.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_properties_set(swigCPtr, MapProperties.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_properties_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_properties_get(swigCPtr);
       MapProperties ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapProperties(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ListPackage packages {
     set {
-      UltraAppKitPINVOKE.GameEngine_packages_set(swigCPtr, ListPackage.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_packages_set(swigCPtr, ListPackage.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_packages_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_packages_get(swigCPtr);
       ListPackage ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListPackage(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ListPlugin plugins {
     set {
-      UltraAppKitPINVOKE.GameEngine_plugins_set(swigCPtr, ListPlugin.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_plugins_set(swigCPtr, ListPlugin.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_plugins_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_plugins_get(swigCPtr);
       ListPlugin ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListPlugin(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Buffer skeletondata {
     set {
-      UltraAppKitPINVOKE.GameEngine_skeletondata_set(swigCPtr, Buffer.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_skeletondata_set(swigCPtr, Buffer.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_skeletondata_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.GameEngine_skeletondata_get(swigCPtr);
       Buffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Buffer(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ulong skeletonmin {
     set {
-      UltraAppKitPINVOKE.GameEngine_skeletonmin_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_skeletonmin_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      ulong ret = UltraAppKitPINVOKE.GameEngine_skeletonmin_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      ulong ret = PInvoke.GameEngine_skeletonmin_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ulong skeletonmax {
     set {
-      UltraAppKitPINVOKE.GameEngine_skeletonmax_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_skeletonmax_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      ulong ret = UltraAppKitPINVOKE.GameEngine_skeletonmax_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      ulong ret = PInvoke.GameEngine_skeletonmax_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool skeletonschanged {
     set {
-      UltraAppKitPINVOKE.GameEngine_skeletonschanged_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_skeletonschanged_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.GameEngine_skeletonschanged_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.GameEngine_skeletonschanged_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool brdfloaded {
     set {
-      UltraAppKitPINVOKE.GameEngine_brdfloaded_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_brdfloaded_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.GameEngine_brdfloaded_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.GameEngine_brdfloaded_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public GameEngine() : this(UltraAppKitPINVOKE.new_GameEngine(), true) {
+  public GameEngine() : this(PInvoke.new_GameEngine(), true) {
   }
 
   public void Start() {
-    UltraAppKitPINVOKE.GameEngine_Start(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.GameEngine_Start(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public MapAsset cachedassets {
     set {
-      UltraAppKitPINVOKE.GameEngine_cachedassets_set(swigCPtr, MapAsset.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_cachedassets_set(swigCPtr, MapAsset.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_cachedassets_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_cachedassets_get(swigCPtr);
       MapAsset ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapAsset(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public MapCachedPixmaps cachedpixmaps {
     set {
-      UltraAppKitPINVOKE.GameEngine_cachedpixmaps_set(swigCPtr, MapCachedPixmaps.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_cachedpixmaps_set(swigCPtr, MapCachedPixmaps.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_cachedpixmaps_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.GameEngine_cachedpixmaps_get(swigCPtr);
       MapCachedPixmaps ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapCachedPixmaps(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public static GameEngine Get() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_Get();
+    global::System.IntPtr cPtr = PInvoke.GameEngine_Get();
     GameEngine ret = (cPtr == global::System.IntPtr.Zero) ? null : new GameEngine(cPtr, true);
     return ret;
   }
 
   public static GameEngine instance {
     set {
-      UltraAppKitPINVOKE.GameEngine_instance_set(GameEngine.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.GameEngine_instance_set(GameEngine.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.GameEngine_instance_get();
+      global::System.IntPtr cPtr = PInvoke.GameEngine_instance_get();
       GameEngine ret = (cPtr == global::System.IntPtr.Zero) ? null : new GameEngine(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
+
+}
 
 }

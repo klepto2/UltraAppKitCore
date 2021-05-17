@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextFieldStyle {
   TEXTFIELD_READONLY = 1,
@@ -16,4 +17,6 @@ public enum TextFieldStyle {
   TEXTFIELD_ENTERKEYACTIONEVENT = 16,
   TEXTFIELD_DEFAULT = TEXTFIELD_LOSEFOCUSACTIONEVENT+TEXTFIELD_ENTERKEYACTIONEVENT,
   TEXTFIELD_PASSWORD = 64
+}
+
 }

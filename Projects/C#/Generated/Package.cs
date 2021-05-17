@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Package : Asset {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Package(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Package_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Package(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Package_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Package : Asset {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Package(swigCPtr);
+          PInvoke.delete_Package(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,68 +36,70 @@ public class Package : Asset {
     }
   }
 
-  public Package() : this(UltraAppKitPINVOKE.new_Package(), true) {
+  public Package() : this(PInvoke.new_Package(), true) {
   }
 
   public virtual new void Reset() {
-    UltraAppKitPINVOKE.Package_Reset(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Package_Reset(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual new bool Reload(Stream stream, LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Package_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Package_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual new bool Reload(Stream stream) {
-    bool ret = UltraAppKitPINVOKE.Package_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Package_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override Asset Copy() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Package_Copy(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Package_Copy(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload(LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Package_Reload__SWIG_2(swigCPtr, (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Package_Reload__SWIG_2(swigCPtr, (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload() {
-    bool ret = UltraAppKitPINVOKE.Package_Reload__SWIG_3(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Package_Reload__SWIG_3(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int FileType(WString path) {
-    int ret = UltraAppKitPINVOKE.Package_FileType(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Package_FileType(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ulong FileSize(WString path) {
-    ulong ret = UltraAppKitPINVOKE.Package_FileSize(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Package_FileSize(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual VectorWString LoadDir(WString path) {
-    VectorWString ret = new VectorWString(UltraAppKitPINVOKE.Package_LoadDir(swigCPtr, WString.getCPtr(path)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    VectorWString ret = new VectorWString(PInvoke.Package_LoadDir(swigCPtr, WString.getCPtr(path)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Stream ReadFile(WString path) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Package_ReadFile(swigCPtr, WString.getCPtr(path));
+    global::System.IntPtr cPtr = PInvoke.Package_ReadFile(swigCPtr, WString.getCPtr(path));
     Stream ret = (cPtr == global::System.IntPtr.Zero) ? null : new Stream(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

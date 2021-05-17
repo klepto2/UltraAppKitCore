@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ListBoxStyle {
   LISTBOX_DEFAULT = 0,
   LISTBOX_MULTISELECT
+}
+
 }

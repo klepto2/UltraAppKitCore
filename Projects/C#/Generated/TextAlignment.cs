@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextAlignment {
   TEXT_LEFT = 0,
@@ -16,4 +17,6 @@ public enum TextAlignment {
   TEXT_RIGHT = 2,
   TEXT_MIDDLE = 4,
   TEXT_BOTTOM = 64
+}
+
 }

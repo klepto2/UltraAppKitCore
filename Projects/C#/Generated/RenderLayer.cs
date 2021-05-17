@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum RenderLayer {
   RENDERLAYER_NONE = 0,
@@ -20,4 +21,6 @@ public enum RenderLayer {
   RENDERLAYER_6 = 64,
   RENDERLAYER_7 = 128,
   RENDERLAYER_ALL = 255
+}
+
 }

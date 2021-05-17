@@ -8,7 +8,10 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TabberStyle {
   TABBER_DEFAULT = 0
+}
+
 }

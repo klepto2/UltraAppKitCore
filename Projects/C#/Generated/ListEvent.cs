@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class ListEvent : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<Event>
  {
@@ -37,7 +38,7 @@ public class ListEvent : global::System.IDisposable, global::System.Collections.
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_ListEvent(swigCPtr);
+          PInvoke.delete_ListEvent(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -358,82 +359,84 @@ public class ListEvent : global::System.IDisposable, global::System.Collections.
   }
 
   private void push_front(Event x) {
-    UltraAppKitPINVOKE.ListEvent_push_front(swigCPtr, Event.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListEvent_push_front(swigCPtr, Event.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private void push_back(Event x) {
-    UltraAppKitPINVOKE.ListEvent_push_back(swigCPtr, Event.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListEvent_push_back(swigCPtr, Event.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveFirst() {
-    UltraAppKitPINVOKE.ListEvent_RemoveFirst(swigCPtr);
+    PInvoke.ListEvent_RemoveFirst(swigCPtr);
   }
 
   public void RemoveLast() {
-    UltraAppKitPINVOKE.ListEvent_RemoveLast(swigCPtr);
+    PInvoke.ListEvent_RemoveLast(swigCPtr);
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.ListEvent_size(swigCPtr);
+    uint ret = PInvoke.ListEvent_size(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.ListEvent_Clear(swigCPtr);
+    PInvoke.ListEvent_Clear(swigCPtr);
   }
 
   private Event getItem(global::System.IntPtr iter) {
-    Event ret = new Event(UltraAppKitPINVOKE.ListEvent_getItem(swigCPtr, iter), false);
+    Event ret = new Event(PInvoke.ListEvent_getItem(swigCPtr, iter), false);
     return ret;
   }
 
   private void setItem(global::System.IntPtr iter, Event val) {
-    UltraAppKitPINVOKE.ListEvent_setItem(swigCPtr, iter, Event.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListEvent_setItem(swigCPtr, iter, Event.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private global::System.IntPtr getFirstIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListEvent_getFirstIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListEvent_getFirstIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getLastIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListEvent_getLastIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListEvent_getLastIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getNextIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListEvent_getNextIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListEvent_getNextIter(swigCPtr, iter);
     return ret;
   }
 
   private global::System.IntPtr getPrevIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListEvent_getPrevIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListEvent_getPrevIter(swigCPtr, iter);
     return ret;
   }
 
   public global::System.IntPtr insertNode(global::System.IntPtr iter, Event value) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListEvent_insertNode(swigCPtr, iter, Event.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    global::System.IntPtr ret = PInvoke.ListEvent_insertNode(swigCPtr, iter, Event.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void eraseIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListEvent_eraseIter(swigCPtr, iter);
+    PInvoke.ListEvent_eraseIter(swigCPtr, iter);
   }
 
   private void deleteIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListEvent_deleteIter(swigCPtr, iter);
+    PInvoke.ListEvent_deleteIter(swigCPtr, iter);
   }
 
   public bool equals(global::System.IntPtr iter1, global::System.IntPtr iter2) {
-    bool ret = UltraAppKitPINVOKE.ListEvent_equals(swigCPtr, iter1, iter2);
+    bool ret = PInvoke.ListEvent_equals(swigCPtr, iter1, iter2);
     return ret;
   }
 
-  public ListEvent() : this(UltraAppKitPINVOKE.new_ListEvent(), true) {
+  public ListEvent() : this(PInvoke.new_ListEvent(), true) {
   }
+
+}
 
 }

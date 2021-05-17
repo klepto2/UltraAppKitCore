@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class ListWidget : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IEnumerable<WidgetWeakPtr>
  {
@@ -37,7 +38,7 @@ public class ListWidget : global::System.IDisposable, global::System.Collections
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_ListWidget(swigCPtr);
+          PInvoke.delete_ListWidget(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -358,82 +359,84 @@ public class ListWidget : global::System.IDisposable, global::System.Collections
   }
 
   private void push_front(WidgetWeakPtr x) {
-    UltraAppKitPINVOKE.ListWidget_push_front(swigCPtr, WidgetWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListWidget_push_front(swigCPtr, WidgetWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private void push_back(WidgetWeakPtr x) {
-    UltraAppKitPINVOKE.ListWidget_push_back(swigCPtr, WidgetWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListWidget_push_back(swigCPtr, WidgetWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveFirst() {
-    UltraAppKitPINVOKE.ListWidget_RemoveFirst(swigCPtr);
+    PInvoke.ListWidget_RemoveFirst(swigCPtr);
   }
 
   public void RemoveLast() {
-    UltraAppKitPINVOKE.ListWidget_RemoveLast(swigCPtr);
+    PInvoke.ListWidget_RemoveLast(swigCPtr);
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.ListWidget_size(swigCPtr);
+    uint ret = PInvoke.ListWidget_size(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.ListWidget_Clear(swigCPtr);
+    PInvoke.ListWidget_Clear(swigCPtr);
   }
 
   private WidgetWeakPtr getItem(global::System.IntPtr iter) {
-    WidgetWeakPtr ret = new WidgetWeakPtr(UltraAppKitPINVOKE.ListWidget_getItem(swigCPtr, iter), false);
+    WidgetWeakPtr ret = new WidgetWeakPtr(PInvoke.ListWidget_getItem(swigCPtr, iter), false);
     return ret;
   }
 
   private void setItem(global::System.IntPtr iter, WidgetWeakPtr val) {
-    UltraAppKitPINVOKE.ListWidget_setItem(swigCPtr, iter, WidgetWeakPtr.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ListWidget_setItem(swigCPtr, iter, WidgetWeakPtr.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private global::System.IntPtr getFirstIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListWidget_getFirstIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListWidget_getFirstIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getLastIter() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListWidget_getLastIter(swigCPtr);
+    global::System.IntPtr ret = PInvoke.ListWidget_getLastIter(swigCPtr);
     return ret;
   }
 
   private global::System.IntPtr getNextIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListWidget_getNextIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListWidget_getNextIter(swigCPtr, iter);
     return ret;
   }
 
   private global::System.IntPtr getPrevIter(global::System.IntPtr iter) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListWidget_getPrevIter(swigCPtr, iter);
+    global::System.IntPtr ret = PInvoke.ListWidget_getPrevIter(swigCPtr, iter);
     return ret;
   }
 
   public global::System.IntPtr insertNode(global::System.IntPtr iter, WidgetWeakPtr value) {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.ListWidget_insertNode(swigCPtr, iter, WidgetWeakPtr.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    global::System.IntPtr ret = PInvoke.ListWidget_insertNode(swigCPtr, iter, WidgetWeakPtr.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void eraseIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListWidget_eraseIter(swigCPtr, iter);
+    PInvoke.ListWidget_eraseIter(swigCPtr, iter);
   }
 
   private void deleteIter(global::System.IntPtr iter) {
-    UltraAppKitPINVOKE.ListWidget_deleteIter(swigCPtr, iter);
+    PInvoke.ListWidget_deleteIter(swigCPtr, iter);
   }
 
   public bool equals(global::System.IntPtr iter1, global::System.IntPtr iter2) {
-    bool ret = UltraAppKitPINVOKE.ListWidget_equals(swigCPtr, iter1, iter2);
+    bool ret = PInvoke.ListWidget_equals(swigCPtr, iter1, iter2);
     return ret;
   }
 
-  public ListWidget() : this(UltraAppKitPINVOKE.new_ListWidget(), true) {
+  public ListWidget() : this(PInvoke.new_ListWidget(), true) {
   }
+
+}
 
 }

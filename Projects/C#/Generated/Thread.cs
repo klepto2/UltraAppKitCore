@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Thread : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Thread(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Thread_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Thread(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Thread_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Thread : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Thread(swigCPtr);
+          PInvoke.delete_Thread(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,35 +36,37 @@ public class Thread : Object {
     }
   }
 
-  public Thread() : this(UltraAppKitPINVOKE.new_Thread(), true) {
+  public Thread() : this(PInvoke.new_Thread(), true) {
   }
 
   public virtual Object GetResult() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Thread_GetResult(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Thread_GetResult(swigCPtr);
     Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Wait() {
-    UltraAppKitPINVOKE.Thread_Wait(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Thread_Wait(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Resume() {
-    UltraAppKitPINVOKE.Thread_Resume(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Thread_Resume(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Pause() {
-    UltraAppKitPINVOKE.Thread_Pause(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Thread_Pause(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int GetState() {
-    int ret = UltraAppKitPINVOKE.Thread_GetState(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Thread_GetState(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

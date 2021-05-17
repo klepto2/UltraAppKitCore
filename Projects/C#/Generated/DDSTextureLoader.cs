@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class DDSTextureLoader : Loader {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal DDSTextureLoader(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.DDSTextureLoader_SWIGSmartPtrUpcast(cPtr), true) {
+  internal DDSTextureLoader(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.DDSTextureLoader_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class DDSTextureLoader : Loader {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_DDSTextureLoader(swigCPtr);
+          PInvoke.delete_DDSTextureLoader(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,47 +38,49 @@ public class DDSTextureLoader : Loader {
 
   public int loadpixmapmiplevel {
     set {
-      UltraAppKitPINVOKE.DDSTextureLoader_loadpixmapmiplevel_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.DDSTextureLoader_loadpixmapmiplevel_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.DDSTextureLoader_loadpixmapmiplevel_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.DDSTextureLoader_loadpixmapmiplevel_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int loadpixmapface {
     set {
-      UltraAppKitPINVOKE.DDSTextureLoader_loadpixmapface_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.DDSTextureLoader_loadpixmapface_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.DDSTextureLoader_loadpixmapface_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.DDSTextureLoader_loadpixmapface_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public DDSTextureLoader() : this(UltraAppKitPINVOKE.new_DDSTextureLoader(), true) {
+  public DDSTextureLoader() : this(PInvoke.new_DDSTextureLoader(), true) {
   }
 
   public override bool Reload(Stream stream, Object o, LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.DDSTextureLoader_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.DDSTextureLoader_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload(Stream stream, Object o) {
-    bool ret = UltraAppKitPINVOKE.DDSTextureLoader_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.DDSTextureLoader_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public static DXGI_FORMAT GetDXGIFormat(DDS_PIXELFORMAT ddpf) {
-    DXGI_FORMAT ret = (DXGI_FORMAT)UltraAppKitPINVOKE.DDSTextureLoader_GetDXGIFormat(DDS_PIXELFORMAT.getCPtr(ddpf));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    DXGI_FORMAT ret = (DXGI_FORMAT)PInvoke.DDSTextureLoader_GetDXGIFormat(DDS_PIXELFORMAT.getCPtr(ddpf));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

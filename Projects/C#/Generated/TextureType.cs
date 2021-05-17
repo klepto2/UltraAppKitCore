@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextureType {
   TEXTURE_2D = 1,
   TEXTURE_3D = 2,
   TEXTURE_CUBE = 3
+}
+
 }

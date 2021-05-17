@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Tabber : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Tabber(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Tabber_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Tabber(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Tabber_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Tabber : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Tabber(swigCPtr);
+          PInvoke.delete_Tabber(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,39 +36,41 @@ public class Tabber : Widget {
     }
   }
 
-  public Tabber() : this(UltraAppKitPINVOKE.new_Tabber(), true) {
+  public Tabber() : this(PInvoke.new_Tabber(), true) {
   }
 
   public override int AddItem(WString text, bool selected) {
-    int ret = UltraAppKitPINVOKE.Tabber_AddItem__SWIG_0(swigCPtr, WString.getCPtr(text), selected);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Tabber_AddItem__SWIG_0(swigCPtr, WString.getCPtr(text), selected);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override int AddItem(WString text) {
-    int ret = UltraAppKitPINVOKE.Tabber_AddItem__SWIG_1(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Tabber_AddItem__SWIG_1(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void MouseDown(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.Tabber_MouseDown(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Tabber_MouseDown(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseMove(int x, int y) {
-    UltraAppKitPINVOKE.Tabber_MouseMove(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Tabber_MouseMove(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyDown(KeyCode key) {
-    UltraAppKitPINVOKE.Tabber_KeyDown(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Tabber_KeyDown(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.Tabber_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Tabber_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum DXGI_FORMAT {
   DXGI_FORMAT_UNKNOWN,
@@ -130,4 +131,6 @@ public enum DXGI_FORMAT {
   DXGI_FORMAT_V208,
   DXGI_FORMAT_V408,
   DXGI_FORMAT_FORCE_UINT
+}
+
 }

@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class AssetWeakPtr : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,47 +37,49 @@ public class AssetWeakPtr : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_AssetWeakPtr(swigCPtr);
+          PInvoke.delete_AssetWeakPtr(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public AssetWeakPtr() : this(UltraAppKitPINVOKE.new_AssetWeakPtr__SWIG_0(), true) {
+  public AssetWeakPtr() : this(PInvoke.new_AssetWeakPtr__SWIG_0(), true) {
   }
 
-  public AssetWeakPtr(AssetWeakPtr arg0) : this(UltraAppKitPINVOKE.new_AssetWeakPtr__SWIG_1(AssetWeakPtr.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public AssetWeakPtr(AssetWeakPtr arg0) : this(PInvoke.new_AssetWeakPtr__SWIG_1(AssetWeakPtr.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public AssetWeakPtr(Asset arg0) : this(UltraAppKitPINVOKE.new_AssetWeakPtr__SWIG_2(Asset.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public AssetWeakPtr(Asset arg0) : this(PInvoke.new_AssetWeakPtr__SWIG_2(Asset.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void swap(AssetWeakPtr arg0) {
-    UltraAppKitPINVOKE.AssetWeakPtr_swap(swigCPtr, AssetWeakPtr.getCPtr(arg0));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.AssetWeakPtr_swap(swigCPtr, AssetWeakPtr.getCPtr(arg0));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void reset() {
-    UltraAppKitPINVOKE.AssetWeakPtr_reset(swigCPtr);
+    PInvoke.AssetWeakPtr_reset(swigCPtr);
   }
 
   public int use_count() {
-    int ret = UltraAppKitPINVOKE.AssetWeakPtr_use_count(swigCPtr);
+    int ret = PInvoke.AssetWeakPtr_use_count(swigCPtr);
     return ret;
   }
 
   public bool expired() {
-    bool ret = UltraAppKitPINVOKE.AssetWeakPtr_expired(swigCPtr);
+    bool ret = PInvoke.AssetWeakPtr_expired(swigCPtr);
     return ret;
   }
 
   public Asset lock_() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.AssetWeakPtr_lock_(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.AssetWeakPtr_lock_(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
     return ret;
   }
+
+}
 
 }

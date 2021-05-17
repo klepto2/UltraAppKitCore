@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum LoadFlags {
   LOAD_DEFAULT = 0,
@@ -25,4 +26,6 @@ public enum LoadFlags {
   LOAD_NO_CACHE = 65536,
   LOAD_NO_PACKAGES = 131072,
   LOAD_RELOAD = 262144
+}
+
 }

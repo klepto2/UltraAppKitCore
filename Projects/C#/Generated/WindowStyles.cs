@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum WindowStyles {
   WINDOW_TITLEBAR = 1,
@@ -19,4 +20,6 @@ public enum WindowStyles {
   WINDOW_CHILD = 4096,
   WINDOW_CLIENTCOORDS = 32768,
   WINDOW_DEFAULT = WINDOW_TITLEBAR
+}
+
 }

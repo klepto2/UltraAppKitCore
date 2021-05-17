@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Object : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,13 +37,29 @@ public class Object : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          UltraAppKitPINVOKE.delete_Object(swigCPtr);
+          PInvoke.delete_Object(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+
+    public static Object FromPointer(System.IntPtr pointer)
+    {
+        return new Object(pointer,false);
+    }
+
+    public System.IntPtr ToPointer()
+    {
+        return swigCPtr.Handle;
+    }
+
+    public Object ToWrapper()
+    {
+        return swigCPtr.Wrapper as Object;
+    }
+    
     public static bool operator == (Object a, Object b)
     {
         if ((object)a == null)
@@ -56,331 +73,340 @@ public class Object : global::System.IDisposable {
 
     public static bool operator !=(Object a, Object b) => !(a==b);
 
+  protected Object() : this(PInvoke.new_Object(), true) {
+    SwigDirectorConnect();
+  }
+
   public Object Self() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_Self(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_Self(swigCPtr);
     Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String GetAddress() {
-    String ret = new String(UltraAppKitPINVOKE.Object_GetAddress(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.Object_GetAddress(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Asset AsAsset() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsAsset(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsAsset(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Buffer AsBuffer() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsBuffer(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsBuffer(swigCPtr);
     Buffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Buffer(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Clock AsClock() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsClock(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsClock(swigCPtr);
     Clock ret = (cPtr == global::System.IntPtr.Zero) ? null : new Clock(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Display AsDisplay() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsDisplay(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsDisplay(swigCPtr);
     Display ret = (cPtr == global::System.IntPtr.Zero) ? null : new Display(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public FileSystemWatcher AsFileSystemWatcher() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsFileSystemWatcher(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsFileSystemWatcher(swigCPtr);
     FileSystemWatcher ret = (cPtr == global::System.IntPtr.Zero) ? null : new FileSystemWatcher(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public GameEngine AsGameEngine() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsGameEngine(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsGameEngine(swigCPtr);
     GameEngine ret = (cPtr == global::System.IntPtr.Zero) ? null : new GameEngine(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IDSystem AsIDSystem() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsIDSystem(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsIDSystem(swigCPtr);
     IDSystem ret = (cPtr == global::System.IntPtr.Zero) ? null : new IDSystem(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Interface AsInterface() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsInterface(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsInterface(swigCPtr);
     Interface ret = (cPtr == global::System.IntPtr.Zero) ? null : new Interface(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Language AsLanguage() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsLanguage(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsLanguage(swigCPtr);
     Language ret = (cPtr == global::System.IntPtr.Zero) ? null : new Language(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Loader AsLoader() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsLoader(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsLoader(swigCPtr);
     Loader ret = (cPtr == global::System.IntPtr.Zero) ? null : new Loader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Mutex AsMutex() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsMutex(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsMutex(swigCPtr);
     Mutex ret = (cPtr == global::System.IntPtr.Zero) ? null : new Mutex(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Process AsProcess() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsProcess(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsProcess(swigCPtr);
     Process ret = (cPtr == global::System.IntPtr.Zero) ? null : new Process(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Stream AsStream() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsStream(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsStream(swigCPtr);
     Stream ret = (cPtr == global::System.IntPtr.Zero) ? null : new Stream(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String AsString() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsString(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsString(swigCPtr);
     String ret = (cPtr == global::System.IntPtr.Zero) ? null : new String(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Thread AsThread() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsThread(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsThread(swigCPtr);
     Thread ret = (cPtr == global::System.IntPtr.Zero) ? null : new Thread(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Timer AsTimer() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTimer(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTimer(swigCPtr);
     Timer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Timer(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public WString AsWString() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsWString(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsWString(swigCPtr);
     WString ret = (cPtr == global::System.IntPtr.Zero) ? null : new WString(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Widget AsWidget() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsWidget(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsWidget(swigCPtr);
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public WidgetItem AsWidgetItem() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsWidgetItem(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsWidgetItem(swigCPtr);
     WidgetItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetItem(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Window AsWindow() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsWindow(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsWindow(swigCPtr);
     Window ret = (cPtr == global::System.IntPtr.Zero) ? null : new Window(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public BufferStream AsBufferStream() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsBufferStream(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsBufferStream(swigCPtr);
     BufferStream ret = (cPtr == global::System.IntPtr.Zero) ? null : new BufferStream(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Button AsButton() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsButton(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsButton(swigCPtr);
     Button ret = (cPtr == global::System.IntPtr.Zero) ? null : new Button(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ComboBox AsComboBox() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsComboBox(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsComboBox(swigCPtr);
     ComboBox ret = (cPtr == global::System.IntPtr.Zero) ? null : new ComboBox(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public DDSTextureLoader AsDDSTextureLoader() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsDDSTextureLoader(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsDDSTextureLoader(swigCPtr);
     DDSTextureLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new DDSTextureLoader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Font AsFont() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsFont(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsFont(swigCPtr);
     Font ret = (cPtr == global::System.IntPtr.Zero) ? null : new Font(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Icon AsIcon() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsIcon(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsIcon(swigCPtr);
     Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Label AsLabel() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsLabel(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsLabel(swigCPtr);
     Label ret = (cPtr == global::System.IntPtr.Zero) ? null : new Label(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ListBox AsListBox() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsListBox(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsListBox(swigCPtr);
     ListBox ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListBox(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Menu AsMenu() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsMenu(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsMenu(swigCPtr);
     Menu ret = (cPtr == global::System.IntPtr.Zero) ? null : new Menu(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public MenuPanel AsMenuPanel() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsMenuPanel(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsMenuPanel(swigCPtr);
     MenuPanel ret = (cPtr == global::System.IntPtr.Zero) ? null : new MenuPanel(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Package AsPackage() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsPackage(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsPackage(swigCPtr);
     Package ret = (cPtr == global::System.IntPtr.Zero) ? null : new Package(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Panel AsPanel() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsPanel(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsPanel(swigCPtr);
     Panel ret = (cPtr == global::System.IntPtr.Zero) ? null : new Panel(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public PipeStream AsPipeStream() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsPipeStream(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsPipeStream(swigCPtr);
     PipeStream ret = (cPtr == global::System.IntPtr.Zero) ? null : new PipeStream(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Pixmap AsPixmap() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsPixmap(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsPixmap(swigCPtr);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Plugin AsPlugin() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsPlugin(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsPlugin(swigCPtr);
     Plugin ret = (cPtr == global::System.IntPtr.Zero) ? null : new Plugin(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public ProgressBar AsProgressBar() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsProgressBar(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsProgressBar(swigCPtr);
     ProgressBar ret = (cPtr == global::System.IntPtr.Zero) ? null : new ProgressBar(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Slider AsSlider() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsSlider(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsSlider(swigCPtr);
     Slider ret = (cPtr == global::System.IntPtr.Zero) ? null : new Slider(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public StreamBuffer AsStreamBuffer() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsStreamBuffer(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsStreamBuffer(swigCPtr);
     StreamBuffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new StreamBuffer(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Tabber AsTabber() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTabber(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTabber(swigCPtr);
     Tabber ret = (cPtr == global::System.IntPtr.Zero) ? null : new Tabber(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public TextArea AsTextArea() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTextArea(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTextArea(swigCPtr);
     TextArea ret = (cPtr == global::System.IntPtr.Zero) ? null : new TextArea(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public TextField AsTextField() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTextField(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTextField(swigCPtr);
     TextField ret = (cPtr == global::System.IntPtr.Zero) ? null : new TextField(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public TreeView AsTreeView() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTreeView(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTreeView(swigCPtr);
     TreeView ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeView(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public TreeViewNode AsTreeViewNode() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsTreeViewNode(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsTreeViewNode(swigCPtr);
     TreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Object AsObject() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Object_AsObject(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Object_AsObject(swigCPtr);
     Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool CompareWith(Object a) {
-    bool ret = UltraAppKitPINVOKE.Object_CompareWith(swigCPtr, Object.getCPtr(a));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Object_CompareWith(swigCPtr, Object.getCPtr(a));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+  private void SwigDirectorConnect() {
+    PInvoke.Object_director_connect(swigCPtr);
+  }
+}
 
 }

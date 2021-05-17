@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class PluginWeakPtr : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,47 +37,49 @@ public class PluginWeakPtr : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_PluginWeakPtr(swigCPtr);
+          PInvoke.delete_PluginWeakPtr(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public PluginWeakPtr() : this(UltraAppKitPINVOKE.new_PluginWeakPtr__SWIG_0(), true) {
+  public PluginWeakPtr() : this(PInvoke.new_PluginWeakPtr__SWIG_0(), true) {
   }
 
-  public PluginWeakPtr(PluginWeakPtr arg0) : this(UltraAppKitPINVOKE.new_PluginWeakPtr__SWIG_1(PluginWeakPtr.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public PluginWeakPtr(PluginWeakPtr arg0) : this(PInvoke.new_PluginWeakPtr__SWIG_1(PluginWeakPtr.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public PluginWeakPtr(Plugin arg0) : this(UltraAppKitPINVOKE.new_PluginWeakPtr__SWIG_2(Plugin.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public PluginWeakPtr(Plugin arg0) : this(PInvoke.new_PluginWeakPtr__SWIG_2(Plugin.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void swap(PluginWeakPtr arg0) {
-    UltraAppKitPINVOKE.PluginWeakPtr_swap(swigCPtr, PluginWeakPtr.getCPtr(arg0));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.PluginWeakPtr_swap(swigCPtr, PluginWeakPtr.getCPtr(arg0));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void reset() {
-    UltraAppKitPINVOKE.PluginWeakPtr_reset(swigCPtr);
+    PInvoke.PluginWeakPtr_reset(swigCPtr);
   }
 
   public int use_count() {
-    int ret = UltraAppKitPINVOKE.PluginWeakPtr_use_count(swigCPtr);
+    int ret = PInvoke.PluginWeakPtr_use_count(swigCPtr);
     return ret;
   }
 
   public bool expired() {
-    bool ret = UltraAppKitPINVOKE.PluginWeakPtr_expired(swigCPtr);
+    bool ret = PInvoke.PluginWeakPtr_expired(swigCPtr);
     return ret;
   }
 
   public Plugin lock_() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.PluginWeakPtr_lock_(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.PluginWeakPtr_lock_(swigCPtr);
     Plugin ret = (cPtr == global::System.IntPtr.Zero) ? null : new Plugin(cPtr, true);
     return ret;
   }
+
+}
 
 }

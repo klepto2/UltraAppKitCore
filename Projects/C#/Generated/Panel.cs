@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Panel : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Panel(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Panel_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Panel(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Panel_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Panel : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Panel(swigCPtr);
+          PInvoke.delete_Panel(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,12 +36,14 @@ public class Panel : Widget {
     }
   }
 
-  public Panel() : this(UltraAppKitPINVOKE.new_Panel(), true) {
+  public Panel() : this(PInvoke.new_Panel(), true) {
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.Panel_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Panel_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

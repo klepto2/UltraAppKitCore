@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Event : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,52 +37,59 @@ public class Event : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_Event(swigCPtr);
+          PInvoke.delete_Event(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+    
+    public static Event FromPointer(System.IntPtr pointer)
+    {
+        return new Event(pointer,false);
+    }
+
   public EventID id {
     set {
-      UltraAppKitPINVOKE.Event_id_set(swigCPtr, (int)value);
+      PInvoke.Event_id_set(swigCPtr, (int)value);
     } 
     get {
-      EventID ret = (EventID)UltraAppKitPINVOKE.Event_id_get(swigCPtr);
+      EventID ret = (EventID)PInvoke.Event_id_get(swigCPtr);
       return ret;
     } 
   }
 
   public Object source {
     set {
-      UltraAppKitPINVOKE.Event_source_set(swigCPtr, Object.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Event_source_set(swigCPtr, Object.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Event_source_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Event_source_get(swigCPtr);
       Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int data {
     set {
-      UltraAppKitPINVOKE.Event_data_set(swigCPtr, value);
+      PInvoke.Event_data_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Event_data_get(swigCPtr);
+      int ret = PInvoke.Event_data_get(swigCPtr);
       return ret;
     } 
   }
 
   public iVec2 position {
     set {
-      UltraAppKitPINVOKE.Event_position_set(swigCPtr, iVec2.getCPtr(value));
+      PInvoke.Event_position_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Event_position_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Event_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
     } 
@@ -89,10 +97,11 @@ public class Event : global::System.IDisposable {
 
   public iVec2 size {
     set {
-      UltraAppKitPINVOKE.Event_size_set(swigCPtr, iVec2.getCPtr(value));
+      PInvoke.Event_size_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Event_size_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Event_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
     } 
@@ -100,36 +109,38 @@ public class Event : global::System.IDisposable {
 
   public Object extra {
     set {
-      UltraAppKitPINVOKE.Event_extra_set(swigCPtr, Object.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Event_extra_set(swigCPtr, Object.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Event_extra_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Event_extra_get(swigCPtr);
       Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Event() : this(UltraAppKitPINVOKE.new_Event__SWIG_0(), true) {
+  public Event() : this(PInvoke.new_Event__SWIG_0(), true) {
   }
 
-  public Event(EventID id, Object source, int data, iVec2 position, iVec2 size, Object extra) : this(UltraAppKitPINVOKE.new_Event__SWIG_1((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position), iVec2.getCPtr(size), Object.getCPtr(extra)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public Event(EventID id, Object source, int data, iVec2 position, iVec2 size, Object extra) : this(PInvoke.new_Event__SWIG_1((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position), iVec2.getCPtr(size), Object.getCPtr(extra)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Event(EventID id, Object source, int data, iVec2 position, iVec2 size) : this(UltraAppKitPINVOKE.new_Event__SWIG_2((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position), iVec2.getCPtr(size)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public Event(EventID id, Object source, int data, iVec2 position, iVec2 size) : this(PInvoke.new_Event__SWIG_2((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position), iVec2.getCPtr(size)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Event(EventID id, Object source, int data, iVec2 position) : this(UltraAppKitPINVOKE.new_Event__SWIG_3((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public Event(EventID id, Object source, int data, iVec2 position) : this(PInvoke.new_Event__SWIG_3((int)id, Object.getCPtr(source), data, iVec2.getCPtr(position)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Event(EventID id, Object source, int data) : this(UltraAppKitPINVOKE.new_Event__SWIG_4((int)id, Object.getCPtr(source), data), true) {
+  public Event(EventID id, Object source, int data) : this(PInvoke.new_Event__SWIG_4((int)id, Object.getCPtr(source), data), true) {
   }
 
-  public Event(EventID id, Object source) : this(UltraAppKitPINVOKE.new_Event__SWIG_5((int)id, Object.getCPtr(source)), true) {
+  public Event(EventID id, Object source) : this(PInvoke.new_Event__SWIG_5((int)id, Object.getCPtr(source)), true) {
   }
+
+}
 
 }

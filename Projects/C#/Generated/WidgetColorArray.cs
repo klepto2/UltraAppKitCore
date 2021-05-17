@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class WidgetColorArray : global::System.IDisposable, global::System.Collections.IEnumerable
     , global::System.Collections.Generic.IEnumerable<Vec4>
@@ -38,7 +39,7 @@ public class WidgetColorArray : global::System.IDisposable, global::System.Colle
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_WidgetColorArray(swigCPtr);
+          PInvoke.delete_WidgetColorArray(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -184,57 +185,59 @@ public class WidgetColorArray : global::System.IDisposable, global::System.Colle
     }
   }
 
-  public WidgetColorArray() : this(UltraAppKitPINVOKE.new_WidgetColorArray__SWIG_0(), true) {
+  public WidgetColorArray() : this(PInvoke.new_WidgetColorArray__SWIG_0(), true) {
   }
 
-  public WidgetColorArray(WidgetColorArray other) : this(UltraAppKitPINVOKE.new_WidgetColorArray__SWIG_1(WidgetColorArray.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public WidgetColorArray(WidgetColorArray other) : this(PInvoke.new_WidgetColorArray__SWIG_1(WidgetColorArray.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.WidgetColorArray_size(swigCPtr);
+    uint ret = PInvoke.WidgetColorArray_size(swigCPtr);
     return ret;
   }
 
   private bool empty() {
-    bool ret = UltraAppKitPINVOKE.WidgetColorArray_empty(swigCPtr);
+    bool ret = PInvoke.WidgetColorArray_empty(swigCPtr);
     return ret;
   }
 
   public void Fill(Vec4 value) {
-    UltraAppKitPINVOKE.WidgetColorArray_Fill(swigCPtr, Vec4.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetColorArray_Fill(swigCPtr, Vec4.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void Swap(WidgetColorArray other) {
-    UltraAppKitPINVOKE.WidgetColorArray_Swap(swigCPtr, WidgetColorArray.getCPtr(other));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetColorArray_Swap(swigCPtr, WidgetColorArray.getCPtr(other));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private Vec4 getitemcopy(int index) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.WidgetColorArray_getitemcopy(swigCPtr, index), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    Vec4 ret = new Vec4(PInvoke.WidgetColorArray_getitemcopy(swigCPtr, index), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Vec4 getitem(int index) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.WidgetColorArray_getitem(swigCPtr, index), false);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    Vec4 ret = new Vec4(PInvoke.WidgetColorArray_getitem(swigCPtr, index), false);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Vec4 val) {
-    UltraAppKitPINVOKE.WidgetColorArray_setitem(swigCPtr, index, Vec4.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetColorArray_setitem(swigCPtr, index, Vec4.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.WidgetColorArray_Reverse__SWIG_0(swigCPtr);
+    PInvoke.WidgetColorArray_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.WidgetColorArray_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetColorArray_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum VkFormat {
   VK_FORMAT_UNDEFINED = 0,
@@ -286,4 +287,6 @@ public enum VkFormat {
   VK_FORMAT_G16_B16R16_2PLANE_422_UNORM_KHR = VK_FORMAT_G16_B16R16_2PLANE_422_UNORM,
   VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM_KHR = VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM,
   VK_FORMAT_MAX_ENUM = 0x7FFFFFFF
+}
+
 }

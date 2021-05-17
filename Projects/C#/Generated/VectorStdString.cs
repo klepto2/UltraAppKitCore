@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class VectorStdString : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<string>
  {
@@ -37,7 +38,7 @@ public class VectorStdString : global::System.IDisposable, global::System.Collec
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_VectorStdString(swigCPtr);
+          PInvoke.delete_VectorStdString(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,131 +218,133 @@ public class VectorStdString : global::System.IDisposable, global::System.Collec
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.VectorStdString_Clear(swigCPtr);
+    PInvoke.VectorStdString_Clear(swigCPtr);
   }
 
   public void Add(string x) {
-    UltraAppKitPINVOKE.VectorStdString_Add(swigCPtr, x);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_Add(swigCPtr, x);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.VectorStdString_size(swigCPtr);
+    uint ret = PInvoke.VectorStdString_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = UltraAppKitPINVOKE.VectorStdString_capacity(swigCPtr);
+    uint ret = PInvoke.VectorStdString_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    UltraAppKitPINVOKE.VectorStdString_reserve(swigCPtr, n);
+    PInvoke.VectorStdString_reserve(swigCPtr, n);
   }
 
-  public VectorStdString() : this(UltraAppKitPINVOKE.new_VectorStdString__SWIG_0(), true) {
+  public VectorStdString() : this(PInvoke.new_VectorStdString__SWIG_0(), true) {
   }
 
-  public VectorStdString(VectorStdString other) : this(UltraAppKitPINVOKE.new_VectorStdString__SWIG_1(VectorStdString.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorStdString(VectorStdString other) : this(PInvoke.new_VectorStdString__SWIG_1(VectorStdString.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public VectorStdString(int capacity) : this(UltraAppKitPINVOKE.new_VectorStdString__SWIG_2(capacity), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorStdString(int capacity) : this(PInvoke.new_VectorStdString__SWIG_2(capacity), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private string getitemcopy(int index) {
-    string ret = UltraAppKitPINVOKE.VectorStdString_getitemcopy(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.VectorStdString_getitemcopy(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private string getitem(int index) {
-    string ret = UltraAppKitPINVOKE.VectorStdString_getitem(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.VectorStdString_getitem(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, string val) {
-    UltraAppKitPINVOKE.VectorStdString_setitem(swigCPtr, index, val);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_setitem(swigCPtr, index, val);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(VectorStdString values) {
-    UltraAppKitPINVOKE.VectorStdString_AddRange(swigCPtr, VectorStdString.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_AddRange(swigCPtr, VectorStdString.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public VectorStdString GetRange(int index, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorStdString_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = PInvoke.VectorStdString_GetRange(swigCPtr, index, count);
     VectorStdString ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorStdString(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, string x) {
-    UltraAppKitPINVOKE.VectorStdString_Insert(swigCPtr, index, x);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_Insert(swigCPtr, index, x);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, VectorStdString values) {
-    UltraAppKitPINVOKE.VectorStdString_InsertRange(swigCPtr, index, VectorStdString.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_InsertRange(swigCPtr, index, VectorStdString.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    UltraAppKitPINVOKE.VectorStdString_RemoveAt(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_RemoveAt(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    UltraAppKitPINVOKE.VectorStdString_RemoveRange(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_RemoveRange(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static VectorStdString Repeat(string value, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorStdString_Repeat(value, count);
+    global::System.IntPtr cPtr = PInvoke.VectorStdString_Repeat(value, count);
     VectorStdString ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorStdString(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.VectorStdString_Reverse__SWIG_0(swigCPtr);
+    PInvoke.VectorStdString_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.VectorStdString_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, VectorStdString values) {
-    UltraAppKitPINVOKE.VectorStdString_SetRange(swigCPtr, index, VectorStdString.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorStdString_SetRange(swigCPtr, index, VectorStdString.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(string value) {
-    bool ret = UltraAppKitPINVOKE.VectorStdString_Contains(swigCPtr, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorStdString_Contains(swigCPtr, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(string value) {
-    int ret = UltraAppKitPINVOKE.VectorStdString_IndexOf(swigCPtr, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorStdString_IndexOf(swigCPtr, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(string value) {
-    int ret = UltraAppKitPINVOKE.VectorStdString_LastIndexOf(swigCPtr, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorStdString_LastIndexOf(swigCPtr, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(string value) {
-    bool ret = UltraAppKitPINVOKE.VectorStdString_Remove(swigCPtr, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorStdString_Remove(swigCPtr, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

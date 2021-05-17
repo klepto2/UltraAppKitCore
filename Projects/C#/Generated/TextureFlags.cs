@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextureFlags {
   TEXTURE_DEFAULT = 0,
@@ -17,4 +18,6 @@ public enum TextureFlags {
   TEXTURE_CLAMP_U = 8,
   TEXTURE_CLAMP_V = 16,
   TEXTURE_CLAMP_W = 32
+}
+
 }

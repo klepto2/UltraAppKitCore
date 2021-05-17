@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum SliderStyle {
   SLIDER_HORIZONTAL = 0,
@@ -16,4 +17,6 @@ public enum SliderStyle {
   SLIDER_SCROLLBAR = 1,
   SLIDER_STEPPER = 2,
   SLIDER_VERTICAL = 4
+}
+
 }

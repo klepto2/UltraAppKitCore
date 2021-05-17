@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class EventQueue : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,7 +37,7 @@ public class EventQueue : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_EventQueue(swigCPtr);
+          PInvoke.delete_EventQueue(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -44,63 +45,65 @@ public class EventQueue : global::System.IDisposable {
   }
 
   public static bool Peek() {
-    bool ret = UltraAppKitPINVOKE.EventQueue_Peek();
+    bool ret = PInvoke.EventQueue_Peek();
     return ret;
   }
 
   public static Event Wait() {
-    Event ret = new Event(UltraAppKitPINVOKE.EventQueue_Wait(), true);
+    Event ret = new Event(PInvoke.EventQueue_Wait(), true);
     return ret;
   }
 
   public static void Flush() {
-    UltraAppKitPINVOKE.EventQueue_Flush();
+    PInvoke.EventQueue_Flush();
   }
 
   public static void Emit(int id, Object source, int data, int x, int y, int width, int height, Object extra, bool queue) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_0(id, Object.getCPtr(source), data, x, y, width, height, Object.getCPtr(extra), queue);
+    PInvoke.EventQueue_Emit__SWIG_0(id, Object.getCPtr(source), data, x, y, width, height, Object.getCPtr(extra), queue);
   }
 
   public static void Emit(int id, Object source, int data, int x, int y, int width, int height, Object extra) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_1(id, Object.getCPtr(source), data, x, y, width, height, Object.getCPtr(extra));
+    PInvoke.EventQueue_Emit__SWIG_1(id, Object.getCPtr(source), data, x, y, width, height, Object.getCPtr(extra));
   }
 
   public static void Emit(int id, Object source, int data, int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_2(id, Object.getCPtr(source), data, x, y, width, height);
+    PInvoke.EventQueue_Emit__SWIG_2(id, Object.getCPtr(source), data, x, y, width, height);
   }
 
   public static void Emit(int id, Object source, int data, int x, int y, int width) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_3(id, Object.getCPtr(source), data, x, y, width);
+    PInvoke.EventQueue_Emit__SWIG_3(id, Object.getCPtr(source), data, x, y, width);
   }
 
   public static void Emit(int id, Object source, int data, int x, int y) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_4(id, Object.getCPtr(source), data, x, y);
+    PInvoke.EventQueue_Emit__SWIG_4(id, Object.getCPtr(source), data, x, y);
   }
 
   public static void Emit(int id, Object source, int data, int x) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_5(id, Object.getCPtr(source), data, x);
+    PInvoke.EventQueue_Emit__SWIG_5(id, Object.getCPtr(source), data, x);
   }
 
   public static void Emit(int id, Object source, int data) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_6(id, Object.getCPtr(source), data);
+    PInvoke.EventQueue_Emit__SWIG_6(id, Object.getCPtr(source), data);
   }
 
   public static void Emit(int id, Object source) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_7(id, Object.getCPtr(source));
+    PInvoke.EventQueue_Emit__SWIG_7(id, Object.getCPtr(source));
   }
 
   public static void Emit(int id) {
-    UltraAppKitPINVOKE.EventQueue_Emit__SWIG_8(id);
+    PInvoke.EventQueue_Emit__SWIG_8(id);
   }
 
   public static int MaxSize {
     get {
-      int ret = UltraAppKitPINVOKE.EventQueue_MaxSize_get();
+      int ret = PInvoke.EventQueue_MaxSize_get();
       return ret;
     } 
   }
 
-  public EventQueue() : this(UltraAppKitPINVOKE.new_EventQueue(), true) {
+  public EventQueue() : this(PInvoke.new_EventQueue(), true) {
   }
+
+}
 
 }

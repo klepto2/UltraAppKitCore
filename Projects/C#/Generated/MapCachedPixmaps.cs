@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MapCachedPixmaps : global::System.IDisposable 
     , global::System.Collections.Generic.IDictionary<float, MapPixmap>
@@ -38,7 +39,7 @@ public class MapCachedPixmaps : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_MapCachedPixmaps(swigCPtr);
+          PInvoke.delete_MapCachedPixmaps(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -225,65 +226,67 @@ public class MapCachedPixmaps : global::System.IDisposable
   }
 
 
-  public MapCachedPixmaps() : this(UltraAppKitPINVOKE.new_MapCachedPixmaps__SWIG_0(), true) {
+  public MapCachedPixmaps() : this(PInvoke.new_MapCachedPixmaps__SWIG_0(), true) {
   }
 
-  public MapCachedPixmaps(MapCachedPixmaps other) : this(UltraAppKitPINVOKE.new_MapCachedPixmaps__SWIG_1(MapCachedPixmaps.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public MapCachedPixmaps(MapCachedPixmaps other) : this(PInvoke.new_MapCachedPixmaps__SWIG_1(MapCachedPixmaps.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.MapCachedPixmaps_size(swigCPtr);
+    uint ret = PInvoke.MapCachedPixmaps_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = UltraAppKitPINVOKE.MapCachedPixmaps_empty(swigCPtr);
+    bool ret = PInvoke.MapCachedPixmaps_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.MapCachedPixmaps_Clear(swigCPtr);
+    PInvoke.MapCachedPixmaps_Clear(swigCPtr);
   }
 
   private MapPixmap getitem(float key) {
-    MapPixmap ret = new MapPixmap(UltraAppKitPINVOKE.MapCachedPixmaps_getitem(swigCPtr, key), false);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    MapPixmap ret = new MapPixmap(PInvoke.MapCachedPixmaps_getitem(swigCPtr, key), false);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(float key, MapPixmap x) {
-    UltraAppKitPINVOKE.MapCachedPixmaps_setitem(swigCPtr, key, MapPixmap.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapCachedPixmaps_setitem(swigCPtr, key, MapPixmap.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool ContainsKey(float key) {
-    bool ret = UltraAppKitPINVOKE.MapCachedPixmaps_ContainsKey(swigCPtr, key);
+    bool ret = PInvoke.MapCachedPixmaps_ContainsKey(swigCPtr, key);
     return ret;
   }
 
   public void Add(float key, MapPixmap value) {
-    UltraAppKitPINVOKE.MapCachedPixmaps_Add(swigCPtr, key, MapPixmap.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapCachedPixmaps_Add(swigCPtr, key, MapPixmap.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(float key) {
-    bool ret = UltraAppKitPINVOKE.MapCachedPixmaps_Remove(swigCPtr, key);
+    bool ret = PInvoke.MapCachedPixmaps_Remove(swigCPtr, key);
     return ret;
   }
 
   private global::System.IntPtr create_iterator_begin() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.MapCachedPixmaps_create_iterator_begin(swigCPtr);
+    global::System.IntPtr ret = PInvoke.MapCachedPixmaps_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   private float get_next_key(global::System.IntPtr swigiterator) {
-    float ret = UltraAppKitPINVOKE.MapCachedPixmaps_get_next_key(swigCPtr, swigiterator);
+    float ret = PInvoke.MapCachedPixmaps_get_next_key(swigCPtr, swigiterator);
     return ret;
   }
 
   private void destroy_iterator(global::System.IntPtr swigiterator) {
-    UltraAppKitPINVOKE.MapCachedPixmaps_destroy_iterator(swigCPtr, swigiterator);
+    PInvoke.MapCachedPixmaps_destroy_iterator(swigCPtr, swigiterator);
   }
+
+}
 
 }

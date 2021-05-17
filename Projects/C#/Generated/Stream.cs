@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Stream : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Stream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Stream_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Stream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Stream_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Stream : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Stream(swigCPtr);
+          PInvoke.delete_Stream(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,191 +38,193 @@ public class Stream : Object {
 
   public WString path {
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.Stream_path_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.Stream_path_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Stream() : this(UltraAppKitPINVOKE.new_Stream(), true) {
+  public Stream() : this(PInvoke.new_Stream(), true) {
   }
 
   public virtual ulong GetPosition() {
-    ulong ret = UltraAppKitPINVOKE.Stream_GetPosition(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Stream_GetPosition(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Seek(ulong pos) {
-    UltraAppKitPINVOKE.Stream_Seek(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_Seek(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual ulong GetSize() {
-    ulong ret = UltraAppKitPINVOKE.Stream_GetSize(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Stream_GetSize(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool EOF() {
-    bool ret = UltraAppKitPINVOKE.Stream_EOF(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Stream_EOF(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Resize(ulong sz) {
-    bool ret = UltraAppKitPINVOKE.Stream_Resize(swigCPtr, sz);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Stream_Resize(swigCPtr, sz);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Close() {
-    UltraAppKitPINVOKE.Stream_Close(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_Close(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual byte ReadByte() {
-    byte ret = UltraAppKitPINVOKE.Stream_ReadByte(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    byte ret = PInvoke.Stream_ReadByte(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int ReadInt() {
-    int ret = UltraAppKitPINVOKE.Stream_ReadInt(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Stream_ReadInt(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ushort ReadShort() {
-    ushort ret = UltraAppKitPINVOKE.Stream_ReadShort(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ushort ret = PInvoke.Stream_ReadShort(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float ReadFloat() {
-    float ret = UltraAppKitPINVOKE.Stream_ReadFloat(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Stream_ReadFloat(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double ReadDouble() {
-    double ret = UltraAppKitPINVOKE.Stream_ReadDouble(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    double ret = PInvoke.Stream_ReadDouble(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual String ReadString(int maxlength) {
-    String ret = new String(UltraAppKitPINVOKE.Stream_ReadString__SWIG_0(swigCPtr, maxlength), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.Stream_ReadString__SWIG_0(swigCPtr, maxlength), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual String ReadString() {
-    String ret = new String(UltraAppKitPINVOKE.Stream_ReadString__SWIG_1(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.Stream_ReadString__SWIG_1(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString ReadWString(int maxlength) {
-    WString ret = new WString(UltraAppKitPINVOKE.Stream_ReadWString__SWIG_0(swigCPtr, maxlength), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.Stream_ReadWString__SWIG_0(swigCPtr, maxlength), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString ReadWString() {
-    WString ret = new WString(UltraAppKitPINVOKE.Stream_ReadWString__SWIG_1(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.Stream_ReadWString__SWIG_1(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual String ReadLine() {
-    String ret = new String(UltraAppKitPINVOKE.Stream_ReadLine(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.Stream_ReadLine(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString ReadWLine() {
-    WString ret = new WString(UltraAppKitPINVOKE.Stream_ReadWLine(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.Stream_ReadWLine(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ulong Read(System.IntPtr b, ulong size) {
-    ulong ret = UltraAppKitPINVOKE.Stream_Read(swigCPtr, b, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Stream_Read(swigCPtr, b, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ulong Write(System.IntPtr b, ulong size) {
-    ulong ret = UltraAppKitPINVOKE.Stream_Write__SWIG_0(swigCPtr, b, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Stream_Write__SWIG_0(swigCPtr, b, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ulong Write(Buffer buffer, ulong offset, ulong size) {
-    ulong ret = UltraAppKitPINVOKE.Stream_Write__SWIG_1(swigCPtr, Buffer.getCPtr(buffer), offset, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Stream_Write__SWIG_1(swigCPtr, Buffer.getCPtr(buffer), offset, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void WriteByte(byte b) {
-    UltraAppKitPINVOKE.Stream_WriteByte(swigCPtr, b);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteByte(swigCPtr, b);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteInt(int n) {
-    UltraAppKitPINVOKE.Stream_WriteInt(swigCPtr, n);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteInt(swigCPtr, n);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteFloat(float f) {
-    UltraAppKitPINVOKE.Stream_WriteFloat(swigCPtr, f);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteFloat(swigCPtr, f);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteDouble(double f) {
-    UltraAppKitPINVOKE.Stream_WriteDouble(swigCPtr, f);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteDouble(swigCPtr, f);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteString(String s, bool nullterminated) {
-    UltraAppKitPINVOKE.Stream_WriteString__SWIG_0(swigCPtr, String.getCPtr(s), nullterminated);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteString__SWIG_0(swigCPtr, String.getCPtr(s), nullterminated);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteString(String s) {
-    UltraAppKitPINVOKE.Stream_WriteString__SWIG_1(swigCPtr, String.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteString__SWIG_1(swigCPtr, String.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteWString(WString s, bool nullterminated) {
-    UltraAppKitPINVOKE.Stream_WriteWString__SWIG_0(swigCPtr, WString.getCPtr(s), nullterminated);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteWString__SWIG_0(swigCPtr, WString.getCPtr(s), nullterminated);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteWString(WString s) {
-    UltraAppKitPINVOKE.Stream_WriteWString__SWIG_1(swigCPtr, WString.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteWString__SWIG_1(swigCPtr, WString.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteLine(String s) {
-    UltraAppKitPINVOKE.Stream_WriteLine(swigCPtr, String.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteLine(swigCPtr, String.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteWLine(WString s) {
-    UltraAppKitPINVOKE.Stream_WriteWLine(swigCPtr, WString.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteWLine(swigCPtr, WString.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WriteShort(ushort n) {
-    UltraAppKitPINVOKE.Stream_WriteShort(swigCPtr, n);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_WriteShort(swigCPtr, n);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Flush() {
-    UltraAppKitPINVOKE.Stream_Flush(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Stream_Flush(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

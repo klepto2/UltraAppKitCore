@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum LabelStyle {
   LABEL_LEFT = 0,
@@ -18,4 +19,6 @@ public enum LabelStyle {
   LABEL_BOTTOM = 64,
   LABEL_MIDDLE = 4,
   LABEL_BORDER = 128
+}
+
 }

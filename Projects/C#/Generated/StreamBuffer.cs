@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class StreamBuffer : Buffer {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal StreamBuffer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.StreamBuffer_SWIGSmartPtrUpcast(cPtr), true) {
+  internal StreamBuffer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.StreamBuffer_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class StreamBuffer : Buffer {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_StreamBuffer(swigCPtr);
+          PInvoke.delete_StreamBuffer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,50 +37,52 @@ public class StreamBuffer : Buffer {
   }
 
   public virtual bool Save(string path) {
-    bool ret = UltraAppKitPINVOKE.StreamBuffer_Save(swigCPtr, path);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.StreamBuffer_Save(swigCPtr, path);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Resize(ulong size, bool padding) {
-    bool ret = UltraAppKitPINVOKE.StreamBuffer_Resize__SWIG_0(swigCPtr, size, padding);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.StreamBuffer_Resize__SWIG_0(swigCPtr, size, padding);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Resize(ulong size) {
-    bool ret = UltraAppKitPINVOKE.StreamBuffer_Resize__SWIG_1(swigCPtr, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.StreamBuffer_Resize__SWIG_1(swigCPtr, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Poke(ulong pos, string buf, ulong size) {
-    UltraAppKitPINVOKE.StreamBuffer_Poke(swigCPtr, pos, buf, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.StreamBuffer_Poke(swigCPtr, pos, buf, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Peek(ulong pos, string buf, ulong size) {
-    UltraAppKitPINVOKE.StreamBuffer_Peek(swigCPtr, pos, buf, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.StreamBuffer_Peek(swigCPtr, pos, buf, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Copy(ulong srcoffset, Buffer dst, ulong dstoffset, ulong size) {
-    UltraAppKitPINVOKE.StreamBuffer_Copy(swigCPtr, srcoffset, Buffer.getCPtr(dst), dstoffset, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.StreamBuffer_Copy(swigCPtr, srcoffset, Buffer.getCPtr(dst), dstoffset, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Clear() {
-    UltraAppKitPINVOKE.StreamBuffer_Clear(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.StreamBuffer_Clear(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual string data() {
-    string ret = UltraAppKitPINVOKE.StreamBuffer_data(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.StreamBuffer_data(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public StreamBuffer() : this(UltraAppKitPINVOKE.new_StreamBuffer(), true) {
+  public StreamBuffer() : this(PInvoke.new_StreamBuffer(), true) {
   }
+
+}
 
 }

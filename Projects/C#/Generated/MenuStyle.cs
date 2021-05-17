@@ -8,7 +8,10 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum MenuStyle {
   MENU_DEFAULT = 0
+}
+
 }

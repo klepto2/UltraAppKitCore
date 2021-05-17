@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum CollisionType {
   COLLISION_NONE,
@@ -20,4 +21,6 @@ public enum CollisionType {
   COLLISION_DEBRIS,
   COLLISION_PROJECTILE,
   COLLISION_LINEOFSIGHT
+}
+
 }

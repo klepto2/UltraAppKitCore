@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class WidgetBlock : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,75 +37,76 @@ public class WidgetBlock : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_WidgetBlock(swigCPtr);
+          PInvoke.delete_WidgetBlock(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public WidgetBlock() : this(UltraAppKitPINVOKE.new_WidgetBlock(), true) {
+  public WidgetBlock() : this(PInvoke.new_WidgetBlock(), true) {
   }
 
   public float iconscale {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_iconscale_set(swigCPtr, value);
+      PInvoke.WidgetBlock_iconscale_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.WidgetBlock_iconscale_get(swigCPtr);
+      float ret = PInvoke.WidgetBlock_iconscale_get(swigCPtr);
       return ret;
     } 
   }
 
   public Icon icon {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_icon_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetBlock_icon_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_icon_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_icon_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public TextureFilter filter {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_filter_set(swigCPtr, (int)value);
+      PInvoke.WidgetBlock_filter_set(swigCPtr, (int)value);
     } 
     get {
-      TextureFilter ret = (TextureFilter)UltraAppKitPINVOKE.WidgetBlock_filter_get(swigCPtr);
+      TextureFilter ret = (TextureFilter)PInvoke.WidgetBlock_filter_get(swigCPtr);
       return ret;
     } 
   }
 
   public float gradient {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_gradient_set(swigCPtr, value);
+      PInvoke.WidgetBlock_gradient_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.WidgetBlock_gradient_get(swigCPtr);
+      float ret = PInvoke.WidgetBlock_gradient_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool hidden {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_hidden_set(swigCPtr, value);
+      PInvoke.WidgetBlock_hidden_set(swigCPtr, value);
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.WidgetBlock_hidden_get(swigCPtr);
+      bool ret = PInvoke.WidgetBlock_hidden_get(swigCPtr);
       return ret;
     } 
   }
 
   public iVec2 position {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_position_set(swigCPtr, iVec2.getCPtr(value));
+      PInvoke.WidgetBlock_position_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_position_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
     } 
@@ -112,10 +114,11 @@ public class WidgetBlock : global::System.IDisposable {
 
   public iVec2 size {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_size_set(swigCPtr, iVec2.getCPtr(value));
+      PInvoke.WidgetBlock_size_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_size_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
     } 
@@ -123,22 +126,23 @@ public class WidgetBlock : global::System.IDisposable {
 
   public string text {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_text_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetBlock_text_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      string ret = UltraAppKitPINVOKE.WidgetBlock_text_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      string ret = PInvoke.WidgetBlock_text_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Vec4 color {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_color_set(swigCPtr, Vec4.getCPtr(value));
+      PInvoke.WidgetBlock_color_set(swigCPtr, Vec4.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_color_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_color_get(swigCPtr);
       Vec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vec4(cPtr, false);
       return ret;
     } 
@@ -146,70 +150,71 @@ public class WidgetBlock : global::System.IDisposable {
 
   public int radius {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_radius_set(swigCPtr, value);
+      PInvoke.WidgetBlock_radius_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.WidgetBlock_radius_get(swigCPtr);
+      int ret = PInvoke.WidgetBlock_radius_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool wireframe {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_wireframe_set(swigCPtr, value);
+      PInvoke.WidgetBlock_wireframe_set(swigCPtr, value);
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.WidgetBlock_wireframe_get(swigCPtr);
+      bool ret = PInvoke.WidgetBlock_wireframe_get(swigCPtr);
       return ret;
     } 
   }
 
   public int textalignment {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_textalignment_set(swigCPtr, value);
+      PInvoke.WidgetBlock_textalignment_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.WidgetBlock_textalignment_get(swigCPtr);
+      int ret = PInvoke.WidgetBlock_textalignment_get(swigCPtr);
       return ret;
     } 
   }
 
   public int fontsize {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_fontsize_set(swigCPtr, value);
+      PInvoke.WidgetBlock_fontsize_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.WidgetBlock_fontsize_get(swigCPtr);
+      int ret = PInvoke.WidgetBlock_fontsize_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool textdefined {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_textdefined_set(swigCPtr, value);
+      PInvoke.WidgetBlock_textdefined_set(swigCPtr, value);
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.WidgetBlock_textdefined_get(swigCPtr);
+      bool ret = PInvoke.WidgetBlock_textdefined_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool clipregiondefined {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_clipregiondefined_set(swigCPtr, value);
+      PInvoke.WidgetBlock_clipregiondefined_set(swigCPtr, value);
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.WidgetBlock_clipregiondefined_get(swigCPtr);
+      bool ret = PInvoke.WidgetBlock_clipregiondefined_get(swigCPtr);
       return ret;
     } 
   }
 
   public iVec4 clipregion {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_clipregion_set(swigCPtr, iVec4.getCPtr(value));
+      PInvoke.WidgetBlock_clipregion_set(swigCPtr, iVec4.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_clipregion_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_clipregion_get(swigCPtr);
       iVec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec4(cPtr, false);
       return ret;
     } 
@@ -217,23 +222,24 @@ public class WidgetBlock : global::System.IDisposable {
 
   public Pixmap pixmap {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.WidgetBlock_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_pixmap_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_pixmap_get(swigCPtr);
       Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public IntFourArray edgepadding {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_edgepadding_set(swigCPtr, IntFourArray.getCPtr(value));
+      PInvoke.WidgetBlock_edgepadding_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_edgepadding_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_edgepadding_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;
     } 
@@ -241,10 +247,11 @@ public class WidgetBlock : global::System.IDisposable {
 
   public IntFourArray alignment {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_alignment_set(swigCPtr, IntFourArray.getCPtr(value));
+      PInvoke.WidgetBlock_alignment_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_alignment_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_alignment_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;
     } 
@@ -252,53 +259,56 @@ public class WidgetBlock : global::System.IDisposable {
 
   public IntFourArray edgedistance {
     set {
-      UltraAppKitPINVOKE.WidgetBlock_edgedistance_set(swigCPtr, IntFourArray.getCPtr(value));
+      PInvoke.WidgetBlock_edgedistance_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.WidgetBlock_edgedistance_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.WidgetBlock_edgedistance_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;
     } 
   }
 
   public virtual void SetClipRegion(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.WidgetBlock_SetClipRegion(swigCPtr, x, y, width, height);
+    PInvoke.WidgetBlock_SetClipRegion(swigCPtr, x, y, width, height);
   }
 
   public virtual void SetPixmap(Pixmap pixmap, Vec4 color) {
-    UltraAppKitPINVOKE.WidgetBlock_SetPixmap__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), Vec4.getCPtr(color));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetBlock_SetPixmap__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), Vec4.getCPtr(color));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetPixmap(Pixmap pixmap) {
-    UltraAppKitPINVOKE.WidgetBlock_SetPixmap__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap));
+    PInvoke.WidgetBlock_SetPixmap__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap));
   }
 
   public virtual void SetText(WString text) {
-    UltraAppKitPINVOKE.WidgetBlock_SetText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetBlock_SetText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetLayout(int left, int right, int top, int bottom) {
-    UltraAppKitPINVOKE.WidgetBlock_SetLayout(swigCPtr, left, right, top, bottom);
+    PInvoke.WidgetBlock_SetLayout(swigCPtr, left, right, top, bottom);
   }
 
   public virtual void SetShape(iVec2 position, iVec2 size) {
-    UltraAppKitPINVOKE.WidgetBlock_SetShape(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetBlock_SetShape(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetIcon(Icon icon, float scale, Vec4 color) {
-    UltraAppKitPINVOKE.WidgetBlock_SetIcon__SWIG_0(swigCPtr, Icon.getCPtr(icon), scale, Vec4.getCPtr(color));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.WidgetBlock_SetIcon__SWIG_0(swigCPtr, Icon.getCPtr(icon), scale, Vec4.getCPtr(color));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetIcon(Icon icon, float scale) {
-    UltraAppKitPINVOKE.WidgetBlock_SetIcon__SWIG_1(swigCPtr, Icon.getCPtr(icon), scale);
+    PInvoke.WidgetBlock_SetIcon__SWIG_1(swigCPtr, Icon.getCPtr(icon), scale);
   }
 
   public virtual void SetIcon(Icon icon) {
-    UltraAppKitPINVOKE.WidgetBlock_SetIcon__SWIG_2(swigCPtr, Icon.getCPtr(icon));
+    PInvoke.WidgetBlock_SetIcon__SWIG_2(swigCPtr, Icon.getCPtr(icon));
   }
+
+}
 
 }

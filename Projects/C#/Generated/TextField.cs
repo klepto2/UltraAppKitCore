@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class TextField : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal TextField(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.TextField_SWIGSmartPtrUpcast(cPtr), true) {
+  internal TextField(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.TextField_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class TextField : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_TextField(swigCPtr);
+          PInvoke.delete_TextField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,114 +36,116 @@ public class TextField : Widget {
     }
   }
 
-  public TextField() : this(UltraAppKitPINVOKE.new_TextField(), true) {
+  public TextField() : this(PInvoke.new_TextField(), true) {
   }
 
   public override WString GetText(bool selected) {
-    WString ret = new WString(UltraAppKitPINVOKE.TextField_GetText__SWIG_0(swigCPtr, selected), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.TextField_GetText__SWIG_0(swigCPtr, selected), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override WString GetText() {
-    WString ret = new WString(UltraAppKitPINVOKE.TextField_GetText__SWIG_1(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.TextField_GetText__SWIG_1(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void SelectText(int position, int length) {
-    UltraAppKitPINVOKE.TextField_SelectText(swigCPtr, position, length);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_SelectText(swigCPtr, position, length);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyUp(KeyCode key) {
-    UltraAppKitPINVOKE.TextField_KeyUp(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_KeyUp(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseDown(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TextField_MouseDown(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_MouseDown(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void DoubleClick(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TextField_DoubleClick(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_DoubleClick(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void TripleClick(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TextField_TripleClick(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_TripleClick(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseUp(MouseButton button, int x, int y) {
-    UltraAppKitPINVOKE.TextField_MouseUp(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_MouseUp(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseMove(int x, int y) {
-    UltraAppKitPINVOKE.TextField_MouseMove(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_MouseMove(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void GainFocus() {
-    UltraAppKitPINVOKE.TextField_GainFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_GainFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void LoseFocus() {
-    UltraAppKitPINVOKE.TextField_LoseFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_LoseFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseEnter(int x, int y) {
-    UltraAppKitPINVOKE.TextField_MouseEnter(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_MouseEnter(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseLeave(int x, int y) {
-    UltraAppKitPINVOKE.TextField_MouseLeave(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_MouseLeave(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyDown(KeyCode key) {
-    UltraAppKitPINVOKE.TextField_KeyDown(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_KeyDown(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyChar(int keychar) {
-    UltraAppKitPINVOKE.TextField_KeyChar(swigCPtr, keychar);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_KeyChar(swigCPtr, keychar);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void CursorBlink() {
-    UltraAppKitPINVOKE.TextField_CursorBlink(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_CursorBlink(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Cut() {
-    UltraAppKitPINVOKE.TextField_Cut(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_Cut(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Copy() {
-    UltraAppKitPINVOKE.TextField_Copy(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_Copy(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Paste() {
-    UltraAppKitPINVOKE.TextField_Paste(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_Paste(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void SetText(WString text) {
-    UltraAppKitPINVOKE.TextField_SetText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_SetText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.TextField_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextField_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

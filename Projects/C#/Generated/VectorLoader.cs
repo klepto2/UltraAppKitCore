@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class VectorLoader : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<Loader>
  {
@@ -37,7 +38,7 @@ public class VectorLoader : global::System.IDisposable, global::System.Collectio
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_VectorLoader(swigCPtr);
+          PInvoke.delete_VectorLoader(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,133 +218,135 @@ public class VectorLoader : global::System.IDisposable, global::System.Collectio
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.VectorLoader_Clear(swigCPtr);
+    PInvoke.VectorLoader_Clear(swigCPtr);
   }
 
   public void Add(Loader x) {
-    UltraAppKitPINVOKE.VectorLoader_Add(swigCPtr, Loader.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_Add(swigCPtr, Loader.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.VectorLoader_size(swigCPtr);
+    uint ret = PInvoke.VectorLoader_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = UltraAppKitPINVOKE.VectorLoader_capacity(swigCPtr);
+    uint ret = PInvoke.VectorLoader_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    UltraAppKitPINVOKE.VectorLoader_reserve(swigCPtr, n);
+    PInvoke.VectorLoader_reserve(swigCPtr, n);
   }
 
-  public VectorLoader() : this(UltraAppKitPINVOKE.new_VectorLoader__SWIG_0(), true) {
+  public VectorLoader() : this(PInvoke.new_VectorLoader__SWIG_0(), true) {
   }
 
-  public VectorLoader(VectorLoader other) : this(UltraAppKitPINVOKE.new_VectorLoader__SWIG_1(VectorLoader.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorLoader(VectorLoader other) : this(PInvoke.new_VectorLoader__SWIG_1(VectorLoader.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public VectorLoader(int capacity) : this(UltraAppKitPINVOKE.new_VectorLoader__SWIG_2(capacity), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorLoader(int capacity) : this(PInvoke.new_VectorLoader__SWIG_2(capacity), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private Loader getitemcopy(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorLoader_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorLoader_getitemcopy(swigCPtr, index);
     Loader ret = (cPtr == global::System.IntPtr.Zero) ? null : new Loader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Loader getitem(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorLoader_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorLoader_getitem(swigCPtr, index);
     Loader ret = (cPtr == global::System.IntPtr.Zero) ? null : new Loader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Loader val) {
-    UltraAppKitPINVOKE.VectorLoader_setitem(swigCPtr, index, Loader.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_setitem(swigCPtr, index, Loader.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(VectorLoader values) {
-    UltraAppKitPINVOKE.VectorLoader_AddRange(swigCPtr, VectorLoader.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_AddRange(swigCPtr, VectorLoader.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public VectorLoader GetRange(int index, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorLoader_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = PInvoke.VectorLoader_GetRange(swigCPtr, index, count);
     VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, Loader x) {
-    UltraAppKitPINVOKE.VectorLoader_Insert(swigCPtr, index, Loader.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_Insert(swigCPtr, index, Loader.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, VectorLoader values) {
-    UltraAppKitPINVOKE.VectorLoader_InsertRange(swigCPtr, index, VectorLoader.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_InsertRange(swigCPtr, index, VectorLoader.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    UltraAppKitPINVOKE.VectorLoader_RemoveAt(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_RemoveAt(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    UltraAppKitPINVOKE.VectorLoader_RemoveRange(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_RemoveRange(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static VectorLoader Repeat(Loader value, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorLoader_Repeat(Loader.getCPtr(value), count);
+    global::System.IntPtr cPtr = PInvoke.VectorLoader_Repeat(Loader.getCPtr(value), count);
     VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.VectorLoader_Reverse__SWIG_0(swigCPtr);
+    PInvoke.VectorLoader_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.VectorLoader_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, VectorLoader values) {
-    UltraAppKitPINVOKE.VectorLoader_SetRange(swigCPtr, index, VectorLoader.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorLoader_SetRange(swigCPtr, index, VectorLoader.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(Loader value) {
-    bool ret = UltraAppKitPINVOKE.VectorLoader_Contains(swigCPtr, Loader.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorLoader_Contains(swigCPtr, Loader.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(Loader value) {
-    int ret = UltraAppKitPINVOKE.VectorLoader_IndexOf(swigCPtr, Loader.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorLoader_IndexOf(swigCPtr, Loader.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(Loader value) {
-    int ret = UltraAppKitPINVOKE.VectorLoader_LastIndexOf(swigCPtr, Loader.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorLoader_LastIndexOf(swigCPtr, Loader.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(Loader value) {
-    bool ret = UltraAppKitPINVOKE.VectorLoader_Remove(swigCPtr, Loader.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorLoader_Remove(swigCPtr, Loader.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

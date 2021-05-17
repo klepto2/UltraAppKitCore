@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Interface : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Interface(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Interface_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Interface(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Interface_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Interface : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Interface(swigCPtr);
+          PInvoke.delete_Interface(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,608 +38,615 @@ public class Interface : Object {
 
   public Widget root {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_root_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_root_get(swigCPtr);
       Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool autoscalemode {
     set {
-      UltraAppKitPINVOKE.Interface_autoscalemode_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_autoscalemode_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Interface_autoscalemode_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Interface_autoscalemode_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public long orderiterator {
     set {
-      UltraAppKitPINVOKE.Interface_orderiterator_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_orderiterator_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      long ret = UltraAppKitPINVOKE.Interface_orderiterator_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      long ret = PInvoke.Interface_orderiterator_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Buffer buffer {
     set {
-      UltraAppKitPINVOKE.Interface_buffer_set(swigCPtr, Buffer.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_buffer_set(swigCPtr, Buffer.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_buffer_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_buffer_get(swigCPtr);
       Buffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Buffer(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Widget base_ {
     set {
-      UltraAppKitPINVOKE.Interface_base__set(swigCPtr, Widget.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_base__set(swigCPtr, Widget.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_base__get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_base__get(swigCPtr);
       Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetWeakPtr hoverwidget {
     set {
-      UltraAppKitPINVOKE.Interface_hoverwidget_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_hoverwidget_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_hoverwidget_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Interface_hoverwidget_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetWeakPtr focusedwidget {
     set {
-      UltraAppKitPINVOKE.Interface_focusedwidget_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_focusedwidget_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_focusedwidget_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Interface_focusedwidget_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WindowWeakPtr window {
     set {
-      UltraAppKitPINVOKE.Interface_window_set(swigCPtr, WindowWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_window_set(swigCPtr, WindowWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_window_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Interface_window_get(swigCPtr);
       WindowWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WindowWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetColorArray colors {
     set {
-      UltraAppKitPINVOKE.Interface_colors_set(swigCPtr, WidgetColorArray.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_colors_set(swigCPtr, WidgetColorArray.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_colors_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Interface_colors_get(swigCPtr);
       WidgetColorArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetColorArray(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool hidestate {
     set {
-      UltraAppKitPINVOKE.Interface_hidestate_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_hidestate_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Interface_hidestate_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Interface_hidestate_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float scale {
     set {
-      UltraAppKitPINVOKE.Interface_scale_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_scale_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Interface_scale_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      float ret = PInvoke.Interface_scale_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public string fontpath {
     set {
-      UltraAppKitPINVOKE.Interface_fontpath_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_fontpath_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      string ret = UltraAppKitPINVOKE.Interface_fontpath_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      string ret = PInvoke.Interface_fontpath_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int lastcursorblinktime {
     set {
-      UltraAppKitPINVOKE.Interface_lastcursorblinktime_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_lastcursorblinktime_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Interface_lastcursorblinktime_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Interface_lastcursorblinktime_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int cursorblinkfrequency {
     set {
-      UltraAppKitPINVOKE.Interface_cursorblinkfrequency_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_cursorblinkfrequency_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Interface_cursorblinkfrequency_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Interface_cursorblinkfrequency_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public ListWidget rootwidgets {
     set {
-      UltraAppKitPINVOKE.Interface_rootwidgets_set(swigCPtr, ListWidget.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_rootwidgets_set(swigCPtr, ListWidget.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_rootwidgets_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Interface_rootwidgets_get(swigCPtr);
       ListWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListWidget(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool enabled {
     set {
-      UltraAppKitPINVOKE.Interface_enabled_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_enabled_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Interface_enabled_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Interface_enabled_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public void LoadIcons() {
-    UltraAppKitPINVOKE.Interface_LoadIcons(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_LoadIcons(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public Icon icon_slider_knob_vertical {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_knob_vertical_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_knob_vertical_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_knob_vertical_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_knob_vertical_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_slider_knob_horizontal {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_knob_horizontal_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_knob_horizontal_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_knob_horizontal_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_knob_horizontal_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_slider_arrow_right {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_arrow_right_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_arrow_right_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_arrow_right_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_arrow_right_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_slider_arrow_left {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_arrow_left_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_arrow_left_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_arrow_left_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_arrow_left_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_slider_arrow_up {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_arrow_up_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_arrow_up_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_arrow_up_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_arrow_up_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_slider_arrow_down {
     set {
-      UltraAppKitPINVOKE.Interface_icon_slider_arrow_down_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_slider_arrow_down_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_slider_arrow_down_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_slider_arrow_down_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_treeviewnode_open {
     set {
-      UltraAppKitPINVOKE.Interface_icon_treeviewnode_open_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_treeviewnode_open_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_treeviewnode_open_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_treeviewnode_open_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_treeviewnode_closed {
     set {
-      UltraAppKitPINVOKE.Interface_icon_treeviewnode_closed_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_treeviewnode_closed_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_treeviewnode_closed_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_treeviewnode_closed_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_combobox_arrow {
     set {
-      UltraAppKitPINVOKE.Interface_icon_combobox_arrow_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_combobox_arrow_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_combobox_arrow_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_combobox_arrow_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Icon icon_button_checkmark {
     set {
-      UltraAppKitPINVOKE.Interface_icon_button_checkmark_set(swigCPtr, Icon.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Interface_icon_button_checkmark_set(swigCPtr, Icon.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_icon_button_checkmark_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Interface_icon_button_checkmark_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Interface() : this(UltraAppKitPINVOKE.new_Interface(), true) {
+  public Interface() : this(PInvoke.new_Interface(), true) {
   }
 
   public virtual bool LoadColorScheme(WString path, LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Interface_LoadColorScheme__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_LoadColorScheme__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool LoadColorScheme(WString path) {
-    bool ret = UltraAppKitPINVOKE.Interface_LoadColorScheme__SWIG_1(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_LoadColorScheme__SWIG_1(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Lock() {
-    UltraAppKitPINVOKE.Interface_Lock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Lock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Unlock() {
-    UltraAppKitPINVOKE.Interface_Unlock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Unlock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void AutoScale(bool mode) {
-    UltraAppKitPINVOKE.Interface_AutoScale(swigCPtr, mode);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_AutoScale(swigCPtr, mode);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Enable() {
-    UltraAppKitPINVOKE.Interface_Enable(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Enable(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Disable() {
-    UltraAppKitPINVOKE.Interface_Disable(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Disable(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual iVec3 GetMousePosition() {
-    iVec3 ret = new iVec3(UltraAppKitPINVOKE.Interface_GetMousePosition(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec3 ret = new iVec3(PInvoke.Interface_GetMousePosition(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Sort() {
-    UltraAppKitPINVOKE.Interface_Sort(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Sort(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Draw() {
-    UltraAppKitPINVOKE.Interface_Draw(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Draw(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Clear() {
-    UltraAppKitPINVOKE.Interface_Clear(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Clear(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetFocus(Widget widget) {
-    UltraAppKitPINVOKE.Interface_SetFocus(swigCPtr, Widget.getCPtr(widget));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_SetFocus(swigCPtr, Widget.getCPtr(widget));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Widget GetFocus() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_GetFocus(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Interface_GetFocus(swigCPtr);
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetLineHeight(Font font, int size, int weight) {
-    int ret = UltraAppKitPINVOKE.Interface_GetLineHeight(swigCPtr, Font.getCPtr(font), size, weight);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Interface_GetLineHeight(swigCPtr, Font.getCPtr(font), size, weight);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetFontHeight(Font font, int size, int weight) {
-    int ret = UltraAppKitPINVOKE.Interface_GetFontHeight(swigCPtr, Font.getCPtr(font), size, weight);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Interface_GetFontHeight(swigCPtr, Font.getCPtr(font), size, weight);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ResetCursorBlink() {
-    UltraAppKitPINVOKE.Interface_ResetCursorBlink(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ResetCursorBlink(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetGradientMode(bool mode) {
-    UltraAppKitPINVOKE.Interface_SetGradientMode(swigCPtr, mode);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_SetGradientMode(swigCPtr, mode);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetScale(float scale) {
-    UltraAppKitPINVOKE.Interface_SetScale(swigCPtr, scale);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_SetScale(swigCPtr, scale);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual float GetScale() {
-    float ret = UltraAppKitPINVOKE.Interface_GetScale(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Interface_GetScale(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Redraw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.Interface_Redraw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Redraw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Hide() {
-    UltraAppKitPINVOKE.Interface_Hide(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Hide(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Show() {
-    UltraAppKitPINVOKE.Interface_Show(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_Show(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool Hidden() {
-    bool ret = UltraAppKitPINVOKE.Interface_Hidden(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_Hidden(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool MouseDown(MouseButton button) {
-    bool ret = UltraAppKitPINVOKE.Interface_MouseDown(swigCPtr, (int)button);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_MouseDown(swigCPtr, (int)button);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(Stream stream, SaveFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_Save__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(Stream stream) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_1(swigCPtr, Stream.getCPtr(stream));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_Save__SWIG_1(swigCPtr, Stream.getCPtr(stream));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(WString path, SaveFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_2(swigCPtr, WString.getCPtr(path), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_Save__SWIG_2(swigCPtr, WString.getCPtr(path), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(WString path) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_3(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Interface_Save__SWIG_3(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool Save(SWIGTYPE_p_nlohmann__json j3, SaveFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_4(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool Save(JSONWrapper j3, SaveFlags flags) {
+    bool ret = PInvoke.Interface_Save__SWIG_4(swigCPtr, JSONWrapper.getCPtr(j3), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool Save(SWIGTYPE_p_nlohmann__json j3) {
-    bool ret = UltraAppKitPINVOKE.Interface_Save__SWIG_5(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool Save(JSONWrapper j3) {
+    bool ret = PInvoke.Interface_Save__SWIG_5(swigCPtr, JSONWrapper.getCPtr(j3));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetPointer(MousePointer pointer) {
-    UltraAppKitPINVOKE.Interface_SetPointer(swigCPtr, (int)pointer);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_SetPointer(swigCPtr, (int)pointer);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void UpdateLayout() {
-    UltraAppKitPINVOKE.Interface_UpdateLayout(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_UpdateLayout(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetClipRegion(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.Interface_SetClipRegion(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_SetClipRegion(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src, int data, int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_0(swigCPtr, eventid, Object.getCPtr(src), data, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_0(swigCPtr, eventid, Object.getCPtr(src), data, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src, int data, int x, int y, int width) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_1(swigCPtr, eventid, Object.getCPtr(src), data, x, y, width);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_1(swigCPtr, eventid, Object.getCPtr(src), data, x, y, width);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src, int data, int x, int y) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_2(swigCPtr, eventid, Object.getCPtr(src), data, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_2(swigCPtr, eventid, Object.getCPtr(src), data, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src, int data, int x) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_3(swigCPtr, eventid, Object.getCPtr(src), data, x);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_3(swigCPtr, eventid, Object.getCPtr(src), data, x);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src, int data) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_4(swigCPtr, eventid, Object.getCPtr(src), data);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_4(swigCPtr, eventid, Object.getCPtr(src), data);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid, Object src) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_5(swigCPtr, eventid, Object.getCPtr(src));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_5(swigCPtr, eventid, Object.getCPtr(src));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(int eventid) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_6(swigCPtr, eventid);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_6(swigCPtr, eventid);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ProcessEvent(Event event_) {
-    UltraAppKitPINVOKE.Interface_ProcessEvent__SWIG_7(swigCPtr, Event.getCPtr(event_));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_ProcessEvent__SWIG_7(swigCPtr, Event.getCPtr(event_));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int GetTextWidth(Font font, int size, WString text, int weight) {
-    int ret = UltraAppKitPINVOKE.Interface_GetTextWidth(swigCPtr, Font.getCPtr(font), size, WString.getCPtr(text), weight);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Interface_GetTextWidth(swigCPtr, Font.getCPtr(font), size, WString.getCPtr(text), weight);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual iVec2 TextSize(Font font, int size, int weight, WString text, int width, TextAlignment flags) {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.Interface_TextSize(swigCPtr, Font.getCPtr(font), size, weight, WString.getCPtr(text), width, (int)flags), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2(PInvoke.Interface_TextSize(swigCPtr, Font.getCPtr(font), size, weight, WString.getCPtr(text), width, (int)flags), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void UpdateCursorBlink() {
-    UltraAppKitPINVOKE.Interface_UpdateCursorBlink(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Interface_UpdateCursorBlink(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Widget GetHoveredWidget() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_GetHoveredWidget(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Interface_GetHoveredWidget(swigCPtr);
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Window GetWindow() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_GetWindow(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Interface_GetWindow(swigCPtr);
     Window ret = (cPtr == global::System.IntPtr.Zero) ? null : new Window(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget GetBase() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_GetBase(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Interface_GetBase(swigCPtr);
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget GetWidgetAtPoint(int x, int y) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Interface_GetWidgetAtPoint(swigCPtr, x, y);
+    global::System.IntPtr cPtr = PInvoke.Interface_GetWidgetAtPoint(swigCPtr, x, y);
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool Reload(SWIGTYPE_p_nlohmann__json j3) {
-    bool ret = UltraAppKitPINVOKE.Interface_Reload(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool Reload(JSONWrapper j3) {
+    bool ret = PInvoke.Interface_Reload(swigCPtr, JSONWrapper.getCPtr(j3));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

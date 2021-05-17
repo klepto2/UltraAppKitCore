@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Vec4 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,204 +37,252 @@ public class Vec4 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_Vec4(swigCPtr);
+          PInvoke.delete_Vec4(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+     public static Vec4 operator+(Vec4 arg1, Vec4 arg2) {
+        return arg1.Plus(arg2);
+    }
+
+    public static Vec4 operator-(Vec4 arg1, Vec4 arg2) {
+        return arg1.Minus(arg2);
+    }
+
+    public static Vec4 operator-(Vec4 arg1) {
+        return arg1.Minus();
+    }
+
+    public static Vec4 operator/(Vec4 arg1, Vec4 arg2) {
+        return arg1.Divide(arg2);
+    }
+
+    public static Vec4 operator*(Vec4 arg1, Vec4 arg2) {
+        return arg1.Multiply(arg2);
+    }
+
+    public static bool operator==(Vec4 arg1, Vec4 arg2) {
+         if ((object)arg1 == null)
+            return (object)arg2 == null;
+
+        if ((object)arg2 == null)
+            return (object)arg1 == null;
+
+        return arg1.EqualEqual(arg2);
+    }
+
+    public static bool operator!=(Vec4 arg1, Vec4 arg2) {
+        return !(arg1 == arg2);
+    }
+
+    public static bool operator<(Vec4 arg1, Vec4 arg2) {
+        return arg1.LessThan(arg2);
+    }
+
+    public static bool operator>(Vec4 arg1, Vec4 arg2) {
+        return !arg1.LessThan(arg2) && !arg1.EqualEqual(arg2);
+    }
+
+    public override string ToString() {
+        return _ToWString();
+    }
+
   public float x {
     set {
-      UltraAppKitPINVOKE.Vec4_x_set(swigCPtr, value);
+      PInvoke.Vec4_x_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_x_get(swigCPtr);
+      float ret = PInvoke.Vec4_x_get(swigCPtr);
       return ret;
     } 
   }
 
   public float r {
     set {
-      UltraAppKitPINVOKE.Vec4_r_set(swigCPtr, value);
+      PInvoke.Vec4_r_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_r_get(swigCPtr);
+      float ret = PInvoke.Vec4_r_get(swigCPtr);
       return ret;
     } 
   }
 
   public float y {
     set {
-      UltraAppKitPINVOKE.Vec4_y_set(swigCPtr, value);
+      PInvoke.Vec4_y_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_y_get(swigCPtr);
+      float ret = PInvoke.Vec4_y_get(swigCPtr);
       return ret;
     } 
   }
 
   public float g {
     set {
-      UltraAppKitPINVOKE.Vec4_g_set(swigCPtr, value);
+      PInvoke.Vec4_g_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_g_get(swigCPtr);
+      float ret = PInvoke.Vec4_g_get(swigCPtr);
       return ret;
     } 
   }
 
   public float z {
     set {
-      UltraAppKitPINVOKE.Vec4_z_set(swigCPtr, value);
+      PInvoke.Vec4_z_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_z_get(swigCPtr);
+      float ret = PInvoke.Vec4_z_get(swigCPtr);
       return ret;
     } 
   }
 
   public float b {
     set {
-      UltraAppKitPINVOKE.Vec4_b_set(swigCPtr, value);
+      PInvoke.Vec4_b_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_b_get(swigCPtr);
+      float ret = PInvoke.Vec4_b_get(swigCPtr);
       return ret;
     } 
   }
 
   public float width {
     set {
-      UltraAppKitPINVOKE.Vec4_width_set(swigCPtr, value);
+      PInvoke.Vec4_width_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_width_get(swigCPtr);
+      float ret = PInvoke.Vec4_width_get(swigCPtr);
       return ret;
     } 
   }
 
   public float w {
     set {
-      UltraAppKitPINVOKE.Vec4_w_set(swigCPtr, value);
+      PInvoke.Vec4_w_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_w_get(swigCPtr);
+      float ret = PInvoke.Vec4_w_get(swigCPtr);
       return ret;
     } 
   }
 
   public float a {
     set {
-      UltraAppKitPINVOKE.Vec4_a_set(swigCPtr, value);
+      PInvoke.Vec4_a_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_a_get(swigCPtr);
+      float ret = PInvoke.Vec4_a_get(swigCPtr);
       return ret;
     } 
   }
 
   public float height {
     set {
-      UltraAppKitPINVOKE.Vec4_height_set(swigCPtr, value);
+      PInvoke.Vec4_height_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec4_height_get(swigCPtr);
+      float ret = PInvoke.Vec4_height_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Vec4() : this(UltraAppKitPINVOKE.new_Vec4__SWIG_0(), true) {
+  public Vec4() : this(PInvoke.new_Vec4__SWIG_0(), true) {
   }
 
-  public Vec4(float x) : this(UltraAppKitPINVOKE.new_Vec4__SWIG_1(x), true) {
+  public Vec4(float x) : this(PInvoke.new_Vec4__SWIG_1(x), true) {
   }
 
-  public Vec4(float x, float y) : this(UltraAppKitPINVOKE.new_Vec4__SWIG_2(x, y), true) {
+  public Vec4(float x, float y) : this(PInvoke.new_Vec4__SWIG_2(x, y), true) {
   }
 
-  public Vec4(float x, float y, float z) : this(UltraAppKitPINVOKE.new_Vec4__SWIG_3(x, y, z), true) {
+  public Vec4(float x, float y, float z) : this(PInvoke.new_Vec4__SWIG_3(x, y, z), true) {
   }
 
-  public Vec4(float x, float y, float z, float w) : this(UltraAppKitPINVOKE.new_Vec4__SWIG_4(x, y, z, w), true) {
+  public Vec4(float x, float y, float z, float w) : this(PInvoke.new_Vec4__SWIG_4(x, y, z, w), true) {
   }
 
   public float DistanceToPoint(Vec4 v) {
-    float ret = UltraAppKitPINVOKE.Vec4_DistanceToPoint(swigCPtr, Vec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Vec4_DistanceToPoint(swigCPtr, Vec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec4 Minus() {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.Vec4_Minus__SWIG_0(swigCPtr), true);
+  private Vec4 Minus() {
+    Vec4 ret = new Vec4(PInvoke.Vec4_Minus__SWIG_0(swigCPtr), true);
     return ret;
   }
 
-  public Vec4 Plus(Vec4 v) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.Vec4_Plus(swigCPtr, Vec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec4 Plus(Vec4 v) {
+    Vec4 ret = new Vec4(PInvoke.Vec4_Plus(swigCPtr, Vec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec4 Minus(Vec4 v) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.Vec4_Minus__SWIG_1(swigCPtr, Vec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec4 Minus(Vec4 v) {
+    Vec4 ret = new Vec4(PInvoke.Vec4_Minus__SWIG_1(swigCPtr, Vec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec4 Multiply(Vec4 v) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.Vec4_Multiply(swigCPtr, Vec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec4 Multiply(Vec4 v) {
+    Vec4 ret = new Vec4(PInvoke.Vec4_Multiply(swigCPtr, Vec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec4 Divide(Vec4 v) {
-    Vec4 ret = new Vec4(UltraAppKitPINVOKE.Vec4_Divide(swigCPtr, Vec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec4 Divide(Vec4 v) {
+    Vec4 ret = new Vec4(PInvoke.Vec4_Divide(swigCPtr, Vec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool NotEqual(Vec4 v) {
-    bool ret = UltraAppKitPINVOKE.Vec4_NotEqual(swigCPtr, Vec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool NotEqual(Vec4 v) {
+    bool ret = PInvoke.Vec4_NotEqual(swigCPtr, Vec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool EqualEqual(Vec4 v) {
-    bool ret = UltraAppKitPINVOKE.Vec4_EqualEqual(swigCPtr, Vec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool EqualEqual(Vec4 v) {
+    bool ret = PInvoke.Vec4_EqualEqual(swigCPtr, Vec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_float IndexInto(uint n) {
-    SWIGTYPE_p_float ret = new SWIGTYPE_p_float(UltraAppKitPINVOKE.Vec4_IndexInto(swigCPtr, n), false);
+  private bool LessThan(Vec4 v) {
+    bool ret = PInvoke.Vec4_LessThan(swigCPtr, Vec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool LessThan(Vec4 v) {
-    bool ret = UltraAppKitPINVOKE.Vec4_LessThan(swigCPtr, Vec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void PlusEqual(Vec4 f) {
+    PInvoke.Vec4_PlusEqual(swigCPtr, Vec4.getCPtr(f));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private void MinusEqual(Vec4 f) {
+    PInvoke.Vec4_MinusEqual(swigCPtr, Vec4.getCPtr(f));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private void MultiplyEqual(Vec4 f) {
+    PInvoke.Vec4_MultiplyEqual(swigCPtr, Vec4.getCPtr(f));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private void DivideEqual(Vec4 f) {
+    PInvoke.Vec4_DivideEqual(swigCPtr, Vec4.getCPtr(f));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private string _ToWString() {
+    string ret = PInvoke.Vec4__ToWString(swigCPtr);
     return ret;
   }
 
-  public void PlusEqual(Vec4 f) {
-    UltraAppKitPINVOKE.Vec4_PlusEqual(swigCPtr, Vec4.getCPtr(f));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void MinusEqual(Vec4 f) {
-    UltraAppKitPINVOKE.Vec4_MinusEqual(swigCPtr, Vec4.getCPtr(f));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void MultiplyEqual(Vec4 f) {
-    UltraAppKitPINVOKE.Vec4_MultiplyEqual(swigCPtr, Vec4.getCPtr(f));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void DivideEqual(Vec4 f) {
-    UltraAppKitPINVOKE.Vec4_DivideEqual(swigCPtr, Vec4.getCPtr(f));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
+}
 
 }

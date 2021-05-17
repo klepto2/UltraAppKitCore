@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum WidgetSensitivity {
   WIDGET_OK = 1,
   WIDGET_CANCEL = 2
+}
+
 }

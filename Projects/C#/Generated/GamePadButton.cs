@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum GamePadButton {
   GAMEPADBUTTON_DPADUP = 512,
@@ -26,4 +27,6 @@ public enum GamePadButton {
   GAMEPADBUTTON_Y,
   GAMEPADBUTTON_RTRIGGER,
   GAMEPADBUTTON_LTRIGGER
+}
+
 }

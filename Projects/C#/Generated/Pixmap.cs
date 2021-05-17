@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Pixmap : Asset {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Pixmap(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Pixmap_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Pixmap(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Pixmap_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Pixmap : Asset {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Pixmap(swigCPtr);
+          PInvoke.delete_Pixmap(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,211 +36,213 @@ public class Pixmap : Asset {
     }
   }
 
-  public Pixmap() : this(UltraAppKitPINVOKE.new_Pixmap(), true) {
+  public Pixmap() : this(PInvoke.new_Pixmap(), true) {
   }
 
   public TextureFormat format {
     get {
-      TextureFormat ret = (TextureFormat)UltraAppKitPINVOKE.Pixmap_format_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      TextureFormat ret = (TextureFormat)PInvoke.Pixmap_format_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 size {
     get {
-      iVec2 ret = new iVec2(UltraAppKitPINVOKE.Pixmap_size_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      iVec2 ret = new iVec2(PInvoke.Pixmap_size_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 blocks {
     get {
-      iVec2 ret = new iVec2(UltraAppKitPINVOKE.Pixmap_blocks_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      iVec2 ret = new iVec2(PInvoke.Pixmap_blocks_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Buffer pixels {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_pixels_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Pixmap_pixels_get(swigCPtr);
       Buffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Buffer(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int blocksize {
     get {
-      int ret = UltraAppKitPINVOKE.Pixmap_blocksize_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Pixmap_blocksize_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public override bool Reload(LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Pixmap_Reload__SWIG_0(swigCPtr, (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Pixmap_Reload__SWIG_0(swigCPtr, (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload() {
-    bool ret = UltraAppKitPINVOKE.Pixmap_Reload__SWIG_1(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Pixmap_Reload__SWIG_1(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual new void Reset() {
-    UltraAppKitPINVOKE.Pixmap_Reset(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Pixmap_Reset(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public virtual bool ApplyFilter(WString name, SWIGTYPE_p_nlohmann__json params_) {
-    bool ret = UltraAppKitPINVOKE.Pixmap_ApplyFilter__SWIG_0(swigCPtr, WString.getCPtr(name), SWIGTYPE_p_nlohmann__json.getCPtr(params_));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool ApplyFilter(WString name, JSONWrapper params_) {
+    bool ret = PInvoke.Pixmap_ApplyFilter__SWIG_0(swigCPtr, WString.getCPtr(name), JSONWrapper.getCPtr(params_));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool ApplyFilter(WString name) {
-    bool ret = UltraAppKitPINVOKE.Pixmap_ApplyFilter__SWIG_1(swigCPtr, WString.getCPtr(name));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Pixmap_ApplyFilter__SWIG_1(swigCPtr, WString.getCPtr(name));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Swizzle(int r, int g, int b, int a) {
-    UltraAppKitPINVOKE.Pixmap_Swizzle(swigCPtr, r, g, b, a);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Pixmap_Swizzle(swigCPtr, r, g, b, a);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x, int y, int w, int h, Mutex readmutex, Mutex writemutex) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_0(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h, Mutex.getCPtr(readmutex), Mutex.getCPtr(writemutex));
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_0(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h, Mutex.getCPtr(readmutex), Mutex.getCPtr(writemutex));
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x, int y, int w, int h, Mutex readmutex) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_1(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h, Mutex.getCPtr(readmutex));
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_1(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h, Mutex.getCPtr(readmutex));
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x, int y, int w, int h) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_2(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_2(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w, h);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x, int y, int w) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_3(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_3(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y, w);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x, int y) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_4(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_4(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x, y);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap, int x) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_5(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_5(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap), x);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format, Pixmap pixmap) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_6(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap));
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_6(swigCPtr, scale, (int)format, Pixmap.getCPtr(pixmap));
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale, TextureFormat format) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_7(swigCPtr, scale, (int)format);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_7(swigCPtr, scale, (int)format);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap(float scale) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_8(swigCPtr, scale);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_8(swigCPtr, scale);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap MakeNormalMap() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_MakeNormalMap__SWIG_9(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_MakeNormalMap__SWIG_9(swigCPtr);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap Resize(int width, int height) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_Resize(swigCPtr, width, height);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_Resize(swigCPtr, width, height);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override Asset Copy() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_Copy(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_Copy(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap Convert(TextureFormat format) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Pixmap_Convert(swigCPtr, (int)format);
+    global::System.IntPtr cPtr = PInvoke.Pixmap_Convert(swigCPtr, (int)format);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Save(WString filename, SaveFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Pixmap_Save__SWIG_0(swigCPtr, WString.getCPtr(filename), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Pixmap_Save__SWIG_0(swigCPtr, WString.getCPtr(filename), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Save(WString filename) {
-    bool ret = UltraAppKitPINVOKE.Pixmap_Save__SWIG_1(swigCPtr, WString.getCPtr(filename));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Pixmap_Save__SWIG_1(swigCPtr, WString.getCPtr(filename));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void CopyRect(int x, int y, int width, int height, Pixmap dst, int dx, int dy) {
-    UltraAppKitPINVOKE.Pixmap_CopyRect(swigCPtr, x, y, width, height, Pixmap.getCPtr(dst), dx, dy);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Pixmap_CopyRect(swigCPtr, x, y, width, height, Pixmap.getCPtr(dst), dx, dy);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int ReadPixel(int x, int y) {
-    int ret = UltraAppKitPINVOKE.Pixmap_ReadPixel(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Pixmap_ReadPixel(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void WritePixel(int x, int y, int color) {
-    UltraAppKitPINVOKE.Pixmap_WritePixel(swigCPtr, x, y, color);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Pixmap_WritePixel(swigCPtr, x, y, color);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Fill(int rgba) {
-    UltraAppKitPINVOKE.Pixmap_Fill(swigCPtr, rgba);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Pixmap_Fill(swigCPtr, rgba);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static ulong GetDataSize(ulong width, ulong height, ulong depth, ulong format) {
-    ulong ret = UltraAppKitPINVOKE.Pixmap_GetDataSize(width, height, depth, format);
+    ulong ret = PInvoke.Pixmap_GetDataSize(width, height, depth, format);
     return ret;
   }
+
+}
 
 }

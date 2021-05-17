@@ -1,4 +1,3 @@
-%template(ListEventListener) std::list<UltraEngine::EventListener>;
 %template(ListEvent) std::list<UltraEngine::Event>;
 %template(ListPackage) std::list<weak_ptr<UltraEngine::Package>>;
 %template(ListPlugin) std::list<weak_ptr<UltraEngine::Plugin>>;

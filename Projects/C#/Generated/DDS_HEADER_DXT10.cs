@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class DDS_HEADER_DXT10 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,7 +37,7 @@ public class DDS_HEADER_DXT10 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_DDS_HEADER_DXT10(swigCPtr);
+          PInvoke.delete_DDS_HEADER_DXT10(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,55 +46,57 @@ public class DDS_HEADER_DXT10 : global::System.IDisposable {
 
   public DXGI_FORMAT dxgiFormat {
     set {
-      UltraAppKitPINVOKE.DDS_HEADER_DXT10_dxgiFormat_set(swigCPtr, (int)value);
+      PInvoke.DDS_HEADER_DXT10_dxgiFormat_set(swigCPtr, (int)value);
     } 
     get {
-      DXGI_FORMAT ret = (DXGI_FORMAT)UltraAppKitPINVOKE.DDS_HEADER_DXT10_dxgiFormat_get(swigCPtr);
+      DXGI_FORMAT ret = (DXGI_FORMAT)PInvoke.DDS_HEADER_DXT10_dxgiFormat_get(swigCPtr);
       return ret;
     } 
   }
 
   public D3D10_RESOURCE_DIMENSION resourceDimension {
     set {
-      UltraAppKitPINVOKE.DDS_HEADER_DXT10_resourceDimension_set(swigCPtr, (int)value);
+      PInvoke.DDS_HEADER_DXT10_resourceDimension_set(swigCPtr, (int)value);
     } 
     get {
-      D3D10_RESOURCE_DIMENSION ret = (D3D10_RESOURCE_DIMENSION)UltraAppKitPINVOKE.DDS_HEADER_DXT10_resourceDimension_get(swigCPtr);
+      D3D10_RESOURCE_DIMENSION ret = (D3D10_RESOURCE_DIMENSION)PInvoke.DDS_HEADER_DXT10_resourceDimension_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint miscFlag {
     set {
-      UltraAppKitPINVOKE.DDS_HEADER_DXT10_miscFlag_set(swigCPtr, value);
+      PInvoke.DDS_HEADER_DXT10_miscFlag_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_HEADER_DXT10_miscFlag_get(swigCPtr);
+      uint ret = PInvoke.DDS_HEADER_DXT10_miscFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint arraySize {
     set {
-      UltraAppKitPINVOKE.DDS_HEADER_DXT10_arraySize_set(swigCPtr, value);
+      PInvoke.DDS_HEADER_DXT10_arraySize_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_HEADER_DXT10_arraySize_get(swigCPtr);
+      uint ret = PInvoke.DDS_HEADER_DXT10_arraySize_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint miscFlags2 {
     set {
-      UltraAppKitPINVOKE.DDS_HEADER_DXT10_miscFlags2_set(swigCPtr, value);
+      PInvoke.DDS_HEADER_DXT10_miscFlags2_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_HEADER_DXT10_miscFlags2_get(swigCPtr);
+      uint ret = PInvoke.DDS_HEADER_DXT10_miscFlags2_get(swigCPtr);
       return ret;
     } 
   }
 
-  public DDS_HEADER_DXT10() : this(UltraAppKitPINVOKE.new_DDS_HEADER_DXT10(), true) {
+  public DDS_HEADER_DXT10() : this(PInvoke.new_DDS_HEADER_DXT10(), true) {
   }
+
+}
 
 }

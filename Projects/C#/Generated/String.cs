@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class String : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal String(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.String_SWIGSmartPtrUpcast(cPtr), true) {
+  internal String(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.String_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class String : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_String(swigCPtr);
+          PInvoke.delete_String(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,146 +36,163 @@ public class String : Object {
     }
   }
 
-  public String() : this(UltraAppKitPINVOKE.new_String__SWIG_0(), true) {
+    
+    public override string ToString()
+    {
+        return ToCString();
+    }
+
+    public static implicit operator string(String d) => d.ToString();
+    public static implicit operator String(string b) => new String(b);
+
+  public String() : this(PInvoke.new_String__SWIG_0(), true) {
   }
 
-  public String(string c) : this(UltraAppKitPINVOKE.new_String__SWIG_1(c), true) {
+  public String(string c) : this(PInvoke.new_String__SWIG_1(c), true) {
   }
 
-  public String(char i) : this(UltraAppKitPINVOKE.new_String__SWIG_3(i), true) {
+  public String(char i) : this(PInvoke.new_String__SWIG_3(i), true) {
   }
 
-  public String(byte i) : this(UltraAppKitPINVOKE.new_String__SWIG_4(i), true) {
+  public String(byte i) : this(PInvoke.new_String__SWIG_4(i), true) {
   }
 
-  public String(short i) : this(UltraAppKitPINVOKE.new_String__SWIG_5(i), true) {
+  public String(short i) : this(PInvoke.new_String__SWIG_5(i), true) {
   }
 
-  public String(ushort i) : this(UltraAppKitPINVOKE.new_String__SWIG_6(i), true) {
+  public String(ushort i) : this(PInvoke.new_String__SWIG_6(i), true) {
   }
 
-  public String(int i) : this(UltraAppKitPINVOKE.new_String__SWIG_7(i), true) {
+  public String(int i) : this(PInvoke.new_String__SWIG_7(i), true) {
   }
 
-  public String(uint i) : this(UltraAppKitPINVOKE.new_String__SWIG_8(i), true) {
+  public String(uint i) : this(PInvoke.new_String__SWIG_8(i), true) {
   }
 
-  public String(long i) : this(UltraAppKitPINVOKE.new_String__SWIG_9(i), true) {
+  public String(long i) : this(PInvoke.new_String__SWIG_9(i), true) {
   }
 
-  public String(ulong i) : this(UltraAppKitPINVOKE.new_String__SWIG_10(i), true) {
+  public String(ulong i) : this(PInvoke.new_String__SWIG_10(i), true) {
   }
 
-  public String(double f) : this(UltraAppKitPINVOKE.new_String__SWIG_11(f), true) {
+  public String(double f) : this(PInvoke.new_String__SWIG_11(f), true) {
   }
 
-  public String(float f) : this(UltraAppKitPINVOKE.new_String__SWIG_12(f), true) {
+  public String(float f) : this(PInvoke.new_String__SWIG_12(f), true) {
   }
 
-  public void PlusEqual(string s) {
-    UltraAppKitPINVOKE.String_PlusEqual(swigCPtr, s);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void PlusEqual(string s) {
+    PInvoke.String_PlusEqual(swigCPtr, s);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public void Equal(string s) {
-    UltraAppKitPINVOKE.String_Equal(swigCPtr, s);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void Equal(string s) {
+    PInvoke.String_Equal(swigCPtr, s);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public String Plus(String s) {
-    String ret = new String(UltraAppKitPINVOKE.String_Plus__SWIG_0(swigCPtr, String.getCPtr(s)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private String Plus(String s) {
+    String ret = new String(PInvoke.String_Plus__SWIG_0(swigCPtr, String.getCPtr(s)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public String Plus(string s) {
-    String ret = new String(UltraAppKitPINVOKE.String_Plus__SWIG_1(swigCPtr, s), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private String Plus(string s) {
+    String ret = new String(PInvoke.String_Plus__SWIG_1(swigCPtr, s), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public long ToInt() {
-    long ret = UltraAppKitPINVOKE.String_ToInt(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    long ret = PInvoke.String_ToInt(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public double ToFloat() {
-    double ret = UltraAppKitPINVOKE.String_ToFloat(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    double ret = PInvoke.String_ToFloat(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int GetSize() {
-    int ret = UltraAppKitPINVOKE.String_GetSize(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.String_GetSize(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Left(int length) {
-    String ret = new String(UltraAppKitPINVOKE.String_Left(swigCPtr, length), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Left(swigCPtr, length), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Right(int length) {
-    String ret = new String(UltraAppKitPINVOKE.String_Right(swigCPtr, length), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Right(swigCPtr, length), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Mid(int position, int length) {
-    String ret = new String(UltraAppKitPINVOKE.String_Mid__SWIG_0(swigCPtr, position, length), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Mid__SWIG_0(swigCPtr, position, length), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Mid(int position) {
-    String ret = new String(UltraAppKitPINVOKE.String_Mid__SWIG_1(swigCPtr, position), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Mid__SWIG_1(swigCPtr, position), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Upper() {
-    String ret = new String(UltraAppKitPINVOKE.String_Upper(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Upper(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Lower() {
-    String ret = new String(UltraAppKitPINVOKE.String_Lower(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Lower(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Trim() {
-    String ret = new String(UltraAppKitPINVOKE.String_Trim(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Trim(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String Replace(String from, String to) {
-    String ret = new String(UltraAppKitPINVOKE.String_Replace(swigCPtr, String.getCPtr(from), String.getCPtr(to)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_Replace(swigCPtr, String.getCPtr(from), String.getCPtr(to)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int Find(String token) {
-    int ret = UltraAppKitPINVOKE.String_Find(swigCPtr, String.getCPtr(token));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.String_Find(swigCPtr, String.getCPtr(token));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public VectorString Split(String delimiter) {
-    VectorString ret = new VectorString(UltraAppKitPINVOKE.String_Split(swigCPtr, String.getCPtr(delimiter)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    VectorString ret = new VectorString(PInvoke.String_Split(swigCPtr, String.getCPtr(delimiter)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public String XOR(String key) {
-    String ret = new String(UltraAppKitPINVOKE.String_XOR(swigCPtr, String.getCPtr(key)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.String_XOR(swigCPtr, String.getCPtr(key)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+  private string ToCString() {
+    string ret = PInvoke.String_ToCString(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+}
 
 }

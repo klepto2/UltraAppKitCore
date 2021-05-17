@@ -63,6 +63,22 @@ bool CompareWith(UltraEngine::Object *a)
 }}
 
 %typemap(cscode) UltraEngine::Object %{
+
+    public static Object FromPointer(System.IntPtr pointer)
+    {
+        return new Object(pointer,false);
+    }
+
+    public System.IntPtr ToPointer()
+    {
+        return swigCPtr.Handle;
+    }
+
+    public Object ToWrapper()
+    {
+        return swigCPtr.Wrapper as Object;
+    }
+    
     public static bool operator == (Object a, Object b)
     {
         if ((object)a == null)
@@ -75,4 +91,51 @@ bool CompareWith(UltraEngine::Object *a)
     }
 
     public static bool operator !=(Object a, Object b) => !(a==b);
+%}
+%typemap(cscode) UltraEngine::Event %{
+    
+    public static Event FromPointer(System.IntPtr pointer)
+    {
+        return new Event(pointer,false);
+    }
+%}
+
+%ignore UltraEngine::WString::ToString; // Canvas not exposed by Lib
+%ignore UltraEngine::String::ToString; // Canvas not exposed by Lib
+
+%csmethodmodifiers UltraEngine::WString::ToCWString() "private";
+%csmethodmodifiers UltraEngine::String::ToCString() "private";
+
+%extend UltraEngine::WString {
+std::wstring ToCWString()
+{
+	return static_cast<wstring>(*self);
+}}
+
+%extend UltraEngine::String {
+std::string ToCString()
+{
+	return static_cast<string>(*self);
+}}
+
+%typemap(cscode) UltraEngine::String %{
+    
+    public override string ToString()
+    {
+        return ToCString();
+    }
+
+    public static implicit operator string(String d) => d.ToString();
+    public static implicit operator String(string b) => new String(b);
+%}
+
+%typemap(cscode) UltraEngine::WString %{
+    
+    public override string ToString()
+    {
+        return ToCWString();
+    }
+
+    public static implicit operator string(WString d) => d.ToString();
+    public static implicit operator WString(string b) => new WString(b);
 %}

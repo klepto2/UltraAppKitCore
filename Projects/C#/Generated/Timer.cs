@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Timer : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Timer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Timer_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Timer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Timer_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Timer : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Timer(swigCPtr);
+          PInvoke.delete_Timer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,13 +38,15 @@ public class Timer : Object {
 
   public int frequency {
     get {
-      int ret = UltraAppKitPINVOKE.Timer_frequency_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Timer_frequency_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Timer() : this(UltraAppKitPINVOKE.new_Timer(), true) {
+  public Timer() : this(PInvoke.new_Timer(), true) {
   }
+
+}
 
 }

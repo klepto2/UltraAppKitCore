@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum PickMode {
   PICK_NONE = 0,
@@ -15,4 +16,6 @@ public enum PickMode {
   PICK_MESH,
   PICK_BOX,
   PICK_CAPSULE
+}
+
 }

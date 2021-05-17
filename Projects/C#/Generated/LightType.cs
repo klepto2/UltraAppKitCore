@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum LightType {
   LIGHT_POINT = 0,
@@ -16,4 +17,6 @@ public enum LightType {
   LIGHT_BOX = 3,
   LIGHT_DIRECTIONAL = 4,
   MAX_LIGHT_TYPES = 5
+}
+
 }

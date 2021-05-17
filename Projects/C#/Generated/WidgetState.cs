@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum WidgetState {
   WIDGETSTATE_SELECTED = 1,
   WIDGETSTATE_UNSELECTED = 0,
   WIDGETSTATE_INDETERMINATE = -1
+}
+
 }

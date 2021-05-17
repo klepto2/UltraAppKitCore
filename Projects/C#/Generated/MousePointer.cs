@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum MousePointer {
   POINTER_DEFAULT,
@@ -21,4 +22,6 @@ public enum MousePointer {
   POINTER_DRAG,
   POINTER_DRAGADD,
   POINTER_NO
+}
+
 }

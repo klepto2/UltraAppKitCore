@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class IDSystem : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal IDSystem(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.IDSystem_SWIGSmartPtrUpcast(cPtr), true) {
+  internal IDSystem(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.IDSystem_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class IDSystem : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_IDSystem(swigCPtr);
+          PInvoke.delete_IDSystem(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,41 +36,43 @@ public class IDSystem : Object {
     }
   }
 
-  public IDSystem(int max) : this(UltraAppKitPINVOKE.new_IDSystem__SWIG_0(max), true) {
+  public IDSystem(int max) : this(PInvoke.new_IDSystem__SWIG_0(max), true) {
   }
 
-  public IDSystem() : this(UltraAppKitPINVOKE.new_IDSystem__SWIG_1(), true) {
+  public IDSystem() : this(PInvoke.new_IDSystem__SWIG_1(), true) {
   }
 
   public int AllocID(int count) {
-    int ret = UltraAppKitPINVOKE.IDSystem_AllocID__SWIG_0(swigCPtr, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.IDSystem_AllocID__SWIG_0(swigCPtr, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int AllocID() {
-    int ret = UltraAppKitPINVOKE.IDSystem_AllocID__SWIG_1(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.IDSystem_AllocID__SWIG_1(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IDHandle AllocHandle(int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.IDSystem_AllocHandle__SWIG_0(swigCPtr, count);
+    global::System.IntPtr cPtr = PInvoke.IDSystem_AllocHandle__SWIG_0(swigCPtr, count);
     IDHandle ret = (cPtr == global::System.IntPtr.Zero) ? null : new IDHandle(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public IDHandle AllocHandle() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.IDSystem_AllocHandle__SWIG_1(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.IDSystem_AllocHandle__SWIG_1(swigCPtr);
     IDHandle ret = (cPtr == global::System.IntPtr.Zero) ? null : new IDHandle(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void ReleaseID(int id) {
-    UltraAppKitPINVOKE.IDSystem_ReleaseID(swigCPtr, id);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.IDSystem_ReleaseID(swigCPtr, id);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

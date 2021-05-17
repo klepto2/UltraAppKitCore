@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Display : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Display(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Display_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Display(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Display_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Display : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Display(swigCPtr);
+          PInvoke.delete_Display(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,73 +38,75 @@ public class Display : Object {
 
   public VectorIVec2 graphicsmodes {
     get {
-      VectorIVec2 ret = new VectorIVec2(UltraAppKitPINVOKE.Display_graphicsmodes_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      VectorIVec2 ret = new VectorIVec2(PInvoke.Display_graphicsmodes_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 position {
     get {
-      iVec2 ret = new iVec2(UltraAppKitPINVOKE.Display_position_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      iVec2 ret = new iVec2(PInvoke.Display_position_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 size {
     get {
-      iVec2 ret = new iVec2(UltraAppKitPINVOKE.Display_size_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      iVec2 ret = new iVec2(PInvoke.Display_size_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public float scale {
     get {
-      float ret = UltraAppKitPINVOKE.Display_scale_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      float ret = PInvoke.Display_scale_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public bool EqualEqual(Display display) {
-    bool ret = UltraAppKitPINVOKE.Display_EqualEqual(swigCPtr, Display.getCPtr(display));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool EqualEqual(Display display) {
+    bool ret = PInvoke.Display_EqualEqual(swigCPtr, Display.getCPtr(display));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool NotEqual(Display display) {
-    bool ret = UltraAppKitPINVOKE.Display_NotEqual(swigCPtr, Display.getCPtr(display));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool NotEqual(Display display) {
+    bool ret = PInvoke.Display_NotEqual(swigCPtr, Display.getCPtr(display));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Display() : this(UltraAppKitPINVOKE.new_Display(), true) {
+  public Display() : this(PInvoke.new_Display(), true) {
   }
 
   public iVec2 GetPosition() {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.Display_GetPosition(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2(PInvoke.Display_GetPosition(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public iVec2 GetSize() {
-    iVec2 ret = new iVec2(UltraAppKitPINVOKE.Display_GetSize(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2(PInvoke.Display_GetSize(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public iVec4 ClientArea() {
-    iVec4 ret = new iVec4(UltraAppKitPINVOKE.Display_ClientArea(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec4 ret = new iVec4(PInvoke.Display_ClientArea(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Vec2 GetScale() {
-    Vec2 ret = new Vec2(UltraAppKitPINVOKE.Display_GetScale(swigCPtr), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    Vec2 ret = new Vec2(PInvoke.Display_GetScale(swigCPtr), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

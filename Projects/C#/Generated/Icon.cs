@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Icon : Asset {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Icon(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Icon_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Icon(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Icon_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Icon : Asset {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Icon(swigCPtr);
+          PInvoke.delete_Icon(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,65 +36,67 @@ public class Icon : Asset {
     }
   }
 
-  public Icon() : this(UltraAppKitPINVOKE.new_Icon(), true) {
+  public Icon() : this(PInvoke.new_Icon(), true) {
   }
 
   public iVec2 size {
     get {
-      iVec2 ret = new iVec2(UltraAppKitPINVOKE.Icon_size_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      iVec2 ret = new iVec2(PInvoke.Icon_size_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public override bool Save(WString path, SaveFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Icon_Save__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Icon_Save__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Save(WString path) {
-    bool ret = UltraAppKitPINVOKE.Icon_Save__SWIG_1(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Icon_Save__SWIG_1(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap Rasterize(float scale, bool cached) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Icon_Rasterize__SWIG_0(swigCPtr, scale, cached);
+    global::System.IntPtr cPtr = PInvoke.Icon_Rasterize__SWIG_0(swigCPtr, scale, cached);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Pixmap Rasterize(float scale) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Icon_Rasterize__SWIG_1(swigCPtr, scale);
+    global::System.IntPtr cPtr = PInvoke.Icon_Rasterize__SWIG_1(swigCPtr, scale);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload(LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Icon_Reload__SWIG_0(swigCPtr, (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Icon_Reload__SWIG_0(swigCPtr, (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override bool Reload() {
-    bool ret = UltraAppKitPINVOKE.Icon_Reload__SWIG_1(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Icon_Reload__SWIG_1(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual new void Reset() {
-    UltraAppKitPINVOKE.Icon_Reset(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Icon_Reset(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override Asset Copy() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Icon_Copy(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Icon_Copy(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

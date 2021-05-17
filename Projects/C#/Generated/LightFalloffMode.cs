@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum LightFalloffMode {
   LIGHT_FALLOFF_LINEAR = 1,
   LIGHT_FALLOFF_INVERSE_SQUARE = 2
+}
+
 }

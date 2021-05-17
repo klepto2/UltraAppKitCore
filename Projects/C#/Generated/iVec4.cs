@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class iVec4 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,153 +37,171 @@ public class iVec4 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_iVec4(swigCPtr);
+          PInvoke.delete_iVec4(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+    public static iVec4 operator+(iVec4 arg1, iVec4 arg2) {
+        return arg1.Plus(arg2);
+    }
+
+    public static iVec4 operator-(iVec4 arg1, iVec4 arg2) {
+        return arg1.Minus(arg2);
+    }
+
+    public static iVec4 operator-(iVec4 arg1) {
+        return arg1.Minus();
+    }
+
+    public override string ToString() {
+        return _ToWString();
+    }
+
   public int x {
     set {
-      UltraAppKitPINVOKE.iVec4_x_set(swigCPtr, value);
+      PInvoke.iVec4_x_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_x_get(swigCPtr);
+      int ret = PInvoke.iVec4_x_get(swigCPtr);
       return ret;
     } 
   }
 
   public int r {
     set {
-      UltraAppKitPINVOKE.iVec4_r_set(swigCPtr, value);
+      PInvoke.iVec4_r_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_r_get(swigCPtr);
+      int ret = PInvoke.iVec4_r_get(swigCPtr);
       return ret;
     } 
   }
 
   public int y {
     set {
-      UltraAppKitPINVOKE.iVec4_y_set(swigCPtr, value);
+      PInvoke.iVec4_y_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_y_get(swigCPtr);
+      int ret = PInvoke.iVec4_y_get(swigCPtr);
       return ret;
     } 
   }
 
   public int g {
     set {
-      UltraAppKitPINVOKE.iVec4_g_set(swigCPtr, value);
+      PInvoke.iVec4_g_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_g_get(swigCPtr);
+      int ret = PInvoke.iVec4_g_get(swigCPtr);
       return ret;
     } 
   }
 
   public int z {
     set {
-      UltraAppKitPINVOKE.iVec4_z_set(swigCPtr, value);
+      PInvoke.iVec4_z_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_z_get(swigCPtr);
+      int ret = PInvoke.iVec4_z_get(swigCPtr);
       return ret;
     } 
   }
 
   public int b {
     set {
-      UltraAppKitPINVOKE.iVec4_b_set(swigCPtr, value);
+      PInvoke.iVec4_b_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_b_get(swigCPtr);
+      int ret = PInvoke.iVec4_b_get(swigCPtr);
       return ret;
     } 
   }
 
   public int width {
     set {
-      UltraAppKitPINVOKE.iVec4_width_set(swigCPtr, value);
+      PInvoke.iVec4_width_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_width_get(swigCPtr);
+      int ret = PInvoke.iVec4_width_get(swigCPtr);
       return ret;
     } 
   }
 
   public int w {
     set {
-      UltraAppKitPINVOKE.iVec4_w_set(swigCPtr, value);
+      PInvoke.iVec4_w_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_w_get(swigCPtr);
+      int ret = PInvoke.iVec4_w_get(swigCPtr);
       return ret;
     } 
   }
 
   public int a {
     set {
-      UltraAppKitPINVOKE.iVec4_a_set(swigCPtr, value);
+      PInvoke.iVec4_a_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_a_get(swigCPtr);
+      int ret = PInvoke.iVec4_a_get(swigCPtr);
       return ret;
     } 
   }
 
   public int height {
     set {
-      UltraAppKitPINVOKE.iVec4_height_set(swigCPtr, value);
+      PInvoke.iVec4_height_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.iVec4_height_get(swigCPtr);
+      int ret = PInvoke.iVec4_height_get(swigCPtr);
       return ret;
     } 
   }
 
-  public iVec4() : this(UltraAppKitPINVOKE.new_iVec4__SWIG_0(), true) {
+  public iVec4() : this(PInvoke.new_iVec4__SWIG_0(), true) {
   }
 
-  public iVec4(int x, int y, int z, int w) : this(UltraAppKitPINVOKE.new_iVec4__SWIG_1(x, y, z, w), true) {
+  public iVec4(int x, int y, int z, int w) : this(PInvoke.new_iVec4__SWIG_1(x, y, z, w), true) {
   }
 
-  public iVec4(iVec2 xy, iVec2 zw) : this(UltraAppKitPINVOKE.new_iVec4__SWIG_2(iVec2.getCPtr(xy), iVec2.getCPtr(zw)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public iVec4(iVec2 xy, iVec2 zw) : this(PInvoke.new_iVec4__SWIG_2(iVec2.getCPtr(xy), iVec2.getCPtr(zw)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public iVec4 Minus() {
-    iVec4 ret = new iVec4(UltraAppKitPINVOKE.iVec4_Minus__SWIG_0(swigCPtr), true);
+  private iVec4 Minus() {
+    iVec4 ret = new iVec4(PInvoke.iVec4_Minus__SWIG_0(swigCPtr), true);
     return ret;
   }
 
-  public SWIGTYPE_p_int IndexInto(uint n) {
-    SWIGTYPE_p_int ret = new SWIGTYPE_p_int(UltraAppKitPINVOKE.iVec4_IndexInto(swigCPtr, n), false);
+  private iVec4 Plus(iVec4 v) {
+    iVec4 ret = new iVec4(PInvoke.iVec4_Plus(swigCPtr, iVec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public iVec4 Plus(iVec4 v) {
-    iVec4 ret = new iVec4(UltraAppKitPINVOKE.iVec4_Plus(swigCPtr, iVec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private iVec4 Minus(iVec4 v) {
+    iVec4 ret = new iVec4(PInvoke.iVec4_Minus__SWIG_1(swigCPtr, iVec4.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public iVec4 Minus(iVec4 v) {
-    iVec4 ret = new iVec4(UltraAppKitPINVOKE.iVec4_Minus__SWIG_1(swigCPtr, iVec4.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void PlusEqual(iVec4 v) {
+    PInvoke.iVec4_PlusEqual(swigCPtr, iVec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private void MinusEqual(iVec4 v) {
+    PInvoke.iVec4_MinusEqual(swigCPtr, iVec4.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+  }
+
+  private string _ToWString() {
+    string ret = PInvoke.iVec4__ToWString(swigCPtr);
     return ret;
   }
 
-  public void PlusEqual(iVec4 v) {
-    UltraAppKitPINVOKE.iVec4_PlusEqual(swigCPtr, iVec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void MinusEqual(iVec4 v) {
-    UltraAppKitPINVOKE.iVec4_MinusEqual(swigCPtr, iVec4.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-  }
+}
 
 }

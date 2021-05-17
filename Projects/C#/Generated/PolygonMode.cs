@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum PolygonMode {
   POLYGON_FILL = 0,
   POLYGON_WIRE = 1,
   POLYGON_POINT = 2
+}
+
 }

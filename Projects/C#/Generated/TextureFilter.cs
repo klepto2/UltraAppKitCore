@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextureFilter {
   TEXTUREFILTER_UNDEFINED = -1,
   TEXTUREFILTER_NEAREST = 0,
   TEXTUREFILTER_LINEAR = 1
+}
+
 }

@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class TextArea : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal TextArea(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.TextArea_SWIGSmartPtrUpcast(cPtr), true) {
+  internal TextArea(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.TextArea_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class TextArea : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_TextArea(swigCPtr);
+          PInvoke.delete_TextArea(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,42 +36,44 @@ public class TextArea : Widget {
     }
   }
 
-  public TextArea() : this(UltraAppKitPINVOKE.new_TextArea(), true) {
+  public TextArea() : this(PInvoke.new_TextArea(), true) {
   }
 
   public override void AddText(WString text) {
-    UltraAppKitPINVOKE.TextArea_AddText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_AddText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void UpdateLayout() {
-    UltraAppKitPINVOKE.TextArea_UpdateLayout(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_UpdateLayout(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void SetShape(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.TextArea_SetShape(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_SetShape(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void SetText(WString text) {
-    UltraAppKitPINVOKE.TextArea_SetText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_SetText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void KeyDown(KeyCode key) {
-    UltraAppKitPINVOKE.TextArea_KeyDown(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_KeyDown(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.TextArea_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override void MouseWheel(int delta, int x, int y) {
-    UltraAppKitPINVOKE.TextArea_MouseWheel(swigCPtr, delta, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TextArea_MouseWheel(swigCPtr, delta, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

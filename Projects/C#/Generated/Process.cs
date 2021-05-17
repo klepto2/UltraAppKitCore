@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Process : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Process(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Process_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Process(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Process_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Process : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Process(swigCPtr);
+          PInvoke.delete_Process(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,64 +38,66 @@ public class Process : Object {
 
   public WString path {
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.Process_path_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.Process_path_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public PipeStream readstream {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Process_readstream_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Process_readstream_get(swigCPtr);
       PipeStream ret = (cPtr == global::System.IntPtr.Zero) ? null : new PipeStream(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public PipeStream writestream {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Process_writestream_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Process_writestream_get(swigCPtr);
       PipeStream ret = (cPtr == global::System.IntPtr.Zero) ? null : new PipeStream(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public PipeStream errorstream {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Process_errorstream_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Process_errorstream_get(swigCPtr);
       PipeStream ret = (cPtr == global::System.IntPtr.Zero) ? null : new PipeStream(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Process() : this(UltraAppKitPINVOKE.new_Process(), true) {
+  public Process() : this(PInvoke.new_Process(), true) {
   }
 
   public virtual System.IntPtr GetHandle() { 
-    System.IntPtr cPtr = UltraAppKitPINVOKE.Process_GetHandle(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    System.IntPtr cPtr = PInvoke.Process_GetHandle(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return cPtr;
     }
 
   public virtual ProcessStatus GetStatus() {
-    ProcessStatus ret = (ProcessStatus)UltraAppKitPINVOKE.Process_GetStatus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ProcessStatus ret = (ProcessStatus)PInvoke.Process_GetStatus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int Wait() {
-    int ret = UltraAppKitPINVOKE.Process_Wait(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Process_Wait(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int Close() {
-    int ret = UltraAppKitPINVOKE.Process_Close(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Process_Close(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

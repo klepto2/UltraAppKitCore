@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class PackageFile : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,7 +37,7 @@ public class PackageFile : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_PackageFile(swigCPtr);
+          PInvoke.delete_PackageFile(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,47 +46,49 @@ public class PackageFile : global::System.IDisposable {
 
   public WString path {
     set {
-      UltraAppKitPINVOKE.PackageFile_path_set(swigCPtr, WString.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.PackageFile_path_set(swigCPtr, WString.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.PackageFile_path_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.PackageFile_path_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int type {
     set {
-      UltraAppKitPINVOKE.PackageFile_type_set(swigCPtr, value);
+      PInvoke.PackageFile_type_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.PackageFile_type_get(swigCPtr);
+      int ret = PInvoke.PackageFile_type_get(swigCPtr);
       return ret;
     } 
   }
 
   public int index {
     set {
-      UltraAppKitPINVOKE.PackageFile_index_set(swigCPtr, value);
+      PInvoke.PackageFile_index_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.PackageFile_index_get(swigCPtr);
+      int ret = PInvoke.PackageFile_index_get(swigCPtr);
       return ret;
     } 
   }
 
   public ulong size {
     set {
-      UltraAppKitPINVOKE.PackageFile_size_set(swigCPtr, value);
+      PInvoke.PackageFile_size_set(swigCPtr, value);
     } 
     get {
-      ulong ret = UltraAppKitPINVOKE.PackageFile_size_get(swigCPtr);
+      ulong ret = PInvoke.PackageFile_size_get(swigCPtr);
       return ret;
     } 
   }
 
-  public PackageFile() : this(UltraAppKitPINVOKE.new_PackageFile(), true) {
+  public PackageFile() : this(PInvoke.new_PackageFile(), true) {
   }
+
+}
 
 }

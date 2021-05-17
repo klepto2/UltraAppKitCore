@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum UserPath {
   PATH_DESKTOP,
@@ -17,4 +18,6 @@ public enum UserPath {
   PATH_SAVEDGAMES,
   PATH_FONTS,
   PATH_PROGRAMS
+}
+
 }

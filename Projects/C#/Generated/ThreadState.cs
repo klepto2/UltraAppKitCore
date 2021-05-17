@@ -8,10 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ThreadState {
   THREAD_FINISHED = 0,
   THREAD_RUNNING = 1,
   THREAD_PAUSED = 2,
   THREAD_READY = 3
+}
+
 }

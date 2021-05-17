@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum SaveFlags {
   SAVE_DEFAULT = 0,
@@ -16,4 +17,6 @@ public enum SaveFlags {
   SAVE_DUMP_INFO = 8192,
   SAVE_ASCII = 16384,
   SAVE_SKIP_MESHES = 32768
+}
+
 }

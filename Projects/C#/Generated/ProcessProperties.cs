@@ -8,7 +8,10 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ProcessProperties {
   PROCESS_DEFAULT = 0
+}
+
 }

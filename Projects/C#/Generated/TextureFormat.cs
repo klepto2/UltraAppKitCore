@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextureFormat {
   TEXTURE_FORMAT_UNDEFINED = 0,
@@ -33,4 +34,6 @@ public enum TextureFormat {
   TEXTURE_BC7 = 145,
   TEXTURE_COLOR = -1001,
   TEXTURE_DEPTH = -1002
+}
+
 }

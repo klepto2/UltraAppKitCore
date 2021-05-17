@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ClearMode {
   CLEAR_COLOR = 1,
   CLEAR_DEPTH = 2
+}
+
 }

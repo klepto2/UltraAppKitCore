@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ButtonStyle {
   BUTTON_DEFAULT = 0,
@@ -17,4 +18,6 @@ public enum ButtonStyle {
   BUTTON_OK = 8,
   BUTTON_CANCEL = 16,
   BUTTON_TOOLBAR = 32
+}
+
 }

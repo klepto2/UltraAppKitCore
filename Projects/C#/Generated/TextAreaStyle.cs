@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TextAreaStyle {
   TEXTAREA_DEFAULT = 0,
   TEXTAREA_WORDWRAP = 1
+}
+
 }

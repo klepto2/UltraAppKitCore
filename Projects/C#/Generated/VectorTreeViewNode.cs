@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class VectorTreeViewNode : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<TreeViewNode>
  {
@@ -37,7 +38,7 @@ public class VectorTreeViewNode : global::System.IDisposable, global::System.Col
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_VectorTreeViewNode(swigCPtr);
+          PInvoke.delete_VectorTreeViewNode(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,133 +218,135 @@ public class VectorTreeViewNode : global::System.IDisposable, global::System.Col
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.VectorTreeViewNode_Clear(swigCPtr);
+    PInvoke.VectorTreeViewNode_Clear(swigCPtr);
   }
 
   public void Add(TreeViewNode x) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_Add(swigCPtr, TreeViewNode.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_Add(swigCPtr, TreeViewNode.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.VectorTreeViewNode_size(swigCPtr);
+    uint ret = PInvoke.VectorTreeViewNode_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = UltraAppKitPINVOKE.VectorTreeViewNode_capacity(swigCPtr);
+    uint ret = PInvoke.VectorTreeViewNode_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_reserve(swigCPtr, n);
+    PInvoke.VectorTreeViewNode_reserve(swigCPtr, n);
   }
 
-  public VectorTreeViewNode() : this(UltraAppKitPINVOKE.new_VectorTreeViewNode__SWIG_0(), true) {
+  public VectorTreeViewNode() : this(PInvoke.new_VectorTreeViewNode__SWIG_0(), true) {
   }
 
-  public VectorTreeViewNode(VectorTreeViewNode other) : this(UltraAppKitPINVOKE.new_VectorTreeViewNode__SWIG_1(VectorTreeViewNode.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorTreeViewNode(VectorTreeViewNode other) : this(PInvoke.new_VectorTreeViewNode__SWIG_1(VectorTreeViewNode.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public VectorTreeViewNode(int capacity) : this(UltraAppKitPINVOKE.new_VectorTreeViewNode__SWIG_2(capacity), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorTreeViewNode(int capacity) : this(PInvoke.new_VectorTreeViewNode__SWIG_2(capacity), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private TreeViewNode getitemcopy(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorTreeViewNode_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorTreeViewNode_getitemcopy(swigCPtr, index);
     TreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private TreeViewNode getitem(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorTreeViewNode_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorTreeViewNode_getitem(swigCPtr, index);
     TreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new TreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, TreeViewNode val) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_setitem(swigCPtr, index, TreeViewNode.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_setitem(swigCPtr, index, TreeViewNode.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(VectorTreeViewNode values) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_AddRange(swigCPtr, VectorTreeViewNode.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_AddRange(swigCPtr, VectorTreeViewNode.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public VectorTreeViewNode GetRange(int index, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorTreeViewNode_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = PInvoke.VectorTreeViewNode_GetRange(swigCPtr, index, count);
     VectorTreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorTreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, TreeViewNode x) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_Insert(swigCPtr, index, TreeViewNode.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_Insert(swigCPtr, index, TreeViewNode.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, VectorTreeViewNode values) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_InsertRange(swigCPtr, index, VectorTreeViewNode.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_InsertRange(swigCPtr, index, VectorTreeViewNode.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_RemoveAt(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_RemoveAt(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_RemoveRange(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_RemoveRange(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static VectorTreeViewNode Repeat(TreeViewNode value, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorTreeViewNode_Repeat(TreeViewNode.getCPtr(value), count);
+    global::System.IntPtr cPtr = PInvoke.VectorTreeViewNode_Repeat(TreeViewNode.getCPtr(value), count);
     VectorTreeViewNode ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorTreeViewNode(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.VectorTreeViewNode_Reverse__SWIG_0(swigCPtr);
+    PInvoke.VectorTreeViewNode_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, VectorTreeViewNode values) {
-    UltraAppKitPINVOKE.VectorTreeViewNode_SetRange(swigCPtr, index, VectorTreeViewNode.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorTreeViewNode_SetRange(swigCPtr, index, VectorTreeViewNode.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(TreeViewNode value) {
-    bool ret = UltraAppKitPINVOKE.VectorTreeViewNode_Contains(swigCPtr, TreeViewNode.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorTreeViewNode_Contains(swigCPtr, TreeViewNode.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(TreeViewNode value) {
-    int ret = UltraAppKitPINVOKE.VectorTreeViewNode_IndexOf(swigCPtr, TreeViewNode.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorTreeViewNode_IndexOf(swigCPtr, TreeViewNode.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(TreeViewNode value) {
-    int ret = UltraAppKitPINVOKE.VectorTreeViewNode_LastIndexOf(swigCPtr, TreeViewNode.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorTreeViewNode_LastIndexOf(swigCPtr, TreeViewNode.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(TreeViewNode value) {
-    bool ret = UltraAppKitPINVOKE.VectorTreeViewNode_Remove(swigCPtr, TreeViewNode.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorTreeViewNode_Remove(swigCPtr, TreeViewNode.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

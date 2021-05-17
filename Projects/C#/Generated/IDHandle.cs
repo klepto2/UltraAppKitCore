@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class IDHandle : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,20 +37,22 @@ public class IDHandle : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          UltraAppKitPINVOKE.delete_IDHandle(swigCPtr);
+          PInvoke.delete_IDHandle(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public IDHandle(int id, int cvount, IDSystem idsystem) : this(UltraAppKitPINVOKE.new_IDHandle(id, cvount, IDSystem.getCPtr(idsystem)), true) {
+  public IDHandle(int id, int cvount, IDSystem idsystem) : this(PInvoke.new_IDHandle(id, cvount, IDSystem.getCPtr(idsystem)), true) {
   }
 
   public int GetID() {
-    int ret = UltraAppKitPINVOKE.IDHandle_GetID(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.IDHandle_GetID(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

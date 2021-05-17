@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum D3D10_RESOURCE_DIMENSION {
   D3D10_RESOURCE_DIMENSION_UNKNOWN,
@@ -15,4 +16,6 @@ public enum D3D10_RESOURCE_DIMENSION {
   D3D10_RESOURCE_DIMENSION_TEXTURE1D,
   D3D10_RESOURCE_DIMENSION_TEXTURE2D,
   D3D10_RESOURCE_DIMENSION_TEXTURE3D
+}
+
 }

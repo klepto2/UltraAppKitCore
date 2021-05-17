@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum EventID {
   EVENT_NONE = 0,
@@ -49,4 +50,6 @@ public enum EventID {
   EVENT_CURSORBLINK,
   EVENT_WIDGETDROP,
   EVENT_WINDOWDPICHANGED
+}
+
 }

@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class VectorPixmap : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<Pixmap>
  {
@@ -37,7 +38,7 @@ public class VectorPixmap : global::System.IDisposable, global::System.Collectio
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_VectorPixmap(swigCPtr);
+          PInvoke.delete_VectorPixmap(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,133 +218,135 @@ public class VectorPixmap : global::System.IDisposable, global::System.Collectio
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.VectorPixmap_Clear(swigCPtr);
+    PInvoke.VectorPixmap_Clear(swigCPtr);
   }
 
   public void Add(Pixmap x) {
-    UltraAppKitPINVOKE.VectorPixmap_Add(swigCPtr, Pixmap.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_Add(swigCPtr, Pixmap.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.VectorPixmap_size(swigCPtr);
+    uint ret = PInvoke.VectorPixmap_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = UltraAppKitPINVOKE.VectorPixmap_capacity(swigCPtr);
+    uint ret = PInvoke.VectorPixmap_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    UltraAppKitPINVOKE.VectorPixmap_reserve(swigCPtr, n);
+    PInvoke.VectorPixmap_reserve(swigCPtr, n);
   }
 
-  public VectorPixmap() : this(UltraAppKitPINVOKE.new_VectorPixmap__SWIG_0(), true) {
+  public VectorPixmap() : this(PInvoke.new_VectorPixmap__SWIG_0(), true) {
   }
 
-  public VectorPixmap(VectorPixmap other) : this(UltraAppKitPINVOKE.new_VectorPixmap__SWIG_1(VectorPixmap.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorPixmap(VectorPixmap other) : this(PInvoke.new_VectorPixmap__SWIG_1(VectorPixmap.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public VectorPixmap(int capacity) : this(UltraAppKitPINVOKE.new_VectorPixmap__SWIG_2(capacity), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorPixmap(int capacity) : this(PInvoke.new_VectorPixmap__SWIG_2(capacity), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private Pixmap getitemcopy(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorPixmap_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorPixmap_getitemcopy(swigCPtr, index);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Pixmap getitem(int index) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorPixmap_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = PInvoke.VectorPixmap_getitem(swigCPtr, index);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Pixmap val) {
-    UltraAppKitPINVOKE.VectorPixmap_setitem(swigCPtr, index, Pixmap.getCPtr(val));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_setitem(swigCPtr, index, Pixmap.getCPtr(val));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(VectorPixmap values) {
-    UltraAppKitPINVOKE.VectorPixmap_AddRange(swigCPtr, VectorPixmap.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_AddRange(swigCPtr, VectorPixmap.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public VectorPixmap GetRange(int index, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorPixmap_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = PInvoke.VectorPixmap_GetRange(swigCPtr, index, count);
     VectorPixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorPixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, Pixmap x) {
-    UltraAppKitPINVOKE.VectorPixmap_Insert(swigCPtr, index, Pixmap.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_Insert(swigCPtr, index, Pixmap.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, VectorPixmap values) {
-    UltraAppKitPINVOKE.VectorPixmap_InsertRange(swigCPtr, index, VectorPixmap.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_InsertRange(swigCPtr, index, VectorPixmap.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    UltraAppKitPINVOKE.VectorPixmap_RemoveAt(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_RemoveAt(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    UltraAppKitPINVOKE.VectorPixmap_RemoveRange(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_RemoveRange(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static VectorPixmap Repeat(Pixmap value, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorPixmap_Repeat(Pixmap.getCPtr(value), count);
+    global::System.IntPtr cPtr = PInvoke.VectorPixmap_Repeat(Pixmap.getCPtr(value), count);
     VectorPixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorPixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.VectorPixmap_Reverse__SWIG_0(swigCPtr);
+    PInvoke.VectorPixmap_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.VectorPixmap_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, VectorPixmap values) {
-    UltraAppKitPINVOKE.VectorPixmap_SetRange(swigCPtr, index, VectorPixmap.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorPixmap_SetRange(swigCPtr, index, VectorPixmap.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(Pixmap value) {
-    bool ret = UltraAppKitPINVOKE.VectorPixmap_Contains(swigCPtr, Pixmap.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorPixmap_Contains(swigCPtr, Pixmap.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int IndexOf(Pixmap value) {
-    int ret = UltraAppKitPINVOKE.VectorPixmap_IndexOf(swigCPtr, Pixmap.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorPixmap_IndexOf(swigCPtr, Pixmap.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public int LastIndexOf(Pixmap value) {
-    int ret = UltraAppKitPINVOKE.VectorPixmap_LastIndexOf(swigCPtr, Pixmap.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.VectorPixmap_LastIndexOf(swigCPtr, Pixmap.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public bool Remove(Pixmap value) {
-    bool ret = UltraAppKitPINVOKE.VectorPixmap_Remove(swigCPtr, Pixmap.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.VectorPixmap_Remove(swigCPtr, Pixmap.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

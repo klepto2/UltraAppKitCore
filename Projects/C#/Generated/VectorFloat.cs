@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class VectorFloat : global::System.IDisposable, global::System.Collections.IEnumerable, global::System.Collections.Generic.IList<float>
  {
@@ -37,7 +38,7 @@ public class VectorFloat : global::System.IDisposable, global::System.Collection
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_VectorFloat(swigCPtr);
+          PInvoke.delete_VectorFloat(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -217,126 +218,128 @@ public class VectorFloat : global::System.IDisposable, global::System.Collection
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.VectorFloat_Clear(swigCPtr);
+    PInvoke.VectorFloat_Clear(swigCPtr);
   }
 
   public void Add(float x) {
-    UltraAppKitPINVOKE.VectorFloat_Add(swigCPtr, x);
+    PInvoke.VectorFloat_Add(swigCPtr, x);
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.VectorFloat_size(swigCPtr);
+    uint ret = PInvoke.VectorFloat_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = UltraAppKitPINVOKE.VectorFloat_capacity(swigCPtr);
+    uint ret = PInvoke.VectorFloat_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    UltraAppKitPINVOKE.VectorFloat_reserve(swigCPtr, n);
+    PInvoke.VectorFloat_reserve(swigCPtr, n);
   }
 
-  public VectorFloat() : this(UltraAppKitPINVOKE.new_VectorFloat__SWIG_0(), true) {
+  public VectorFloat() : this(PInvoke.new_VectorFloat__SWIG_0(), true) {
   }
 
-  public VectorFloat(VectorFloat other) : this(UltraAppKitPINVOKE.new_VectorFloat__SWIG_1(VectorFloat.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorFloat(VectorFloat other) : this(PInvoke.new_VectorFloat__SWIG_1(VectorFloat.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public VectorFloat(int capacity) : this(UltraAppKitPINVOKE.new_VectorFloat__SWIG_2(capacity), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public VectorFloat(int capacity) : this(PInvoke.new_VectorFloat__SWIG_2(capacity), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private float getitemcopy(int index) {
-    float ret = UltraAppKitPINVOKE.VectorFloat_getitemcopy(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.VectorFloat_getitemcopy(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private float getitem(int index) {
-    float ret = UltraAppKitPINVOKE.VectorFloat_getitem(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.VectorFloat_getitem(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, float val) {
-    UltraAppKitPINVOKE.VectorFloat_setitem(swigCPtr, index, val);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_setitem(swigCPtr, index, val);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(VectorFloat values) {
-    UltraAppKitPINVOKE.VectorFloat_AddRange(swigCPtr, VectorFloat.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_AddRange(swigCPtr, VectorFloat.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public VectorFloat GetRange(int index, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorFloat_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = PInvoke.VectorFloat_GetRange(swigCPtr, index, count);
     VectorFloat ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorFloat(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, float x) {
-    UltraAppKitPINVOKE.VectorFloat_Insert(swigCPtr, index, x);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_Insert(swigCPtr, index, x);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, VectorFloat values) {
-    UltraAppKitPINVOKE.VectorFloat_InsertRange(swigCPtr, index, VectorFloat.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_InsertRange(swigCPtr, index, VectorFloat.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    UltraAppKitPINVOKE.VectorFloat_RemoveAt(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_RemoveAt(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    UltraAppKitPINVOKE.VectorFloat_RemoveRange(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_RemoveRange(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public static VectorFloat Repeat(float value, int count) {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.VectorFloat_Repeat(value, count);
+    global::System.IntPtr cPtr = PInvoke.VectorFloat_Repeat(value, count);
     VectorFloat ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorFloat(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.VectorFloat_Reverse__SWIG_0(swigCPtr);
+    PInvoke.VectorFloat_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.VectorFloat_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, VectorFloat values) {
-    UltraAppKitPINVOKE.VectorFloat_SetRange(swigCPtr, index, VectorFloat.getCPtr(values));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.VectorFloat_SetRange(swigCPtr, index, VectorFloat.getCPtr(values));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Contains(float value) {
-    bool ret = UltraAppKitPINVOKE.VectorFloat_Contains(swigCPtr, value);
+    bool ret = PInvoke.VectorFloat_Contains(swigCPtr, value);
     return ret;
   }
 
   public int IndexOf(float value) {
-    int ret = UltraAppKitPINVOKE.VectorFloat_IndexOf(swigCPtr, value);
+    int ret = PInvoke.VectorFloat_IndexOf(swigCPtr, value);
     return ret;
   }
 
   public int LastIndexOf(float value) {
-    int ret = UltraAppKitPINVOKE.VectorFloat_LastIndexOf(swigCPtr, value);
+    int ret = PInvoke.VectorFloat_LastIndexOf(swigCPtr, value);
     return ret;
   }
 
   public bool Remove(float value) {
-    bool ret = UltraAppKitPINVOKE.VectorFloat_Remove(swigCPtr, value);
+    bool ret = PInvoke.VectorFloat_Remove(swigCPtr, value);
     return ret;
   }
+
+}
 
 }

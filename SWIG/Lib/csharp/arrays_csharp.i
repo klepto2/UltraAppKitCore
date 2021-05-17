@@ -78,13 +78,21 @@
 // inout arrays
 
 %typemap(ctype)   CTYPE INOUT[] "CTYPE*"
-%typemap(cstype)  CTYPE INOUT[] "CSTYPE[]"
-%typemap(imtype, inattributes="[global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]") CTYPE INOUT[] "CSTYPE[]"
+%typemap(cstype, out="CSTYPE[]")  CTYPE INOUT[] "CSTYPE[]"
+%typemap(imtype, out="CSTYPE[]", inattributes="[global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]", outattributes="[return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]") CTYPE INOUT[] "CSTYPE[]"
 %typemap(csin)    CTYPE INOUT[] "$csinput"
-
 %typemap(in)      CTYPE INOUT[] "$1 = $input;"
 %typemap(freearg) CTYPE INOUT[] ""
 %typemap(argout)  CTYPE INOUT[] ""
+%typemap(csvarout) CTYPE INOUT[] %{
+    get {
+      var ret = $imcall;$excode
+      return ret;
+    } %}
+
+
+
+
 
 %enddef // CSHARP_ARRAYS
 

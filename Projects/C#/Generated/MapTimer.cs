@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MapTimer : global::System.IDisposable 
     , global::System.Collections.Generic.IDictionary<int, TimerWeakPtr>
@@ -38,7 +39,7 @@ public class MapTimer : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_MapTimer(swigCPtr);
+          PInvoke.delete_MapTimer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -225,65 +226,67 @@ public class MapTimer : global::System.IDisposable
   }
 
 
-  public MapTimer() : this(UltraAppKitPINVOKE.new_MapTimer__SWIG_0(), true) {
+  public MapTimer() : this(PInvoke.new_MapTimer__SWIG_0(), true) {
   }
 
-  public MapTimer(MapTimer other) : this(UltraAppKitPINVOKE.new_MapTimer__SWIG_1(MapTimer.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public MapTimer(MapTimer other) : this(PInvoke.new_MapTimer__SWIG_1(MapTimer.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.MapTimer_size(swigCPtr);
+    uint ret = PInvoke.MapTimer_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = UltraAppKitPINVOKE.MapTimer_empty(swigCPtr);
+    bool ret = PInvoke.MapTimer_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.MapTimer_Clear(swigCPtr);
+    PInvoke.MapTimer_Clear(swigCPtr);
   }
 
   private TimerWeakPtr getitem(int key) {
-    TimerWeakPtr ret = new TimerWeakPtr(UltraAppKitPINVOKE.MapTimer_getitem(swigCPtr, key), false);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    TimerWeakPtr ret = new TimerWeakPtr(PInvoke.MapTimer_getitem(swigCPtr, key), false);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int key, TimerWeakPtr x) {
-    UltraAppKitPINVOKE.MapTimer_setitem(swigCPtr, key, TimerWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapTimer_setitem(swigCPtr, key, TimerWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool ContainsKey(int key) {
-    bool ret = UltraAppKitPINVOKE.MapTimer_ContainsKey(swigCPtr, key);
+    bool ret = PInvoke.MapTimer_ContainsKey(swigCPtr, key);
     return ret;
   }
 
   public void Add(int key, TimerWeakPtr value) {
-    UltraAppKitPINVOKE.MapTimer_Add(swigCPtr, key, TimerWeakPtr.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapTimer_Add(swigCPtr, key, TimerWeakPtr.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(int key) {
-    bool ret = UltraAppKitPINVOKE.MapTimer_Remove(swigCPtr, key);
+    bool ret = PInvoke.MapTimer_Remove(swigCPtr, key);
     return ret;
   }
 
   private global::System.IntPtr create_iterator_begin() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.MapTimer_create_iterator_begin(swigCPtr);
+    global::System.IntPtr ret = PInvoke.MapTimer_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   private int get_next_key(global::System.IntPtr swigiterator) {
-    int ret = UltraAppKitPINVOKE.MapTimer_get_next_key(swigCPtr, swigiterator);
+    int ret = PInvoke.MapTimer_get_next_key(swigCPtr, swigiterator);
     return ret;
   }
 
   private void destroy_iterator(global::System.IntPtr swigiterator) {
-    UltraAppKitPINVOKE.MapTimer_destroy_iterator(swigCPtr, swigiterator);
+    PInvoke.MapTimer_destroy_iterator(swigCPtr, swigiterator);
   }
+
+}
 
 }

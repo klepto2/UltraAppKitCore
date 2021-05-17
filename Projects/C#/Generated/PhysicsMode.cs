@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum PhysicsMode {
   PHYSICS_DISABLED,
@@ -16,4 +17,6 @@ public enum PhysicsMode {
   PHYSICS_SOFTBODY,
   PHYSICS_KINEMATIC,
   PHYSICS_NAVMESH
+}
+
 }

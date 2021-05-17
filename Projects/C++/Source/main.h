@@ -8,8 +8,17 @@
  * interface file instead.
  * ----------------------------------------------------------------------------- */
 
-#ifndef SWIG_UltraAppKit_WRAP_H_
-#define SWIG_UltraAppKit_WRAP_H_
+#ifndef SWIG_Functions_WRAP_H_
+#define SWIG_Functions_WRAP_H_
+
+class SwigDirector_Object : public UltraEngine::Object, public Swig::Director {
+
+public:
+    SwigDirector_Object();
+    virtual ~SwigDirector_Object();
+    void swig_connect_director();
+    void swig_init_callbacks();
+};
 
 class SwigDirector_Widget : public UltraEngine::Widget, public Swig::Director {
 
@@ -451,6 +460,20 @@ private:
     SWIG_Callback7_t swig_callbackCopy;
     SWIG_Callback8_t swig_callbackSave__SWIG_0;
     SWIG_Callback9_t swig_callbackSave__SWIG_1;
+    void swig_init_callbacks();
+};
+
+class SwigDirector_FunctionDelegate : public FunctionDelegate, public Swig::Director {
+
+public:
+    SwigDirector_FunctionDelegate();
+    virtual void Execute();
+
+    typedef void (SWIGSTDCALL* SWIG_Callback0_t)();
+    void swig_connect_director(SWIG_Callback0_t callbackExecute);
+
+private:
+    SWIG_Callback0_t swig_callbackExecute;
     void swig_init_callbacks();
 };
 

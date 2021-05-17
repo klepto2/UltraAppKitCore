@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Buffer : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Buffer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Buffer_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Buffer(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Buffer_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Buffer : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Buffer(swigCPtr);
+          PInvoke.delete_Buffer(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,127 +36,129 @@ public class Buffer : Object {
     }
   }
 
-  public Buffer() : this(UltraAppKitPINVOKE.new_Buffer__SWIG_0(), true) {
+  public Buffer() : this(PInvoke.new_Buffer__SWIG_0(), true) {
   }
 
-  public Buffer(ulong size, bool isstatic) : this(UltraAppKitPINVOKE.new_Buffer__SWIG_1(size, isstatic), true) {
+  public Buffer(ulong size, bool isstatic) : this(PInvoke.new_Buffer__SWIG_1(size, isstatic), true) {
   }
 
   public virtual string Data() {
-    string ret = UltraAppKitPINVOKE.Buffer_Data(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.Buffer_Data(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Clear() {
-    UltraAppKitPINVOKE.Buffer_Clear(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_Clear(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual ulong GetSize() {
-    ulong ret = UltraAppKitPINVOKE.Buffer_GetSize(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.Buffer_GetSize(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Resize(ulong size, bool padding) {
-    bool ret = UltraAppKitPINVOKE.Buffer_Resize__SWIG_0(swigCPtr, size, padding);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Buffer_Resize__SWIG_0(swigCPtr, size, padding);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Resize(ulong size) {
-    bool ret = UltraAppKitPINVOKE.Buffer_Resize__SWIG_1(swigCPtr, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Buffer_Resize__SWIG_1(swigCPtr, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void PokeByte(ulong pos, byte c) {
-    UltraAppKitPINVOKE.Buffer_PokeByte(swigCPtr, pos, c);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeByte(swigCPtr, pos, c);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeShort(ulong pos, ushort i) {
-    UltraAppKitPINVOKE.Buffer_PokeShort(swigCPtr, pos, i);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeShort(swigCPtr, pos, i);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeInt(ulong pos, int i) {
-    UltraAppKitPINVOKE.Buffer_PokeInt(swigCPtr, pos, i);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeInt(swigCPtr, pos, i);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeFloat(ulong pos, float f) {
-    UltraAppKitPINVOKE.Buffer_PokeFloat(swigCPtr, pos, f);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeFloat(swigCPtr, pos, f);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeDouble(ulong pos, double f) {
-    UltraAppKitPINVOKE.Buffer_PokeDouble(swigCPtr, pos, f);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeDouble(swigCPtr, pos, f);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeString(ulong pos, String s) {
-    UltraAppKitPINVOKE.Buffer_PokeString(swigCPtr, pos, String.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeString(swigCPtr, pos, String.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void PokeWString(ulong pos, WString s) {
-    UltraAppKitPINVOKE.Buffer_PokeWString(swigCPtr, pos, WString.getCPtr(s));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_PokeWString(swigCPtr, pos, WString.getCPtr(s));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual byte PeekByte(ulong pos) {
-    byte ret = UltraAppKitPINVOKE.Buffer_PeekByte(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    byte ret = PInvoke.Buffer_PeekByte(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual ushort PeekShort(ulong pos) {
-    ushort ret = UltraAppKitPINVOKE.Buffer_PeekShort(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ushort ret = PInvoke.Buffer_PeekShort(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int PeekInt(ulong pos) {
-    int ret = UltraAppKitPINVOKE.Buffer_PeekInt(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.Buffer_PeekInt(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float PeekFloat(ulong pos) {
-    float ret = UltraAppKitPINVOKE.Buffer_PeekFloat(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Buffer_PeekFloat(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual double PeekDouble(ulong pos) {
-    double ret = UltraAppKitPINVOKE.Buffer_PeekDouble(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    double ret = PInvoke.Buffer_PeekDouble(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual String PeekString(ulong pos) {
-    String ret = new String(UltraAppKitPINVOKE.Buffer_PeekString(swigCPtr, pos), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    String ret = new String(PInvoke.Buffer_PeekString(swigCPtr, pos), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString PeekWString(ulong pos) {
-    WString ret = new WString(UltraAppKitPINVOKE.Buffer_PeekWString(swigCPtr, pos), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString(PInvoke.Buffer_PeekWString(swigCPtr, pos), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Copy(ulong srcoffset, Buffer dst, ulong dstoffset, ulong size) {
-    UltraAppKitPINVOKE.Buffer_Copy(swigCPtr, srcoffset, Buffer.getCPtr(dst), dstoffset, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Buffer_Copy(swigCPtr, srcoffset, Buffer.getCPtr(dst), dstoffset, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool Save(WString path) {
-    bool ret = UltraAppKitPINVOKE.Buffer_Save(swigCPtr, WString.getCPtr(path));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Buffer_Save(swigCPtr, WString.getCPtr(path));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

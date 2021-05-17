@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Mutex : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Mutex(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Mutex_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Mutex(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Mutex_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Mutex : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Mutex(swigCPtr);
+          PInvoke.delete_Mutex(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,22 +36,24 @@ public class Mutex : Object {
     }
   }
 
-  public Mutex() : this(UltraAppKitPINVOKE.new_Mutex(), true) {
+  public Mutex() : this(PInvoke.new_Mutex(), true) {
   }
 
   public virtual void Wait() {
-    UltraAppKitPINVOKE.Mutex_Wait(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Mutex_Wait(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Lock() {
-    UltraAppKitPINVOKE.Mutex_Lock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Mutex_Lock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Unlock() {
-    UltraAppKitPINVOKE.Mutex_Unlock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Mutex_Unlock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

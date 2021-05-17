@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class IntFourArray : global::System.IDisposable, global::System.Collections.IEnumerable
     , global::System.Collections.Generic.IEnumerable<int>
@@ -38,7 +39,7 @@ public class IntFourArray : global::System.IDisposable, global::System.Collectio
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_IntFourArray(swigCPtr);
+          PInvoke.delete_IntFourArray(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -184,56 +185,58 @@ public class IntFourArray : global::System.IDisposable, global::System.Collectio
     }
   }
 
-  public IntFourArray() : this(UltraAppKitPINVOKE.new_IntFourArray__SWIG_0(), true) {
+  public IntFourArray() : this(PInvoke.new_IntFourArray__SWIG_0(), true) {
   }
 
-  public IntFourArray(IntFourArray other) : this(UltraAppKitPINVOKE.new_IntFourArray__SWIG_1(IntFourArray.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public IntFourArray(IntFourArray other) : this(PInvoke.new_IntFourArray__SWIG_1(IntFourArray.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.IntFourArray_size(swigCPtr);
+    uint ret = PInvoke.IntFourArray_size(swigCPtr);
     return ret;
   }
 
   private bool empty() {
-    bool ret = UltraAppKitPINVOKE.IntFourArray_empty(swigCPtr);
+    bool ret = PInvoke.IntFourArray_empty(swigCPtr);
     return ret;
   }
 
   public void Fill(int value) {
-    UltraAppKitPINVOKE.IntFourArray_Fill(swigCPtr, value);
+    PInvoke.IntFourArray_Fill(swigCPtr, value);
   }
 
   public void Swap(IntFourArray other) {
-    UltraAppKitPINVOKE.IntFourArray_Swap(swigCPtr, IntFourArray.getCPtr(other));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.IntFourArray_Swap(swigCPtr, IntFourArray.getCPtr(other));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private int getitemcopy(int index) {
-    int ret = UltraAppKitPINVOKE.IntFourArray_getitemcopy(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.IntFourArray_getitemcopy(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private int getitem(int index) {
-    int ret = UltraAppKitPINVOKE.IntFourArray_getitem(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = PInvoke.IntFourArray_getitem(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, int val) {
-    UltraAppKitPINVOKE.IntFourArray_setitem(swigCPtr, index, val);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.IntFourArray_setitem(swigCPtr, index, val);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void Reverse() {
-    UltraAppKitPINVOKE.IntFourArray_Reverse__SWIG_0(swigCPtr);
+    PInvoke.IntFourArray_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    UltraAppKitPINVOKE.IntFourArray_Reverse__SWIG_1(swigCPtr, index, count);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.IntFourArray_Reverse__SWIG_1(swigCPtr, index, count);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

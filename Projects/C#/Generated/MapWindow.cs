@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MapWindow : global::System.IDisposable 
     , global::System.Collections.Generic.IDictionary< System.IntPtr , WindowWeakPtr>
@@ -38,7 +39,7 @@ public class MapWindow : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_MapWindow(swigCPtr);
+          PInvoke.delete_MapWindow(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -225,67 +226,69 @@ public class MapWindow : global::System.IDisposable
   }
 
 
-  public MapWindow() : this(UltraAppKitPINVOKE.new_MapWindow__SWIG_0(), true) {
+  public MapWindow() : this(PInvoke.new_MapWindow__SWIG_0(), true) {
   }
 
-  public MapWindow(MapWindow other) : this(UltraAppKitPINVOKE.new_MapWindow__SWIG_1(MapWindow.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public MapWindow(MapWindow other) : this(PInvoke.new_MapWindow__SWIG_1(MapWindow.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.MapWindow_size(swigCPtr);
+    uint ret = PInvoke.MapWindow_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = UltraAppKitPINVOKE.MapWindow_empty(swigCPtr);
+    bool ret = PInvoke.MapWindow_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.MapWindow_Clear(swigCPtr);
+    PInvoke.MapWindow_Clear(swigCPtr);
   }
 
   private WindowWeakPtr getitem( System.IntPtr  key) {
-    WindowWeakPtr ret = new WindowWeakPtr(UltraAppKitPINVOKE.MapWindow_getitem(swigCPtr,  ref key ), false);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WindowWeakPtr ret = new WindowWeakPtr(PInvoke.MapWindow_getitem(swigCPtr,  ref key ), false);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem( System.IntPtr  key, WindowWeakPtr x) {
-    UltraAppKitPINVOKE.MapWindow_setitem(swigCPtr,  ref key , WindowWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapWindow_setitem(swigCPtr,  ref key , WindowWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool ContainsKey( System.IntPtr  key) {
-    bool ret = UltraAppKitPINVOKE.MapWindow_ContainsKey(swigCPtr,  ref key );
+    bool ret = PInvoke.MapWindow_ContainsKey(swigCPtr,  ref key );
     return ret;
   }
 
   public void Add( System.IntPtr  key, WindowWeakPtr value) {
-    UltraAppKitPINVOKE.MapWindow_Add(swigCPtr,  ref key , WindowWeakPtr.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapWindow_Add(swigCPtr,  ref key , WindowWeakPtr.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Remove( System.IntPtr  key) {
-    bool ret = UltraAppKitPINVOKE.MapWindow_Remove(swigCPtr,  ref key );
+    bool ret = PInvoke.MapWindow_Remove(swigCPtr,  ref key );
     return ret;
   }
 
   private global::System.IntPtr create_iterator_begin() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.MapWindow_create_iterator_begin(swigCPtr);
+    global::System.IntPtr ret = PInvoke.MapWindow_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   private  System.IntPtr  get_next_key(global::System.IntPtr swigiterator) {
-                System.IntPtr ptr = UltraAppKitPINVOKE.MapWindow_get_next_key(swigCPtr, swigiterator);
+                System.IntPtr ptr = PInvoke.MapWindow_get_next_key(swigCPtr, swigiterator);
                 System.IntPtr ret = (System.IntPtr)global::System.Runtime.InteropServices.Marshal.PtrToStructure(ptr,
 typeof(System.IntPtr));
                 return ret;
         }
 
   private void destroy_iterator(global::System.IntPtr swigiterator) {
-    UltraAppKitPINVOKE.MapWindow_destroy_iterator(swigCPtr, swigiterator);
+    PInvoke.MapWindow_destroy_iterator(swigCPtr, swigiterator);
   }
+
+}
 
 }

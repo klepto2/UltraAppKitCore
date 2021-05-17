@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum WidgetColor {
   WIDGETCOLOR_BACKGROUND = 0,
@@ -23,4 +24,6 @@ public enum WidgetColor {
   WIDGETCOLOR_SLIDERTRACKHOVERED,
   WIDGETCOLOR_MENUBORDER,
   WIDGETCOLOR_POPUP
+}
+
 }

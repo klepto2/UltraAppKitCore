@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TreeViewStyle {
   TREEVIEW_DEFAULT = 0,
@@ -15,4 +16,6 @@ public enum TreeViewStyle {
   TREEVIEW_DRAGANDDROP = 2,
   TREEVIEW_SORT = 4,
   TREEVIEW_DRAGINSERT = 8
+}
+
 }

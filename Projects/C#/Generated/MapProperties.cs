@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MapProperties : global::System.IDisposable 
     , global::System.Collections.Generic.IDictionary<string, string>
@@ -38,7 +39,7 @@ public class MapProperties : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_MapProperties(swigCPtr);
+          PInvoke.delete_MapProperties(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -225,67 +226,69 @@ public class MapProperties : global::System.IDisposable
   }
 
 
-  public MapProperties() : this(UltraAppKitPINVOKE.new_MapProperties__SWIG_0(), true) {
+  public MapProperties() : this(PInvoke.new_MapProperties__SWIG_0(), true) {
   }
 
-  public MapProperties(MapProperties other) : this(UltraAppKitPINVOKE.new_MapProperties__SWIG_1(MapProperties.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public MapProperties(MapProperties other) : this(PInvoke.new_MapProperties__SWIG_1(MapProperties.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.MapProperties_size(swigCPtr);
+    uint ret = PInvoke.MapProperties_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = UltraAppKitPINVOKE.MapProperties_empty(swigCPtr);
+    bool ret = PInvoke.MapProperties_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.MapProperties_Clear(swigCPtr);
+    PInvoke.MapProperties_Clear(swigCPtr);
   }
 
   private string getitem(string key) {
-    string ret = UltraAppKitPINVOKE.MapProperties_getitem(swigCPtr, key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.MapProperties_getitem(swigCPtr, key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(string key, string x) {
-    UltraAppKitPINVOKE.MapProperties_setitem(swigCPtr, key, x);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapProperties_setitem(swigCPtr, key, x);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool ContainsKey(string key) {
-    bool ret = UltraAppKitPINVOKE.MapProperties_ContainsKey(swigCPtr, key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.MapProperties_ContainsKey(swigCPtr, key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(string key, string value) {
-    UltraAppKitPINVOKE.MapProperties_Add(swigCPtr, key, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapProperties_Add(swigCPtr, key, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(string key) {
-    bool ret = UltraAppKitPINVOKE.MapProperties_Remove(swigCPtr, key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.MapProperties_Remove(swigCPtr, key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private global::System.IntPtr create_iterator_begin() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.MapProperties_create_iterator_begin(swigCPtr);
+    global::System.IntPtr ret = PInvoke.MapProperties_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   private string get_next_key(global::System.IntPtr swigiterator) {
-    string ret = UltraAppKitPINVOKE.MapProperties_get_next_key(swigCPtr, swigiterator);
+    string ret = PInvoke.MapProperties_get_next_key(swigCPtr, swigiterator);
     return ret;
   }
 
   private void destroy_iterator(global::System.IntPtr swigiterator) {
-    UltraAppKitPINVOKE.MapProperties_destroy_iterator(swigCPtr, swigiterator);
+    PInvoke.MapProperties_destroy_iterator(swigCPtr, swigiterator);
   }
+
+}
 
 }

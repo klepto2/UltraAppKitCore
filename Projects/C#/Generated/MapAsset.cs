@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class MapAsset : global::System.IDisposable 
     , global::System.Collections.Generic.IDictionary<string, AssetWeakPtr>
@@ -38,7 +39,7 @@ public class MapAsset : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_MapAsset(swigCPtr);
+          PInvoke.delete_MapAsset(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -225,67 +226,69 @@ public class MapAsset : global::System.IDisposable
   }
 
 
-  public MapAsset() : this(UltraAppKitPINVOKE.new_MapAsset__SWIG_0(), true) {
+  public MapAsset() : this(PInvoke.new_MapAsset__SWIG_0(), true) {
   }
 
-  public MapAsset(MapAsset other) : this(UltraAppKitPINVOKE.new_MapAsset__SWIG_1(MapAsset.getCPtr(other)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public MapAsset(MapAsset other) : this(PInvoke.new_MapAsset__SWIG_1(MapAsset.getCPtr(other)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = UltraAppKitPINVOKE.MapAsset_size(swigCPtr);
+    uint ret = PInvoke.MapAsset_size(swigCPtr);
     return ret;
   }
 
   public bool empty() {
-    bool ret = UltraAppKitPINVOKE.MapAsset_empty(swigCPtr);
+    bool ret = PInvoke.MapAsset_empty(swigCPtr);
     return ret;
   }
 
   public void Clear() {
-    UltraAppKitPINVOKE.MapAsset_Clear(swigCPtr);
+    PInvoke.MapAsset_Clear(swigCPtr);
   }
 
   private AssetWeakPtr getitem(string key) {
-    AssetWeakPtr ret = new AssetWeakPtr(UltraAppKitPINVOKE.MapAsset_getitem(swigCPtr, key), false);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    AssetWeakPtr ret = new AssetWeakPtr(PInvoke.MapAsset_getitem(swigCPtr, key), false);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(string key, AssetWeakPtr x) {
-    UltraAppKitPINVOKE.MapAsset_setitem(swigCPtr, key, AssetWeakPtr.getCPtr(x));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapAsset_setitem(swigCPtr, key, AssetWeakPtr.getCPtr(x));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool ContainsKey(string key) {
-    bool ret = UltraAppKitPINVOKE.MapAsset_ContainsKey(swigCPtr, key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.MapAsset_ContainsKey(swigCPtr, key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Add(string key, AssetWeakPtr value) {
-    UltraAppKitPINVOKE.MapAsset_Add(swigCPtr, key, AssetWeakPtr.getCPtr(value));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.MapAsset_Add(swigCPtr, key, AssetWeakPtr.getCPtr(value));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public bool Remove(string key) {
-    bool ret = UltraAppKitPINVOKE.MapAsset_Remove(swigCPtr, key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.MapAsset_Remove(swigCPtr, key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private global::System.IntPtr create_iterator_begin() {
-    global::System.IntPtr ret = UltraAppKitPINVOKE.MapAsset_create_iterator_begin(swigCPtr);
+    global::System.IntPtr ret = PInvoke.MapAsset_create_iterator_begin(swigCPtr);
     return ret;
   }
 
   private string get_next_key(global::System.IntPtr swigiterator) {
-    string ret = UltraAppKitPINVOKE.MapAsset_get_next_key(swigCPtr, swigiterator);
+    string ret = PInvoke.MapAsset_get_next_key(swigCPtr, swigiterator);
     return ret;
   }
 
   private void destroy_iterator(global::System.IntPtr swigiterator) {
-    UltraAppKitPINVOKE.MapAsset_destroy_iterator(swigCPtr, swigiterator);
+    PInvoke.MapAsset_destroy_iterator(swigCPtr, swigiterator);
   }
+
+}
 
 }

@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ProcessStatus {
   PROCESS_RUNNING,
   PROCESS_FINISHED
+}
+
 }

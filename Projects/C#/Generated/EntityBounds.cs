@@ -8,10 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum EntityBounds {
   BOUNDS_LOCAL = 1,
   BOUNDS_GLOBAL = 2,
   BOUNDS_RECURSIVE = 4,
   BOUNDS_ALL = BOUNDS_LOCAL|BOUNDS_GLOBAL|BOUNDS_RECURSIVE
+}
+
 }

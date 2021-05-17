@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class ProgressBar : Widget {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal ProgressBar(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.ProgressBar_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ProgressBar(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.ProgressBar_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class ProgressBar : Widget {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_ProgressBar(swigCPtr);
+          PInvoke.delete_ProgressBar(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,12 +36,14 @@ public class ProgressBar : Widget {
     }
   }
 
-  public ProgressBar() : this(UltraAppKitPINVOKE.new_ProgressBar(), true) {
+  public ProgressBar() : this(PInvoke.new_ProgressBar(), true) {
   }
 
   public override void Draw(int x, int y, int width, int height) {
-    UltraAppKitPINVOKE.ProgressBar_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.ProgressBar_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

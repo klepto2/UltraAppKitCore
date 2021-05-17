@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class DDS_PIXELFORMAT : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,7 +37,7 @@ public class DDS_PIXELFORMAT : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_DDS_PIXELFORMAT(swigCPtr);
+          PInvoke.delete_DDS_PIXELFORMAT(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,85 +46,87 @@ public class DDS_PIXELFORMAT : global::System.IDisposable {
 
   public uint dwSize {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwSize_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwSize_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwSize_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwSize_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwFlags {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwFlags_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwFlags_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwFlags_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwFlags_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwFourCC {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwFourCC_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwFourCC_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwFourCC_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwFourCC_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwRGBBitCount {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwRGBBitCount_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwRGBBitCount_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwRGBBitCount_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwRGBBitCount_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwRBitMask {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwRBitMask_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwRBitMask_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwRBitMask_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwRBitMask_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwGBitMask {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwGBitMask_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwGBitMask_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwGBitMask_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwGBitMask_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwBBitMask {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwBBitMask_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwBBitMask_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwBBitMask_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwBBitMask_get(swigCPtr);
       return ret;
     } 
   }
 
   public uint dwABitMask {
     set {
-      UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwABitMask_set(swigCPtr, value);
+      PInvoke.DDS_PIXELFORMAT_dwABitMask_set(swigCPtr, value);
     } 
     get {
-      uint ret = UltraAppKitPINVOKE.DDS_PIXELFORMAT_dwABitMask_get(swigCPtr);
+      uint ret = PInvoke.DDS_PIXELFORMAT_dwABitMask_get(swigCPtr);
       return ret;
     } 
   }
 
-  public DDS_PIXELFORMAT() : this(UltraAppKitPINVOKE.new_DDS_PIXELFORMAT(), true) {
+  public DDS_PIXELFORMAT() : this(PInvoke.new_DDS_PIXELFORMAT(), true) {
   }
+
+}
 
 }

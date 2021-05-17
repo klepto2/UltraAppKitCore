@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Language : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Language(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Language_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Language(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Language_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Language : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Language(swigCPtr);
+          PInvoke.delete_Language(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,17 +37,19 @@ public class Language : Object {
   }
 
   public virtual void AddTerm(string key, string value) {
-    UltraAppKitPINVOKE.Language_AddTerm(swigCPtr, key, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Language_AddTerm(swigCPtr, key, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual string Translate(string text) {
-    string ret = UltraAppKitPINVOKE.Language_Translate__SWIG_0(swigCPtr, text);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = PInvoke.Language_Translate__SWIG_0(swigCPtr, text);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Language() : this(UltraAppKitPINVOKE.new_Language(), true) {
+  public Language() : this(PInvoke.new_Language(), true) {
   }
+
+}
 
 }

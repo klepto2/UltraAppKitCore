@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Asset : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Asset(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Asset_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Asset(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Asset_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Asset : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Asset(swigCPtr);
+          PInvoke.delete_Asset(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,73 +37,73 @@ public class Asset : Object {
   }
 
   protected virtual void Reset() {
-    UltraAppKitPINVOKE.Asset_Reset(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Asset_Reset(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   protected virtual void Destroy() {
-    if (SwigDerivedClassHasMethod("Destroy", swigMethodTypes1)) UltraAppKitPINVOKE.Asset_DestroySwigExplicitAsset(swigCPtr); else UltraAppKitPINVOKE.Asset_Destroy(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Destroy", swigMethodTypes1)) PInvoke.Asset_DestroySwigExplicitAsset(swigCPtr); else PInvoke.Asset_Destroy(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   protected virtual bool Reload(Stream stream, LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Asset_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Asset_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   protected virtual bool Reload(Stream stream) {
-    bool ret = UltraAppKitPINVOKE.Asset_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Asset_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public WString path {
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.Asset_path_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.Asset_path_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Asset() : this(UltraAppKitPINVOKE.new_Asset(), true) {
+  public Asset() : this(PInvoke.new_Asset(), true) {
     SwigDirectorConnect();
   }
 
   public virtual WString GetPath() {
-    WString ret = new WString((SwigDerivedClassHasMethod("GetPath", swigMethodTypes4) ? UltraAppKitPINVOKE.Asset_GetPathSwigExplicitAsset(swigCPtr) : UltraAppKitPINVOKE.Asset_GetPath(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString((SwigDerivedClassHasMethod("GetPath", swigMethodTypes4) ? PInvoke.Asset_GetPathSwigExplicitAsset(swigCPtr) : PInvoke.Asset_GetPath(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Reload(LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Asset_Reload__SWIG_2(swigCPtr, (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Asset_Reload__SWIG_2(swigCPtr, (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Reload() {
-    bool ret = UltraAppKitPINVOKE.Asset_Reload__SWIG_3(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Asset_Reload__SWIG_3(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Asset Copy() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.Asset_Copy(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.Asset_Copy(swigCPtr);
     Asset ret = (cPtr == global::System.IntPtr.Zero) ? null : new Asset(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(WString path, SaveFlags flags) {
-    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes8) ? UltraAppKitPINVOKE.Asset_SaveSwigExplicitAsset__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags) : UltraAppKitPINVOKE.Asset_Save__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes8) ? PInvoke.Asset_SaveSwigExplicitAsset__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags) : PInvoke.Asset_Save__SWIG_0(swigCPtr, WString.getCPtr(path), (int)flags));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Save(WString path) {
-    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes9) ? UltraAppKitPINVOKE.Asset_SaveSwigExplicitAsset__SWIG_1(swigCPtr, WString.getCPtr(path)) : UltraAppKitPINVOKE.Asset_Save__SWIG_1(swigCPtr, WString.getCPtr(path)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes9) ? PInvoke.Asset_SaveSwigExplicitAsset__SWIG_1(swigCPtr, WString.getCPtr(path)) : PInvoke.Asset_Save__SWIG_1(swigCPtr, WString.getCPtr(path)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
@@ -127,7 +128,7 @@ public class Asset : Object {
       swigDelegate8 = new SwigDelegateAsset_8(SwigDirectorMethodSave__SWIG_0);
     if (SwigDerivedClassHasMethod("Save", swigMethodTypes9))
       swigDelegate9 = new SwigDelegateAsset_9(SwigDirectorMethodSave__SWIG_1);
-    UltraAppKitPINVOKE.Asset_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9);
+    PInvoke.Asset_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
@@ -208,4 +209,6 @@ public class Asset : Object {
   private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] {  };
   private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(WString), typeof(SaveFlags) };
   private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] { typeof(WString) };
+}
+
 }

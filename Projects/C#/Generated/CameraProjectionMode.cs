@@ -8,9 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum CameraProjectionMode {
   PROJECTION_NONE = 0,
   PROJECTION_ORTHOGRAPHIC = 1,
   PROJECTION_PERSPECTIVE = 2
+}
+
 }

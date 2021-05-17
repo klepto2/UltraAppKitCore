@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class PixmapWeakPtr : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,47 +37,49 @@ public class PixmapWeakPtr : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_PixmapWeakPtr(swigCPtr);
+          PInvoke.delete_PixmapWeakPtr(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public PixmapWeakPtr() : this(UltraAppKitPINVOKE.new_PixmapWeakPtr__SWIG_0(), true) {
+  public PixmapWeakPtr() : this(PInvoke.new_PixmapWeakPtr__SWIG_0(), true) {
   }
 
-  public PixmapWeakPtr(PixmapWeakPtr arg0) : this(UltraAppKitPINVOKE.new_PixmapWeakPtr__SWIG_1(PixmapWeakPtr.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public PixmapWeakPtr(PixmapWeakPtr arg0) : this(PInvoke.new_PixmapWeakPtr__SWIG_1(PixmapWeakPtr.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public PixmapWeakPtr(Pixmap arg0) : this(UltraAppKitPINVOKE.new_PixmapWeakPtr__SWIG_2(Pixmap.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public PixmapWeakPtr(Pixmap arg0) : this(PInvoke.new_PixmapWeakPtr__SWIG_2(Pixmap.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void swap(PixmapWeakPtr arg0) {
-    UltraAppKitPINVOKE.PixmapWeakPtr_swap(swigCPtr, PixmapWeakPtr.getCPtr(arg0));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.PixmapWeakPtr_swap(swigCPtr, PixmapWeakPtr.getCPtr(arg0));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void reset() {
-    UltraAppKitPINVOKE.PixmapWeakPtr_reset(swigCPtr);
+    PInvoke.PixmapWeakPtr_reset(swigCPtr);
   }
 
   public int use_count() {
-    int ret = UltraAppKitPINVOKE.PixmapWeakPtr_use_count(swigCPtr);
+    int ret = PInvoke.PixmapWeakPtr_use_count(swigCPtr);
     return ret;
   }
 
   public bool expired() {
-    bool ret = UltraAppKitPINVOKE.PixmapWeakPtr_expired(swigCPtr);
+    bool ret = PInvoke.PixmapWeakPtr_expired(swigCPtr);
     return ret;
   }
 
   public Pixmap lock_() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.PixmapWeakPtr_lock_(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.PixmapWeakPtr_lock_(swigCPtr);
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
     return ret;
   }
+
+}
 
 }

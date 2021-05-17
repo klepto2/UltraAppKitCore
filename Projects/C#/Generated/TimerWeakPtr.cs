@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class TimerWeakPtr : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,47 +37,49 @@ public class TimerWeakPtr : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_TimerWeakPtr(swigCPtr);
+          PInvoke.delete_TimerWeakPtr(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public TimerWeakPtr() : this(UltraAppKitPINVOKE.new_TimerWeakPtr__SWIG_0(), true) {
+  public TimerWeakPtr() : this(PInvoke.new_TimerWeakPtr__SWIG_0(), true) {
   }
 
-  public TimerWeakPtr(TimerWeakPtr arg0) : this(UltraAppKitPINVOKE.new_TimerWeakPtr__SWIG_1(TimerWeakPtr.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public TimerWeakPtr(TimerWeakPtr arg0) : this(PInvoke.new_TimerWeakPtr__SWIG_1(TimerWeakPtr.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public TimerWeakPtr(Timer arg0) : this(UltraAppKitPINVOKE.new_TimerWeakPtr__SWIG_2(Timer.getCPtr(arg0)), true) {
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public TimerWeakPtr(Timer arg0) : this(PInvoke.new_TimerWeakPtr__SWIG_2(Timer.getCPtr(arg0)), true) {
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void swap(TimerWeakPtr arg0) {
-    UltraAppKitPINVOKE.TimerWeakPtr_swap(swigCPtr, TimerWeakPtr.getCPtr(arg0));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.TimerWeakPtr_swap(swigCPtr, TimerWeakPtr.getCPtr(arg0));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public void reset() {
-    UltraAppKitPINVOKE.TimerWeakPtr_reset(swigCPtr);
+    PInvoke.TimerWeakPtr_reset(swigCPtr);
   }
 
   public int use_count() {
-    int ret = UltraAppKitPINVOKE.TimerWeakPtr_use_count(swigCPtr);
+    int ret = PInvoke.TimerWeakPtr_use_count(swigCPtr);
     return ret;
   }
 
   public bool expired() {
-    bool ret = UltraAppKitPINVOKE.TimerWeakPtr_expired(swigCPtr);
+    bool ret = PInvoke.TimerWeakPtr_expired(swigCPtr);
     return ret;
   }
 
   public Timer lock_() {
-    global::System.IntPtr cPtr = UltraAppKitPINVOKE.TimerWeakPtr_lock_(swigCPtr);
+    global::System.IntPtr cPtr = PInvoke.TimerWeakPtr_lock_(swigCPtr);
     Timer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Timer(cPtr, true);
     return ret;
   }
+
+}
 
 }

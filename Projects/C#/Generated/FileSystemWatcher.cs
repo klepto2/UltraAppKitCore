@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class FileSystemWatcher : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal FileSystemWatcher(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.FileSystemWatcher_SWIGSmartPtrUpcast(cPtr), true) {
+  internal FileSystemWatcher(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.FileSystemWatcher_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class FileSystemWatcher : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_FileSystemWatcher(swigCPtr);
+          PInvoke.delete_FileSystemWatcher(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -35,13 +36,15 @@ public class FileSystemWatcher : Object {
     }
   }
 
-  public FileSystemWatcher() : this(UltraAppKitPINVOKE.new_FileSystemWatcher(), true) {
+  public FileSystemWatcher() : this(PInvoke.new_FileSystemWatcher(), true) {
   }
 
   public static bool TimerCallback(Event event_, Object extra) {
-    bool ret = UltraAppKitPINVOKE.FileSystemWatcher_TimerCallback(Event.getCPtr(event_), Object.getCPtr(extra));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.FileSystemWatcher_TimerCallback(Event.getCPtr(event_), Object.getCPtr(extra));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

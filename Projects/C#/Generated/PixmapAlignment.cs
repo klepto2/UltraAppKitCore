@@ -8,10 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum PixmapAlignment {
   PIXMAP_CENTER,
   PIXMAP_CONTAIN,
   PIXMAP_COVER,
   PIXMAP_STRETCH
+}
+
 }

@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Loader : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Loader(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Loader_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Loader(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Loader_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Loader : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Loader(swigCPtr);
+          PInvoke.delete_Loader(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,72 +38,76 @@ public class Loader : Object {
 
   public float dpi {
     set {
-      UltraAppKitPINVOKE.Loader_dpi_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Loader_dpi_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Loader_dpi_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      float ret = PInvoke.Loader_dpi_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorStdWString extensions {
     set {
-      UltraAppKitPINVOKE.Loader_extensions_set(swigCPtr, VectorStdWString.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Loader_extensions_set(swigCPtr, VectorStdWString.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Loader_extensions_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Loader_extensions_get(swigCPtr);
       VectorStdWString ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorStdWString(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public string mimetype {
     set {
-      UltraAppKitPINVOKE.Loader_mimetype_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Loader_mimetype_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      string ret = UltraAppKitPINVOKE.Loader_mimetype_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      string ret = PInvoke.Loader_mimetype_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public PluginWeakPtr plugin {
     set {
-      UltraAppKitPINVOKE.Loader_plugin_set(swigCPtr, PluginWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Loader_plugin_set(swigCPtr, PluginWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Loader_plugin_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Loader_plugin_get(swigCPtr);
       PluginWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new PluginWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Loader() : this(UltraAppKitPINVOKE.new_Loader(), true) {
+  public Loader() : this(PInvoke.new_Loader(), true) {
   }
 
   public virtual bool Reload(Stream stream, Object o, LoadFlags flags) {
-    bool ret = UltraAppKitPINVOKE.Loader_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o), (int)flags);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Loader_Reload__SWIG_0(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o), (int)flags);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Reload(Stream stream, Object o) {
-    bool ret = UltraAppKitPINVOKE.Loader_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.Loader_Reload__SWIG_1(swigCPtr, Stream.getCPtr(stream), Object.getCPtr(o));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Continue(Object o) {
-    UltraAppKitPINVOKE.Loader_Continue(swigCPtr, Object.getCPtr(o));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Loader_Continue(swigCPtr, Object.getCPtr(o));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
+
+}
 
 }

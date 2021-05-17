@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Character : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,7 +37,7 @@ public class Character : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_Character(swigCPtr);
+          PInvoke.delete_Character(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -45,10 +46,11 @@ public class Character : global::System.IDisposable {
 
   public Vec4 texcoords {
     set {
-      UltraAppKitPINVOKE.Character_texcoords_set(swigCPtr, Vec4.getCPtr(value));
+      PInvoke.Character_texcoords_set(swigCPtr, Vec4.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Character_texcoords_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Character_texcoords_get(swigCPtr);
       Vec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vec4(cPtr, false);
       return ret;
     } 
@@ -56,65 +58,67 @@ public class Character : global::System.IDisposable {
 
   public int id {
     set {
-      UltraAppKitPINVOKE.Character_id_set(swigCPtr, value);
+      PInvoke.Character_id_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_id_get(swigCPtr);
+      int ret = PInvoke.Character_id_get(swigCPtr);
       return ret;
     } 
   }
 
   public int spacing {
     set {
-      UltraAppKitPINVOKE.Character_spacing_set(swigCPtr, value);
+      PInvoke.Character_spacing_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_spacing_get(swigCPtr);
+      int ret = PInvoke.Character_spacing_get(swigCPtr);
       return ret;
     } 
   }
 
   public int x {
     set {
-      UltraAppKitPINVOKE.Character_x_set(swigCPtr, value);
+      PInvoke.Character_x_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_x_get(swigCPtr);
+      int ret = PInvoke.Character_x_get(swigCPtr);
       return ret;
     } 
   }
 
   public int y {
     set {
-      UltraAppKitPINVOKE.Character_y_set(swigCPtr, value);
+      PInvoke.Character_y_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_y_get(swigCPtr);
+      int ret = PInvoke.Character_y_get(swigCPtr);
       return ret;
     } 
   }
 
   public int width {
     set {
-      UltraAppKitPINVOKE.Character_width_set(swigCPtr, value);
+      PInvoke.Character_width_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_width_get(swigCPtr);
+      int ret = PInvoke.Character_width_get(swigCPtr);
       return ret;
     } 
   }
 
   public int height {
     set {
-      UltraAppKitPINVOKE.Character_height_set(swigCPtr, value);
+      PInvoke.Character_height_set(swigCPtr, value);
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Character_height_get(swigCPtr);
+      int ret = PInvoke.Character_height_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Character() : this(UltraAppKitPINVOKE.new_Character(), true) {
+  public Character() : this(PInvoke.new_Character(), true) {
   }
+
+}
 
 }

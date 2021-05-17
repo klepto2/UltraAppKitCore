@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Vec3 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,256 +37,308 @@ public class Vec3 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          UltraAppKitPINVOKE.delete_Vec3(swigCPtr);
+          PInvoke.delete_Vec3(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
+    public static Vec3 operator+(Vec3 arg1, Vec3 arg2) {
+        return arg1.Plus(arg2);
+    }
+
+    public static Vec3 operator-(Vec3 arg1, Vec3 arg2) {
+        return arg1.Minus(arg2);
+    }
+
+    public static Vec3 operator-(Vec3 arg1) {
+        return arg1.Minus();
+    }
+
+    public static Vec3 operator/(Vec3 arg1, Vec3 arg2) {
+        return arg1.Divide(arg2);
+    }
+
+    public static Vec3 operator*(Vec3 arg1, Vec3 arg2) {
+        return arg1.Multiply(arg2);
+    }
+
+    public static float operator%(Vec3 arg1, Vec3 arg2) {
+        return arg1.Percent(arg2);
+    }
+
+     public static bool operator==(Vec3 arg1, Vec3 arg2) {
+         if ((object)arg1 == null)
+            return (object)arg2 == null;
+
+        if ((object)arg2 == null)
+            return (object)arg1 == null;
+
+        return arg1.EqualEqual(arg2);
+    }
+
+    public static bool operator!=(Vec3 arg1, Vec3 arg2) {
+        return !(arg1 == arg2);
+    }
+
+    public static bool operator<(Vec3 arg1, Vec3 arg2) {
+        return arg1.LessThan(arg2);
+    }
+
+    public static bool operator>(Vec3 arg1, Vec3 arg2) {
+        return !arg1.LessThan(arg2) && !arg1.EqualEqual(arg2);
+    }
+
+    public override string ToString() {
+        return _ToWString();
+    }
+
   public float x {
     set {
-      UltraAppKitPINVOKE.Vec3_x_set(swigCPtr, value);
+      PInvoke.Vec3_x_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_x_get(swigCPtr);
+      float ret = PInvoke.Vec3_x_get(swigCPtr);
       return ret;
     } 
   }
 
   public float r {
     set {
-      UltraAppKitPINVOKE.Vec3_r_set(swigCPtr, value);
+      PInvoke.Vec3_r_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_r_get(swigCPtr);
+      float ret = PInvoke.Vec3_r_get(swigCPtr);
       return ret;
     } 
   }
 
   public float width {
     set {
-      UltraAppKitPINVOKE.Vec3_width_set(swigCPtr, value);
+      PInvoke.Vec3_width_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_width_get(swigCPtr);
+      float ret = PInvoke.Vec3_width_get(swigCPtr);
       return ret;
     } 
   }
 
   public float y {
     set {
-      UltraAppKitPINVOKE.Vec3_y_set(swigCPtr, value);
+      PInvoke.Vec3_y_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_y_get(swigCPtr);
+      float ret = PInvoke.Vec3_y_get(swigCPtr);
       return ret;
     } 
   }
 
   public float g {
     set {
-      UltraAppKitPINVOKE.Vec3_g_set(swigCPtr, value);
+      PInvoke.Vec3_g_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_g_get(swigCPtr);
+      float ret = PInvoke.Vec3_g_get(swigCPtr);
       return ret;
     } 
   }
 
   public float height {
     set {
-      UltraAppKitPINVOKE.Vec3_height_set(swigCPtr, value);
+      PInvoke.Vec3_height_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_height_get(swigCPtr);
+      float ret = PInvoke.Vec3_height_get(swigCPtr);
       return ret;
     } 
   }
 
   public float z {
     set {
-      UltraAppKitPINVOKE.Vec3_z_set(swigCPtr, value);
+      PInvoke.Vec3_z_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_z_get(swigCPtr);
+      float ret = PInvoke.Vec3_z_get(swigCPtr);
       return ret;
     } 
   }
 
   public float b {
     set {
-      UltraAppKitPINVOKE.Vec3_b_set(swigCPtr, value);
+      PInvoke.Vec3_b_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_b_get(swigCPtr);
+      float ret = PInvoke.Vec3_b_get(swigCPtr);
       return ret;
     } 
   }
 
   public float depth {
     set {
-      UltraAppKitPINVOKE.Vec3_depth_set(swigCPtr, value);
+      PInvoke.Vec3_depth_set(swigCPtr, value);
     } 
     get {
-      float ret = UltraAppKitPINVOKE.Vec3_depth_get(swigCPtr);
+      float ret = PInvoke.Vec3_depth_get(swigCPtr);
       return ret;
     } 
   }
 
-  public Vec3() : this(UltraAppKitPINVOKE.new_Vec3__SWIG_0(), true) {
+  public Vec3() : this(PInvoke.new_Vec3__SWIG_0(), true) {
   }
 
-  public Vec3(float x) : this(UltraAppKitPINVOKE.new_Vec3__SWIG_1(x), true) {
+  public Vec3(float x) : this(PInvoke.new_Vec3__SWIG_1(x), true) {
   }
 
-  public Vec3(float x, float y) : this(UltraAppKitPINVOKE.new_Vec3__SWIG_2(x, y), true) {
+  public Vec3(float x, float y) : this(PInvoke.new_Vec3__SWIG_2(x, y), true) {
   }
 
-  public Vec3(float x, float y, float z) : this(UltraAppKitPINVOKE.new_Vec3__SWIG_3(x, y, z), true) {
+  public Vec3(float x, float y, float z) : this(PInvoke.new_Vec3__SWIG_3(x, y, z), true) {
   }
 
-  public bool LessThan(Vec3 v) {
-    bool ret = UltraAppKitPINVOKE.Vec3_LessThan(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private string _ToWString() {
+    string ret = PInvoke.Vec3__ToWString(swigCPtr);
     return ret;
   }
 
-  public bool GreaterThan(Vec3 v) {
-    bool ret = UltraAppKitPINVOKE.Vec3_GreaterThan(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool LessThan(Vec3 v) {
+    bool ret = PInvoke.Vec3_LessThan(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool NotEqual(Vec3 v) {
-    bool ret = UltraAppKitPINVOKE.Vec3_NotEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool GreaterThan(Vec3 v) {
+    bool ret = PInvoke.Vec3_GreaterThan(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool EqualEqual(Vec3 v) {
-    bool ret = UltraAppKitPINVOKE.Vec3_EqualEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private bool NotEqual(Vec3 v) {
+    bool ret = PInvoke.Vec3_NotEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_float IndexInto(uint n) {
-    SWIGTYPE_p_float ret = new SWIGTYPE_p_float(UltraAppKitPINVOKE.Vec3_IndexInto(swigCPtr, n), false);
+  private bool EqualEqual(Vec3 v) {
+    bool ret = PInvoke.Vec3_EqualEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec3 Minus(Vec3 v) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Minus__SWIG_0(swigCPtr, Vec3.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec3 Minus(Vec3 v) {
+    Vec3 ret = new Vec3(PInvoke.Vec3_Minus__SWIG_0(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void MinusEqual(Vec3 v) {
-    UltraAppKitPINVOKE.Vec3_MinusEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void MinusEqual(Vec3 v) {
+    PInvoke.Vec3_MinusEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Vec3 Plus(Vec3 v) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Plus(swigCPtr, Vec3.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec3 Plus(Vec3 v) {
+    Vec3 ret = new Vec3(PInvoke.Vec3_Plus(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void PlusEqual(Vec3 v) {
-    UltraAppKitPINVOKE.Vec3_PlusEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void PlusEqual(Vec3 v) {
+    PInvoke.Vec3_PlusEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Vec3 Multiply(Vec3 v) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Multiply(swigCPtr, Vec3.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec3 Multiply(Vec3 v) {
+    Vec3 ret = new Vec3(PInvoke.Vec3_Multiply(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void MultiplyEqual(Vec3 v) {
-    UltraAppKitPINVOKE.Vec3_MultiplyEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void MultiplyEqual(Vec3 v) {
+    PInvoke.Vec3_MultiplyEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public Vec3 Divide(Vec3 v) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Divide(swigCPtr, Vec3.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private Vec3 Divide(Vec3 v) {
+    Vec3 ret = new Vec3(PInvoke.Vec3_Divide(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void DivideEqual(Vec3 v) {
-    UltraAppKitPINVOKE.Vec3_DivideEqual(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private void DivideEqual(Vec3 v) {
+    PInvoke.Vec3_DivideEqual(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public float Percent(Vec3 v) {
-    float ret = UltraAppKitPINVOKE.Vec3_Percent(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  private float Percent(Vec3 v) {
+    float ret = PInvoke.Vec3_Percent(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Vec3 Minus() {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Minus__SWIG_1(swigCPtr), true);
+  private Vec3 Minus() {
+    Vec3 ret = new Vec3(PInvoke.Vec3_Minus__SWIG_1(swigCPtr), true);
     return ret;
   }
 
   public Vec3 Reflect(Vec3 normal) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Reflect(swigCPtr, Vec3.getCPtr(normal)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    Vec3 ret = new Vec3(PInvoke.Vec3_Reflect(swigCPtr, Vec3.getCPtr(normal)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Vec2 xy() {
-    Vec2 ret = new Vec2(UltraAppKitPINVOKE.Vec3_xy(swigCPtr), true);
+    Vec2 ret = new Vec2(PInvoke.Vec3_xy(swigCPtr), true);
     return ret;
   }
 
   public Vec2 zy() {
-    Vec2 ret = new Vec2(UltraAppKitPINVOKE.Vec3_zy(swigCPtr), true);
+    Vec2 ret = new Vec2(PInvoke.Vec3_zy(swigCPtr), true);
     return ret;
   }
 
   public Vec2 xz() {
-    Vec2 ret = new Vec2(UltraAppKitPINVOKE.Vec3_xz(swigCPtr), true);
+    Vec2 ret = new Vec2(PInvoke.Vec3_xz(swigCPtr), true);
     return ret;
   }
 
   public float Length() {
-    float ret = UltraAppKitPINVOKE.Vec3_Length(swigCPtr);
+    float ret = PInvoke.Vec3_Length(swigCPtr);
     return ret;
   }
 
   public Vec3 Normalize() {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Normalize(swigCPtr), true);
+    Vec3 ret = new Vec3(PInvoke.Vec3_Normalize(swigCPtr), true);
     return ret;
   }
 
   public Vec3 Inverse() {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Inverse(swigCPtr), true);
+    Vec3 ret = new Vec3(PInvoke.Vec3_Inverse(swigCPtr), true);
     return ret;
   }
 
   public float DistanceToPoint(Vec3 p) {
-    float ret = UltraAppKitPINVOKE.Vec3_DistanceToPoint(swigCPtr, Vec3.getCPtr(p));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Vec3_DistanceToPoint(swigCPtr, Vec3.getCPtr(p));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Vec3 Cross(Vec3 v) {
-    Vec3 ret = new Vec3(UltraAppKitPINVOKE.Vec3_Cross__SWIG_0(swigCPtr, Vec3.getCPtr(v)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    Vec3 ret = new Vec3(PInvoke.Vec3_Cross__SWIG_0(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Cross(Vec3 v, Vec3 result) {
-    UltraAppKitPINVOKE.Vec3_Cross__SWIG_1(swigCPtr, Vec3.getCPtr(v), Vec3.getCPtr(result));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.Vec3_Cross__SWIG_1(swigCPtr, Vec3.getCPtr(v), Vec3.getCPtr(result));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public float Dot(Vec3 v) {
-    float ret = UltraAppKitPINVOKE.Vec3_Dot(swigCPtr, Vec3.getCPtr(v));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    float ret = PInvoke.Vec3_Dot(swigCPtr, Vec3.getCPtr(v));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

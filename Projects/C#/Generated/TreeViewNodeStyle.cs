@@ -8,8 +8,11 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum TreeViewNodeStyle {
   TREEVIEWNODE_DETAULT,
   TREEVIEWNODE_EXPANDABLE
+}
+
 }

@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum KeyCode {
   KEY_LBUTTON = 0x1,
@@ -110,4 +111,6 @@ public enum KeyCode {
   KEY_NUMPADMULTIPLY,
   KEY_NUMPADSUBTRACT,
   KEY_NUMPADADDITION
+}
+
 }

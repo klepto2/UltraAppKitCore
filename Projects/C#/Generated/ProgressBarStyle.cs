@@ -8,7 +8,10 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ProgressBarStyle {
   PROGRESSBAR_DEFAULT
+}
+
 }

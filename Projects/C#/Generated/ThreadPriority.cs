@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum ThreadPriority {
   THREAD_BACKGROUND = -2,
@@ -15,4 +16,6 @@ public enum ThreadPriority {
   THREAD_NORMAL = 0,
   THREAD_HIGH = 1,
   THREAD_REALTIME = 2
+}
+
 }

@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class BufferStream : Stream {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal BufferStream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.BufferStream_SWIGSmartPtrUpcast(cPtr), true) {
+  internal BufferStream(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.BufferStream_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class BufferStream : Stream {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_BufferStream(swigCPtr);
+          PInvoke.delete_BufferStream(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -37,54 +38,56 @@ public class BufferStream : Stream {
 
   public Buffer data {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.BufferStream_data_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.BufferStream_data_get(swigCPtr);
       Buffer ret = (cPtr == global::System.IntPtr.Zero) ? null : new Buffer(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public BufferStream() : this(UltraAppKitPINVOKE.new_BufferStream(), true) {
+  public BufferStream() : this(PInvoke.new_BufferStream(), true) {
   }
 
   public override void Close() {
-    UltraAppKitPINVOKE.BufferStream_Close(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.BufferStream_Close(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override bool EOF() {
-    bool ret = UltraAppKitPINVOKE.BufferStream_EOF(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = PInvoke.BufferStream_EOF(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ulong GetPosition() {
-    ulong ret = UltraAppKitPINVOKE.BufferStream_GetPosition(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.BufferStream_GetPosition(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override void Seek(ulong pos) {
-    UltraAppKitPINVOKE.BufferStream_Seek(swigCPtr, pos);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    PInvoke.BufferStream_Seek(swigCPtr, pos);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public override ulong GetSize() {
-    ulong ret = UltraAppKitPINVOKE.BufferStream_GetSize(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.BufferStream_GetSize(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ulong Read(System.IntPtr b, ulong size) {
-    ulong ret = UltraAppKitPINVOKE.BufferStream_Read(swigCPtr, b, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.BufferStream_Read(swigCPtr, b, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override ulong Write(System.IntPtr b, ulong size) {
-    ulong ret = UltraAppKitPINVOKE.BufferStream_Write(swigCPtr, b, size);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    ulong ret = PInvoke.BufferStream_Write(swigCPtr, b, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
+
+}
 
 }

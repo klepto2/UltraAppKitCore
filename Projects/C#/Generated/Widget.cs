@@ -8,12 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public class Widget : Object {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Widget(global::System.IntPtr cPtr, bool cMemoryOwn) : base(UltraAppKitPINVOKE.Widget_SWIGSmartPtrUpcast(cPtr), true) {
+  internal Widget(global::System.IntPtr cPtr, bool cMemoryOwn) : base(PInvoke.Widget_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
@@ -27,7 +28,7 @@ public class Widget : Object {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          UltraAppKitPINVOKE.delete_Widget(swigCPtr);
+          PInvoke.delete_Widget(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -36,1207 +37,1192 @@ public class Widget : Object {
   }
 
   protected virtual void Reset() {
-    if (SwigDerivedClassHasMethod("Reset", swigMethodTypes0)) UltraAppKitPINVOKE.Widget_ResetSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Reset(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Reset", swigMethodTypes0)) PInvoke.Widget_ResetSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Reset(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   protected virtual bool OK() {
-    bool ret = (SwigDerivedClassHasMethod("OK", swigMethodTypes1) ? UltraAppKitPINVOKE.Widget_OKSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_OK(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("OK", swigMethodTypes1) ? PInvoke.Widget_OKSwigExplicitWidget(swigCPtr) : PInvoke.Widget_OK(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   protected virtual bool Cancel() {
-    bool ret = (SwigDerivedClassHasMethod("Cancel", swigMethodTypes2) ? UltraAppKitPINVOKE.Widget_CancelSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_Cancel(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Cancel", swigMethodTypes2) ? PInvoke.Widget_CancelSwigExplicitWidget(swigCPtr) : PInvoke.Widget_Cancel(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   protected virtual void UpdateColors() {
-    if (SwigDerivedClassHasMethod("UpdateColors", swigMethodTypes3)) UltraAppKitPINVOKE.Widget_UpdateColorsSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_UpdateColors(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("UpdateColors", swigMethodTypes3)) PInvoke.Widget_UpdateColorsSwigExplicitWidget(swigCPtr); else PInvoke.Widget_UpdateColors(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public Icon icon {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_icon_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_icon_get(swigCPtr);
       Icon ret = (cPtr == global::System.IntPtr.Zero) ? null : new Icon(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WString text {
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.Widget_text_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.Widget_text_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public virtual bool Initialize(WString text, int x, int y, int width, int height, Widget parent, int style) {
-    bool ret = (SwigDerivedClassHasMethod("Initialize", swigMethodTypes4) ? UltraAppKitPINVOKE.Widget_InitializeSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), x, y, width, height, Widget.getCPtr(parent), style) : UltraAppKitPINVOKE.Widget_Initialize__SWIG_0(swigCPtr, WString.getCPtr(text), x, y, width, height, Widget.getCPtr(parent), style));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Initialize", swigMethodTypes4) ? PInvoke.Widget_InitializeSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), x, y, width, height, Widget.getCPtr(parent), style) : PInvoke.Widget_Initialize__SWIG_0(swigCPtr, WString.getCPtr(text), x, y, width, height, Widget.getCPtr(parent), style));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Initialize(WString text, int x, int y, int width, int height, Interface parent, int style) {
-    bool ret = (SwigDerivedClassHasMethod("Initialize", swigMethodTypes5) ? UltraAppKitPINVOKE.Widget_InitializeSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text), x, y, width, height, Interface.getCPtr(parent), style) : UltraAppKitPINVOKE.Widget_Initialize__SWIG_1(swigCPtr, WString.getCPtr(text), x, y, width, height, Interface.getCPtr(parent), style));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Initialize", swigMethodTypes5) ? PInvoke.Widget_InitializeSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text), x, y, width, height, Interface.getCPtr(parent), style) : PInvoke.Widget_Initialize__SWIG_1(swigCPtr, WString.getCPtr(text), x, y, width, height, Interface.getCPtr(parent), style));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public Object extra {
     set {
-      UltraAppKitPINVOKE.Widget_extra_set(swigCPtr, Object.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_extra_set(swigCPtr, Object.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_extra_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_extra_get(swigCPtr);
       Object ret = (cPtr == global::System.IntPtr.Zero) ? null : new Object(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public TextureFilter pixmapfilter {
     set {
-      UltraAppKitPINVOKE.Widget_pixmapfilter_set(swigCPtr, (int)value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_pixmapfilter_set(swigCPtr, (int)value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      TextureFilter ret = (TextureFilter)UltraAppKitPINVOKE.Widget_pixmapfilter_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      TextureFilter ret = (TextureFilter)PInvoke.Widget_pixmapfilter_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int cornerradius {
     set {
-      UltraAppKitPINVOKE.Widget_cornerradius_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_cornerradius_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_cornerradius_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_cornerradius_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetColorArray color {
     set {
-      UltraAppKitPINVOKE.Widget_color_set(swigCPtr, WidgetColorArray.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_color_set(swigCPtr, WidgetColorArray.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_color_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_color_get(swigCPtr);
       WidgetColorArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetColorArray(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public long order {
     set {
-      UltraAppKitPINVOKE.Widget_order_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_order_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      long ret = UltraAppKitPINVOKE.Widget_order_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      long ret = PInvoke.Widget_order_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 range {
     set {
-      UltraAppKitPINVOKE.Widget_range_set(swigCPtr, iVec2.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_range_set(swigCPtr, iVec2.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_range_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_range_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int selection {
     set {
-      UltraAppKitPINVOKE.Widget_selection_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_selection_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_selection_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_selection_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool hidestate {
     set {
-      UltraAppKitPINVOKE.Widget_hidestate_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_hidestate_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Widget_hidestate_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Widget_hidestate_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int textalignement {
     set {
-      UltraAppKitPINVOKE.Widget_textalignement_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_textalignement_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_textalignement_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_textalignement_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 position {
     set {
-      UltraAppKitPINVOKE.Widget_position_set(swigCPtr, iVec2.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_position_set(swigCPtr, iVec2.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_position_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec2 size {
     set {
-      UltraAppKitPINVOKE.Widget_size_set(swigCPtr, iVec2.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_size_set(swigCPtr, iVec2.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_size_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_int edgemode {
-    set {
-      UltraAppKitPINVOKE.Widget_edgemode_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_edgemode_get(swigCPtr);
-      SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_int edgedistance {
-    set {
-      UltraAppKitPINVOKE.Widget_edgedistance_set(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_edgedistance_get(swigCPtr);
-      SWIGTYPE_p_int ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_int(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Interface gui {
     set {
-      UltraAppKitPINVOKE.Widget_gui_set(swigCPtr, Interface.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_gui_set(swigCPtr, Interface.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_gui_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_gui_get(swigCPtr);
       Interface ret = (cPtr == global::System.IntPtr.Zero) ? null : new Interface(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WindowWeakPtr window {
     set {
-      UltraAppKitPINVOKE.Widget_window_set(swigCPtr, WindowWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_window_set(swigCPtr, WindowWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_window_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_window_get(swigCPtr);
       WindowWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WindowWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetWeakPtr parent {
     set {
-      UltraAppKitPINVOKE.Widget_parent_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_parent_set(swigCPtr, WidgetWeakPtr.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_parent_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_parent_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorWidget m_kids {
     set {
-      UltraAppKitPINVOKE.Widget_m_kids_set(swigCPtr, VectorWidget.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_m_kids_set(swigCPtr, VectorWidget.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_m_kids_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_m_kids_get(swigCPtr);
       VectorWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidget(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorWidgetItem items {
     set {
-      UltraAppKitPINVOKE.Widget_items_set(swigCPtr, VectorWidgetItem.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_items_set(swigCPtr, VectorWidgetItem.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_items_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_items_get(swigCPtr);
       VectorWidgetItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetItem(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorWidgetItem filtereditems {
     set {
-      UltraAppKitPINVOKE.Widget_filtereditems_set(swigCPtr, VectorWidgetItem.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_filtereditems_set(swigCPtr, VectorWidgetItem.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_filtereditems_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_filtereditems_get(swigCPtr);
       VectorWidgetItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetItem(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public iVec4 padding {
     set {
-      UltraAppKitPINVOKE.Widget_padding_set(swigCPtr, iVec4.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_padding_set(swigCPtr, iVec4.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_padding_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_padding_get(swigCPtr);
       iVec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec4(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int redrawfrequency {
     set {
-      UltraAppKitPINVOKE.Widget_redrawfrequency_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_redrawfrequency_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_redrawfrequency_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_redrawfrequency_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public double progress {
     set {
-      UltraAppKitPINVOKE.Widget_progress_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_progress_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      double ret = UltraAppKitPINVOKE.Widget_progress_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      double ret = PInvoke.Widget_progress_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int slidervalue {
     set {
-      UltraAppKitPINVOKE.Widget_slidervalue_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_slidervalue_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_slidervalue_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_slidervalue_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool disabled {
     set {
-      UltraAppKitPINVOKE.Widget_disabled_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_disabled_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Widget_disabled_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Widget_disabled_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Font font {
     set {
-      UltraAppKitPINVOKE.Widget_font_set(swigCPtr, Font.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_font_set(swigCPtr, Font.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_font_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_font_get(swigCPtr);
       Font ret = (cPtr == global::System.IntPtr.Zero) ? null : new Font(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WidgetState state {
     set {
-      UltraAppKitPINVOKE.Widget_state_set(swigCPtr, (int)value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_state_set(swigCPtr, (int)value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      WidgetState ret = (WidgetState)UltraAppKitPINVOKE.Widget_state_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WidgetState ret = (WidgetState)PInvoke.Widget_state_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public bool collapsed {
     set {
-      UltraAppKitPINVOKE.Widget_collapsed_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_collapsed_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = UltraAppKitPINVOKE.Widget_collapsed_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      bool ret = PInvoke.Widget_collapsed_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorWidgetBlock blocks {
     set {
-      UltraAppKitPINVOKE.Widget_blocks_set(swigCPtr, VectorWidgetBlock.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_blocks_set(swigCPtr, VectorWidgetBlock.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_blocks_get(swigCPtr);
+      //Test
+      global::System.IntPtr cPtr = PInvoke.Widget_blocks_get(swigCPtr);
       VectorWidgetBlock ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetBlock(cPtr, false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int sensitivity {
     set {
-      UltraAppKitPINVOKE.Widget_sensitivity_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_sensitivity_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_sensitivity_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_sensitivity_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Pixmap m_pixmap {
     set {
-      UltraAppKitPINVOKE.Widget_m_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_m_pixmap_set(swigCPtr, Pixmap.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_m_pixmap_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_m_pixmap_get(swigCPtr);
       Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public Pixmap pixmap {
     get {
-      global::System.IntPtr cPtr = UltraAppKitPINVOKE.Widget_pixmap_get(swigCPtr);
+      global::System.IntPtr cPtr = PInvoke.Widget_pixmap_get(swigCPtr);
       Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int style {
     set {
-      UltraAppKitPINVOKE.Widget_style_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_style_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_style_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_style_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int drawupdate {
     set {
-      UltraAppKitPINVOKE.Widget_drawupdate_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_drawupdate_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_drawupdate_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_drawupdate_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int lockstate {
     set {
-      UltraAppKitPINVOKE.Widget_lockstate_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_lockstate_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_lockstate_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_lockstate_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public WString filtertext {
     set {
-      UltraAppKitPINVOKE.Widget_filtertext_set(swigCPtr, WString.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_filtertext_set(swigCPtr, WString.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      WString ret = new WString(UltraAppKitPINVOKE.Widget_filtertext_get(swigCPtr), true);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      WString ret = new WString(PInvoke.Widget_filtertext_get(swigCPtr), true);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public int fontweight {
     set {
-      UltraAppKitPINVOKE.Widget_fontweight_set(swigCPtr, value);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_fontweight_set(swigCPtr, value);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = UltraAppKitPINVOKE.Widget_fontweight_get(swigCPtr);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      int ret = PInvoke.Widget_fontweight_get(swigCPtr);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public VectorWidget kids {
     set {
-      UltraAppKitPINVOKE.Widget_kids_set(swigCPtr, VectorWidget.getCPtr(value));
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      PInvoke.Widget_kids_set(swigCPtr, VectorWidget.getCPtr(value));
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      VectorWidget ret = new VectorWidget(UltraAppKitPINVOKE.Widget_kids_get(swigCPtr), false);
-      if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+      VectorWidget ret = new VectorWidget(PInvoke.Widget_kids_get(swigCPtr), false);
+      if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Widget() : this(UltraAppKitPINVOKE.new_Widget(), true) {
+  public Widget() : this(PInvoke.new_Widget(), true) {
     SwigDirectorConnect();
   }
 
   public virtual bool SetParent(Widget parent, int position) {
-    bool ret = (SwigDerivedClassHasMethod("SetParent", swigMethodTypes6) ? UltraAppKitPINVOKE.Widget_SetParentSwigExplicitWidget__SWIG_0(swigCPtr, Widget.getCPtr(parent), position) : UltraAppKitPINVOKE.Widget_SetParent__SWIG_0(swigCPtr, Widget.getCPtr(parent), position));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("SetParent", swigMethodTypes6) ? PInvoke.Widget_SetParentSwigExplicitWidget__SWIG_0(swigCPtr, Widget.getCPtr(parent), position) : PInvoke.Widget_SetParent__SWIG_0(swigCPtr, Widget.getCPtr(parent), position));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetItemText(int iten, WString text) {
-    if (SwigDerivedClassHasMethod("SetItemText", swigMethodTypes7)) UltraAppKitPINVOKE.Widget_SetItemTextSwigExplicitWidget(swigCPtr, iten, WString.getCPtr(text)); else UltraAppKitPINVOKE.Widget_SetItemText(swigCPtr, iten, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetItemText", swigMethodTypes7)) PInvoke.Widget_SetItemTextSwigExplicitWidget(swigCPtr, iten, WString.getCPtr(text)); else PInvoke.Widget_SetItemText(swigCPtr, iten, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual WString GetItemText(int iten) {
-    WString ret = new WString((SwigDerivedClassHasMethod("GetItemText", swigMethodTypes8) ? UltraAppKitPINVOKE.Widget_GetItemTextSwigExplicitWidget(swigCPtr, iten) : UltraAppKitPINVOKE.Widget_GetItemText(swigCPtr, iten)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString((SwigDerivedClassHasMethod("GetItemText", swigMethodTypes8) ? PInvoke.Widget_GetItemTextSwigExplicitWidget(swigCPtr, iten) : PInvoke.Widget_GetItemText(swigCPtr, iten)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetItemIcon(int item, Icon icon, float scale) {
-    if (SwigDerivedClassHasMethod("SetItemIcon", swigMethodTypes9)) UltraAppKitPINVOKE.Widget_SetItemIconSwigExplicitWidget__SWIG_0(swigCPtr, item, Icon.getCPtr(icon), scale); else UltraAppKitPINVOKE.Widget_SetItemIcon__SWIG_0(swigCPtr, item, Icon.getCPtr(icon), scale);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetItemIcon", swigMethodTypes9)) PInvoke.Widget_SetItemIconSwigExplicitWidget__SWIG_0(swigCPtr, item, Icon.getCPtr(icon), scale); else PInvoke.Widget_SetItemIcon__SWIG_0(swigCPtr, item, Icon.getCPtr(icon), scale);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetItemIcon(int item, Icon icon) {
-    if (SwigDerivedClassHasMethod("SetItemIcon", swigMethodTypes10)) UltraAppKitPINVOKE.Widget_SetItemIconSwigExplicitWidget__SWIG_1(swigCPtr, item, Icon.getCPtr(icon)); else UltraAppKitPINVOKE.Widget_SetItemIcon__SWIG_1(swigCPtr, item, Icon.getCPtr(icon));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetItemIcon", swigMethodTypes10)) PInvoke.Widget_SetItemIconSwigExplicitWidget__SWIG_1(swigCPtr, item, Icon.getCPtr(icon)); else PInvoke.Widget_SetItemIcon__SWIG_1(swigCPtr, item, Icon.getCPtr(icon));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetItemPixmap(int item, Pixmap pixmap) {
-    if (SwigDerivedClassHasMethod("SetItemPixmap", swigMethodTypes11)) UltraAppKitPINVOKE.Widget_SetItemPixmapSwigExplicitWidget(swigCPtr, item, Pixmap.getCPtr(pixmap)); else UltraAppKitPINVOKE.Widget_SetItemPixmap(swigCPtr, item, Pixmap.getCPtr(pixmap));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetItemPixmap", swigMethodTypes11)) PInvoke.Widget_SetItemPixmapSwigExplicitWidget(swigCPtr, item, Pixmap.getCPtr(pixmap)); else PInvoke.Widget_SetItemPixmap(swigCPtr, item, Pixmap.getCPtr(pixmap));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Widget AddNode(WString text, Icon icon) {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("AddNode", swigMethodTypes12) ? UltraAppKitPINVOKE.Widget_AddNodeSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), Icon.getCPtr(icon)) : UltraAppKitPINVOKE.Widget_AddNode__SWIG_0(swigCPtr, WString.getCPtr(text), Icon.getCPtr(icon)));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("AddNode", swigMethodTypes12) ? PInvoke.Widget_AddNodeSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), Icon.getCPtr(icon)) : PInvoke.Widget_AddNode__SWIG_0(swigCPtr, WString.getCPtr(text), Icon.getCPtr(icon)));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget AddNode(WString text) {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("AddNode", swigMethodTypes13) ? UltraAppKitPINVOKE.Widget_AddNodeSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text)) : UltraAppKitPINVOKE.Widget_AddNode__SWIG_1(swigCPtr, WString.getCPtr(text)));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("AddNode", swigMethodTypes13) ? PInvoke.Widget_AddNodeSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text)) : PInvoke.Widget_AddNode__SWIG_1(swigCPtr, WString.getCPtr(text)));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetInteractive(bool interactive) {
-    if (SwigDerivedClassHasMethod("SetInteractive", swigMethodTypes14)) UltraAppKitPINVOKE.Widget_SetInteractiveSwigExplicitWidget(swigCPtr, interactive); else UltraAppKitPINVOKE.Widget_SetInteractive(swigCPtr, interactive);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetInteractive", swigMethodTypes14)) PInvoke.Widget_SetInteractiveSwigExplicitWidget(swigCPtr, interactive); else PInvoke.Widget_SetInteractive(swigCPtr, interactive);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SelectText(int position, int length) {
-    if (SwigDerivedClassHasMethod("SelectText", swigMethodTypes15)) UltraAppKitPINVOKE.Widget_SelectTextSwigExplicitWidget(swigCPtr, position, length); else UltraAppKitPINVOKE.Widget_SelectText(swigCPtr, position, length);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SelectText", swigMethodTypes15)) PInvoke.Widget_SelectTextSwigExplicitWidget(swigCPtr, position, length); else PInvoke.Widget_SelectText(swigCPtr, position, length);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetParent(Widget parent) {
-    if (SwigDerivedClassHasMethod("SetParent", swigMethodTypes16)) UltraAppKitPINVOKE.Widget_SetParentSwigExplicitWidget__SWIG_1(swigCPtr, Widget.getCPtr(parent)); else UltraAppKitPINVOKE.Widget_SetParent__SWIG_1(swigCPtr, Widget.getCPtr(parent));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetParent", swigMethodTypes16)) PInvoke.Widget_SetParentSwigExplicitWidget__SWIG_1(swigCPtr, Widget.getCPtr(parent)); else PInvoke.Widget_SetParent__SWIG_1(swigCPtr, Widget.getCPtr(parent));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
-  public virtual bool Reload(SWIGTYPE_p_nlohmann__json j3) {
-    bool ret = (SwigDerivedClassHasMethod("Reload", swigMethodTypes17) ? UltraAppKitPINVOKE.Widget_ReloadSwigExplicitWidget(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3)) : UltraAppKitPINVOKE.Widget_Reload(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool Reload(JSONWrapper j3) {
+    bool ret = (SwigDerivedClassHasMethod("Reload", swigMethodTypes17) ? PInvoke.Widget_ReloadSwigExplicitWidget(swigCPtr, JSONWrapper.getCPtr(j3)) : PInvoke.Widget_Reload(swigCPtr, JSONWrapper.getCPtr(j3)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool Save(SWIGTYPE_p_nlohmann__json j3, SaveFlags flags) {
-    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes18) ? UltraAppKitPINVOKE.Widget_SaveSwigExplicitWidget(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3), (int)flags) : UltraAppKitPINVOKE.Widget_Save(swigCPtr, SWIGTYPE_p_nlohmann__json.getCPtr(j3), (int)flags));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+  public virtual bool Save(JSONWrapper j3, SaveFlags flags) {
+    bool ret = (SwigDerivedClassHasMethod("Save", swigMethodTypes18) ? PInvoke.Widget_SaveSwigExplicitWidget(swigCPtr, JSONWrapper.getCPtr(j3), (int)flags) : PInvoke.Widget_Save(swigCPtr, JSONWrapper.getCPtr(j3), (int)flags));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetRadius(int radius) {
-    if (SwigDerivedClassHasMethod("SetRadius", swigMethodTypes19)) UltraAppKitPINVOKE.Widget_SetRadiusSwigExplicitWidget(swigCPtr, radius); else UltraAppKitPINVOKE.Widget_SetRadius(swigCPtr, radius);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetRadius", swigMethodTypes19)) PInvoke.Widget_SetRadiusSwigExplicitWidget(swigCPtr, radius); else PInvoke.Widget_SetRadius(swigCPtr, radius);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int GetRadius() {
-    int ret = (SwigDerivedClassHasMethod("GetRadius", swigMethodTypes20) ? UltraAppKitPINVOKE.Widget_GetRadiusSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetRadius(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("GetRadius", swigMethodTypes20) ? PInvoke.Widget_GetRadiusSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetRadius(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetPointer(MousePointer pointer) {
-    if (SwigDerivedClassHasMethod("SetPointer", swigMethodTypes21)) UltraAppKitPINVOKE.Widget_SetPointerSwigExplicitWidget(swigCPtr, (int)pointer); else UltraAppKitPINVOKE.Widget_SetPointer(swigCPtr, (int)pointer);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetPointer", swigMethodTypes21)) PInvoke.Widget_SetPointerSwigExplicitWidget(swigCPtr, (int)pointer); else PInvoke.Widget_SetPointer(swigCPtr, (int)pointer);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void FilterItems(WString filter) {
-    if (SwigDerivedClassHasMethod("FilterItems", swigMethodTypes22)) UltraAppKitPINVOKE.Widget_FilterItemsSwigExplicitWidget(swigCPtr, WString.getCPtr(filter)); else UltraAppKitPINVOKE.Widget_FilterItems(swigCPtr, WString.getCPtr(filter));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("FilterItems", swigMethodTypes22)) PInvoke.Widget_FilterItemsSwigExplicitWidget(swigCPtr, WString.getCPtr(filter)); else PInvoke.Widget_FilterItems(swigCPtr, WString.getCPtr(filter));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Widget GetNext() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetNext", swigMethodTypes23) ? UltraAppKitPINVOKE.Widget_GetNextSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetNext(swigCPtr));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetNext", swigMethodTypes23) ? PInvoke.Widget_GetNextSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetNext(swigCPtr));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget GetPrev() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetPrev", swigMethodTypes24) ? UltraAppKitPINVOKE.Widget_GetPrevSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetPrev(swigCPtr));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetPrev", swigMethodTypes24) ? PInvoke.Widget_GetPrevSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetPrev(swigCPtr));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void CursorBlink() {
-    if (SwigDerivedClassHasMethod("CursorBlink", swigMethodTypes25)) UltraAppKitPINVOKE.Widget_CursorBlinkSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_CursorBlink(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("CursorBlink", swigMethodTypes25)) PInvoke.Widget_CursorBlinkSwigExplicitWidget(swigCPtr); else PInvoke.Widget_CursorBlink(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void ModifyItem(int index, WString text) {
-    if (SwigDerivedClassHasMethod("ModifyItem", swigMethodTypes26)) UltraAppKitPINVOKE.Widget_ModifyItemSwigExplicitWidget(swigCPtr, index, WString.getCPtr(text)); else UltraAppKitPINVOKE.Widget_ModifyItem(swigCPtr, index, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ModifyItem", swigMethodTypes26)) PInvoke.Widget_ModifyItemSwigExplicitWidget(swigCPtr, index, WString.getCPtr(text)); else PInvoke.Widget_ModifyItem(swigCPtr, index, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void WindowDragBegin() {
-    if (SwigDerivedClassHasMethod("WindowDragBegin", swigMethodTypes27)) UltraAppKitPINVOKE.Widget_WindowDragBeginSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_WindowDragBegin(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("WindowDragBegin", swigMethodTypes27)) PInvoke.Widget_WindowDragBeginSwigExplicitWidget(swigCPtr); else PInvoke.Widget_WindowDragBegin(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool ProcessEvent(Event e) {
-    bool ret = (SwigDerivedClassHasMethod("ProcessEvent", swigMethodTypes28) ? UltraAppKitPINVOKE.Widget_ProcessEventSwigExplicitWidget(swigCPtr, Event.getCPtr(e)) : UltraAppKitPINVOKE.Widget_ProcessEvent(swigCPtr, Event.getCPtr(e)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("ProcessEvent", swigMethodTypes28) ? PInvoke.Widget_ProcessEventSwigExplicitWidget(swigCPtr, Event.getCPtr(e)) : PInvoke.Widget_ProcessEvent(swigCPtr, Event.getCPtr(e)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void MouseMove(int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseMove", swigMethodTypes29)) UltraAppKitPINVOKE.Widget_MouseMoveSwigExplicitWidget(swigCPtr, x, y); else UltraAppKitPINVOKE.Widget_MouseMove(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseMove", swigMethodTypes29)) PInvoke.Widget_MouseMoveSwigExplicitWidget(swigCPtr, x, y); else PInvoke.Widget_MouseMove(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseEnter(int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseEnter", swigMethodTypes30)) UltraAppKitPINVOKE.Widget_MouseEnterSwigExplicitWidget(swigCPtr, x, y); else UltraAppKitPINVOKE.Widget_MouseEnter(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseEnter", swigMethodTypes30)) PInvoke.Widget_MouseEnterSwigExplicitWidget(swigCPtr, x, y); else PInvoke.Widget_MouseEnter(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseLeave(int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseLeave", swigMethodTypes31)) UltraAppKitPINVOKE.Widget_MouseLeaveSwigExplicitWidget(swigCPtr, x, y); else UltraAppKitPINVOKE.Widget_MouseLeave(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseLeave", swigMethodTypes31)) PInvoke.Widget_MouseLeaveSwigExplicitWidget(swigCPtr, x, y); else PInvoke.Widget_MouseLeave(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseDown(MouseButton button, int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseDown", swigMethodTypes32)) UltraAppKitPINVOKE.Widget_MouseDownSwigExplicitWidget(swigCPtr, (int)button, x, y); else UltraAppKitPINVOKE.Widget_MouseDown(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseDown", swigMethodTypes32)) PInvoke.Widget_MouseDownSwigExplicitWidget(swigCPtr, (int)button, x, y); else PInvoke.Widget_MouseDown(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseRepeat(MouseButton button, int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseRepeat", swigMethodTypes33)) UltraAppKitPINVOKE.Widget_MouseRepeatSwigExplicitWidget(swigCPtr, (int)button, x, y); else UltraAppKitPINVOKE.Widget_MouseRepeat(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseRepeat", swigMethodTypes33)) PInvoke.Widget_MouseRepeatSwigExplicitWidget(swigCPtr, (int)button, x, y); else PInvoke.Widget_MouseRepeat(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseUp(MouseButton button, int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseUp", swigMethodTypes34)) UltraAppKitPINVOKE.Widget_MouseUpSwigExplicitWidget(swigCPtr, (int)button, x, y); else UltraAppKitPINVOKE.Widget_MouseUp(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseUp", swigMethodTypes34)) PInvoke.Widget_MouseUpSwigExplicitWidget(swigCPtr, (int)button, x, y); else PInvoke.Widget_MouseUp(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void LoseFocus() {
-    if (SwigDerivedClassHasMethod("LoseFocus", swigMethodTypes35)) UltraAppKitPINVOKE.Widget_LoseFocusSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_LoseFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("LoseFocus", swigMethodTypes35)) PInvoke.Widget_LoseFocusSwigExplicitWidget(swigCPtr); else PInvoke.Widget_LoseFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void DoubleClick(MouseButton button, int x, int y) {
-    if (SwigDerivedClassHasMethod("DoubleClick", swigMethodTypes36)) UltraAppKitPINVOKE.Widget_DoubleClickSwigExplicitWidget(swigCPtr, (int)button, x, y); else UltraAppKitPINVOKE.Widget_DoubleClick(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("DoubleClick", swigMethodTypes36)) PInvoke.Widget_DoubleClickSwigExplicitWidget(swigCPtr, (int)button, x, y); else PInvoke.Widget_DoubleClick(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void TripleClick(MouseButton button, int x, int y) {
-    if (SwigDerivedClassHasMethod("TripleClick", swigMethodTypes37)) UltraAppKitPINVOKE.Widget_TripleClickSwigExplicitWidget(swigCPtr, (int)button, x, y); else UltraAppKitPINVOKE.Widget_TripleClick(swigCPtr, (int)button, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("TripleClick", swigMethodTypes37)) PInvoke.Widget_TripleClickSwigExplicitWidget(swigCPtr, (int)button, x, y); else PInvoke.Widget_TripleClick(swigCPtr, (int)button, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void GainFocus() {
-    if (SwigDerivedClassHasMethod("GainFocus", swigMethodTypes38)) UltraAppKitPINVOKE.Widget_GainFocusSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_GainFocus(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("GainFocus", swigMethodTypes38)) PInvoke.Widget_GainFocusSwigExplicitWidget(swigCPtr); else PInvoke.Widget_GainFocus(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void KeyDown(KeyCode key) {
-    if (SwigDerivedClassHasMethod("KeyDown", swigMethodTypes39)) UltraAppKitPINVOKE.Widget_KeyDownSwigExplicitWidget(swigCPtr, (int)key); else UltraAppKitPINVOKE.Widget_KeyDown(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("KeyDown", swigMethodTypes39)) PInvoke.Widget_KeyDownSwigExplicitWidget(swigCPtr, (int)key); else PInvoke.Widget_KeyDown(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void KeyUp(KeyCode key) {
-    if (SwigDerivedClassHasMethod("KeyUp", swigMethodTypes40)) UltraAppKitPINVOKE.Widget_KeyUpSwigExplicitWidget(swigCPtr, (int)key); else UltraAppKitPINVOKE.Widget_KeyUp(swigCPtr, (int)key);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("KeyUp", swigMethodTypes40)) PInvoke.Widget_KeyUpSwigExplicitWidget(swigCPtr, (int)key); else PInvoke.Widget_KeyUp(swigCPtr, (int)key);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void KeyChar(int keychar) {
-    if (SwigDerivedClassHasMethod("KeyChar", swigMethodTypes41)) UltraAppKitPINVOKE.Widget_KeyCharSwigExplicitWidget(swigCPtr, keychar); else UltraAppKitPINVOKE.Widget_KeyChar(swigCPtr, keychar);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("KeyChar", swigMethodTypes41)) PInvoke.Widget_KeyCharSwigExplicitWidget(swigCPtr, keychar); else PInvoke.Widget_KeyChar(swigCPtr, keychar);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void MouseWheel(int delta, int x, int y) {
-    if (SwigDerivedClassHasMethod("MouseWheel", swigMethodTypes42)) UltraAppKitPINVOKE.Widget_MouseWheelSwigExplicitWidget(swigCPtr, delta, x, y); else UltraAppKitPINVOKE.Widget_MouseWheel(swigCPtr, delta, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("MouseWheel", swigMethodTypes42)) PInvoke.Widget_MouseWheelSwigExplicitWidget(swigCPtr, delta, x, y); else PInvoke.Widget_MouseWheel(swigCPtr, delta, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Activate() {
-    if (SwigDerivedClassHasMethod("Activate", swigMethodTypes43)) UltraAppKitPINVOKE.Widget_ActivateSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Activate(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Activate", swigMethodTypes43)) PInvoke.Widget_ActivateSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Activate(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool FindOK() {
-    bool ret = (SwigDerivedClassHasMethod("FindOK", swigMethodTypes44) ? UltraAppKitPINVOKE.Widget_FindOKSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_FindOK(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("FindOK", swigMethodTypes44) ? PInvoke.Widget_FindOKSwigExplicitWidget(swigCPtr) : PInvoke.Widget_FindOK(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Paint(int x, int y, int width, int height) {
-    if (SwigDerivedClassHasMethod("Paint", swigMethodTypes45)) UltraAppKitPINVOKE.Widget_PaintSwigExplicitWidget__SWIG_0(swigCPtr, x, y, width, height); else UltraAppKitPINVOKE.Widget_Paint__SWIG_0(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Paint", swigMethodTypes45)) PInvoke.Widget_PaintSwigExplicitWidget__SWIG_0(swigCPtr, x, y, width, height); else PInvoke.Widget_Paint__SWIG_0(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Paint() {
-    if (SwigDerivedClassHasMethod("Paint", swigMethodTypes46)) UltraAppKitPINVOKE.Widget_PaintSwigExplicitWidget__SWIG_1(swigCPtr); else UltraAppKitPINVOKE.Widget_Paint__SWIG_1(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Paint", swigMethodTypes46)) PInvoke.Widget_PaintSwigExplicitWidget__SWIG_1(swigCPtr); else PInvoke.Widget_Paint__SWIG_1(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool FindCancel() {
-    bool ret = (SwigDerivedClassHasMethod("FindCancel", swigMethodTypes47) ? UltraAppKitPINVOKE.Widget_FindCancelSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_FindCancel(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("FindCancel", swigMethodTypes47) ? PInvoke.Widget_FindCancelSwigExplicitWidget(swigCPtr) : PInvoke.Widget_FindCancel(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetSensitivity(int sensitivity) {
-    if (SwigDerivedClassHasMethod("SetSensitivity", swigMethodTypes48)) UltraAppKitPINVOKE.Widget_SetSensitivitySwigExplicitWidget(swigCPtr, sensitivity); else UltraAppKitPINVOKE.Widget_SetSensitivity(swigCPtr, sensitivity);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetSensitivity", swigMethodTypes48)) PInvoke.Widget_SetSensitivitySwigExplicitWidget(swigCPtr, sensitivity); else PInvoke.Widget_SetSensitivity(swigCPtr, sensitivity);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Sort(bool recursive) {
-    if (SwigDerivedClassHasMethod("Sort", swigMethodTypes49)) UltraAppKitPINVOKE.Widget_SortSwigExplicitWidget__SWIG_0(swigCPtr, recursive); else UltraAppKitPINVOKE.Widget_Sort__SWIG_0(swigCPtr, recursive);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Sort", swigMethodTypes49)) PInvoke.Widget_SortSwigExplicitWidget__SWIG_0(swigCPtr, recursive); else PInvoke.Widget_Sort__SWIG_0(swigCPtr, recursive);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Hide() {
-    if (SwigDerivedClassHasMethod("Hide", swigMethodTypes50)) UltraAppKitPINVOKE.Widget_HideSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Hide(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Hide", swigMethodTypes50)) PInvoke.Widget_HideSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Hide(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Show() {
-    if (SwigDerivedClassHasMethod("Show", swigMethodTypes51)) UltraAppKitPINVOKE.Widget_ShowSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Show(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Show", swigMethodTypes51)) PInvoke.Widget_ShowSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Show(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Sort(long order) {
-    if (SwigDerivedClassHasMethod("Sort", swigMethodTypes52)) UltraAppKitPINVOKE.Widget_SortSwigExplicitWidget__SWIG_1(swigCPtr, order); else UltraAppKitPINVOKE.Widget_Sort__SWIG_1(swigCPtr, order);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Sort", swigMethodTypes52)) PInvoke.Widget_SortSwigExplicitWidget__SWIG_1(swigCPtr, order); else PInvoke.Widget_Sort__SWIG_1(swigCPtr, order);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int AddBlock(Icon icon, iVec2 position, float scale, Vec4 color) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes53) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_0(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale, Vec4.getCPtr(color)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_0(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale, Vec4.getCPtr(color)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes53) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_0(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale, Vec4.getCPtr(color)) : PInvoke.Widget_AddBlock__SWIG_0(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale, Vec4.getCPtr(color)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(Icon icon, iVec2 position, float scale) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes54) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_1(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_1(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes54) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_1(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale) : PInvoke.Widget_AddBlock__SWIG_1(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position), scale));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(Icon icon, iVec2 position) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes55) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_2(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_2(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes55) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_2(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position)) : PInvoke.Widget_AddBlock__SWIG_2(swigCPtr, Icon.getCPtr(icon), iVec2.getCPtr(position)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(Pixmap pixmap, iVec2 position, Vec4 color) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes56) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_3(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position), Vec4.getCPtr(color)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_3(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position), Vec4.getCPtr(color)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes56) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_3(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position), Vec4.getCPtr(color)) : PInvoke.Widget_AddBlock__SWIG_3(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position), Vec4.getCPtr(color)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(Pixmap pixmap, iVec2 position) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes57) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_4(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_4(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes57) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_4(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position)) : PInvoke.Widget_AddBlock__SWIG_4(swigCPtr, Pixmap.getCPtr(pixmap), iVec2.getCPtr(position)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(iVec2 position, iVec2 size, Vec4 color0, bool wireframe, float radius, float gradient) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes58) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_5(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius, gradient) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_5(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius, gradient));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes58) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_5(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius, gradient) : PInvoke.Widget_AddBlock__SWIG_5(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius, gradient));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(iVec2 position, iVec2 size, Vec4 color0, bool wireframe, float radius) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes59) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_6(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_6(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes59) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_6(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius) : PInvoke.Widget_AddBlock__SWIG_6(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe, radius));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(iVec2 position, iVec2 size, Vec4 color0, bool wireframe) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes60) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_7(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_7(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes60) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_7(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe) : PInvoke.Widget_AddBlock__SWIG_7(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0), wireframe));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(iVec2 position, iVec2 size, Vec4 color0) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes61) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_8(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_8(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes61) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_8(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0)) : PInvoke.Widget_AddBlock__SWIG_8(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color0)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(iVec2 position, iVec2 size) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes62) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_9(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_9(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes62) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_9(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)) : PInvoke.Widget_AddBlock__SWIG_9(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(WString text, iVec2 position, iVec2 size, Vec4 color, int alignment) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes63) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_10(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color), alignment) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_10(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color), alignment));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes63) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_10(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color), alignment) : PInvoke.Widget_AddBlock__SWIG_10(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color), alignment));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddBlock(WString text, iVec2 position, iVec2 size, Vec4 color) {
-    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes64) ? UltraAppKitPINVOKE.Widget_AddBlockSwigExplicitWidget__SWIG_11(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color)) : UltraAppKitPINVOKE.Widget_AddBlock__SWIG_11(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddBlock", swigMethodTypes64) ? PInvoke.Widget_AddBlockSwigExplicitWidget__SWIG_11(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color)) : PInvoke.Widget_AddBlock__SWIG_11(swigCPtr, WString.getCPtr(text), iVec2.getCPtr(position), iVec2.getCPtr(size), Vec4.getCPtr(color)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Invalidate(bool recursive) {
-    if (SwigDerivedClassHasMethod("Invalidate", swigMethodTypes65)) UltraAppKitPINVOKE.Widget_InvalidateSwigExplicitWidget__SWIG_0(swigCPtr, recursive); else UltraAppKitPINVOKE.Widget_Invalidate__SWIG_0(swigCPtr, recursive);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Invalidate", swigMethodTypes65)) PInvoke.Widget_InvalidateSwigExplicitWidget__SWIG_0(swigCPtr, recursive); else PInvoke.Widget_Invalidate__SWIG_0(swigCPtr, recursive);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Invalidate() {
-    if (SwigDerivedClassHasMethod("Invalidate", swigMethodTypes66)) UltraAppKitPINVOKE.Widget_InvalidateSwigExplicitWidget__SWIG_1(swigCPtr); else UltraAppKitPINVOKE.Widget_Invalidate__SWIG_1(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Invalidate", swigMethodTypes66)) PInvoke.Widget_InvalidateSwigExplicitWidget__SWIG_1(swigCPtr); else PInvoke.Widget_Invalidate__SWIG_1(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Refresh() {
-    if (SwigDerivedClassHasMethod("Refresh", swigMethodTypes67)) UltraAppKitPINVOKE.Widget_RefreshSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Refresh(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Refresh", swigMethodTypes67)) PInvoke.Widget_RefreshSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Refresh(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual string Debug() {
-    string ret = (SwigDerivedClassHasMethod("Debug", swigMethodTypes68) ? UltraAppKitPINVOKE.Widget_DebugSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_Debug(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    string ret = (SwigDerivedClassHasMethod("Debug", swigMethodTypes68) ? PInvoke.Widget_DebugSwigExplicitWidget(swigCPtr) : PInvoke.Widget_Debug(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetFontScale(float scale) {
-    if (SwigDerivedClassHasMethod("SetFontScale", swigMethodTypes69)) UltraAppKitPINVOKE.Widget_SetFontScaleSwigExplicitWidget(swigCPtr, scale); else UltraAppKitPINVOKE.Widget_SetFontScale(swigCPtr, scale);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetFontScale", swigMethodTypes69)) PInvoke.Widget_SetFontScaleSwigExplicitWidget(swigCPtr, scale); else PInvoke.Widget_SetFontScale(swigCPtr, scale);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetFontWeight(bool bold) {
-    if (SwigDerivedClassHasMethod("SetFontWeight", swigMethodTypes70)) UltraAppKitPINVOKE.Widget_SetFontWeightSwigExplicitWidget(swigCPtr, bold); else UltraAppKitPINVOKE.Widget_SetFontWeight(swigCPtr, bold);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetFontWeight", swigMethodTypes70)) PInvoke.Widget_SetFontWeightSwigExplicitWidget(swigCPtr, bold); else PInvoke.Widget_SetFontWeight(swigCPtr, bold);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Lock() {
-    if (SwigDerivedClassHasMethod("Lock", swigMethodTypes71)) UltraAppKitPINVOKE.Widget_LockSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Lock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Lock", swigMethodTypes71)) PInvoke.Widget_LockSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Lock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Unlock() {
-    if (SwigDerivedClassHasMethod("Unlock", swigMethodTypes72)) UltraAppKitPINVOKE.Widget_UnlockSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Unlock(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Unlock", swigMethodTypes72)) PInvoke.Widget_UnlockSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Unlock(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Expand() {
-    if (SwigDerivedClassHasMethod("Expand", swigMethodTypes73)) UltraAppKitPINVOKE.Widget_ExpandSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Expand(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Expand", swigMethodTypes73)) PInvoke.Widget_ExpandSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Expand(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Collapse() {
-    if (SwigDerivedClassHasMethod("Collapse", swigMethodTypes74)) UltraAppKitPINVOKE.Widget_CollapseSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Collapse(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Collapse", swigMethodTypes74)) PInvoke.Widget_CollapseSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Collapse(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool Collapsed() {
-    bool ret = (SwigDerivedClassHasMethod("Collapsed", swigMethodTypes75) ? UltraAppKitPINVOKE.Widget_CollapsedSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_Collapsed(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Collapsed", swigMethodTypes75) ? PInvoke.Widget_CollapsedSwigExplicitWidget(swigCPtr) : PInvoke.Widget_Collapsed(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetColor(float r, float g, float b, float a, WidgetColor index) {
-    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes76)) UltraAppKitPINVOKE.Widget_SetColorSwigExplicitWidget__SWIG_0(swigCPtr, r, g, b, a, (int)index); else UltraAppKitPINVOKE.Widget_SetColor__SWIG_0(swigCPtr, r, g, b, a, (int)index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes76)) PInvoke.Widget_SetColorSwigExplicitWidget__SWIG_0(swigCPtr, r, g, b, a, (int)index); else PInvoke.Widget_SetColor__SWIG_0(swigCPtr, r, g, b, a, (int)index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetColor(float r, float g, float b, float a) {
-    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes77)) UltraAppKitPINVOKE.Widget_SetColorSwigExplicitWidget__SWIG_1(swigCPtr, r, g, b, a); else UltraAppKitPINVOKE.Widget_SetColor__SWIG_1(swigCPtr, r, g, b, a);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes77)) PInvoke.Widget_SetColorSwigExplicitWidget__SWIG_1(swigCPtr, r, g, b, a); else PInvoke.Widget_SetColor__SWIG_1(swigCPtr, r, g, b, a);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetColor(float r, float g, float b) {
-    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes78)) UltraAppKitPINVOKE.Widget_SetColorSwigExplicitWidget__SWIG_2(swigCPtr, r, g, b); else UltraAppKitPINVOKE.Widget_SetColor__SWIG_2(swigCPtr, r, g, b);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes78)) PInvoke.Widget_SetColorSwigExplicitWidget__SWIG_2(swigCPtr, r, g, b); else PInvoke.Widget_SetColor__SWIG_2(swigCPtr, r, g, b);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetColor(Vec4 color, WidgetColor index) {
-    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes79)) UltraAppKitPINVOKE.Widget_SetColorSwigExplicitWidget__SWIG_3(swigCPtr, Vec4.getCPtr(color), (int)index); else UltraAppKitPINVOKE.Widget_SetColor__SWIG_3(swigCPtr, Vec4.getCPtr(color), (int)index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes79)) PInvoke.Widget_SetColorSwigExplicitWidget__SWIG_3(swigCPtr, Vec4.getCPtr(color), (int)index); else PInvoke.Widget_SetColor__SWIG_3(swigCPtr, Vec4.getCPtr(color), (int)index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetColor(Vec4 color) {
-    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes80)) UltraAppKitPINVOKE.Widget_SetColorSwigExplicitWidget__SWIG_4(swigCPtr, Vec4.getCPtr(color)); else UltraAppKitPINVOKE.Widget_SetColor__SWIG_4(swigCPtr, Vec4.getCPtr(color));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetColor", swigMethodTypes80)) PInvoke.Widget_SetColorSwigExplicitWidget__SWIG_4(swigCPtr, Vec4.getCPtr(color)); else PInvoke.Widget_SetColor__SWIG_4(swigCPtr, Vec4.getCPtr(color));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetState(WidgetState state) {
-    if (SwigDerivedClassHasMethod("SetState", swigMethodTypes81)) UltraAppKitPINVOKE.Widget_SetStateSwigExplicitWidget__SWIG_0(swigCPtr, (int)state); else UltraAppKitPINVOKE.Widget_SetState__SWIG_0(swigCPtr, (int)state);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetState", swigMethodTypes81)) PInvoke.Widget_SetStateSwigExplicitWidget__SWIG_0(swigCPtr, (int)state); else PInvoke.Widget_SetState__SWIG_0(swigCPtr, (int)state);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetState(bool state) {
-    if (SwigDerivedClassHasMethod("SetState", swigMethodTypes82)) UltraAppKitPINVOKE.Widget_SetStateSwigExplicitWidget__SWIG_1(swigCPtr, state); else UltraAppKitPINVOKE.Widget_SetState__SWIG_1(swigCPtr, state);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetState", swigMethodTypes82)) PInvoke.Widget_SetStateSwigExplicitWidget__SWIG_1(swigCPtr, state); else PInvoke.Widget_SetState__SWIG_1(swigCPtr, state);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual WidgetState GetState() {
-    WidgetState ret = (WidgetState)(SwigDerivedClassHasMethod("GetState", swigMethodTypes83) ? UltraAppKitPINVOKE.Widget_GetStateSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetState(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WidgetState ret = (WidgetState)(SwigDerivedClassHasMethod("GetState", swigMethodTypes83) ? PInvoke.Widget_GetStateSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetState(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetIcon(Icon icon, PixmapAlignment alignment, float scale) {
-    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes84)) UltraAppKitPINVOKE.Widget_SetIconSwigExplicitWidget__SWIG_0(swigCPtr, Icon.getCPtr(icon), (int)alignment, scale); else UltraAppKitPINVOKE.Widget_SetIcon__SWIG_0(swigCPtr, Icon.getCPtr(icon), (int)alignment, scale);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes84)) PInvoke.Widget_SetIconSwigExplicitWidget__SWIG_0(swigCPtr, Icon.getCPtr(icon), (int)alignment, scale); else PInvoke.Widget_SetIcon__SWIG_0(swigCPtr, Icon.getCPtr(icon), (int)alignment, scale);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetIcon(Icon icon, PixmapAlignment alignment) {
-    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes85)) UltraAppKitPINVOKE.Widget_SetIconSwigExplicitWidget__SWIG_1(swigCPtr, Icon.getCPtr(icon), (int)alignment); else UltraAppKitPINVOKE.Widget_SetIcon__SWIG_1(swigCPtr, Icon.getCPtr(icon), (int)alignment);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes85)) PInvoke.Widget_SetIconSwigExplicitWidget__SWIG_1(swigCPtr, Icon.getCPtr(icon), (int)alignment); else PInvoke.Widget_SetIcon__SWIG_1(swigCPtr, Icon.getCPtr(icon), (int)alignment);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetIcon(Icon icon) {
-    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes86)) UltraAppKitPINVOKE.Widget_SetIconSwigExplicitWidget__SWIG_2(swigCPtr, Icon.getCPtr(icon)); else UltraAppKitPINVOKE.Widget_SetIcon__SWIG_2(swigCPtr, Icon.getCPtr(icon));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetIcon", swigMethodTypes86)) PInvoke.Widget_SetIconSwigExplicitWidget__SWIG_2(swigCPtr, Icon.getCPtr(icon)); else PInvoke.Widget_SetIcon__SWIG_2(swigCPtr, Icon.getCPtr(icon));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetPixmap(Pixmap pixmap, PixmapAlignment alignment, TextureFilter filter) {
-    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes87)) UltraAppKitPINVOKE.Widget_SetPixmapSwigExplicitWidget__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment, (int)filter); else UltraAppKitPINVOKE.Widget_SetPixmap__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment, (int)filter);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes87)) PInvoke.Widget_SetPixmapSwigExplicitWidget__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment, (int)filter); else PInvoke.Widget_SetPixmap__SWIG_0(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment, (int)filter);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetPixmap(Pixmap pixmap, PixmapAlignment alignment) {
-    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes88)) UltraAppKitPINVOKE.Widget_SetPixmapSwigExplicitWidget__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment); else UltraAppKitPINVOKE.Widget_SetPixmap__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes88)) PInvoke.Widget_SetPixmapSwigExplicitWidget__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment); else PInvoke.Widget_SetPixmap__SWIG_1(swigCPtr, Pixmap.getCPtr(pixmap), (int)alignment);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetPixmap(Pixmap pixmap) {
-    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes89)) UltraAppKitPINVOKE.Widget_SetPixmapSwigExplicitWidget__SWIG_2(swigCPtr, Pixmap.getCPtr(pixmap)); else UltraAppKitPINVOKE.Widget_SetPixmap__SWIG_2(swigCPtr, Pixmap.getCPtr(pixmap));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetPixmap", swigMethodTypes89)) PInvoke.Widget_SetPixmapSwigExplicitWidget__SWIG_2(swigCPtr, Pixmap.getCPtr(pixmap)); else PInvoke.Widget_SetPixmap__SWIG_2(swigCPtr, Pixmap.getCPtr(pixmap));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual Pixmap GetPixmap() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetPixmap", swigMethodTypes90) ? UltraAppKitPINVOKE.Widget_GetPixmapSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetPixmap(swigCPtr));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetPixmap", swigMethodTypes90) ? PInvoke.Widget_GetPixmapSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetPixmap(swigCPtr));
     Pixmap ret = (cPtr == global::System.IntPtr.Zero) ? null : new Pixmap(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Enable() {
-    if (SwigDerivedClassHasMethod("Enable", swigMethodTypes91)) UltraAppKitPINVOKE.Widget_EnableSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Enable(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Enable", swigMethodTypes91)) PInvoke.Widget_EnableSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Enable(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Disable() {
-    if (SwigDerivedClassHasMethod("Disable", swigMethodTypes92)) UltraAppKitPINVOKE.Widget_DisableSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Disable(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Disable", swigMethodTypes92)) PInvoke.Widget_DisableSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Disable(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool GetDisabled() {
-    bool ret = (SwigDerivedClassHasMethod("GetDisabled", swigMethodTypes93) ? UltraAppKitPINVOKE.Widget_GetDisabledSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetDisabled(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("GetDisabled", swigMethodTypes93) ? PInvoke.Widget_GetDisabledSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetDisabled(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetRange(int x, int y) {
-    if (SwigDerivedClassHasMethod("SetRange", swigMethodTypes94)) UltraAppKitPINVOKE.Widget_SetRangeSwigExplicitWidget(swigCPtr, x, y); else UltraAppKitPINVOKE.Widget_SetRange(swigCPtr, x, y);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetRange", swigMethodTypes94)) PInvoke.Widget_SetRangeSwigExplicitWidget(swigCPtr, x, y); else PInvoke.Widget_SetRange(swigCPtr, x, y);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetValue(int value) {
-    if (SwigDerivedClassHasMethod("SetValue", swigMethodTypes95)) UltraAppKitPINVOKE.Widget_SetValueSwigExplicitWidget(swigCPtr, value); else UltraAppKitPINVOKE.Widget_SetValue(swigCPtr, value);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetValue", swigMethodTypes95)) PInvoke.Widget_SetValueSwigExplicitWidget(swigCPtr, value); else PInvoke.Widget_SetValue(swigCPtr, value);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int GetValue() {
-    int ret = (SwigDerivedClassHasMethod("GetValue", swigMethodTypes96) ? UltraAppKitPINVOKE.Widget_GetValueSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetValue(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("GetValue", swigMethodTypes96) ? PInvoke.Widget_GetValueSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetValue(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual iVec2 GetRange() {
-    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetRange", swigMethodTypes97) ? UltraAppKitPINVOKE.Widget_GetRangeSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetRange(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetRange", swigMethodTypes97) ? PInvoke.Widget_GetRangeSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetRange(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int GetSelectedItem() {
-    int ret = (SwigDerivedClassHasMethod("GetSelectedItem", swigMethodTypes98) ? UltraAppKitPINVOKE.Widget_GetSelectedItemSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetSelectedItem(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("GetSelectedItem", swigMethodTypes98) ? PInvoke.Widget_GetSelectedItemSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetSelectedItem(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SelectItem(int index) {
-    if (SwigDerivedClassHasMethod("SelectItem", swigMethodTypes99)) UltraAppKitPINVOKE.Widget_SelectItemSwigExplicitWidget(swigCPtr, index); else UltraAppKitPINVOKE.Widget_SelectItem(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SelectItem", swigMethodTypes99)) PInvoke.Widget_SelectItemSwigExplicitWidget(swigCPtr, index); else PInvoke.Widget_SelectItem(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int AddItem(WString text, bool selected) {
-    int ret = (SwigDerivedClassHasMethod("AddItem", swigMethodTypes100) ? UltraAppKitPINVOKE.Widget_AddItemSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), selected) : UltraAppKitPINVOKE.Widget_AddItem__SWIG_0(swigCPtr, WString.getCPtr(text), selected));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddItem", swigMethodTypes100) ? PInvoke.Widget_AddItemSwigExplicitWidget__SWIG_0(swigCPtr, WString.getCPtr(text), selected) : PInvoke.Widget_AddItem__SWIG_0(swigCPtr, WString.getCPtr(text), selected));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual int AddItem(WString text) {
-    int ret = (SwigDerivedClassHasMethod("AddItem", swigMethodTypes101) ? UltraAppKitPINVOKE.Widget_AddItemSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text)) : UltraAppKitPINVOKE.Widget_AddItem__SWIG_1(swigCPtr, WString.getCPtr(text)));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("AddItem", swigMethodTypes101) ? PInvoke.Widget_AddItemSwigExplicitWidget__SWIG_1(swigCPtr, WString.getCPtr(text)) : PInvoke.Widget_AddItem__SWIG_1(swigCPtr, WString.getCPtr(text)));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget GetParent() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetParent", swigMethodTypes102) ? UltraAppKitPINVOKE.Widget_GetParentSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetParent(swigCPtr));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetParent", swigMethodTypes102) ? PInvoke.Widget_GetParentSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetParent(swigCPtr));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetText(WString text) {
-    if (SwigDerivedClassHasMethod("SetText", swigMethodTypes103)) UltraAppKitPINVOKE.Widget_SetTextSwigExplicitWidget(swigCPtr, WString.getCPtr(text)); else UltraAppKitPINVOKE.Widget_SetText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetText", swigMethodTypes103)) PInvoke.Widget_SetTextSwigExplicitWidget(swigCPtr, WString.getCPtr(text)); else PInvoke.Widget_SetText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual int CountItems() {
-    int ret = (SwigDerivedClassHasMethod("CountItems", swigMethodTypes104) ? UltraAppKitPINVOKE.Widget_CountItemsSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_CountItems(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    int ret = (SwigDerivedClassHasMethod("CountItems", swigMethodTypes104) ? PInvoke.Widget_CountItemsSwigExplicitWidget(swigCPtr) : PInvoke.Widget_CountItems(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void ClearItems() {
-    if (SwigDerivedClassHasMethod("ClearItems", swigMethodTypes105)) UltraAppKitPINVOKE.Widget_ClearItemsSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_ClearItems(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("ClearItems", swigMethodTypes105)) PInvoke.Widget_ClearItemsSwigExplicitWidget(swigCPtr); else PInvoke.Widget_ClearItems(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void RemoveItem(int index) {
-    if (SwigDerivedClassHasMethod("RemoveItem", swigMethodTypes106)) UltraAppKitPINVOKE.Widget_RemoveItemSwigExplicitWidget(swigCPtr, index); else UltraAppKitPINVOKE.Widget_RemoveItem(swigCPtr, index);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("RemoveItem", swigMethodTypes106)) PInvoke.Widget_RemoveItemSwigExplicitWidget(swigCPtr, index); else PInvoke.Widget_RemoveItem(swigCPtr, index);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetProgress(double progress) {
-    if (SwigDerivedClassHasMethod("SetProgress", swigMethodTypes107)) UltraAppKitPINVOKE.Widget_SetProgressSwigExplicitWidget(swigCPtr, progress); else UltraAppKitPINVOKE.Widget_SetProgress(swigCPtr, progress);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetProgress", swigMethodTypes107)) PInvoke.Widget_SetProgressSwigExplicitWidget(swigCPtr, progress); else PInvoke.Widget_SetProgress(swigCPtr, progress);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual double GetProgress() {
-    double ret = (SwigDerivedClassHasMethod("GetProgress", swigMethodTypes108) ? UltraAppKitPINVOKE.Widget_GetProgressSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetProgress(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    double ret = (SwigDerivedClassHasMethod("GetProgress", swigMethodTypes108) ? PInvoke.Widget_GetProgressSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetProgress(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetRedrawFrequency(int frequency) {
-    if (SwigDerivedClassHasMethod("SetRedrawFrequency", swigMethodTypes109)) UltraAppKitPINVOKE.Widget_SetRedrawFrequencySwigExplicitWidget(swigCPtr, frequency); else UltraAppKitPINVOKE.Widget_SetRedrawFrequency(swigCPtr, frequency);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetRedrawFrequency", swigMethodTypes109)) PInvoke.Widget_SetRedrawFrequencySwigExplicitWidget(swigCPtr, frequency); else PInvoke.Widget_SetRedrawFrequency(swigCPtr, frequency);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void AddText(WString text) {
-    if (SwigDerivedClassHasMethod("AddText", swigMethodTypes110)) UltraAppKitPINVOKE.Widget_AddTextSwigExplicitWidget(swigCPtr, WString.getCPtr(text)); else UltraAppKitPINVOKE.Widget_AddText(swigCPtr, WString.getCPtr(text));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("AddText", swigMethodTypes110)) PInvoke.Widget_AddTextSwigExplicitWidget(swigCPtr, WString.getCPtr(text)); else PInvoke.Widget_AddText(swigCPtr, WString.getCPtr(text));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Redraw() {
-    if (SwigDerivedClassHasMethod("Redraw", swigMethodTypes111)) UltraAppKitPINVOKE.Widget_RedrawSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Redraw(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Redraw", swigMethodTypes111)) PInvoke.Widget_RedrawSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Redraw(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetPadding(int left, int top, int right, int bottom) {
-    if (SwigDerivedClassHasMethod("SetPadding", swigMethodTypes112)) UltraAppKitPINVOKE.Widget_SetPaddingSwigExplicitWidget(swigCPtr, left, top, right, bottom); else UltraAppKitPINVOKE.Widget_SetPadding(swigCPtr, left, top, right, bottom);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetPadding", swigMethodTypes112)) PInvoke.Widget_SetPaddingSwigExplicitWidget(swigCPtr, left, top, right, bottom); else PInvoke.Widget_SetPadding(swigCPtr, left, top, right, bottom);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual iVec4 GetPadding() {
-    iVec4 ret = new iVec4((SwigDerivedClassHasMethod("GetPadding", swigMethodTypes113) ? UltraAppKitPINVOKE.Widget_GetPaddingSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetPadding(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec4 ret = new iVec4((SwigDerivedClassHasMethod("GetPadding", swigMethodTypes113) ? PInvoke.Widget_GetPaddingSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetPadding(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual iVec2 GetPosition(bool global) {
-    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetPosition", swigMethodTypes114) ? UltraAppKitPINVOKE.Widget_GetPositionSwigExplicitWidget__SWIG_0(swigCPtr, global) : UltraAppKitPINVOKE.Widget_GetPosition__SWIG_0(swigCPtr, global)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetPosition", swigMethodTypes114) ? PInvoke.Widget_GetPositionSwigExplicitWidget__SWIG_0(swigCPtr, global) : PInvoke.Widget_GetPosition__SWIG_0(swigCPtr, global)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual iVec2 GetPosition() {
-    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetPosition", swigMethodTypes115) ? UltraAppKitPINVOKE.Widget_GetPositionSwigExplicitWidget__SWIG_1(swigCPtr) : UltraAppKitPINVOKE.Widget_GetPosition__SWIG_1(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetPosition", swigMethodTypes115) ? PInvoke.Widget_GetPositionSwigExplicitWidget__SWIG_1(swigCPtr) : PInvoke.Widget_GetPosition__SWIG_1(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual iVec2 GetSize() {
-    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetSize", swigMethodTypes116) ? UltraAppKitPINVOKE.Widget_GetSizeSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetSize(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("GetSize", swigMethodTypes116) ? PInvoke.Widget_GetSizeSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetSize(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void Cut() {
-    if (SwigDerivedClassHasMethod("Cut", swigMethodTypes117)) UltraAppKitPINVOKE.Widget_CutSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Cut(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Cut", swigMethodTypes117)) PInvoke.Widget_CutSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Cut(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Copy() {
-    if (SwigDerivedClassHasMethod("Copy", swigMethodTypes118)) UltraAppKitPINVOKE.Widget_CopySwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Copy(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Copy", swigMethodTypes118)) PInvoke.Widget_CopySwigExplicitWidget(swigCPtr); else PInvoke.Widget_Copy(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Paste() {
-    if (SwigDerivedClassHasMethod("Paste", swigMethodTypes119)) UltraAppKitPINVOKE.Widget_PasteSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_Paste(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Paste", swigMethodTypes119)) PInvoke.Widget_PasteSwigExplicitWidget(swigCPtr); else PInvoke.Widget_Paste(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual iVec2 ClientSize() {
-    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("ClientSize", swigMethodTypes120) ? UltraAppKitPINVOKE.Widget_ClientSizeSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_ClientSize(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    iVec2 ret = new iVec2((SwigDerivedClassHasMethod("ClientSize", swigMethodTypes120) ? PInvoke.Widget_ClientSizeSwigExplicitWidget(swigCPtr) : PInvoke.Widget_ClientSize(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Interface GetInterface() {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetInterface", swigMethodTypes121) ? UltraAppKitPINVOKE.Widget_GetInterfaceSwigExplicitWidget(swigCPtr) : UltraAppKitPINVOKE.Widget_GetInterface(swigCPtr));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetInterface", swigMethodTypes121) ? PInvoke.Widget_GetInterfaceSwigExplicitWidget(swigCPtr) : PInvoke.Widget_GetInterface(swigCPtr));
     Interface ret = (cPtr == global::System.IntPtr.Zero) ? null : new Interface(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString GetText(bool selected) {
-    WString ret = new WString((SwigDerivedClassHasMethod("GetText", swigMethodTypes122) ? UltraAppKitPINVOKE.Widget_GetTextSwigExplicitWidget__SWIG_0(swigCPtr, selected) : UltraAppKitPINVOKE.Widget_GetText__SWIG_0(swigCPtr, selected)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString((SwigDerivedClassHasMethod("GetText", swigMethodTypes122) ? PInvoke.Widget_GetTextSwigExplicitWidget__SWIG_0(swigCPtr, selected) : PInvoke.Widget_GetText__SWIG_0(swigCPtr, selected)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual WString GetText() {
-    WString ret = new WString((SwigDerivedClassHasMethod("GetText", swigMethodTypes123) ? UltraAppKitPINVOKE.Widget_GetTextSwigExplicitWidget__SWIG_1(swigCPtr) : UltraAppKitPINVOKE.Widget_GetText__SWIG_1(swigCPtr)), true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    WString ret = new WString((SwigDerivedClassHasMethod("GetText", swigMethodTypes123) ? PInvoke.Widget_GetTextSwigExplicitWidget__SWIG_1(swigCPtr) : PInvoke.Widget_GetText__SWIG_1(swigCPtr)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void SetLayout(int left, int right, int top, int bottom) {
-    if (SwigDerivedClassHasMethod("SetLayout", swigMethodTypes124)) UltraAppKitPINVOKE.Widget_SetLayoutSwigExplicitWidget(swigCPtr, left, right, top, bottom); else UltraAppKitPINVOKE.Widget_SetLayout(swigCPtr, left, right, top, bottom);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetLayout", swigMethodTypes124)) PInvoke.Widget_SetLayoutSwigExplicitWidget(swigCPtr, left, right, top, bottom); else PInvoke.Widget_SetLayout(swigCPtr, left, right, top, bottom);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetShape(int x, int y, int width, int height) {
-    if (SwigDerivedClassHasMethod("SetShape", swigMethodTypes125)) UltraAppKitPINVOKE.Widget_SetShapeSwigExplicitWidget__SWIG_0(swigCPtr, x, y, width, height); else UltraAppKitPINVOKE.Widget_SetShape__SWIG_0(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetShape", swigMethodTypes125)) PInvoke.Widget_SetShapeSwigExplicitWidget__SWIG_0(swigCPtr, x, y, width, height); else PInvoke.Widget_SetShape__SWIG_0(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void SetShape(iVec2 position, iVec2 size) {
-    if (SwigDerivedClassHasMethod("SetShape", swigMethodTypes126)) UltraAppKitPINVOKE.Widget_SetShapeSwigExplicitWidget__SWIG_1(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)); else UltraAppKitPINVOKE.Widget_SetShape__SWIG_1(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("SetShape", swigMethodTypes126)) PInvoke.Widget_SetShapeSwigExplicitWidget__SWIG_1(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size)); else PInvoke.Widget_SetShape__SWIG_1(swigCPtr, iVec2.getCPtr(position), iVec2.getCPtr(size));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual bool Hidden(bool recursive) {
-    bool ret = (SwigDerivedClassHasMethod("Hidden", swigMethodTypes127) ? UltraAppKitPINVOKE.Widget_HiddenSwigExplicitWidget__SWIG_0(swigCPtr, recursive) : UltraAppKitPINVOKE.Widget_Hidden__SWIG_0(swigCPtr, recursive));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Hidden", swigMethodTypes127) ? PInvoke.Widget_HiddenSwigExplicitWidget__SWIG_0(swigCPtr, recursive) : PInvoke.Widget_Hidden__SWIG_0(swigCPtr, recursive));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual bool Hidden() {
-    bool ret = (SwigDerivedClassHasMethod("Hidden", swigMethodTypes128) ? UltraAppKitPINVOKE.Widget_HiddenSwigExplicitWidget__SWIG_1(swigCPtr) : UltraAppKitPINVOKE.Widget_Hidden__SWIG_1(swigCPtr));
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    bool ret = (SwigDerivedClassHasMethod("Hidden", swigMethodTypes128) ? PInvoke.Widget_HiddenSwigExplicitWidget__SWIG_1(swigCPtr) : PInvoke.Widget_Hidden__SWIG_1(swigCPtr));
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual Widget GetWidgetAtPoint(int x, int y) {
-    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetWidgetAtPoint", swigMethodTypes129) ? UltraAppKitPINVOKE.Widget_GetWidgetAtPointSwigExplicitWidget(swigCPtr, x, y) : UltraAppKitPINVOKE.Widget_GetWidgetAtPoint(swigCPtr, x, y));
+    global::System.IntPtr cPtr = (SwigDerivedClassHasMethod("GetWidgetAtPoint", swigMethodTypes129) ? PInvoke.Widget_GetWidgetAtPointSwigExplicitWidget(swigCPtr, x, y) : PInvoke.Widget_GetWidgetAtPoint(swigCPtr, x, y));
     Widget ret = (cPtr == global::System.IntPtr.Zero) ? null : new Widget(cPtr, true);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual void UpdateLayout() {
-    if (SwigDerivedClassHasMethod("UpdateLayout", swigMethodTypes130)) UltraAppKitPINVOKE.Widget_UpdateLayoutSwigExplicitWidget(swigCPtr); else UltraAppKitPINVOKE.Widget_UpdateLayout(swigCPtr);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("UpdateLayout", swigMethodTypes130)) PInvoke.Widget_UpdateLayoutSwigExplicitWidget(swigCPtr); else PInvoke.Widget_UpdateLayout(swigCPtr);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Draw(int x, int y, int width, int height) {
-    if (SwigDerivedClassHasMethod("Draw", swigMethodTypes131)) UltraAppKitPINVOKE.Widget_DrawSwigExplicitWidget(swigCPtr, x, y, width, height); else UltraAppKitPINVOKE.Widget_Draw(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Draw", swigMethodTypes131)) PInvoke.Widget_DrawSwigExplicitWidget(swigCPtr, x, y, width, height); else PInvoke.Widget_Draw(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   public virtual void Draw__(int x, int y, int width, int height) {
-    if (SwigDerivedClassHasMethod("Draw__", swigMethodTypes132)) UltraAppKitPINVOKE.Widget_Draw__SwigExplicitWidget(swigCPtr, x, y, width, height); else UltraAppKitPINVOKE.Widget_Draw__(swigCPtr, x, y, width, height);
-    if (UltraAppKitPINVOKE.SWIGPendingException.Pending) throw UltraAppKitPINVOKE.SWIGPendingException.Retrieve();
+    if (SwigDerivedClassHasMethod("Draw__", swigMethodTypes132)) PInvoke.Widget_Draw__SwigExplicitWidget(swigCPtr, x, y, width, height); else PInvoke.Widget_Draw__(swigCPtr, x, y, width, height);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
   }
 
   private void SwigDirectorConnect() {
@@ -1506,7 +1492,7 @@ public class Widget : Object {
       swigDelegate131 = new SwigDelegateWidget_131(SwigDirectorMethodDraw);
     if (SwigDerivedClassHasMethod("Draw__", swigMethodTypes132))
       swigDelegate132 = new SwigDelegateWidget_132(SwigDirectorMethodDraw__);
-    UltraAppKitPINVOKE.Widget_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16, swigDelegate17, swigDelegate18, swigDelegate19, swigDelegate20, swigDelegate21, swigDelegate22, swigDelegate23, swigDelegate24, swigDelegate25, swigDelegate26, swigDelegate27, swigDelegate28, swigDelegate29, swigDelegate30, swigDelegate31, swigDelegate32, swigDelegate33, swigDelegate34, swigDelegate35, swigDelegate36, swigDelegate37, swigDelegate38, swigDelegate39, swigDelegate40, swigDelegate41, swigDelegate42, swigDelegate43, swigDelegate44, swigDelegate45, swigDelegate46, swigDelegate47, swigDelegate48, swigDelegate49, swigDelegate50, swigDelegate51, swigDelegate52, swigDelegate53, swigDelegate54, swigDelegate55, swigDelegate56, swigDelegate57, swigDelegate58, swigDelegate59, swigDelegate60, swigDelegate61, swigDelegate62, swigDelegate63, swigDelegate64, swigDelegate65, swigDelegate66, swigDelegate67, swigDelegate68, swigDelegate69, swigDelegate70, swigDelegate71, swigDelegate72, swigDelegate73, swigDelegate74, swigDelegate75, swigDelegate76, swigDelegate77, swigDelegate78, swigDelegate79, swigDelegate80, swigDelegate81, swigDelegate82, swigDelegate83, swigDelegate84, swigDelegate85, swigDelegate86, swigDelegate87, swigDelegate88, swigDelegate89, swigDelegate90, swigDelegate91, swigDelegate92, swigDelegate93, swigDelegate94, swigDelegate95, swigDelegate96, swigDelegate97, swigDelegate98, swigDelegate99, swigDelegate100, swigDelegate101, swigDelegate102, swigDelegate103, swigDelegate104, swigDelegate105, swigDelegate106, swigDelegate107, swigDelegate108, swigDelegate109, swigDelegate110, swigDelegate111, swigDelegate112, swigDelegate113, swigDelegate114, swigDelegate115, swigDelegate116, swigDelegate117, swigDelegate118, swigDelegate119, swigDelegate120, swigDelegate121, swigDelegate122, swigDelegate123, swigDelegate124, swigDelegate125, swigDelegate126, swigDelegate127, swigDelegate128, swigDelegate129, swigDelegate130, swigDelegate131, swigDelegate132);
+    PInvoke.Widget_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16, swigDelegate17, swigDelegate18, swigDelegate19, swigDelegate20, swigDelegate21, swigDelegate22, swigDelegate23, swigDelegate24, swigDelegate25, swigDelegate26, swigDelegate27, swigDelegate28, swigDelegate29, swigDelegate30, swigDelegate31, swigDelegate32, swigDelegate33, swigDelegate34, swigDelegate35, swigDelegate36, swigDelegate37, swigDelegate38, swigDelegate39, swigDelegate40, swigDelegate41, swigDelegate42, swigDelegate43, swigDelegate44, swigDelegate45, swigDelegate46, swigDelegate47, swigDelegate48, swigDelegate49, swigDelegate50, swigDelegate51, swigDelegate52, swigDelegate53, swigDelegate54, swigDelegate55, swigDelegate56, swigDelegate57, swigDelegate58, swigDelegate59, swigDelegate60, swigDelegate61, swigDelegate62, swigDelegate63, swigDelegate64, swigDelegate65, swigDelegate66, swigDelegate67, swigDelegate68, swigDelegate69, swigDelegate70, swigDelegate71, swigDelegate72, swigDelegate73, swigDelegate74, swigDelegate75, swigDelegate76, swigDelegate77, swigDelegate78, swigDelegate79, swigDelegate80, swigDelegate81, swigDelegate82, swigDelegate83, swigDelegate84, swigDelegate85, swigDelegate86, swigDelegate87, swigDelegate88, swigDelegate89, swigDelegate90, swigDelegate91, swigDelegate92, swigDelegate93, swigDelegate94, swigDelegate95, swigDelegate96, swigDelegate97, swigDelegate98, swigDelegate99, swigDelegate100, swigDelegate101, swigDelegate102, swigDelegate103, swigDelegate104, swigDelegate105, swigDelegate106, swigDelegate107, swigDelegate108, swigDelegate109, swigDelegate110, swigDelegate111, swigDelegate112, swigDelegate113, swigDelegate114, swigDelegate115, swigDelegate116, swigDelegate117, swigDelegate118, swigDelegate119, swigDelegate120, swigDelegate121, swigDelegate122, swigDelegate123, swigDelegate124, swigDelegate125, swigDelegate126, swigDelegate127, swigDelegate128, swigDelegate129, swigDelegate130, swigDelegate131, swigDelegate132);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
@@ -1584,11 +1570,11 @@ public class Widget : Object {
   }
 
   private bool SwigDirectorMethodReload(global::System.IntPtr j3) {
-    return Reload(new SWIGTYPE_p_nlohmann__json(j3, false));
+    return Reload(new JSONWrapper(j3, false));
   }
 
   private bool SwigDirectorMethodSave(global::System.IntPtr j3, int flags) {
-    return Save(new SWIGTYPE_p_nlohmann__json(j3, false), (SaveFlags)flags);
+    return Save(new JSONWrapper(j3, false), (SaveFlags)flags);
   }
 
   private void SwigDirectorMethodSetRadius(int radius) {
@@ -2332,8 +2318,8 @@ public class Widget : Object {
   private static global::System.Type[] swigMethodTypes14 = new global::System.Type[] { typeof(bool) };
   private static global::System.Type[] swigMethodTypes15 = new global::System.Type[] { typeof(int), typeof(int) };
   private static global::System.Type[] swigMethodTypes16 = new global::System.Type[] { typeof(Widget) };
-  private static global::System.Type[] swigMethodTypes17 = new global::System.Type[] { typeof(SWIGTYPE_p_nlohmann__json) };
-  private static global::System.Type[] swigMethodTypes18 = new global::System.Type[] { typeof(SWIGTYPE_p_nlohmann__json), typeof(SaveFlags) };
+  private static global::System.Type[] swigMethodTypes17 = new global::System.Type[] { typeof(JSONWrapper) };
+  private static global::System.Type[] swigMethodTypes18 = new global::System.Type[] { typeof(JSONWrapper), typeof(SaveFlags) };
   private static global::System.Type[] swigMethodTypes19 = new global::System.Type[] { typeof(int) };
   private static global::System.Type[] swigMethodTypes20 = new global::System.Type[] {  };
   private static global::System.Type[] swigMethodTypes21 = new global::System.Type[] { typeof(MousePointer) };
@@ -2448,4 +2434,6 @@ public class Widget : Object {
   private static global::System.Type[] swigMethodTypes130 = new global::System.Type[] {  };
   private static global::System.Type[] swigMethodTypes131 = new global::System.Type[] { typeof(int), typeof(int), typeof(int), typeof(int) };
   private static global::System.Type[] swigMethodTypes132 = new global::System.Type[] { typeof(int), typeof(int), typeof(int), typeof(int) };
+}
+
 }

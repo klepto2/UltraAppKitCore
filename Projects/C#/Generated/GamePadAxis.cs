@@ -8,10 +8,13 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace UltraEngine {
 
 public enum GamePadAxis {
   GAMEPADAXIS_RTRIGGER = 8,
   GAMEPADAXIS_LTRIGGER,
   GAMEPADAXIS_RSTICK,
   GAMEPADAXIS_LSTICK
+}
+
 }
