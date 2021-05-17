@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "UltraAppKit.Core.Sample": {
+      "commandName": "Project",
+      "commandLineArgs": "a -D -Hello -Path=\"Test\"",
+      "nativeDebugging": true
+    }
+  }
+}
