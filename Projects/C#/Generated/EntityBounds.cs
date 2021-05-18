@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum EntityBounds {
   BOUNDS_LOCAL = 1,
   BOUNDS_GLOBAL = 2,

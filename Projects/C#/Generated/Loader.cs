@@ -54,7 +54,6 @@ public class Loader : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Loader_extensions_get(swigCPtr);
       VectorStdWString ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorStdWString(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -80,7 +79,6 @@ public class Loader : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Loader_plugin_get(swigCPtr);
       PluginWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new PluginWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

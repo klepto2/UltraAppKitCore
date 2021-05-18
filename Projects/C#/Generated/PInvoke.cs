@@ -33,7 +33,7 @@ class PInvoke {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="SWIGRegisterExceptionCallbacks_Functions")]
+    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="SWIGRegisterExceptionCallbacks_Functions")]
     public static extern void SWIGRegisterExceptionCallbacks_Functions(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
@@ -47,7 +47,7 @@ class PInvoke {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="SWIGRegisterExceptionArgumentCallbacks_Functions")]
+    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="SWIGRegisterExceptionArgumentCallbacks_Functions")]
     public static extern void SWIGRegisterExceptionCallbacksArgument_Functions(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
@@ -174,7 +174,7 @@ class PInvoke {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="SWIGRegisterStringCallback_Functions")]
+    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="SWIGRegisterStringCallback_Functions")]
     public static extern void SWIGRegisterStringCallback_Functions(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
@@ -199,7 +199,7 @@ class PInvoke {
     public delegate string SWIGWStringDelegate(global::System.IntPtr message);
     static SWIGWStringDelegate wstringDelegate = new SWIGWStringDelegate(CreateWString);
 
-    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="SWIGRegisterWStringCallback_Functions")]
+    [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="SWIGRegisterWStringCallback_Functions")]
     public static extern void SWIGRegisterWStringCallback_Functions(SWIGWStringDelegate wstringDelegate);
 
     static string CreateWString([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]global::System.IntPtr cString) {
@@ -214,7382 +214,7392 @@ class PInvoke {
   static protected SWIGWStringHelper swigWStringHelper = new SWIGWStringHelper();
 
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_JSONWrapper_dump")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_JSONWrapper_dump")]
   public static extern string JSONWrapper_dump(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_JSONWrapper")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_JSONWrapper")]
   public static extern global::System.IntPtr new_JSONWrapper();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_JSONWrapper")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_JSONWrapper")]
   public static extern void delete_JSONWrapper(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Clear")]
   public static extern void VectorFloat_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Add")]
   public static extern void VectorFloat_Add(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_size")]
   public static extern uint VectorFloat_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_capacity")]
   public static extern uint VectorFloat_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_reserve")]
   public static extern void VectorFloat_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_0")]
   public static extern global::System.IntPtr new_VectorFloat__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_1")]
   public static extern global::System.IntPtr new_VectorFloat__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorFloat__SWIG_2")]
   public static extern global::System.IntPtr new_VectorFloat__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_getitemcopy")]
   public static extern float VectorFloat_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_getitem")]
   public static extern float VectorFloat_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_setitem")]
   public static extern void VectorFloat_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_AddRange")]
   public static extern void VectorFloat_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_GetRange")]
   public static extern global::System.IntPtr VectorFloat_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Insert")]
   public static extern void VectorFloat_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_InsertRange")]
   public static extern void VectorFloat_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_RemoveAt")]
   public static extern void VectorFloat_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_RemoveRange")]
   public static extern void VectorFloat_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Repeat")]
   public static extern global::System.IntPtr VectorFloat_Repeat(float jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Reverse__SWIG_0")]
   public static extern void VectorFloat_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Reverse__SWIG_1")]
   public static extern void VectorFloat_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_SetRange")]
   public static extern void VectorFloat_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Contains")]
   public static extern bool VectorFloat_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_IndexOf")]
   public static extern int VectorFloat_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_LastIndexOf")]
   public static extern int VectorFloat_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorFloat_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorFloat_Remove")]
   public static extern bool VectorFloat_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorFloat")]
   public static extern void delete_VectorFloat(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Clear")]
   public static extern void VectorDisplay_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Add")]
   public static extern void VectorDisplay_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_size")]
   public static extern uint VectorDisplay_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_capacity")]
   public static extern uint VectorDisplay_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_reserve")]
   public static extern void VectorDisplay_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_0")]
   public static extern global::System.IntPtr new_VectorDisplay__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_1")]
   public static extern global::System.IntPtr new_VectorDisplay__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorDisplay__SWIG_2")]
   public static extern global::System.IntPtr new_VectorDisplay__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_getitemcopy")]
   public static extern global::System.IntPtr VectorDisplay_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_getitem")]
   public static extern global::System.IntPtr VectorDisplay_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_setitem")]
   public static extern void VectorDisplay_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_AddRange")]
   public static extern void VectorDisplay_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_GetRange")]
   public static extern global::System.IntPtr VectorDisplay_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Insert")]
   public static extern void VectorDisplay_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_InsertRange")]
   public static extern void VectorDisplay_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_RemoveAt")]
   public static extern void VectorDisplay_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_RemoveRange")]
   public static extern void VectorDisplay_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Repeat")]
   public static extern global::System.IntPtr VectorDisplay_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Reverse__SWIG_0")]
   public static extern void VectorDisplay_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Reverse__SWIG_1")]
   public static extern void VectorDisplay_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_SetRange")]
   public static extern void VectorDisplay_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Contains")]
   public static extern bool VectorDisplay_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_IndexOf")]
   public static extern int VectorDisplay_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_LastIndexOf")]
   public static extern int VectorDisplay_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorDisplay_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorDisplay_Remove")]
   public static extern bool VectorDisplay_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorDisplay")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorDisplay")]
   public static extern void delete_VectorDisplay(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Clear")]
   public static extern void VectorPixmap_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Add")]
   public static extern void VectorPixmap_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_size")]
   public static extern uint VectorPixmap_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_capacity")]
   public static extern uint VectorPixmap_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_reserve")]
   public static extern void VectorPixmap_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_0")]
   public static extern global::System.IntPtr new_VectorPixmap__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_1")]
   public static extern global::System.IntPtr new_VectorPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorPixmap__SWIG_2")]
   public static extern global::System.IntPtr new_VectorPixmap__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_getitemcopy")]
   public static extern global::System.IntPtr VectorPixmap_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_getitem")]
   public static extern global::System.IntPtr VectorPixmap_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_setitem")]
   public static extern void VectorPixmap_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_AddRange")]
   public static extern void VectorPixmap_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_GetRange")]
   public static extern global::System.IntPtr VectorPixmap_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Insert")]
   public static extern void VectorPixmap_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_InsertRange")]
   public static extern void VectorPixmap_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_RemoveAt")]
   public static extern void VectorPixmap_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_RemoveRange")]
   public static extern void VectorPixmap_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Repeat")]
   public static extern global::System.IntPtr VectorPixmap_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Reverse__SWIG_0")]
   public static extern void VectorPixmap_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Reverse__SWIG_1")]
   public static extern void VectorPixmap_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_SetRange")]
   public static extern void VectorPixmap_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Contains")]
   public static extern bool VectorPixmap_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_IndexOf")]
   public static extern int VectorPixmap_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_LastIndexOf")]
   public static extern int VectorPixmap_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorPixmap_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorPixmap_Remove")]
   public static extern bool VectorPixmap_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorPixmap")]
   public static extern void delete_VectorPixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Clear")]
   public static extern void VectorTreeViewNode_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Add")]
   public static extern void VectorTreeViewNode_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_size")]
   public static extern uint VectorTreeViewNode_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_capacity")]
   public static extern uint VectorTreeViewNode_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_reserve")]
   public static extern void VectorTreeViewNode_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_0")]
   public static extern global::System.IntPtr new_VectorTreeViewNode__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_1")]
   public static extern global::System.IntPtr new_VectorTreeViewNode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorTreeViewNode__SWIG_2")]
   public static extern global::System.IntPtr new_VectorTreeViewNode__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_getitemcopy")]
   public static extern global::System.IntPtr VectorTreeViewNode_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_getitem")]
   public static extern global::System.IntPtr VectorTreeViewNode_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_setitem")]
   public static extern void VectorTreeViewNode_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_AddRange")]
   public static extern void VectorTreeViewNode_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_GetRange")]
   public static extern global::System.IntPtr VectorTreeViewNode_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Insert")]
   public static extern void VectorTreeViewNode_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_InsertRange")]
   public static extern void VectorTreeViewNode_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_RemoveAt")]
   public static extern void VectorTreeViewNode_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_RemoveRange")]
   public static extern void VectorTreeViewNode_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Repeat")]
   public static extern global::System.IntPtr VectorTreeViewNode_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Reverse__SWIG_0")]
   public static extern void VectorTreeViewNode_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Reverse__SWIG_1")]
   public static extern void VectorTreeViewNode_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_SetRange")]
   public static extern void VectorTreeViewNode_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Contains")]
   public static extern bool VectorTreeViewNode_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_IndexOf")]
   public static extern int VectorTreeViewNode_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_LastIndexOf")]
   public static extern int VectorTreeViewNode_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorTreeViewNode_Remove")]
   public static extern bool VectorTreeViewNode_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorTreeViewNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorTreeViewNode")]
   public static extern void delete_VectorTreeViewNode(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Clear")]
   public static extern void VectorLoader_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Add")]
   public static extern void VectorLoader_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_size")]
   public static extern uint VectorLoader_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_capacity")]
   public static extern uint VectorLoader_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_reserve")]
   public static extern void VectorLoader_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_0")]
   public static extern global::System.IntPtr new_VectorLoader__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_1")]
   public static extern global::System.IntPtr new_VectorLoader__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorLoader__SWIG_2")]
   public static extern global::System.IntPtr new_VectorLoader__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_getitemcopy")]
   public static extern global::System.IntPtr VectorLoader_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_getitem")]
   public static extern global::System.IntPtr VectorLoader_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_setitem")]
   public static extern void VectorLoader_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_AddRange")]
   public static extern void VectorLoader_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_GetRange")]
   public static extern global::System.IntPtr VectorLoader_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Insert")]
   public static extern void VectorLoader_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_InsertRange")]
   public static extern void VectorLoader_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_RemoveAt")]
   public static extern void VectorLoader_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_RemoveRange")]
   public static extern void VectorLoader_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Repeat")]
   public static extern global::System.IntPtr VectorLoader_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Reverse__SWIG_0")]
   public static extern void VectorLoader_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Reverse__SWIG_1")]
   public static extern void VectorLoader_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_SetRange")]
   public static extern void VectorLoader_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Contains")]
   public static extern bool VectorLoader_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_IndexOf")]
   public static extern int VectorLoader_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_LastIndexOf")]
   public static extern int VectorLoader_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorLoader_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorLoader_Remove")]
   public static extern bool VectorLoader_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorLoader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorLoader")]
   public static extern void delete_VectorLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Clear")]
   public static extern void VectorWidget_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Add")]
   public static extern void VectorWidget_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_size")]
   public static extern uint VectorWidget_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_capacity")]
   public static extern uint VectorWidget_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_reserve")]
   public static extern void VectorWidget_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_0")]
   public static extern global::System.IntPtr new_VectorWidget__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_1")]
   public static extern global::System.IntPtr new_VectorWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidget__SWIG_2")]
   public static extern global::System.IntPtr new_VectorWidget__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_getitemcopy")]
   public static extern global::System.IntPtr VectorWidget_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_getitem")]
   public static extern global::System.IntPtr VectorWidget_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_setitem")]
   public static extern void VectorWidget_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_AddRange")]
   public static extern void VectorWidget_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_GetRange")]
   public static extern global::System.IntPtr VectorWidget_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Insert")]
   public static extern void VectorWidget_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_InsertRange")]
   public static extern void VectorWidget_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_RemoveAt")]
   public static extern void VectorWidget_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_RemoveRange")]
   public static extern void VectorWidget_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Repeat")]
   public static extern global::System.IntPtr VectorWidget_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Reverse__SWIG_0")]
   public static extern void VectorWidget_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Reverse__SWIG_1")]
   public static extern void VectorWidget_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_SetRange")]
   public static extern void VectorWidget_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Contains")]
   public static extern bool VectorWidget_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_IndexOf")]
   public static extern int VectorWidget_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_LastIndexOf")]
   public static extern int VectorWidget_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidget_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidget_Remove")]
   public static extern bool VectorWidget_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorWidget")]
   public static extern void delete_VectorWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Clear")]
   public static extern void VectorWindow_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Add")]
   public static extern void VectorWindow_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_size")]
   public static extern uint VectorWindow_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_capacity")]
   public static extern uint VectorWindow_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_reserve")]
   public static extern void VectorWindow_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_0")]
   public static extern global::System.IntPtr new_VectorWindow__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_1")]
   public static extern global::System.IntPtr new_VectorWindow__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWindow__SWIG_2")]
   public static extern global::System.IntPtr new_VectorWindow__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_getitemcopy")]
   public static extern global::System.IntPtr VectorWindow_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_getitem")]
   public static extern global::System.IntPtr VectorWindow_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_setitem")]
   public static extern void VectorWindow_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_AddRange")]
   public static extern void VectorWindow_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_GetRange")]
   public static extern global::System.IntPtr VectorWindow_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Insert")]
   public static extern void VectorWindow_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_InsertRange")]
   public static extern void VectorWindow_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_RemoveAt")]
   public static extern void VectorWindow_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_RemoveRange")]
   public static extern void VectorWindow_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Repeat")]
   public static extern global::System.IntPtr VectorWindow_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Reverse__SWIG_0")]
   public static extern void VectorWindow_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Reverse__SWIG_1")]
   public static extern void VectorWindow_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_SetRange")]
   public static extern void VectorWindow_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Contains")]
   public static extern bool VectorWindow_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_IndexOf")]
   public static extern int VectorWindow_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_LastIndexOf")]
   public static extern int VectorWindow_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWindow_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWindow_Remove")]
   public static extern bool VectorWindow_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorWindow")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorWindow")]
   public static extern void delete_VectorWindow(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Clear")]
   public static extern void VectorStdString_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Add")]
   public static extern void VectorStdString_Add(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_size")]
   public static extern uint VectorStdString_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_capacity")]
   public static extern uint VectorStdString_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_reserve")]
   public static extern void VectorStdString_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_0")]
   public static extern global::System.IntPtr new_VectorStdString__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_1")]
   public static extern global::System.IntPtr new_VectorStdString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdString__SWIG_2")]
   public static extern global::System.IntPtr new_VectorStdString__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_getitemcopy")]
   public static extern string VectorStdString_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_getitem")]
   public static extern string VectorStdString_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_setitem")]
   public static extern void VectorStdString_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_AddRange")]
   public static extern void VectorStdString_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_GetRange")]
   public static extern global::System.IntPtr VectorStdString_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Insert")]
   public static extern void VectorStdString_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_InsertRange")]
   public static extern void VectorStdString_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_RemoveAt")]
   public static extern void VectorStdString_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_RemoveRange")]
   public static extern void VectorStdString_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Repeat")]
   public static extern global::System.IntPtr VectorStdString_Repeat(string jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Reverse__SWIG_0")]
   public static extern void VectorStdString_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Reverse__SWIG_1")]
   public static extern void VectorStdString_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_SetRange")]
   public static extern void VectorStdString_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Contains")]
   public static extern bool VectorStdString_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_IndexOf")]
   public static extern int VectorStdString_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_LastIndexOf")]
   public static extern int VectorStdString_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdString_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdString_Remove")]
   public static extern bool VectorStdString_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorStdString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorStdString")]
   public static extern void delete_VectorStdString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Clear")]
   public static extern void VectorStdWString_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Add")]
   public static extern void VectorStdWString_Add(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_size")]
   public static extern uint VectorStdWString_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_capacity")]
   public static extern uint VectorStdWString_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_reserve")]
   public static extern void VectorStdWString_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_0")]
   public static extern global::System.IntPtr new_VectorStdWString__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_1")]
   public static extern global::System.IntPtr new_VectorStdWString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorStdWString__SWIG_2")]
   public static extern global::System.IntPtr new_VectorStdWString__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_getitemcopy")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string VectorStdWString_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_getitem")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string VectorStdWString_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_setitem")]
   public static extern void VectorStdWString_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_AddRange")]
   public static extern void VectorStdWString_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_GetRange")]
   public static extern global::System.IntPtr VectorStdWString_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Insert")]
   public static extern void VectorStdWString_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_InsertRange")]
   public static extern void VectorStdWString_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_RemoveAt")]
   public static extern void VectorStdWString_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_RemoveRange")]
   public static extern void VectorStdWString_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Repeat")]
   public static extern global::System.IntPtr VectorStdWString_Repeat([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Reverse__SWIG_0")]
   public static extern void VectorStdWString_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Reverse__SWIG_1")]
   public static extern void VectorStdWString_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_SetRange")]
   public static extern void VectorStdWString_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Contains")]
   public static extern bool VectorStdWString_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_IndexOf")]
   public static extern int VectorStdWString_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_LastIndexOf")]
   public static extern int VectorStdWString_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorStdWString_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorStdWString_Remove")]
   public static extern bool VectorStdWString_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorStdWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorStdWString")]
   public static extern void delete_VectorStdWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Clear")]
   public static extern void VectorIVec2_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Add")]
   public static extern void VectorIVec2_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_size")]
   public static extern uint VectorIVec2_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_capacity")]
   public static extern uint VectorIVec2_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_reserve")]
   public static extern void VectorIVec2_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_0")]
   public static extern global::System.IntPtr new_VectorIVec2__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_1")]
   public static extern global::System.IntPtr new_VectorIVec2__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorIVec2__SWIG_2")]
   public static extern global::System.IntPtr new_VectorIVec2__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_getitemcopy")]
   public static extern global::System.IntPtr VectorIVec2_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_getitem")]
   public static extern global::System.IntPtr VectorIVec2_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_setitem")]
   public static extern void VectorIVec2_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_AddRange")]
   public static extern void VectorIVec2_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_GetRange")]
   public static extern global::System.IntPtr VectorIVec2_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Insert")]
   public static extern void VectorIVec2_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_InsertRange")]
   public static extern void VectorIVec2_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_RemoveAt")]
   public static extern void VectorIVec2_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_RemoveRange")]
   public static extern void VectorIVec2_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Repeat")]
   public static extern global::System.IntPtr VectorIVec2_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Reverse__SWIG_0")]
   public static extern void VectorIVec2_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Reverse__SWIG_1")]
   public static extern void VectorIVec2_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_SetRange")]
   public static extern void VectorIVec2_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Contains")]
   public static extern bool VectorIVec2_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_IndexOf")]
   public static extern int VectorIVec2_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_LastIndexOf")]
   public static extern int VectorIVec2_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorIVec2_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorIVec2_Remove")]
   public static extern bool VectorIVec2_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorIVec2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorIVec2")]
   public static extern void delete_VectorIVec2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Clear")]
   public static extern void VectorString_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Add")]
   public static extern void VectorString_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_size")]
   public static extern uint VectorString_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_capacity")]
   public static extern uint VectorString_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_reserve")]
   public static extern void VectorString_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_0")]
   public static extern global::System.IntPtr new_VectorString__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_1")]
   public static extern global::System.IntPtr new_VectorString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorString__SWIG_2")]
   public static extern global::System.IntPtr new_VectorString__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_getitemcopy")]
   public static extern global::System.IntPtr VectorString_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_getitem")]
   public static extern global::System.IntPtr VectorString_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_setitem")]
   public static extern void VectorString_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_AddRange")]
   public static extern void VectorString_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_GetRange")]
   public static extern global::System.IntPtr VectorString_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Insert")]
   public static extern void VectorString_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_InsertRange")]
   public static extern void VectorString_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_RemoveAt")]
   public static extern void VectorString_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_RemoveRange")]
   public static extern void VectorString_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Repeat")]
   public static extern global::System.IntPtr VectorString_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Reverse__SWIG_0")]
   public static extern void VectorString_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Reverse__SWIG_1")]
   public static extern void VectorString_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_SetRange")]
   public static extern void VectorString_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Contains")]
   public static extern bool VectorString_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_IndexOf")]
   public static extern int VectorString_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_LastIndexOf")]
   public static extern int VectorString_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorString_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorString_Remove")]
   public static extern bool VectorString_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorString")]
   public static extern void delete_VectorString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Clear")]
   public static extern void VectorWString_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Add")]
   public static extern void VectorWString_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_size")]
   public static extern uint VectorWString_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_capacity")]
   public static extern uint VectorWString_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_reserve")]
   public static extern void VectorWString_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_0")]
   public static extern global::System.IntPtr new_VectorWString__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_1")]
   public static extern global::System.IntPtr new_VectorWString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWString__SWIG_2")]
   public static extern global::System.IntPtr new_VectorWString__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_getitemcopy")]
   public static extern global::System.IntPtr VectorWString_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_getitem")]
   public static extern global::System.IntPtr VectorWString_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_setitem")]
   public static extern void VectorWString_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_AddRange")]
   public static extern void VectorWString_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_GetRange")]
   public static extern global::System.IntPtr VectorWString_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Insert")]
   public static extern void VectorWString_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_InsertRange")]
   public static extern void VectorWString_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_RemoveAt")]
   public static extern void VectorWString_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_RemoveRange")]
   public static extern void VectorWString_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Repeat")]
   public static extern global::System.IntPtr VectorWString_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Reverse__SWIG_0")]
   public static extern void VectorWString_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Reverse__SWIG_1")]
   public static extern void VectorWString_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_SetRange")]
   public static extern void VectorWString_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Contains")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Contains")]
   public static extern bool VectorWString_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_IndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_IndexOf")]
   public static extern int VectorWString_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_LastIndexOf")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_LastIndexOf")]
   public static extern int VectorWString_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWString_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWString_Remove")]
   public static extern bool VectorWString_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorWString")]
   public static extern void delete_VectorWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Clear")]
   public static extern void VectorWidgetBlock_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Add")]
   public static extern void VectorWidgetBlock_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_size")]
   public static extern uint VectorWidgetBlock_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_capacity")]
   public static extern uint VectorWidgetBlock_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_reserve")]
   public static extern void VectorWidgetBlock_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_0")]
   public static extern global::System.IntPtr new_VectorWidgetBlock__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_1")]
   public static extern global::System.IntPtr new_VectorWidgetBlock__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetBlock__SWIG_2")]
   public static extern global::System.IntPtr new_VectorWidgetBlock__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_getitemcopy")]
   public static extern global::System.IntPtr VectorWidgetBlock_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_getitem")]
   public static extern global::System.IntPtr VectorWidgetBlock_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_setitem")]
   public static extern void VectorWidgetBlock_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_AddRange")]
   public static extern void VectorWidgetBlock_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_GetRange")]
   public static extern global::System.IntPtr VectorWidgetBlock_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Insert")]
   public static extern void VectorWidgetBlock_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_InsertRange")]
   public static extern void VectorWidgetBlock_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_RemoveAt")]
   public static extern void VectorWidgetBlock_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_RemoveRange")]
   public static extern void VectorWidgetBlock_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Repeat")]
   public static extern global::System.IntPtr VectorWidgetBlock_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Reverse__SWIG_0")]
   public static extern void VectorWidgetBlock_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_Reverse__SWIG_1")]
   public static extern void VectorWidgetBlock_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetBlock_SetRange")]
   public static extern void VectorWidgetBlock_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorWidgetBlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorWidgetBlock")]
   public static extern void delete_VectorWidgetBlock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Clear")]
   public static extern void VectorWidgetItem_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Add")]
   public static extern void VectorWidgetItem_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_size")]
   public static extern uint VectorWidgetItem_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_capacity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_capacity")]
   public static extern uint VectorWidgetItem_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_reserve")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_reserve")]
   public static extern void VectorWidgetItem_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_0")]
   public static extern global::System.IntPtr new_VectorWidgetItem__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_1")]
   public static extern global::System.IntPtr new_VectorWidgetItem__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_VectorWidgetItem__SWIG_2")]
   public static extern global::System.IntPtr new_VectorWidgetItem__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_getitemcopy")]
   public static extern global::System.IntPtr VectorWidgetItem_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_getitem")]
   public static extern global::System.IntPtr VectorWidgetItem_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_setitem")]
   public static extern void VectorWidgetItem_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_AddRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_AddRange")]
   public static extern void VectorWidgetItem_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_GetRange")]
   public static extern global::System.IntPtr VectorWidgetItem_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Insert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Insert")]
   public static extern void VectorWidgetItem_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_InsertRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_InsertRange")]
   public static extern void VectorWidgetItem_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_RemoveAt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_RemoveAt")]
   public static extern void VectorWidgetItem_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_RemoveRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_RemoveRange")]
   public static extern void VectorWidgetItem_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Repeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Repeat")]
   public static extern global::System.IntPtr VectorWidgetItem_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Reverse__SWIG_0")]
   public static extern void VectorWidgetItem_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_Reverse__SWIG_1")]
   public static extern void VectorWidgetItem_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_VectorWidgetItem_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_VectorWidgetItem_SetRange")]
   public static extern void VectorWidgetItem_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_VectorWidgetItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_VectorWidgetItem")]
   public static extern void delete_VectorWidgetItem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_AssetWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_AssetWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_AssetWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_AssetWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AssetWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AssetWeakPtr_swap")]
   public static extern void AssetWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AssetWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AssetWeakPtr_reset")]
   public static extern void AssetWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AssetWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AssetWeakPtr_use_count")]
   public static extern int AssetWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AssetWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AssetWeakPtr_expired")]
   public static extern bool AssetWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AssetWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AssetWeakPtr_lock_")]
   public static extern global::System.IntPtr AssetWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_AssetWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_AssetWeakPtr")]
   public static extern void delete_AssetWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_PackageWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_PackageWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PackageWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_PackageWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageWeakPtr_swap")]
   public static extern void PackageWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageWeakPtr_reset")]
   public static extern void PackageWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageWeakPtr_use_count")]
   public static extern int PackageWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageWeakPtr_expired")]
   public static extern bool PackageWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageWeakPtr_lock_")]
   public static extern global::System.IntPtr PackageWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_PackageWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_PackageWeakPtr")]
   public static extern void delete_PackageWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_PixmapWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_PixmapWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PixmapWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_PixmapWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_swap")]
   public static extern void PixmapWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_reset")]
   public static extern void PixmapWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_use_count")]
   public static extern int PixmapWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_expired")]
   public static extern bool PixmapWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PixmapWeakPtr_lock_")]
   public static extern global::System.IntPtr PixmapWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_PixmapWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_PixmapWeakPtr")]
   public static extern void delete_PixmapWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_TimerWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_TimerWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TimerWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_TimerWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TimerWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TimerWeakPtr_swap")]
   public static extern void TimerWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TimerWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TimerWeakPtr_reset")]
   public static extern void TimerWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TimerWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TimerWeakPtr_use_count")]
   public static extern int TimerWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TimerWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TimerWeakPtr_expired")]
   public static extern bool TimerWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TimerWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TimerWeakPtr_lock_")]
   public static extern global::System.IntPtr TimerWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_TimerWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_TimerWeakPtr")]
   public static extern void delete_TimerWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_ObjectWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_ObjectWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ObjectWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_ObjectWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_swap")]
   public static extern void ObjectWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_reset")]
   public static extern void ObjectWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_use_count")]
   public static extern int ObjectWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_expired")]
   public static extern bool ObjectWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ObjectWeakPtr_lock_")]
   public static extern global::System.IntPtr ObjectWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ObjectWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ObjectWeakPtr")]
   public static extern void delete_ObjectWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_PluginWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_PluginWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PluginWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_PluginWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PluginWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PluginWeakPtr_swap")]
   public static extern void PluginWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PluginWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PluginWeakPtr_reset")]
   public static extern void PluginWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PluginWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PluginWeakPtr_use_count")]
   public static extern int PluginWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PluginWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PluginWeakPtr_expired")]
   public static extern bool PluginWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PluginWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PluginWeakPtr_lock_")]
   public static extern global::System.IntPtr PluginWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_PluginWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_PluginWeakPtr")]
   public static extern void delete_PluginWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_WidgetWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_WidgetWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_WidgetWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_swap")]
   public static extern void WidgetWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_reset")]
   public static extern void WidgetWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_use_count")]
   public static extern int WidgetWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_expired")]
   public static extern bool WidgetWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetWeakPtr_lock_")]
   public static extern global::System.IntPtr WidgetWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WidgetWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WidgetWeakPtr")]
   public static extern void delete_WidgetWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_0")]
   public static extern global::System.IntPtr new_WindowWeakPtr__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_1")]
   public static extern global::System.IntPtr new_WindowWeakPtr__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WindowWeakPtr__SWIG_2")]
   public static extern global::System.IntPtr new_WindowWeakPtr__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WindowWeakPtr_swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WindowWeakPtr_swap")]
   public static extern void WindowWeakPtr_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WindowWeakPtr_reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WindowWeakPtr_reset")]
   public static extern void WindowWeakPtr_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WindowWeakPtr_use_count")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WindowWeakPtr_use_count")]
   public static extern int WindowWeakPtr_use_count(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WindowWeakPtr_expired")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WindowWeakPtr_expired")]
   public static extern bool WindowWeakPtr_expired(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WindowWeakPtr_lock_")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WindowWeakPtr_lock_")]
   public static extern global::System.IntPtr WindowWeakPtr_lock_(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WindowWeakPtr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WindowWeakPtr")]
   public static extern void delete_WindowWeakPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetColorArray__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetColorArray__SWIG_0")]
   public static extern global::System.IntPtr new_WidgetColorArray__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetColorArray__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetColorArray__SWIG_1")]
   public static extern global::System.IntPtr new_WidgetColorArray__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_size")]
   public static extern uint WidgetColorArray_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_empty")]
   public static extern bool WidgetColorArray_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_Fill")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_Fill")]
   public static extern void WidgetColorArray_Fill(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_Swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_Swap")]
   public static extern void WidgetColorArray_Swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_getitemcopy")]
   public static extern global::System.IntPtr WidgetColorArray_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_getitem")]
   public static extern global::System.IntPtr WidgetColorArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_setitem")]
   public static extern void WidgetColorArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_Reverse__SWIG_0")]
   public static extern void WidgetColorArray_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetColorArray_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetColorArray_Reverse__SWIG_1")]
   public static extern void WidgetColorArray_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WidgetColorArray")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WidgetColorArray")]
   public static extern void delete_WidgetColorArray(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_IntFourArray__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_IntFourArray__SWIG_0")]
   public static extern global::System.IntPtr new_IntFourArray__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_IntFourArray__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_IntFourArray__SWIG_1")]
   public static extern global::System.IntPtr new_IntFourArray__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_size")]
   public static extern uint IntFourArray_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_empty")]
   public static extern bool IntFourArray_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_Fill")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_Fill")]
   public static extern void IntFourArray_Fill(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_Swap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_Swap")]
   public static extern void IntFourArray_Swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_getitemcopy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_getitemcopy")]
   public static extern int IntFourArray_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_getitem")]
   public static extern int IntFourArray_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_setitem")]
   public static extern void IntFourArray_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_Reverse__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_Reverse__SWIG_0")]
   public static extern void IntFourArray_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IntFourArray_Reverse__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IntFourArray_Reverse__SWIG_1")]
   public static extern void IntFourArray_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_IntFourArray")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_IntFourArray")]
   public static extern void delete_IntFourArray(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_push_front")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_push_front")]
   public static extern void ListEvent_push_front(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_push_back")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_push_back")]
   public static extern void ListEvent_push_back(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_RemoveFirst")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_RemoveFirst")]
   public static extern void ListEvent_RemoveFirst(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_RemoveLast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_RemoveLast")]
   public static extern void ListEvent_RemoveLast(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_size")]
   public static extern uint ListEvent_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_Clear")]
   public static extern void ListEvent_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_getItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_getItem")]
   public static extern global::System.IntPtr ListEvent_getItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_setItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_setItem")]
   public static extern void ListEvent_setItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_getFirstIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_getFirstIter")]
   public static extern global::System.IntPtr ListEvent_getFirstIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_getLastIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_getLastIter")]
   public static extern global::System.IntPtr ListEvent_getLastIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_getNextIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_getNextIter")]
   public static extern global::System.IntPtr ListEvent_getNextIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_getPrevIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_getPrevIter")]
   public static extern global::System.IntPtr ListEvent_getPrevIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_insertNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_insertNode")]
   public static extern global::System.IntPtr ListEvent_insertNode(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_eraseIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_eraseIter")]
   public static extern void ListEvent_eraseIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_deleteIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_deleteIter")]
   public static extern void ListEvent_deleteIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListEvent_equals")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListEvent_equals")]
   public static extern bool ListEvent_equals(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ListEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ListEvent")]
   public static extern global::System.IntPtr new_ListEvent();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ListEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ListEvent")]
   public static extern void delete_ListEvent(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_push_front")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_push_front")]
   public static extern void ListPackage_push_front(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_push_back")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_push_back")]
   public static extern void ListPackage_push_back(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_RemoveFirst")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_RemoveFirst")]
   public static extern void ListPackage_RemoveFirst(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_RemoveLast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_RemoveLast")]
   public static extern void ListPackage_RemoveLast(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_size")]
   public static extern uint ListPackage_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_Clear")]
   public static extern void ListPackage_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_getItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_getItem")]
   public static extern global::System.IntPtr ListPackage_getItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_setItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_setItem")]
   public static extern void ListPackage_setItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_getFirstIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_getFirstIter")]
   public static extern global::System.IntPtr ListPackage_getFirstIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_getLastIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_getLastIter")]
   public static extern global::System.IntPtr ListPackage_getLastIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_getNextIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_getNextIter")]
   public static extern global::System.IntPtr ListPackage_getNextIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_getPrevIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_getPrevIter")]
   public static extern global::System.IntPtr ListPackage_getPrevIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_insertNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_insertNode")]
   public static extern global::System.IntPtr ListPackage_insertNode(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_eraseIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_eraseIter")]
   public static extern void ListPackage_eraseIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_deleteIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_deleteIter")]
   public static extern void ListPackage_deleteIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPackage_equals")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPackage_equals")]
   public static extern bool ListPackage_equals(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ListPackage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ListPackage")]
   public static extern global::System.IntPtr new_ListPackage();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ListPackage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ListPackage")]
   public static extern void delete_ListPackage(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_push_front")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_push_front")]
   public static extern void ListPlugin_push_front(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_push_back")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_push_back")]
   public static extern void ListPlugin_push_back(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_RemoveFirst")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_RemoveFirst")]
   public static extern void ListPlugin_RemoveFirst(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_RemoveLast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_RemoveLast")]
   public static extern void ListPlugin_RemoveLast(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_size")]
   public static extern uint ListPlugin_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_Clear")]
   public static extern void ListPlugin_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_getItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_getItem")]
   public static extern global::System.IntPtr ListPlugin_getItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_setItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_setItem")]
   public static extern void ListPlugin_setItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_getFirstIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_getFirstIter")]
   public static extern global::System.IntPtr ListPlugin_getFirstIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_getLastIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_getLastIter")]
   public static extern global::System.IntPtr ListPlugin_getLastIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_getNextIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_getNextIter")]
   public static extern global::System.IntPtr ListPlugin_getNextIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_getPrevIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_getPrevIter")]
   public static extern global::System.IntPtr ListPlugin_getPrevIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_insertNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_insertNode")]
   public static extern global::System.IntPtr ListPlugin_insertNode(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_eraseIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_eraseIter")]
   public static extern void ListPlugin_eraseIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_deleteIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_deleteIter")]
   public static extern void ListPlugin_deleteIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListPlugin_equals")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListPlugin_equals")]
   public static extern bool ListPlugin_equals(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ListPlugin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ListPlugin")]
   public static extern global::System.IntPtr new_ListPlugin();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ListPlugin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ListPlugin")]
   public static extern void delete_ListPlugin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_push_front")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_push_front")]
   public static extern void ListWidget_push_front(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_push_back")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_push_back")]
   public static extern void ListWidget_push_back(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_RemoveFirst")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_RemoveFirst")]
   public static extern void ListWidget_RemoveFirst(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_RemoveLast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_RemoveLast")]
   public static extern void ListWidget_RemoveLast(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_size")]
   public static extern uint ListWidget_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_Clear")]
   public static extern void ListWidget_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_getItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_getItem")]
   public static extern global::System.IntPtr ListWidget_getItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_setItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_setItem")]
   public static extern void ListWidget_setItem(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_getFirstIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_getFirstIter")]
   public static extern global::System.IntPtr ListWidget_getFirstIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_getLastIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_getLastIter")]
   public static extern global::System.IntPtr ListWidget_getLastIter(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_getNextIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_getNextIter")]
   public static extern global::System.IntPtr ListWidget_getNextIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_getPrevIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_getPrevIter")]
   public static extern global::System.IntPtr ListWidget_getPrevIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_insertNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_insertNode")]
   public static extern global::System.IntPtr ListWidget_insertNode(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_eraseIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_eraseIter")]
   public static extern void ListWidget_eraseIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_deleteIter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_deleteIter")]
   public static extern void ListWidget_deleteIter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListWidget_equals")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListWidget_equals")]
   public static extern bool ListWidget_equals(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2, global::System.IntPtr jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ListWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ListWidget")]
   public static extern global::System.IntPtr new_ListWidget();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ListWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ListWidget")]
   public static extern void delete_ListWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapTimer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapTimer__SWIG_0")]
   public static extern global::System.IntPtr new_MapTimer__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapTimer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapTimer__SWIG_1")]
   public static extern global::System.IntPtr new_MapTimer__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_size")]
   public static extern uint MapTimer_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_empty")]
   public static extern bool MapTimer_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_Clear")]
   public static extern void MapTimer_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_getitem")]
   public static extern global::System.IntPtr MapTimer_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_setitem")]
   public static extern void MapTimer_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_ContainsKey")]
   public static extern bool MapTimer_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_Add")]
   public static extern void MapTimer_Add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_Remove")]
   public static extern bool MapTimer_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_create_iterator_begin")]
   public static extern global::System.IntPtr MapTimer_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_get_next_key")]
   public static extern int MapTimer_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapTimer_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapTimer_destroy_iterator")]
   public static extern void MapTimer_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapTimer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapTimer")]
   public static extern void delete_MapTimer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapAsset__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapAsset__SWIG_0")]
   public static extern global::System.IntPtr new_MapAsset__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapAsset__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapAsset__SWIG_1")]
   public static extern global::System.IntPtr new_MapAsset__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_size")]
   public static extern uint MapAsset_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_empty")]
   public static extern bool MapAsset_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_Clear")]
   public static extern void MapAsset_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_getitem")]
   public static extern global::System.IntPtr MapAsset_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_setitem")]
   public static extern void MapAsset_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_ContainsKey")]
   public static extern bool MapAsset_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_Add")]
   public static extern void MapAsset_Add(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_Remove")]
   public static extern bool MapAsset_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_create_iterator_begin")]
   public static extern global::System.IntPtr MapAsset_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_get_next_key")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string MapAsset_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapAsset_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapAsset_destroy_iterator")]
   public static extern void MapAsset_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapAsset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapAsset")]
   public static extern void delete_MapAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapWindow__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapWindow__SWIG_0")]
   public static extern global::System.IntPtr new_MapWindow__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapWindow__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapWindow__SWIG_1")]
   public static extern global::System.IntPtr new_MapWindow__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_size")]
   public static extern uint MapWindow_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_empty")]
   public static extern bool MapWindow_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_Clear")]
   public static extern void MapWindow_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_getitem")]
   public static extern global::System.IntPtr MapWindow_getitem(global::System.Runtime.InteropServices.HandleRef jarg1,  ref System.IntPtr  jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_setitem")]
   public static extern void MapWindow_setitem(global::System.Runtime.InteropServices.HandleRef jarg1,  ref System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_ContainsKey")]
   public static extern bool MapWindow_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1,  ref System.IntPtr  jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_Add")]
   public static extern void MapWindow_Add(global::System.Runtime.InteropServices.HandleRef jarg1,  ref System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_Remove")]
   public static extern bool MapWindow_Remove(global::System.Runtime.InteropServices.HandleRef jarg1,  ref System.IntPtr  jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_create_iterator_begin")]
   public static extern global::System.IntPtr MapWindow_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_get_next_key")]
   public static extern System.IntPtr MapWindow_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapWindow_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapWindow_destroy_iterator")]
   public static extern void MapWindow_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapWindow")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapWindow")]
   public static extern void delete_MapWindow(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapProperties__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapProperties__SWIG_0")]
   public static extern global::System.IntPtr new_MapProperties__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapProperties__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapProperties__SWIG_1")]
   public static extern global::System.IntPtr new_MapProperties__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_size")]
   public static extern uint MapProperties_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_empty")]
   public static extern bool MapProperties_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_Clear")]
   public static extern void MapProperties_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_getitem")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string MapProperties_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_setitem")]
   public static extern void MapProperties_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_ContainsKey")]
   public static extern bool MapProperties_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_Add")]
   public static extern void MapProperties_Add(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_Remove")]
   public static extern bool MapProperties_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_create_iterator_begin")]
   public static extern global::System.IntPtr MapProperties_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_get_next_key")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string MapProperties_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapProperties_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapProperties_destroy_iterator")]
   public static extern void MapProperties_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapProperties")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapProperties")]
   public static extern void delete_MapProperties(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapPixmap__SWIG_0")]
   public static extern global::System.IntPtr new_MapPixmap__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapPixmap__SWIG_1")]
   public static extern global::System.IntPtr new_MapPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_size")]
   public static extern uint MapPixmap_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_empty")]
   public static extern bool MapPixmap_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_Clear")]
   public static extern void MapPixmap_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_getitem")]
   public static extern global::System.IntPtr MapPixmap_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_setitem")]
   public static extern void MapPixmap_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_ContainsKey")]
   public static extern bool MapPixmap_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_Add")]
   public static extern void MapPixmap_Add(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_Remove")]
   public static extern bool MapPixmap_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_create_iterator_begin")]
   public static extern global::System.IntPtr MapPixmap_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_get_next_key")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string MapPixmap_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapPixmap_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapPixmap_destroy_iterator")]
   public static extern void MapPixmap_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapPixmap")]
   public static extern void delete_MapPixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapCachedPixmaps__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapCachedPixmaps__SWIG_0")]
   public static extern global::System.IntPtr new_MapCachedPixmaps__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MapCachedPixmaps__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MapCachedPixmaps__SWIG_1")]
   public static extern global::System.IntPtr new_MapCachedPixmaps__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_size")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_size")]
   public static extern uint MapCachedPixmaps_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_empty")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_empty")]
   public static extern bool MapCachedPixmaps_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Clear")]
   public static extern void MapCachedPixmaps_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_getitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_getitem")]
   public static extern global::System.IntPtr MapCachedPixmaps_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_setitem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_setitem")]
   public static extern void MapCachedPixmaps_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_ContainsKey")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_ContainsKey")]
   public static extern bool MapCachedPixmaps_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Add")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Add")]
   public static extern void MapCachedPixmaps_Add(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Remove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_Remove")]
   public static extern bool MapCachedPixmaps_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_create_iterator_begin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_create_iterator_begin")]
   public static extern global::System.IntPtr MapCachedPixmaps_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_get_next_key")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_get_next_key")]
   public static extern float MapCachedPixmaps_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_destroy_iterator")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MapCachedPixmaps_destroy_iterator")]
   public static extern void MapCachedPixmaps_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MapCachedPixmaps")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MapCachedPixmaps")]
   public static extern void delete_MapCachedPixmaps(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine__ULTRA_ENGINE_VERSION_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine__ULTRA_ENGINE_VERSION_get")]
   public static extern int _ULTRA_ENGINE_VERSION_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine__HAS_STD_BYTE_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine__HAS_STD_BYTE_get")]
   public static extern int _HAS_STD_BYTE_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_0")]
   public static extern int BinaryOR__SWIG_0(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_1")]
   public static extern int BinaryOR__SWIG_1(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_2")]
   public static extern int BinaryOR__SWIG_2(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_3")]
   public static extern int BinaryOR__SWIG_3(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_0")]
   public static extern int BinaryNot__SWIG_0(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_4")]
   public static extern int BinaryOR__SWIG_4(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_1")]
   public static extern int BinaryNot__SWIG_1(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryAnd__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryAnd__SWIG_0")]
   public static extern int BinaryAnd__SWIG_0(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MAX_ANIMATION_THREADS_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MAX_ANIMATION_THREADS_get")]
   public static extern int MAX_ANIMATION_THREADS_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TEXT_MULTILINE_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TEXT_MULTILINE_get")]
   public static extern int TEXT_MULTILINE_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TEXT_WORDWRAP_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TEXT_WORDWRAP_get")]
   public static extern int TEXT_WORDWRAP_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TEXT_SHADOW_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TEXT_SHADOW_get")]
   public static extern int TEXT_SHADOW_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_5")]
   public static extern int BinaryOR__SWIG_5(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_6")]
   public static extern int BinaryOR__SWIG_6(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryAnd__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryAnd__SWIG_1")]
   public static extern int BinaryAnd__SWIG_1(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryNot__SWIG_2")]
   public static extern int BinaryNot__SWIG_2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PI_OVER_180_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PI_OVER_180_get")]
   public static extern double PI_OVER_180_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PI_OVER_360_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PI_OVER_360_get")]
   public static extern double PI_OVER_360_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DEGTORAD_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DEGTORAD_get")]
   public static extern double DEGTORAD_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RADTODEG_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RADTODEG_get")]
   public static extern double RADTODEG_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Alpha")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Alpha")]
   public static extern byte Alpha(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Blue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Blue")]
   public static extern byte Blue(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Green")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Green")]
   public static extern byte Green(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Red")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Red")]
   public static extern byte Red(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Abs")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Abs")]
   public static extern float Abs(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Round__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Round__SWIG_0")]
   public static extern int Round__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Round__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Round__SWIG_1")]
   public static extern long Round__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Floor__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Floor__SWIG_0")]
   public static extern int Floor__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Floor__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Floor__SWIG_1")]
   public static extern long Floor__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Ceil__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Ceil__SWIG_0")]
   public static extern int Ceil__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Ceil__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Ceil__SWIG_1")]
   public static extern long Ceil__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Sin__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Sin__SWIG_0")]
   public static extern float Sin__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Cos__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Cos__SWIG_0")]
   public static extern float Cos__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tan__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tan__SWIG_0")]
   public static extern float Tan__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ASin__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ASin__SWIG_0")]
   public static extern float ASin__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ACos__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ACos__SWIG_0")]
   public static extern float ACos__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ATan__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ATan__SWIG_0")]
   public static extern float ATan__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ATan__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ATan__SWIG_1")]
   public static extern float ATan__SWIG_1(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Sin__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Sin__SWIG_1")]
   public static extern double Sin__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Cos__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Cos__SWIG_1")]
   public static extern double Cos__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tan__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tan__SWIG_1")]
   public static extern double Tan__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ASin__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ASin__SWIG_1")]
   public static extern double ASin__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ACos__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ACos__SWIG_1")]
   public static extern double ACos__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ATan__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ATan__SWIG_2")]
   public static extern double ATan__SWIG_2(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ATan__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ATan__SWIG_3")]
   public static extern double ATan__SWIG_3(double jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Min__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Min__SWIG_0")]
   public static extern float Min__SWIG_0(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Max__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Max__SWIG_0")]
   public static extern float Max__SWIG_0(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Min__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Min__SWIG_1")]
   public static extern int Min__SWIG_1(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Max__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Max__SWIG_1")]
   public static extern int Max__SWIG_1(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Min__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Min__SWIG_2")]
   public static extern double Min__SWIG_2(double jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Max__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Max__SWIG_2")]
   public static extern double Max__SWIG_2(double jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clamp__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clamp__SWIG_0")]
   public static extern float Clamp__SWIG_0(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clamp__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clamp__SWIG_1")]
   public static extern int Clamp__SWIG_1(int jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clamp__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clamp__SWIG_2")]
   public static extern double Clamp__SWIG_2(double jarg1, double jarg2, double jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Degrees__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Degrees__SWIG_0")]
   public static extern float Degrees__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Radians__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Radians__SWIG_0")]
   public static extern float Radians__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Degrees__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Degrees__SWIG_1")]
   public static extern double Degrees__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Radians__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Radians__SWIG_1")]
   public static extern double Radians__SWIG_1(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mix")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mix")]
   public static extern float Mix(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Log2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Log2")]
   public static extern float Log2(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DeltaAngle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DeltaAngle")]
   public static extern float DeltaAngle(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MoveAngle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MoveAngle")]
   public static extern float MoveAngle(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pow2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pow2")]
   public static extern int Pow2(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Sign")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Sign")]
   public static extern float Sign(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Random__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Random__SWIG_0")]
   public static extern float Random__SWIG_0(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Random__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Random__SWIG_1")]
   public static extern float Random__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Random__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Random__SWIG_2")]
   public static extern float Random__SWIG_2(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MoveValue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MoveValue")]
   public static extern float MoveValue(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CurveValue__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CurveValue__SWIG_0")]
   public static extern float CurveValue__SWIG_0(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CurveValue__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CurveValue__SWIG_1")]
   public static extern double CurveValue__SWIG_1(double jarg1, double jarg2, double jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CurveAngle__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CurveAngle__SWIG_0")]
   public static extern float CurveAngle__SWIG_0(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CurveAngle__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CurveAngle__SWIG_1")]
   public static extern double CurveAngle__SWIG_1(double jarg1, double jarg2, double jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mod")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mod")]
   public static extern double Mod(double jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Min__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Min__SWIG_3")]
   public static extern global::System.IntPtr Min__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Max__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Max__SWIG_3")]
   public static extern global::System.IntPtr Max__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SeedRandom")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SeedRandom")]
   public static extern void SeedRandom(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_rnd_state_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_rnd_state_set")]
   public static extern void rnd_state_set(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_rnd_state_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_rnd_state_get")]
   public static extern int rnd_state_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_x_set")]
   public static extern void Vec2_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_x_get")]
   public static extern float Vec2_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_r_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_r_set")]
   public static extern void Vec2_r_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_r_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_r_get")]
   public static extern float Vec2_r_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_y_set")]
   public static extern void Vec2_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_y_get")]
   public static extern float Vec2_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_g_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_g_set")]
   public static extern void Vec2_g_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_g_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_g_get")]
   public static extern float Vec2_g_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_0")]
   public static extern global::System.IntPtr new_Vec2__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_1")]
   public static extern global::System.IntPtr new_Vec2__SWIG_1(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec2__SWIG_2")]
   public static extern global::System.IntPtr new_Vec2__SWIG_2(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string Vec2__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_EqualEqual")]
   public static extern bool Vec2_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_LessThan")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_LessThan")]
   public static extern bool Vec2_LessThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_PlusEqual")]
   public static extern void Vec2_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_MinusEqual")]
   public static extern void Vec2_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_DivideEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_DivideEqual")]
   public static extern void Vec2_DivideEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_MultiplyEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_MultiplyEqual")]
   public static extern void Vec2_MultiplyEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Multiply")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Multiply")]
   public static extern global::System.IntPtr Vec2_Multiply(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Divide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Divide")]
   public static extern global::System.IntPtr Vec2_Divide(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Plus")]
   public static extern global::System.IntPtr Vec2_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Minus__SWIG_0")]
   public static extern global::System.IntPtr Vec2_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Minus__SWIG_1")]
   public static extern global::System.IntPtr Vec2_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Percent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Percent")]
   public static extern float Vec2_Percent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Dot")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Dot")]
   public static extern float Vec2_Dot(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Normalize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Normalize")]
   public static extern global::System.IntPtr Vec2_Normalize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_Length")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_Length")]
   public static extern float Vec2_Length(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec2_DistanceToPoint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec2_DistanceToPoint")]
   public static extern float Vec2_DistanceToPoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Vec2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Vec2")]
   public static extern void delete_Vec2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_x_set")]
   public static extern void Vec3_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_x_get")]
   public static extern float Vec3_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_r_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_r_set")]
   public static extern void Vec3_r_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_r_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_r_get")]
   public static extern float Vec3_r_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_width_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_width_set")]
   public static extern void Vec3_width_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_width_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_width_get")]
   public static extern float Vec3_width_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_y_set")]
   public static extern void Vec3_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_y_get")]
   public static extern float Vec3_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_g_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_g_set")]
   public static extern void Vec3_g_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_g_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_g_get")]
   public static extern float Vec3_g_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_height_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_height_set")]
   public static extern void Vec3_height_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_height_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_height_get")]
   public static extern float Vec3_height_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_z_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_z_set")]
   public static extern void Vec3_z_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_z_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_z_get")]
   public static extern float Vec3_z_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_b_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_b_set")]
   public static extern void Vec3_b_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_b_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_b_get")]
   public static extern float Vec3_b_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_depth_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_depth_set")]
   public static extern void Vec3_depth_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_depth_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_depth_get")]
   public static extern float Vec3_depth_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_0")]
   public static extern global::System.IntPtr new_Vec3__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_1")]
   public static extern global::System.IntPtr new_Vec3__SWIG_1(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_2")]
   public static extern global::System.IntPtr new_Vec3__SWIG_2(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec3__SWIG_3")]
   public static extern global::System.IntPtr new_Vec3__SWIG_3(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string Vec3__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_LessThan")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_LessThan")]
   public static extern bool Vec3_LessThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_GreaterThan")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_GreaterThan")]
   public static extern bool Vec3_GreaterThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_NotEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_NotEqual")]
   public static extern bool Vec3_NotEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_EqualEqual")]
   public static extern bool Vec3_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_ExclusiveOR")]
+  public static extern global::System.IntPtr Vec3_ExclusiveOR(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Minus__SWIG_0")]
   public static extern global::System.IntPtr Vec3_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_MinusEqual")]
   public static extern void Vec3_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Plus")]
   public static extern global::System.IntPtr Vec3_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_PlusEqual")]
   public static extern void Vec3_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Multiply")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Multiply")]
   public static extern global::System.IntPtr Vec3_Multiply(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_MultiplyEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_MultiplyEqual")]
   public static extern void Vec3_MultiplyEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Divide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Divide")]
   public static extern global::System.IntPtr Vec3_Divide(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_DivideEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_DivideEqual")]
   public static extern void Vec3_DivideEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Percent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Percent")]
   public static extern float Vec3_Percent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Minus__SWIG_1")]
   public static extern global::System.IntPtr Vec3_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Reflect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Reflect")]
   public static extern global::System.IntPtr Vec3_Reflect(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_xy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_xy")]
   public static extern global::System.IntPtr Vec3_xy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_zy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_zy")]
   public static extern global::System.IntPtr Vec3_zy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_xz")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_xz")]
   public static extern global::System.IntPtr Vec3_xz(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Length")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Length")]
   public static extern float Vec3_Length(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Normalize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Normalize")]
   public static extern global::System.IntPtr Vec3_Normalize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Inverse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Inverse")]
   public static extern global::System.IntPtr Vec3_Inverse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_DistanceToPoint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_DistanceToPoint")]
   public static extern float Vec3_DistanceToPoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Cross__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Cross__SWIG_0")]
   public static extern global::System.IntPtr Vec3_Cross__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Cross__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Cross__SWIG_1")]
   public static extern void Vec3_Cross__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec3_Dot")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec3_Dot")]
   public static extern float Vec3_Dot(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Vec3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Vec3")]
   public static extern void delete_Vec3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LessThan__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LessThan__SWIG_0")]
   public static extern bool LessThan__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_0")]
   public static extern bool GreaterThan__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_x_set")]
   public static extern void Vec4_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_x_get")]
   public static extern float Vec4_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_r_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_r_set")]
   public static extern void Vec4_r_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_r_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_r_get")]
   public static extern float Vec4_r_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_y_set")]
   public static extern void Vec4_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_y_get")]
   public static extern float Vec4_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_g_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_g_set")]
   public static extern void Vec4_g_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_g_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_g_get")]
   public static extern float Vec4_g_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_z_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_z_set")]
   public static extern void Vec4_z_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_z_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_z_get")]
   public static extern float Vec4_z_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_b_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_b_set")]
   public static extern void Vec4_b_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_b_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_b_get")]
   public static extern float Vec4_b_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_width_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_width_set")]
   public static extern void Vec4_width_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_width_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_width_get")]
   public static extern float Vec4_width_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_w_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_w_set")]
   public static extern void Vec4_w_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_w_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_w_get")]
   public static extern float Vec4_w_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_a_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_a_set")]
   public static extern void Vec4_a_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_a_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_a_get")]
   public static extern float Vec4_a_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_height_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_height_set")]
   public static extern void Vec4_height_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_height_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_height_get")]
   public static extern float Vec4_height_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_0")]
   public static extern global::System.IntPtr new_Vec4__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_1")]
   public static extern global::System.IntPtr new_Vec4__SWIG_1(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_2")]
   public static extern global::System.IntPtr new_Vec4__SWIG_2(float jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_3")]
   public static extern global::System.IntPtr new_Vec4__SWIG_3(float jarg1, float jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Vec4__SWIG_4")]
   public static extern global::System.IntPtr new_Vec4__SWIG_4(float jarg1, float jarg2, float jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_DistanceToPoint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_DistanceToPoint")]
   public static extern float Vec4_DistanceToPoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_Minus__SWIG_0")]
   public static extern global::System.IntPtr Vec4_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_Plus")]
   public static extern global::System.IntPtr Vec4_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_Minus__SWIG_1")]
   public static extern global::System.IntPtr Vec4_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_Multiply")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_Multiply")]
   public static extern global::System.IntPtr Vec4_Multiply(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_Divide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_Divide")]
   public static extern global::System.IntPtr Vec4_Divide(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_NotEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_NotEqual")]
   public static extern bool Vec4_NotEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_EqualEqual")]
   public static extern bool Vec4_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_LessThan")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_LessThan")]
   public static extern bool Vec4_LessThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_PlusEqual")]
   public static extern void Vec4_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_MinusEqual")]
   public static extern void Vec4_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_MultiplyEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_MultiplyEqual")]
   public static extern void Vec4_MultiplyEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4_DivideEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4_DivideEqual")]
   public static extern void Vec4_DivideEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Vec4__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Vec4__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string Vec4__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Vec4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Vec4")]
   public static extern void delete_Vec4(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LessThan__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LessThan__SWIG_1")]
   public static extern bool LessThan__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_1")]
   public static extern bool GreaterThan__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_x_set")]
   public static extern void iVec2_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_x_get")]
   public static extern int iVec2_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_r_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_r_set")]
   public static extern void iVec2_r_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_r_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_r_get")]
   public static extern int iVec2_r_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_y_set")]
   public static extern void iVec2_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_y_get")]
   public static extern int iVec2_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_g_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_g_set")]
   public static extern void iVec2_g_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_g_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_g_get")]
   public static extern int iVec2_g_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_0")]
   public static extern global::System.IntPtr new_iVec2__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_1")]
   public static extern global::System.IntPtr new_iVec2__SWIG_1(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec2__SWIG_2")]
   public static extern global::System.IntPtr new_iVec2__SWIG_2(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_Minus__SWIG_0")]
   public static extern global::System.IntPtr iVec2_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_Plus")]
   public static extern global::System.IntPtr iVec2_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_Minus__SWIG_1")]
   public static extern global::System.IntPtr iVec2_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_PlusEqual")]
   public static extern void iVec2_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_MinusEqual")]
   public static extern void iVec2_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_LessThan")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_LessThan")]
   public static extern bool iVec2_LessThan(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_NotEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_NotEqual")]
   public static extern bool iVec2_NotEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2_EqualEqual")]
   public static extern bool iVec2_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec2__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec2__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string iVec2__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_iVec2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_iVec2")]
   public static extern void delete_iVec2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LessThan__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LessThan__SWIG_2")]
   public static extern bool LessThan__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_2")]
   public static extern bool GreaterThan__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_x_set")]
   public static extern void iVec3_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_x_get")]
   public static extern int iVec3_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_y_set")]
   public static extern void iVec3_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_y_get")]
   public static extern int iVec3_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_z_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_z_set")]
   public static extern void iVec3_z_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_z_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_z_get")]
   public static extern int iVec3_z_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec3__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec3__SWIG_0")]
   public static extern global::System.IntPtr new_iVec3__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec3__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec3__SWIG_1")]
   public static extern global::System.IntPtr new_iVec3__SWIG_1(int jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_Minus__SWIG_0")]
   public static extern global::System.IntPtr iVec3_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_Plus")]
   public static extern global::System.IntPtr iVec3_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_Minus__SWIG_1")]
   public static extern global::System.IntPtr iVec3_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_PlusEqual")]
   public static extern void iVec3_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_MinusEqual")]
   public static extern void iVec3_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string iVec3__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_EqualEqual")]
   public static extern bool iVec3_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec3_NotEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec3_NotEqual")]
   public static extern bool iVec3_NotEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_iVec3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_iVec3")]
   public static extern void delete_iVec3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LessThan__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LessThan__SWIG_3")]
   public static extern bool LessThan__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_3")]
   public static extern bool GreaterThan__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_x_set")]
   public static extern void iVec4_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_x_get")]
   public static extern int iVec4_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_r_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_r_set")]
   public static extern void iVec4_r_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_r_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_r_get")]
   public static extern int iVec4_r_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_y_set")]
   public static extern void iVec4_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_y_get")]
   public static extern int iVec4_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_g_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_g_set")]
   public static extern void iVec4_g_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_g_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_g_get")]
   public static extern int iVec4_g_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_z_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_z_set")]
   public static extern void iVec4_z_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_z_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_z_get")]
   public static extern int iVec4_z_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_b_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_b_set")]
   public static extern void iVec4_b_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_b_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_b_get")]
   public static extern int iVec4_b_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_width_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_width_set")]
   public static extern void iVec4_width_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_width_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_width_get")]
   public static extern int iVec4_width_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_w_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_w_set")]
   public static extern void iVec4_w_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_w_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_w_get")]
   public static extern int iVec4_w_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_a_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_a_set")]
   public static extern void iVec4_a_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_a_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_a_get")]
   public static extern int iVec4_a_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_height_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_height_set")]
   public static extern void iVec4_height_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_height_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_height_get")]
   public static extern int iVec4_height_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_0")]
   public static extern global::System.IntPtr new_iVec4__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_1")]
   public static extern global::System.IntPtr new_iVec4__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_iVec4__SWIG_2")]
   public static extern global::System.IntPtr new_iVec4__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_Minus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_Minus__SWIG_0")]
   public static extern global::System.IntPtr iVec4_Minus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_Plus")]
   public static extern global::System.IntPtr iVec4_Plus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_Minus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_Minus__SWIG_1")]
   public static extern global::System.IntPtr iVec4_Minus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_PlusEqual")]
   public static extern void iVec4_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4_MinusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4_MinusEqual")]
   public static extern void iVec4_MinusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_iVec4__ToWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_iVec4__ToWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string iVec4__ToWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_iVec4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_iVec4")]
   public static extern void delete_iVec4(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LessThan__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LessThan__SWIG_4")]
   public static extern bool LessThan__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GreaterThan__SWIG_4")]
   public static extern bool GreaterThan__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Object")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Object")]
   public static extern global::System.IntPtr new_Object();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Object")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Object")]
   public static extern void delete_Object(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_Self")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_Self")]
   public static extern global::System.IntPtr Object_Self(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_GetAddress")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_GetAddress")]
   public static extern global::System.IntPtr Object_GetAddress(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsAsset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsAsset")]
   public static extern global::System.IntPtr Object_AsAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsBuffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsBuffer")]
   public static extern global::System.IntPtr Object_AsBuffer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsClock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsClock")]
   public static extern global::System.IntPtr Object_AsClock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsDisplay")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsDisplay")]
   public static extern global::System.IntPtr Object_AsDisplay(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsFileSystemWatcher")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsFileSystemWatcher")]
   public static extern global::System.IntPtr Object_AsFileSystemWatcher(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsGameEngine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsGameEngine")]
   public static extern global::System.IntPtr Object_AsGameEngine(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsIDSystem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsIDSystem")]
   public static extern global::System.IntPtr Object_AsIDSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsInterface")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsInterface")]
   public static extern global::System.IntPtr Object_AsInterface(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsLanguage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsLanguage")]
   public static extern global::System.IntPtr Object_AsLanguage(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsLoader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsLoader")]
   public static extern global::System.IntPtr Object_AsLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsMutex")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsMutex")]
   public static extern global::System.IntPtr Object_AsMutex(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsProcess")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsProcess")]
   public static extern global::System.IntPtr Object_AsProcess(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsStream")]
   public static extern global::System.IntPtr Object_AsStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsString")]
   public static extern global::System.IntPtr Object_AsString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsThread")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsThread")]
   public static extern global::System.IntPtr Object_AsThread(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTimer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTimer")]
   public static extern global::System.IntPtr Object_AsTimer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsWString")]
   public static extern global::System.IntPtr Object_AsWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsWidget")]
   public static extern global::System.IntPtr Object_AsWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsWidgetItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsWidgetItem")]
   public static extern global::System.IntPtr Object_AsWidgetItem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsWindow")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsWindow")]
   public static extern global::System.IntPtr Object_AsWindow(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsBufferStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsBufferStream")]
   public static extern global::System.IntPtr Object_AsBufferStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsButton")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsButton")]
   public static extern global::System.IntPtr Object_AsButton(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsComboBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsComboBox")]
   public static extern global::System.IntPtr Object_AsComboBox(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsDDSTextureLoader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsDDSTextureLoader")]
   public static extern global::System.IntPtr Object_AsDDSTextureLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsFont")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsFont")]
   public static extern global::System.IntPtr Object_AsFont(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsIcon")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsIcon")]
   public static extern global::System.IntPtr Object_AsIcon(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsLabel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsLabel")]
   public static extern global::System.IntPtr Object_AsLabel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsListBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsListBox")]
   public static extern global::System.IntPtr Object_AsListBox(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsMenu")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsMenu")]
   public static extern global::System.IntPtr Object_AsMenu(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsMenuPanel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsMenuPanel")]
   public static extern global::System.IntPtr Object_AsMenuPanel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsPackage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsPackage")]
   public static extern global::System.IntPtr Object_AsPackage(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsPanel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsPanel")]
   public static extern global::System.IntPtr Object_AsPanel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsPipeStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsPipeStream")]
   public static extern global::System.IntPtr Object_AsPipeStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsPixmap")]
   public static extern global::System.IntPtr Object_AsPixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsPlugin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsPlugin")]
   public static extern global::System.IntPtr Object_AsPlugin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsProgressBar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsProgressBar")]
   public static extern global::System.IntPtr Object_AsProgressBar(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsSlider")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsSlider")]
   public static extern global::System.IntPtr Object_AsSlider(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsStreamBuffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsStreamBuffer")]
   public static extern global::System.IntPtr Object_AsStreamBuffer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTabber")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTabber")]
   public static extern global::System.IntPtr Object_AsTabber(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTextArea")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTextArea")]
   public static extern global::System.IntPtr Object_AsTextArea(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTextField")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTextField")]
   public static extern global::System.IntPtr Object_AsTextField(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTreeView")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTreeView")]
   public static extern global::System.IntPtr Object_AsTreeView(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsTreeViewNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsTreeViewNode")]
   public static extern global::System.IntPtr Object_AsTreeViewNode(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_AsObject")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_AsObject")]
   public static extern global::System.IntPtr Object_AsObject(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_CompareWith")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_CompareWith")]
   public static extern bool Object_CompareWith(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Object_director_connect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Object_director_connect")]
   public static extern void Object_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_0")]
   public static extern global::System.IntPtr new_String__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_1")]
   public static extern global::System.IntPtr new_String__SWIG_1(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_3")]
   public static extern global::System.IntPtr new_String__SWIG_3(char jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_4")]
   public static extern global::System.IntPtr new_String__SWIG_4(byte jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_5")]
   public static extern global::System.IntPtr new_String__SWIG_5(short jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_6")]
   public static extern global::System.IntPtr new_String__SWIG_6(ushort jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_7")]
   public static extern global::System.IntPtr new_String__SWIG_7(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_8")]
   public static extern global::System.IntPtr new_String__SWIG_8(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_9")]
   public static extern global::System.IntPtr new_String__SWIG_9(long jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_10")]
   public static extern global::System.IntPtr new_String__SWIG_10(ulong jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_11")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_11")]
   public static extern global::System.IntPtr new_String__SWIG_11(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_String__SWIG_12")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_String__SWIG_12")]
   public static extern global::System.IntPtr new_String__SWIG_12(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_PlusEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_PlusEqual")]
   public static extern void String_PlusEqual(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Equal")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Equal")]
   public static extern void String_Equal(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Plus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Plus__SWIG_0")]
   public static extern global::System.IntPtr String_Plus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Plus__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Plus__SWIG_1")]
   public static extern global::System.IntPtr String_Plus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_ToInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_ToInt")]
   public static extern long String_ToInt(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_ToFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_ToFloat")]
   public static extern double String_ToFloat(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_GetSize")]
   public static extern int String_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Left")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Left")]
   public static extern global::System.IntPtr String_Left(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Right")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Right")]
   public static extern global::System.IntPtr String_Right(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Mid__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Mid__SWIG_0")]
   public static extern global::System.IntPtr String_Mid__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Mid__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Mid__SWIG_1")]
   public static extern global::System.IntPtr String_Mid__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Upper")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Upper")]
   public static extern global::System.IntPtr String_Upper(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Lower")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Lower")]
   public static extern global::System.IntPtr String_Lower(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Trim")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Trim")]
   public static extern global::System.IntPtr String_Trim(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Replace")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Replace")]
   public static extern global::System.IntPtr String_Replace(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Find")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Find")]
   public static extern int String_Find(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_Split")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_Split")]
   public static extern global::System.IntPtr String_Split(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_XOR")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_XOR")]
   public static extern global::System.IntPtr String_XOR(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_ToCString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_ToCString")]
   public static extern string String_ToCString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_String")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_String")]
   public static extern void delete_String(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Dec")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Dec")]
   public static extern ulong Dec(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Hex")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Hex")]
   public static extern global::System.IntPtr Hex(ulong jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_0")]
   public static extern global::System.IntPtr new_WString__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_1")]
-  public static extern global::System.IntPtr new_WString__SWIG_1(string jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_1")]
+  public static extern global::System.IntPtr new_WString__SWIG_1([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_5")]
-  public static extern global::System.IntPtr new_WString__SWIG_5(char jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_4")]
+  public static extern global::System.IntPtr new_WString__SWIG_4(char jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_6")]
-  public static extern global::System.IntPtr new_WString__SWIG_6(byte jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_5")]
+  public static extern global::System.IntPtr new_WString__SWIG_5(byte jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_7")]
-  public static extern global::System.IntPtr new_WString__SWIG_7(short jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_6")]
+  public static extern global::System.IntPtr new_WString__SWIG_6(short jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_8")]
-  public static extern global::System.IntPtr new_WString__SWIG_8(ushort jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_7")]
+  public static extern global::System.IntPtr new_WString__SWIG_7(ushort jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_9")]
-  public static extern global::System.IntPtr new_WString__SWIG_9(int jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_8")]
+  public static extern global::System.IntPtr new_WString__SWIG_8(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_10")]
-  public static extern global::System.IntPtr new_WString__SWIG_10(uint jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_9")]
+  public static extern global::System.IntPtr new_WString__SWIG_9(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_11")]
-  public static extern global::System.IntPtr new_WString__SWIG_11(long jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_10")]
+  public static extern global::System.IntPtr new_WString__SWIG_10(long jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_12")]
-  public static extern global::System.IntPtr new_WString__SWIG_12(ulong jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_11")]
+  public static extern global::System.IntPtr new_WString__SWIG_11(ulong jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_13")]
-  public static extern global::System.IntPtr new_WString__SWIG_13(double jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_12")]
+  public static extern global::System.IntPtr new_WString__SWIG_12(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WString__SWIG_14")]
-  public static extern global::System.IntPtr new_WString__SWIG_14(float jarg1);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WString__SWIG_13")]
+  public static extern global::System.IntPtr new_WString__SWIG_13(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_PlusEqual__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_PlusEqual__SWIG_0")]
   public static extern void WString_PlusEqual__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_PlusEqual__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_PlusEqual__SWIG_1")]
   public static extern void WString_PlusEqual__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Equal")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Equal")]
   public static extern void WString_Equal(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_0")]
   public static extern global::System.IntPtr WString_Plus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_3")]
   public static extern global::System.IntPtr WString_Plus__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Plus__SWIG_4")]
   public static extern global::System.IntPtr WString_Plus__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_EqualEqual__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_EqualEqual__SWIG_0")]
   public static extern bool WString_EqualEqual__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_NotEqual__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_NotEqual__SWIG_0")]
   public static extern bool WString_NotEqual__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_ToInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_ToInt")]
   public static extern long WString_ToInt(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_ToFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_ToFloat")]
   public static extern double WString_ToFloat(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_GetSize")]
   public static extern int WString_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Left")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Left")]
   public static extern global::System.IntPtr WString_Left(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Right")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Right")]
   public static extern global::System.IntPtr WString_Right(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Mid__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Mid__SWIG_0")]
   public static extern global::System.IntPtr WString_Mid__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Mid__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Mid__SWIG_1")]
   public static extern global::System.IntPtr WString_Mid__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Upper")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Upper")]
   public static extern global::System.IntPtr WString_Upper(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Lower")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Lower")]
   public static extern global::System.IntPtr WString_Lower(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Trim")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Trim")]
   public static extern global::System.IntPtr WString_Trim(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Replace")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Replace")]
   public static extern global::System.IntPtr WString_Replace(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Find")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Find")]
   public static extern int WString_Find(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_Split")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_Split")]
   public static extern global::System.IntPtr WString_Split(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_XOR")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_XOR")]
   public static extern global::System.IntPtr WString_XOR(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_ToUTF8String")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_ToUTF8String")]
   public static extern global::System.IntPtr WString_ToUTF8String(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_ToCWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_ToCWString")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string WString_ToCWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WString")]
   public static extern void delete_WString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plus")]
   public static extern global::System.IntPtr Plus(string jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_JSONSetString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_JSONSetString")]
   public static extern void JSONSetString(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_JSONGetString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_JSONGetString")]
   public static extern global::System.IntPtr JSONGetString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_graphicsmodes_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_graphicsmodes_get")]
   public static extern global::System.IntPtr Display_graphicsmodes_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_position_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_position_get")]
   public static extern global::System.IntPtr Display_position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_size_get")]
   public static extern global::System.IntPtr Display_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_scale_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_scale_get")]
   public static extern float Display_scale_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_EqualEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_EqualEqual")]
   public static extern bool Display_EqualEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_NotEqual")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_NotEqual")]
   public static extern bool Display_NotEqual(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Display")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Display")]
   public static extern global::System.IntPtr new_Display();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_GetPosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_GetPosition")]
   public static extern global::System.IntPtr Display_GetPosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_GetSize")]
   public static extern global::System.IntPtr Display_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_ClientArea")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_ClientArea")]
   public static extern global::System.IntPtr Display_ClientArea(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_GetScale")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_GetScale")]
   public static extern global::System.IntPtr Display_GetScale(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Display")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Display")]
   public static extern void delete_Display(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetDisplays")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetDisplays")]
   public static extern global::System.IntPtr GetDisplays();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetDisplayAtCoord")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetDisplayAtCoord")]
   public static extern global::System.IntPtr GetDisplayAtCoord(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_IDHandle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_IDHandle")]
   public static extern global::System.IntPtr new_IDHandle(int jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_IDHandle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_IDHandle")]
   public static extern void delete_IDHandle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDHandle_GetID")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDHandle_GetID")]
   public static extern int IDHandle_GetID(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_IDSystem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_IDSystem__SWIG_0")]
   public static extern global::System.IntPtr new_IDSystem__SWIG_0(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_IDSystem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_IDSystem__SWIG_1")]
   public static extern global::System.IntPtr new_IDSystem__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_AllocID__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_AllocID__SWIG_0")]
   public static extern int IDSystem_AllocID__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_AllocID__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_AllocID__SWIG_1")]
   public static extern int IDSystem_AllocID__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_AllocHandle__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_AllocHandle__SWIG_0")]
   public static extern global::System.IntPtr IDSystem_AllocHandle__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_AllocHandle__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_AllocHandle__SWIG_1")]
   public static extern global::System.IntPtr IDSystem_AllocHandle__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_ReleaseID")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_ReleaseID")]
   public static extern void IDSystem_ReleaseID(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_IDSystem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_IDSystem")]
   public static extern void delete_IDSystem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateIDSystem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateIDSystem")]
   public static extern global::System.IntPtr CreateIDSystem();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetVersion")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetVersion")]
   public static extern int GetVersion();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ICON_WARNING_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ICON_WARNING_get")]
   public static extern int ICON_WARNING_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ICON_QUESTION_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ICON_QUESTION_get")]
   public static extern int ICON_QUESTION_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ICON_INFORMATION_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ICON_INFORMATION_get")]
   public static extern int ICON_INFORMATION_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject1_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject1_set")]
   public static extern void DebugObject1_set(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject1_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject1_get")]
   public static extern global::System.IntPtr DebugObject1_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject2_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject2_set")]
   public static extern void DebugObject2_set(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject2_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject2_get")]
   public static extern global::System.IntPtr DebugObject2_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject3_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject3_set")]
   public static extern void DebugObject3_set(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject3_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject3_get")]
   public static extern global::System.IntPtr DebugObject3_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject4_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject4_set")]
   public static extern void DebugObject4_set(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DebugObject4_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DebugObject4_get")]
   public static extern global::System.IntPtr DebugObject4_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadJSON__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadJSON__SWIG_0")]
   public static extern global::System.IntPtr LoadJSON__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadJSON__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadJSON__SWIG_1")]
   public static extern global::System.IntPtr LoadJSON__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveJSON__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveJSON__SWIG_0")]
   public static extern bool SaveJSON__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveJSON__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveJSON__SWIG_1")]
   public static extern bool SaveJSON__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ParseCommandLine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ParseCommandLine")]
   public static extern global::System.IntPtr ParseCommandLine(int jarg1, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray, SizeParamIndex=0, ArraySubType=global::System.Runtime.InteropServices.UnmanagedType.LPStr)]string[] jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Input__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Input__SWIG_0")]
   public static extern global::System.IntPtr Input__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Input__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Input__SWIG_1")]
   public static extern global::System.IntPtr Input__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Input__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Input__SWIG_2")]
   public static extern global::System.IntPtr Input__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_0")]
   public static extern global::System.IntPtr GetProperty__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_1")]
   public static extern global::System.IntPtr GetProperty__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_2")]
   public static extern string GetProperty__SWIG_2(string jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetProperty__SWIG_3")]
   public static extern string GetProperty__SWIG_3(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetProperty__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetProperty__SWIG_0")]
   public static extern void SetProperty__SWIG_0(string jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetProperty__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetProperty__SWIG_1")]
   public static extern void SetProperty__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetLogMode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetLogMode")]
   public static extern void SetLogMode(bool jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Notify__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Notify__SWIG_0")]
   public static extern void Notify__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Notify__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Notify__SWIG_1")]
   public static extern void Notify__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Notify__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Notify__SWIG_2")]
   public static extern void Notify__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Confirm__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Confirm__SWIG_0")]
   public static extern int Confirm__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Confirm__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Confirm__SWIG_1")]
   public static extern int Confirm__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Confirm__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Confirm__SWIG_2")]
   public static extern int Confirm__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Proceed__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Proceed__SWIG_0")]
   public static extern int Proceed__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Proceed__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Proceed__SWIG_1")]
   public static extern int Proceed__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Proceed__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Proceed__SWIG_2")]
   public static extern int Proceed__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestColor")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestColor")]
   public static extern int RequestColor(int jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_0")]
   public static extern global::System.IntPtr RequestDir__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_1")]
   public static extern global::System.IntPtr RequestDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestDir__SWIG_2")]
   public static extern global::System.IntPtr RequestDir__SWIG_2();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_0")]
   public static extern global::System.IntPtr RequestFile__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, bool jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_1")]
   public static extern global::System.IntPtr RequestFile__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_2")]
   public static extern global::System.IntPtr RequestFile__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_3")]
   public static extern global::System.IntPtr RequestFile__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_4")]
   public static extern global::System.IntPtr RequestFile__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RequestFile__SWIG_5")]
   public static extern global::System.IntPtr RequestFile__SWIG_5();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetClipboardText__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetClipboardText__SWIG_0")]
   public static extern void SetClipboardText__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetClipboardText__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetClipboardText__SWIG_1")]
   public static extern void SetClipboardText__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetClipboardText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetClipboardText")]
   public static extern global::System.IntPtr GetClipboardText();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RuntimeError")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RuntimeError")]
   public static extern void RuntimeError(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Warn")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Warn")]
   public static extern void Warn(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Assert__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Assert__SWIG_0")]
   public static extern void Assert__SWIG_0(bool jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Assert__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Assert__SWIG_1")]
   public static extern void Assert__SWIG_1(bool jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Assert__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Assert__SWIG_2")]
   public static extern void Assert__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Assert__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Assert__SWIG_3")]
   public static extern void Assert__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Millisecs")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Millisecs")]
   public static extern ulong Millisecs();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Sleep")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Sleep")]
   public static extern void Sleep(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetMemoryUsage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetMemoryUsage")]
   public static extern ulong GetMemoryUsage();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateUUID")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateUUID")]
   public static extern global::System.IntPtr CreateUUID();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Chr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Chr")]
   public static extern global::System.IntPtr Chr(byte jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asc__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asc__SWIG_0")]
   public static extern byte Asc__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_XOR")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_XOR")]
   public static extern global::System.IntPtr XOR(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WChr")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WChr")]
   public static extern global::System.IntPtr WChr(char jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asc__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asc__SWIG_1")]
   public static extern char Asc__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_0")]
   public static extern void Print__SWIG_0(string jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_1")]
   public static extern void Print__SWIG_1(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_2")]
   public static extern void Print__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_3")]
   public static extern void Print__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_4")]
   public static extern void Print__SWIG_4(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_5")]
   public static extern void Print__SWIG_5(ulong jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_6")]
   public static extern void Print__SWIG_6(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_7")]
   public static extern void Print__SWIG_7(float jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_8")]
   public static extern void Print__SWIG_8(double jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_9")]
   public static extern void Print__SWIG_9(bool jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Print__SWIG_11")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Print__SWIG_11")]
   public static extern void Print__SWIG_11(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AddLogStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AddLogStream")]
   public static extern void AddLogStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileHidden")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileHidden")]
   public static extern bool FileHidden(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DownloadFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DownloadFile")]
   public static extern bool DownloadFile(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PathIsURL")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PathIsURL")]
   public static extern bool PathIsURL(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LuaLoadDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LuaLoadDir")]
   public static extern global::System.IntPtr LuaLoadDir(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadDir__SWIG_0")]
   public static extern global::System.IntPtr LoadDir__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadDir__SWIG_1")]
   public static extern global::System.IntPtr LoadDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripAll__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripAll__SWIG_0")]
   public static extern global::System.IntPtr StripAll__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripAll__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripAll__SWIG_1")]
   public static extern global::System.IntPtr StripAll__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripDir__SWIG_0")]
   public static extern global::System.IntPtr StripDir__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripDir__SWIG_1")]
   public static extern global::System.IntPtr StripDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ExtractDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ExtractDir__SWIG_0")]
   public static extern global::System.IntPtr ExtractDir__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ExtractDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ExtractDir__SWIG_1")]
   public static extern global::System.IntPtr ExtractDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripExt__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripExt__SWIG_0")]
   public static extern string StripExt__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StripExt__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StripExt__SWIG_1")]
   public static extern global::System.IntPtr StripExt__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileTime")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileTime")]
   public static extern ulong FileTime(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileType")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileType")]
   public static extern int FileType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ExtractExt__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ExtractExt__SWIG_0")]
   public static extern global::System.IntPtr ExtractExt__SWIG_0(string jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ExtractExt__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ExtractExt__SWIG_1")]
   public static extern global::System.IntPtr ExtractExt__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetPath")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetPath")]
   public static extern global::System.IntPtr GetPath(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CurrentDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CurrentDir")]
   public static extern global::System.IntPtr CurrentDir();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AppDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AppDir")]
   public static extern global::System.IntPtr AppDir();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ChangeDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ChangeDir")]
   public static extern bool ChangeDir(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RealPath")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RealPath")]
   public static extern global::System.IntPtr RealPath(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DeleteDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DeleteDir__SWIG_0")]
   public static extern bool DeleteDir__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DeleteDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DeleteDir__SWIG_1")]
   public static extern bool DeleteDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateDir__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateDir__SWIG_0")]
   public static extern bool CreateDir__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateDir__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateDir__SWIG_1")]
   public static extern bool CreateDir__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RenameDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RenameDir")]
   public static extern bool RenameDir(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FixPath")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FixPath")]
   public static extern global::System.IntPtr FixPath(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CasedPath")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CasedPath")]
   public static extern global::System.IntPtr CasedPath(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CasedFileName")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CasedFileName")]
   public static extern global::System.IntPtr CasedFileName(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ClearWebCache")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ClearWebCache")]
   public static extern bool ClearWebCache();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadString")]
   public static extern global::System.IntPtr LoadString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadWString")]
   public static extern global::System.IntPtr LoadWString(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ReadFile__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ReadFile__SWIG_0")]
   public static extern global::System.IntPtr ReadFile__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ReadFile__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ReadFile__SWIG_1")]
   public static extern global::System.IntPtr ReadFile__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RenameFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RenameFile")]
   public static extern bool RenameFile(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WriteFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WriteFile")]
   public static extern global::System.IntPtr WriteFile(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_OpenFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_OpenFile")]
   public static extern global::System.IntPtr OpenFile(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DeleteFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DeleteFile")]
   public static extern bool DeleteFile(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CopyFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CopyFile")]
   public static extern bool CopyFile(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_OpenDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_OpenDir")]
   public static extern bool OpenDir(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RunFile__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RunFile__SWIG_0")]
   public static extern bool RunFile__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_RunFile__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_RunFile__SWIG_1")]
   public static extern bool RunFile__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateFile")]
   public static extern bool CreateFile(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileSize")]
   public static extern long FileSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_id_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_id_set")]
   public static extern void Event_id_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_id_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_id_get")]
   public static extern int Event_id_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_source_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_source_set")]
   public static extern void Event_source_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_source_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_source_get")]
   public static extern global::System.IntPtr Event_source_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_data_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_data_set")]
   public static extern void Event_data_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_data_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_data_get")]
   public static extern int Event_data_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_position_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_position_set")]
   public static extern void Event_position_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_position_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_position_get")]
   public static extern global::System.IntPtr Event_position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_size_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_size_set")]
   public static extern void Event_size_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_size_get")]
   public static extern global::System.IntPtr Event_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_extra_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_extra_set")]
   public static extern void Event_extra_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Event_extra_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Event_extra_get")]
   public static extern global::System.IntPtr Event_extra_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_0")]
   public static extern global::System.IntPtr new_Event__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_1")]
   public static extern global::System.IntPtr new_Event__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_2")]
   public static extern global::System.IntPtr new_Event__SWIG_2(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_3")]
   public static extern global::System.IntPtr new_Event__SWIG_3(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_4")]
   public static extern global::System.IntPtr new_Event__SWIG_4(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Event__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Event__SWIG_5")]
   public static extern global::System.IntPtr new_Event__SWIG_5(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Event")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Event")]
   public static extern void delete_Event(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_AllocEventID")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_AllocEventID")]
   public static extern int AllocEventID();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Peek")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Peek")]
   public static extern bool EventQueue_Peek();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Wait")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Wait")]
   public static extern global::System.IntPtr EventQueue_Wait();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Flush")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Flush")]
   public static extern void EventQueue_Flush();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_0")]
   public static extern void EventQueue_Emit__SWIG_0(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, global::System.Runtime.InteropServices.HandleRef jarg8, bool jarg9);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_1")]
   public static extern void EventQueue_Emit__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, global::System.Runtime.InteropServices.HandleRef jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_2")]
   public static extern void EventQueue_Emit__SWIG_2(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_3")]
   public static extern void EventQueue_Emit__SWIG_3(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_4")]
   public static extern void EventQueue_Emit__SWIG_4(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_5")]
   public static extern void EventQueue_Emit__SWIG_5(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_6")]
   public static extern void EventQueue_Emit__SWIG_6(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_7")]
   public static extern void EventQueue_Emit__SWIG_7(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_Emit__SWIG_8")]
   public static extern void EventQueue_Emit__SWIG_8(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EventQueue_MaxSize_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EventQueue_MaxSize_get")]
   public static extern int EventQueue_MaxSize_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_EventQueue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_EventQueue")]
   public static extern global::System.IntPtr new_EventQueue();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_EventQueue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_EventQueue")]
   public static extern void delete_EventQueue(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PeekEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PeekEvent")]
   public static extern bool PeekEvent();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WaitEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WaitEvent")]
   public static extern global::System.IntPtr WaitEvent();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_0")]
   public static extern void EmitEvent__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_1")]
   public static extern void EmitEvent__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_2")]
   public static extern void EmitEvent__SWIG_2(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7, global::System.Runtime.InteropServices.HandleRef jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_3")]
   public static extern void EmitEvent__SWIG_3(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_4")]
   public static extern void EmitEvent__SWIG_4(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_5")]
   public static extern void EmitEvent__SWIG_5(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_6")]
   public static extern void EmitEvent__SWIG_6(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_7")]
   public static extern void EmitEvent__SWIG_7(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_8")]
   public static extern void EmitEvent__SWIG_8(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_EmitEvent__SWIG_9")]
   public static extern void EmitEvent__SWIG_9(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Language_AddTerm")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Language_AddTerm")]
   public static extern void Language_AddTerm(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Language_Translate__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Language_Translate")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
-  public static extern string Language_Translate__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+  public static extern string Language_Translate(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Language")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Language_TranslateW")]
+  [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
+  public static extern string Language_TranslateW(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Language")]
   public static extern global::System.IntPtr new_Language();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Language")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Language")]
   public static extern void delete_Language(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadLanguage__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadLanguage__SWIG_0")]
   public static extern global::System.IntPtr LoadLanguage__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadLanguage__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadLanguage__SWIG_1")]
   public static extern global::System.IntPtr LoadLanguage__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SetLanguage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SetLanguage")]
   public static extern void SetLanguage(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GetLanguage")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GetLanguage")]
   public static extern global::System.IntPtr GetLanguage();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_STREAM_READ_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_STREAM_READ_get")]
   public static extern int STREAM_READ_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_STREAM_WRITE_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_STREAM_WRITE_get")]
   public static extern int STREAM_WRITE_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_path_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_path_get")]
   public static extern global::System.IntPtr Stream_path_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Stream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Stream")]
   public static extern global::System.IntPtr new_Stream();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Stream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Stream")]
   public static extern void delete_Stream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_GetPosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_GetPosition")]
   public static extern ulong Stream_GetPosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Seek")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Seek")]
   public static extern void Stream_Seek(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_GetSize")]
   public static extern ulong Stream_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_EOF")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_EOF")]
   public static extern bool Stream_EOF(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Resize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Resize")]
   public static extern bool Stream_Resize(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Close")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Close")]
   public static extern void Stream_Close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadByte")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadByte")]
   public static extern byte Stream_ReadByte(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadInt")]
   public static extern int Stream_ReadInt(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadShort")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadShort")]
   public static extern ushort Stream_ReadShort(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadFloat")]
   public static extern float Stream_ReadFloat(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadDouble")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadDouble")]
   public static extern double Stream_ReadDouble(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadString__SWIG_0")]
   public static extern global::System.IntPtr Stream_ReadString__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadString__SWIG_1")]
   public static extern global::System.IntPtr Stream_ReadString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadWString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadWString__SWIG_0")]
   public static extern global::System.IntPtr Stream_ReadWString__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadWString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadWString__SWIG_1")]
   public static extern global::System.IntPtr Stream_ReadWString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadLine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadLine")]
   public static extern global::System.IntPtr Stream_ReadLine(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_ReadWLine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_ReadWLine")]
   public static extern global::System.IntPtr Stream_ReadWLine(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Read")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Read")]
   public static extern ulong Stream_Read(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Write__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Write__SWIG_0")]
   public static extern ulong Stream_Write__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Write__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Write__SWIG_1")]
   public static extern ulong Stream_Write__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ulong jarg3, ulong jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteByte")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteByte")]
   public static extern void Stream_WriteByte(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteInt")]
   public static extern void Stream_WriteInt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteFloat")]
   public static extern void Stream_WriteFloat(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteDouble")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteDouble")]
   public static extern void Stream_WriteDouble(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteString__SWIG_0")]
   public static extern void Stream_WriteString__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteString__SWIG_1")]
   public static extern void Stream_WriteString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteWString__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteWString__SWIG_0")]
   public static extern void Stream_WriteWString__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteWString__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteWString__SWIG_1")]
   public static extern void Stream_WriteWString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteLine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteLine")]
   public static extern void Stream_WriteLine(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteWLine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteWLine")]
   public static extern void Stream_WriteWLine(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_WriteShort")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_WriteShort")]
   public static extern void Stream_WriteShort(global::System.Runtime.InteropServices.HandleRef jarg1, ushort jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_Flush")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_Flush")]
   public static extern void Stream_Flush(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_data_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_data_get")]
   public static extern global::System.IntPtr BufferStream_data_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_BufferStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_BufferStream")]
   public static extern global::System.IntPtr new_BufferStream();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_BufferStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_BufferStream")]
   public static extern void delete_BufferStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_Close")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_Close")]
   public static extern void BufferStream_Close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_EOF")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_EOF")]
   public static extern bool BufferStream_EOF(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_GetPosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_GetPosition")]
   public static extern ulong BufferStream_GetPosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_Seek")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_Seek")]
   public static extern void BufferStream_Seek(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_GetSize")]
   public static extern ulong BufferStream_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_Read")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_Read")]
   public static extern ulong BufferStream_Read(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_Write")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_Write")]
   public static extern ulong BufferStream_Write(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_0")]
   public static extern global::System.IntPtr CreateBufferStream__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_1")]
   public static extern global::System.IntPtr CreateBufferStream__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateBufferStream__SWIG_2")]
   public static extern global::System.IntPtr CreateBufferStream__SWIG_2();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_FileSystemWatcher")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_FileSystemWatcher")]
   public static extern global::System.IntPtr new_FileSystemWatcher();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_FileSystemWatcher")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_FileSystemWatcher")]
   public static extern void delete_FileSystemWatcher(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileSystemWatcher_TimerCallback")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileSystemWatcher_TimerCallback")]
   public static extern bool FileSystemWatcher_TimerCallback(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateFileSystemWatcher__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateFileSystemWatcher__SWIG_0")]
   public static extern global::System.IntPtr CreateFileSystemWatcher__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateFileSystemWatcher__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateFileSystemWatcher__SWIG_1")]
   public static extern global::System.IntPtr CreateFileSystemWatcher__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_disableWindowsKey_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_disableWindowsKey_set")]
   public static extern void GameEngine_disableWindowsKey_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_disableWindowsKey_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_disableWindowsKey_get")]
   public static extern bool GameEngine_disableWindowsKey_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timerwindow_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timerwindow_set")]
   public static extern void GameEngine_timerwindow_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timerwindow_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timerwindow_get")]
   public static extern global::System.IntPtr GameEngine_timerwindow_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timers_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timers_set")]
   public static extern void GameEngine_timers_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timers_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timers_get")]
   public static extern global::System.IntPtr GameEngine_timers_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timerIDs_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timerIDs_set")]
   public static extern void GameEngine_timerIDs_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_timerIDs_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_timerIDs_get")]
   public static extern global::System.IntPtr GameEngine_timerIDs_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_EventIDSystem_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_EventIDSystem_set")]
   public static extern void GameEngine_EventIDSystem_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_EventIDSystem_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_EventIDSystem_get")]
   public static extern global::System.IntPtr GameEngine_EventIDSystem_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_vmmessagemutex_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_vmmessagemutex_set")]
   public static extern void GameEngine_vmmessagemutex_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_vmmessagemutex_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_vmmessagemutex_get")]
   public static extern global::System.IntPtr GameEngine_vmmessagemutex_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_widgets_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_widgets_set")]
   public static extern void GameEngine_widgets_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_widgets_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_widgets_get")]
   public static extern global::System.IntPtr GameEngine_widgets_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_windowhandle_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_windowhandle_set")]
   public static extern void GameEngine_windowhandle_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_windowhandle_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_windowhandle_get")]
   public static extern global::System.IntPtr GameEngine_windowhandle_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_settings_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_settings_set")]
   public static extern void GameEngine_settings_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_settings_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_settings_get")]
   public static extern global::System.IntPtr GameEngine_settings_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_bonematrices_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_bonematrices_set")]
   public static extern void GameEngine_bonematrices_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_bonematrices_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_bonematrices_get")]
   public static extern global::System.IntPtr GameEngine_bonematrices_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_textureloaders_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_textureloaders_set")]
   public static extern void GameEngine_textureloaders_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_textureloaders_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_textureloaders_get")]
   public static extern global::System.IntPtr GameEngine_textureloaders_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_modelloaders_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_modelloaders_set")]
   public static extern void GameEngine_modelloaders_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_modelloaders_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_modelloaders_get")]
   public static extern global::System.IntPtr GameEngine_modelloaders_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_soundloaders_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_soundloaders_set")]
   public static extern void GameEngine_soundloaders_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_soundloaders_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_soundloaders_get")]
   public static extern global::System.IntPtr GameEngine_soundloaders_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_materialloaders_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_materialloaders_set")]
   public static extern void GameEngine_materialloaders_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_materialloaders_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_materialloaders_get")]
   public static extern global::System.IntPtr GameEngine_materialloaders_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_PrintMutex_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_PrintMutex_set")]
   public static extern void GameEngine_PrintMutex_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_PrintMutex_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_PrintMutex_get")]
   public static extern global::System.IntPtr GameEngine_PrintMutex_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_DPIScaling_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_DPIScaling_set")]
   public static extern void GameEngine_DPIScaling_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_DPIScaling_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_DPIScaling_get")]
   public static extern float GameEngine_DPIScaling_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_eventqueue_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_eventqueue_set")]
   public static extern void GameEngine_eventqueue_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_eventqueue_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_eventqueue_get")]
   public static extern global::System.IntPtr GameEngine_eventqueue_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_properties_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_properties_set")]
   public static extern void GameEngine_properties_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_properties_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_properties_get")]
   public static extern global::System.IntPtr GameEngine_properties_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_packages_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_packages_set")]
   public static extern void GameEngine_packages_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_packages_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_packages_get")]
   public static extern global::System.IntPtr GameEngine_packages_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_plugins_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_plugins_set")]
   public static extern void GameEngine_plugins_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_plugins_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_plugins_get")]
   public static extern global::System.IntPtr GameEngine_plugins_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletondata_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletondata_set")]
   public static extern void GameEngine_skeletondata_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletondata_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletondata_get")]
   public static extern global::System.IntPtr GameEngine_skeletondata_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmin_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmin_set")]
   public static extern void GameEngine_skeletonmin_set(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmin_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmin_get")]
   public static extern ulong GameEngine_skeletonmin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmax_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmax_set")]
   public static extern void GameEngine_skeletonmax_set(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmax_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonmax_get")]
   public static extern ulong GameEngine_skeletonmax_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonschanged_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonschanged_set")]
   public static extern void GameEngine_skeletonschanged_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_skeletonschanged_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_skeletonschanged_get")]
   public static extern bool GameEngine_skeletonschanged_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_brdfloaded_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_brdfloaded_set")]
   public static extern void GameEngine_brdfloaded_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_brdfloaded_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_brdfloaded_get")]
   public static extern bool GameEngine_brdfloaded_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_GameEngine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_GameEngine")]
   public static extern global::System.IntPtr new_GameEngine();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_GameEngine")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_GameEngine")]
   public static extern void delete_GameEngine(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_Start")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_Start")]
   public static extern void GameEngine_Start(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_cachedassets_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_cachedassets_set")]
   public static extern void GameEngine_cachedassets_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_cachedassets_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_cachedassets_get")]
   public static extern global::System.IntPtr GameEngine_cachedassets_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_cachedpixmaps_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_cachedpixmaps_set")]
   public static extern void GameEngine_cachedpixmaps_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_cachedpixmaps_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_cachedpixmaps_get")]
   public static extern global::System.IntPtr GameEngine_cachedpixmaps_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_Get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_Get")]
   public static extern global::System.IntPtr GameEngine_Get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_instance_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_instance_set")]
   public static extern void GameEngine_instance_set(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_instance_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_instance_get")]
   public static extern global::System.IntPtr GameEngine_instance_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Initialize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Initialize")]
   public static extern void Initialize();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Shutdown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Shutdown")]
   public static extern void Shutdown();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Clock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Clock")]
   public static extern global::System.IntPtr new_Clock(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_GetTime")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_GetTime")]
   public static extern ulong Clock_GetTime(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_Tick__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_Tick__SWIG_0")]
   public static extern void Clock_Tick__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_Tick__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_Tick__SWIG_1")]
   public static extern void Clock_Tick__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_GetSpeed")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_GetSpeed")]
   public static extern float Clock_GetSpeed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_Pause")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_Pause")]
   public static extern void Clock_Pause(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_Paused")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_Paused")]
   public static extern bool Clock_Paused(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_Resume")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_Resume")]
   public static extern void Clock_Resume(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Clock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Clock")]
   public static extern void delete_Clock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateClock__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateClock__SWIG_0")]
   public static extern global::System.IntPtr CreateClock__SWIG_0(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateClock__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateClock__SWIG_1")]
   public static extern global::System.IntPtr CreateClock__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Buffer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Buffer__SWIG_0")]
   public static extern global::System.IntPtr new_Buffer__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Buffer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Buffer__SWIG_1")]
   public static extern global::System.IntPtr new_Buffer__SWIG_1(ulong jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Buffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Buffer")]
   public static extern void delete_Buffer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Data")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Data")]
   public static extern string Buffer_Data(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Clear")]
   public static extern void Buffer_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_GetSize")]
   public static extern ulong Buffer_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Resize__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Resize__SWIG_0")]
   public static extern bool Buffer_Resize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Resize__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Resize__SWIG_1")]
   public static extern bool Buffer_Resize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeByte")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeByte")]
   public static extern void Buffer_PokeByte(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, byte jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeShort")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeShort")]
   public static extern void Buffer_PokeShort(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, ushort jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeInt")]
   public static extern void Buffer_PokeInt(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeFloat")]
   public static extern void Buffer_PokeFloat(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeDouble")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeDouble")]
   public static extern void Buffer_PokeDouble(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, double jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeString")]
   public static extern void Buffer_PokeString(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PokeWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PokeWString")]
   public static extern void Buffer_PokeWString(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekByte")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekByte")]
   public static extern byte Buffer_PeekByte(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekShort")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekShort")]
   public static extern ushort Buffer_PeekShort(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekInt")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekInt")]
   public static extern int Buffer_PeekInt(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekFloat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekFloat")]
   public static extern float Buffer_PeekFloat(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekDouble")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekDouble")]
   public static extern double Buffer_PeekDouble(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekString")]
   public static extern global::System.IntPtr Buffer_PeekString(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_PeekWString")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_PeekWString")]
   public static extern global::System.IntPtr Buffer_PeekWString(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Copy")]
   public static extern void Buffer_Copy(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, ulong jarg4, ulong jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_Save")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_Save")]
   public static extern bool Buffer_Save(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadBuffer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadBuffer__SWIG_0")]
   public static extern global::System.IntPtr LoadBuffer__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadBuffer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadBuffer__SWIG_1")]
   public static extern global::System.IntPtr LoadBuffer__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateBuffer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateBuffer__SWIG_0")]
   public static extern global::System.IntPtr CreateBuffer__SWIG_0(ulong jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateBuffer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateBuffer__SWIG_1")]
   public static extern global::System.IntPtr CreateBuffer__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateStaticBuffer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateStaticBuffer__SWIG_0")]
   public static extern global::System.IntPtr CreateStaticBuffer__SWIG_0(System.IntPtr jarg1, ulong jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateStaticBuffer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateStaticBuffer__SWIG_1")]
   public static extern global::System.IntPtr CreateStaticBuffer__SWIG_1(System.IntPtr jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetBlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetBlock")]
   public static extern global::System.IntPtr new_WidgetBlock();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WidgetBlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WidgetBlock")]
   public static extern void delete_WidgetBlock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_iconscale_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_iconscale_set")]
   public static extern void WidgetBlock_iconscale_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_iconscale_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_iconscale_get")]
   public static extern float WidgetBlock_iconscale_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_icon_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_icon_set")]
   public static extern void WidgetBlock_icon_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_icon_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_icon_get")]
   public static extern global::System.IntPtr WidgetBlock_icon_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_filter_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_filter_set")]
   public static extern void WidgetBlock_filter_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_filter_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_filter_get")]
   public static extern int WidgetBlock_filter_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_gradient_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_gradient_set")]
   public static extern void WidgetBlock_gradient_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_gradient_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_gradient_get")]
   public static extern float WidgetBlock_gradient_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_hidden_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_hidden_set")]
   public static extern void WidgetBlock_hidden_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_hidden_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_hidden_get")]
   public static extern bool WidgetBlock_hidden_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_position_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_position_set")]
   public static extern void WidgetBlock_position_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_position_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_position_get")]
   public static extern global::System.IntPtr WidgetBlock_position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_size_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_size_set")]
   public static extern void WidgetBlock_size_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_size_get")]
   public static extern global::System.IntPtr WidgetBlock_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_text_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_text_set")]
   public static extern void WidgetBlock_text_set(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_text_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_text_get")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string WidgetBlock_text_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_color_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_color_set")]
   public static extern void WidgetBlock_color_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_color_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_color_get")]
   public static extern global::System.IntPtr WidgetBlock_color_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_radius_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_radius_set")]
   public static extern void WidgetBlock_radius_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_radius_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_radius_get")]
   public static extern int WidgetBlock_radius_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_wireframe_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_wireframe_set")]
   public static extern void WidgetBlock_wireframe_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_wireframe_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_wireframe_get")]
   public static extern bool WidgetBlock_wireframe_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_textalignment_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_textalignment_set")]
   public static extern void WidgetBlock_textalignment_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_textalignment_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_textalignment_get")]
   public static extern int WidgetBlock_textalignment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_fontsize_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_fontsize_set")]
   public static extern void WidgetBlock_fontsize_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_fontsize_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_fontsize_get")]
   public static extern int WidgetBlock_fontsize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_textdefined_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_textdefined_set")]
   public static extern void WidgetBlock_textdefined_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_textdefined_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_textdefined_get")]
   public static extern bool WidgetBlock_textdefined_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregiondefined_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregiondefined_set")]
   public static extern void WidgetBlock_clipregiondefined_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregiondefined_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregiondefined_get")]
   public static extern bool WidgetBlock_clipregiondefined_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregion_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregion_set")]
   public static extern void WidgetBlock_clipregion_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregion_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_clipregion_get")]
   public static extern global::System.IntPtr WidgetBlock_clipregion_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_pixmap_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_pixmap_set")]
   public static extern void WidgetBlock_pixmap_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_pixmap_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_pixmap_get")]
   public static extern global::System.IntPtr WidgetBlock_pixmap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_edgepadding_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_edgepadding_set")]
   public static extern void WidgetBlock_edgepadding_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_edgepadding_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_edgepadding_get")]
   public static extern global::System.IntPtr WidgetBlock_edgepadding_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_alignment_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_alignment_set")]
   public static extern void WidgetBlock_alignment_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_alignment_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_alignment_get")]
   public static extern global::System.IntPtr WidgetBlock_alignment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_edgedistance_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_edgedistance_set")]
   public static extern void WidgetBlock_edgedistance_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_edgedistance_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_edgedistance_get")]
   public static extern global::System.IntPtr WidgetBlock_edgedistance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetClipRegion")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetClipRegion")]
   public static extern void WidgetBlock_SetClipRegion(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetPixmap__SWIG_0")]
   public static extern void WidgetBlock_SetPixmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetPixmap__SWIG_1")]
   public static extern void WidgetBlock_SetPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetText")]
   public static extern void WidgetBlock_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetLayout")]
   public static extern void WidgetBlock_SetLayout(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetShape")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetShape")]
   public static extern void WidgetBlock_SetShape(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_0")]
   public static extern void WidgetBlock_SetIcon__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, float jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_1")]
   public static extern void WidgetBlock_SetIcon__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, float jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetBlock_SetIcon__SWIG_2")]
   public static extern void WidgetBlock_SetIcon__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_root_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_root_get")]
   public static extern global::System.IntPtr Interface_root_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_autoscalemode_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_autoscalemode_set")]
   public static extern void Interface_autoscalemode_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_autoscalemode_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_autoscalemode_get")]
   public static extern bool Interface_autoscalemode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_orderiterator_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_orderiterator_set")]
   public static extern void Interface_orderiterator_set(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_orderiterator_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_orderiterator_get")]
   public static extern long Interface_orderiterator_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_buffer_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_buffer_set")]
   public static extern void Interface_buffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_buffer_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_buffer_get")]
   public static extern global::System.IntPtr Interface_buffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_base__set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_base__set")]
   public static extern void Interface_base__set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_base__get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_base__get")]
   public static extern global::System.IntPtr Interface_base__get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_hoverwidget_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_hoverwidget_set")]
   public static extern void Interface_hoverwidget_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_hoverwidget_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_hoverwidget_get")]
   public static extern global::System.IntPtr Interface_hoverwidget_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_focusedwidget_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_focusedwidget_set")]
   public static extern void Interface_focusedwidget_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_focusedwidget_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_focusedwidget_get")]
   public static extern global::System.IntPtr Interface_focusedwidget_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_window_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_window_set")]
   public static extern void Interface_window_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_window_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_window_get")]
   public static extern global::System.IntPtr Interface_window_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_colors_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_colors_set")]
   public static extern void Interface_colors_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_colors_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_colors_get")]
   public static extern global::System.IntPtr Interface_colors_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_hidestate_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_hidestate_set")]
   public static extern void Interface_hidestate_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_hidestate_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_hidestate_get")]
   public static extern bool Interface_hidestate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_scale_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_scale_set")]
   public static extern void Interface_scale_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_scale_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_scale_get")]
   public static extern float Interface_scale_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_fontpath_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_fontpath_set")]
   public static extern void Interface_fontpath_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_fontpath_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_fontpath_get")]
   public static extern string Interface_fontpath_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_lastcursorblinktime_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_lastcursorblinktime_set")]
   public static extern void Interface_lastcursorblinktime_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_lastcursorblinktime_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_lastcursorblinktime_get")]
   public static extern int Interface_lastcursorblinktime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_cursorblinkfrequency_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_cursorblinkfrequency_set")]
   public static extern void Interface_cursorblinkfrequency_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_cursorblinkfrequency_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_cursorblinkfrequency_get")]
   public static extern int Interface_cursorblinkfrequency_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_rootwidgets_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_rootwidgets_set")]
   public static extern void Interface_rootwidgets_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_rootwidgets_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_rootwidgets_get")]
   public static extern global::System.IntPtr Interface_rootwidgets_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_enabled_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_enabled_set")]
   public static extern void Interface_enabled_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_enabled_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_enabled_get")]
   public static extern bool Interface_enabled_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_LoadIcons")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_LoadIcons")]
   public static extern void Interface_LoadIcons(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_vertical_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_vertical_set")]
   public static extern void Interface_icon_slider_knob_vertical_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_vertical_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_vertical_get")]
   public static extern global::System.IntPtr Interface_icon_slider_knob_vertical_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_horizontal_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_horizontal_set")]
   public static extern void Interface_icon_slider_knob_horizontal_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_horizontal_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_knob_horizontal_get")]
   public static extern global::System.IntPtr Interface_icon_slider_knob_horizontal_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_right_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_right_set")]
   public static extern void Interface_icon_slider_arrow_right_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_right_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_right_get")]
   public static extern global::System.IntPtr Interface_icon_slider_arrow_right_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_left_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_left_set")]
   public static extern void Interface_icon_slider_arrow_left_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_left_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_left_get")]
   public static extern global::System.IntPtr Interface_icon_slider_arrow_left_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_up_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_up_set")]
   public static extern void Interface_icon_slider_arrow_up_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_up_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_up_get")]
   public static extern global::System.IntPtr Interface_icon_slider_arrow_up_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_down_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_down_set")]
   public static extern void Interface_icon_slider_arrow_down_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_down_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_slider_arrow_down_get")]
   public static extern global::System.IntPtr Interface_icon_slider_arrow_down_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_open_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_open_set")]
   public static extern void Interface_icon_treeviewnode_open_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_open_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_open_get")]
   public static extern global::System.IntPtr Interface_icon_treeviewnode_open_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_closed_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_closed_set")]
   public static extern void Interface_icon_treeviewnode_closed_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_closed_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_treeviewnode_closed_get")]
   public static extern global::System.IntPtr Interface_icon_treeviewnode_closed_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_combobox_arrow_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_combobox_arrow_set")]
   public static extern void Interface_icon_combobox_arrow_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_combobox_arrow_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_combobox_arrow_get")]
   public static extern global::System.IntPtr Interface_icon_combobox_arrow_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_button_checkmark_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_button_checkmark_set")]
   public static extern void Interface_icon_button_checkmark_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_icon_button_checkmark_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_icon_button_checkmark_get")]
   public static extern global::System.IntPtr Interface_icon_button_checkmark_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Interface")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Interface")]
   public static extern global::System.IntPtr new_Interface();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Interface")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Interface")]
   public static extern void delete_Interface(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_LoadColorScheme__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_LoadColorScheme__SWIG_0")]
   public static extern bool Interface_LoadColorScheme__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_LoadColorScheme__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_LoadColorScheme__SWIG_1")]
   public static extern bool Interface_LoadColorScheme__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Lock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Lock")]
   public static extern void Interface_Lock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Unlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Unlock")]
   public static extern void Interface_Unlock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_AutoScale")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_AutoScale")]
   public static extern void Interface_AutoScale(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Enable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Enable")]
   public static extern void Interface_Enable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Disable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Disable")]
   public static extern void Interface_Disable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetMousePosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetMousePosition")]
   public static extern global::System.IntPtr Interface_GetMousePosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Sort")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Sort")]
   public static extern void Interface_Sort(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Draw")]
   public static extern void Interface_Draw(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Clear")]
   public static extern void Interface_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SetFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SetFocus")]
   public static extern void Interface_SetFocus(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetFocus")]
   public static extern global::System.IntPtr Interface_GetFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetLineHeight")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetLineHeight")]
   public static extern int Interface_GetLineHeight(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetFontHeight")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetFontHeight")]
   public static extern int Interface_GetFontHeight(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ResetCursorBlink")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ResetCursorBlink")]
   public static extern void Interface_ResetCursorBlink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SetGradientMode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SetGradientMode")]
   public static extern void Interface_SetGradientMode(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SetScale")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SetScale")]
   public static extern void Interface_SetScale(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetScale")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetScale")]
   public static extern float Interface_GetScale(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Redraw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Redraw")]
   public static extern void Interface_Redraw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Hide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Hide")]
   public static extern void Interface_Hide(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Show")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Show")]
   public static extern void Interface_Show(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Hidden")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Hidden")]
   public static extern bool Interface_Hidden(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_MouseDown")]
   public static extern bool Interface_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_0")]
   public static extern bool Interface_Save__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_1")]
   public static extern bool Interface_Save__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_2")]
   public static extern bool Interface_Save__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_3")]
   public static extern bool Interface_Save__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_4")]
   public static extern bool Interface_Save__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Save__SWIG_5")]
   public static extern bool Interface_Save__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SetPointer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SetPointer")]
   public static extern void Interface_SetPointer(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_UpdateLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_UpdateLayout")]
   public static extern void Interface_UpdateLayout(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SetClipRegion")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SetClipRegion")]
   public static extern void Interface_SetClipRegion(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_0")]
   public static extern void Interface_ProcessEvent__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5, int jarg6, int jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_1")]
   public static extern void Interface_ProcessEvent__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5, int jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_2")]
   public static extern void Interface_ProcessEvent__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_3")]
   public static extern void Interface_ProcessEvent__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_4")]
   public static extern void Interface_ProcessEvent__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_5")]
   public static extern void Interface_ProcessEvent__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_6")]
   public static extern void Interface_ProcessEvent__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_ProcessEvent__SWIG_7")]
   public static extern void Interface_ProcessEvent__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetTextWidth")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetTextWidth")]
   public static extern int Interface_GetTextWidth(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_TextSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_TextSize")]
   public static extern global::System.IntPtr Interface_TextSize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_UpdateCursorBlink")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_UpdateCursorBlink")]
   public static extern void Interface_UpdateCursorBlink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetHoveredWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetHoveredWidget")]
   public static extern global::System.IntPtr Interface_GetHoveredWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetWindow")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetWindow")]
   public static extern global::System.IntPtr Interface_GetWindow(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetBase")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetBase")]
   public static extern global::System.IntPtr Interface_GetBase(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_GetWidgetAtPoint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_GetWidgetAtPoint")]
   public static extern global::System.IntPtr Interface_GetWidgetAtPoint(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_Reload")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_Reload")]
   public static extern bool Interface_Reload(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateInterface")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateInterface")]
   public static extern global::System.IntPtr CreateInterface(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_iconscale_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_iconscale_set")]
   public static extern void WidgetItem_iconscale_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_iconscale_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_iconscale_get")]
   public static extern float WidgetItem_iconscale_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_text_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_text_set")]
   public static extern void WidgetItem_text_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_text_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_text_get")]
   public static extern global::System.IntPtr WidgetItem_text_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_icon_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_icon_set")]
   public static extern void WidgetItem_icon_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_icon_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_icon_get")]
   public static extern global::System.IntPtr WidgetItem_icon_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_pixmap_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_pixmap_set")]
   public static extern void WidgetItem_pixmap_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_pixmap_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_pixmap_get")]
   public static extern global::System.IntPtr WidgetItem_pixmap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_extra_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_extra_set")]
   public static extern void WidgetItem_extra_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_extra_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_extra_get")]
   public static extern global::System.IntPtr WidgetItem_extra_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_state_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_state_set")]
   public static extern void WidgetItem_state_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_state_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_state_get")]
   public static extern int WidgetItem_state_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_WidgetItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_WidgetItem")]
   public static extern global::System.IntPtr new_WidgetItem();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_WidgetItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_WidgetItem")]
   public static extern void delete_WidgetItem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Reset")]
   public static extern void Widget_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ResetSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ResetSwigExplicitWidget")]
   public static extern void Widget_ResetSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_OK")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_OK")]
   public static extern bool Widget_OK(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_OKSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_OKSwigExplicitWidget")]
   public static extern bool Widget_OKSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Cancel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Cancel")]
   public static extern bool Widget_Cancel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CancelSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CancelSwigExplicitWidget")]
   public static extern bool Widget_CancelSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_UpdateColors")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_UpdateColors")]
   public static extern void Widget_UpdateColors(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_UpdateColorsSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_UpdateColorsSwigExplicitWidget")]
   public static extern void Widget_UpdateColorsSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_icon_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_icon_get")]
   public static extern global::System.IntPtr Widget_icon_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_text_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_text_get")]
   public static extern global::System.IntPtr Widget_text_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Initialize__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Initialize__SWIG_0")]
   public static extern bool Widget_Initialize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_InitializeSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_InitializeSwigExplicitWidget__SWIG_0")]
   public static extern bool Widget_InitializeSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Initialize__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Initialize__SWIG_1")]
   public static extern bool Widget_Initialize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_InitializeSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_InitializeSwigExplicitWidget__SWIG_1")]
   public static extern bool Widget_InitializeSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_extra_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_extra_set")]
   public static extern void Widget_extra_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_extra_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_extra_get")]
   public static extern global::System.IntPtr Widget_extra_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_pixmapfilter_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_pixmapfilter_set")]
   public static extern void Widget_pixmapfilter_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_pixmapfilter_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_pixmapfilter_get")]
   public static extern int Widget_pixmapfilter_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_cornerradius_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_cornerradius_set")]
   public static extern void Widget_cornerradius_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_cornerradius_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_cornerradius_get")]
   public static extern int Widget_cornerradius_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_color_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_color_set")]
   public static extern void Widget_color_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_color_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_color_get")]
   public static extern global::System.IntPtr Widget_color_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_order_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_order_set")]
   public static extern void Widget_order_set(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_order_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_order_get")]
   public static extern long Widget_order_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_range_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_range_set")]
   public static extern void Widget_range_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_range_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_range_get")]
   public static extern global::System.IntPtr Widget_range_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_selection_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_selection_set")]
   public static extern void Widget_selection_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_selection_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_selection_get")]
   public static extern int Widget_selection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_hidestate_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_hidestate_set")]
   public static extern void Widget_hidestate_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_hidestate_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_hidestate_get")]
   public static extern bool Widget_hidestate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_textalignement_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_textalignement_set")]
   public static extern void Widget_textalignement_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_textalignement_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_textalignement_get")]
   public static extern int Widget_textalignement_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_position_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_position_set")]
   public static extern void Widget_position_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_position_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_position_get")]
   public static extern global::System.IntPtr Widget_position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_size_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_size_set")]
   public static extern void Widget_size_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_size_get")]
   public static extern global::System.IntPtr Widget_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_gui_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_gui_set")]
   public static extern void Widget_gui_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_gui_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_gui_get")]
   public static extern global::System.IntPtr Widget_gui_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_window_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_window_set")]
   public static extern void Widget_window_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_window_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_window_get")]
   public static extern global::System.IntPtr Widget_window_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_parent_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_parent_set")]
   public static extern void Widget_parent_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_parent_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_parent_get")]
   public static extern global::System.IntPtr Widget_parent_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_m_kids_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_m_kids_set")]
   public static extern void Widget_m_kids_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_m_kids_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_m_kids_get")]
   public static extern global::System.IntPtr Widget_m_kids_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_items_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_items_set")]
   public static extern void Widget_items_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_items_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_items_get")]
   public static extern global::System.IntPtr Widget_items_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_filtereditems_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_filtereditems_set")]
   public static extern void Widget_filtereditems_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_filtereditems_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_filtereditems_get")]
   public static extern global::System.IntPtr Widget_filtereditems_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_padding_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_padding_set")]
   public static extern void Widget_padding_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_padding_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_padding_get")]
   public static extern global::System.IntPtr Widget_padding_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_redrawfrequency_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_redrawfrequency_set")]
   public static extern void Widget_redrawfrequency_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_redrawfrequency_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_redrawfrequency_get")]
   public static extern int Widget_redrawfrequency_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_progress_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_progress_set")]
   public static extern void Widget_progress_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_progress_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_progress_get")]
   public static extern double Widget_progress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_slidervalue_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_slidervalue_set")]
   public static extern void Widget_slidervalue_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_slidervalue_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_slidervalue_get")]
   public static extern int Widget_slidervalue_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_disabled_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_disabled_set")]
   public static extern void Widget_disabled_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_disabled_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_disabled_get")]
   public static extern bool Widget_disabled_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_font_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_font_set")]
   public static extern void Widget_font_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_font_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_font_get")]
   public static extern global::System.IntPtr Widget_font_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_state_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_state_set")]
   public static extern void Widget_state_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_state_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_state_get")]
   public static extern int Widget_state_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_collapsed_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_collapsed_set")]
   public static extern void Widget_collapsed_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_collapsed_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_collapsed_get")]
   public static extern bool Widget_collapsed_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_blocks_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_blocks_set")]
   public static extern void Widget_blocks_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_blocks_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_blocks_get")]
   public static extern global::System.IntPtr Widget_blocks_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_sensitivity_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_sensitivity_set")]
   public static extern void Widget_sensitivity_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_sensitivity_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_sensitivity_get")]
   public static extern int Widget_sensitivity_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_m_pixmap_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_m_pixmap_set")]
   public static extern void Widget_m_pixmap_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_m_pixmap_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_m_pixmap_get")]
   public static extern global::System.IntPtr Widget_m_pixmap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_pixmap_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_pixmap_get")]
   public static extern global::System.IntPtr Widget_pixmap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_style_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_style_set")]
   public static extern void Widget_style_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_style_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_style_get")]
   public static extern int Widget_style_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_drawupdate_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_drawupdate_set")]
   public static extern void Widget_drawupdate_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_drawupdate_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_drawupdate_get")]
   public static extern int Widget_drawupdate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_lockstate_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_lockstate_set")]
   public static extern void Widget_lockstate_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_lockstate_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_lockstate_get")]
   public static extern int Widget_lockstate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_filtertext_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_filtertext_set")]
   public static extern void Widget_filtertext_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_filtertext_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_filtertext_get")]
   public static extern global::System.IntPtr Widget_filtertext_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_fontweight_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_fontweight_set")]
   public static extern void Widget_fontweight_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_fontweight_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_fontweight_get")]
   public static extern int Widget_fontweight_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_kids_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_kids_set")]
   public static extern void Widget_kids_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_kids_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_kids_get")]
   public static extern global::System.IntPtr Widget_kids_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Widget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Widget")]
   public static extern global::System.IntPtr new_Widget();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Widget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Widget")]
   public static extern void delete_Widget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetParent__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetParent__SWIG_0")]
   public static extern bool Widget_SetParent__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetParentSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetParentSwigExplicitWidget__SWIG_0")]
   public static extern bool Widget_SetParentSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemText")]
   public static extern void Widget_SetItemText(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemTextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemTextSwigExplicitWidget")]
   public static extern void Widget_SetItemTextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetItemText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetItemText")]
   public static extern global::System.IntPtr Widget_GetItemText(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetItemTextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetItemTextSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetItemTextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemIcon__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemIcon__SWIG_0")]
   public static extern void Widget_SetItemIcon__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemIconSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemIconSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetItemIconSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemIcon__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemIcon__SWIG_1")]
   public static extern void Widget_SetItemIcon__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemIconSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemIconSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetItemIconSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemPixmap")]
   public static extern void Widget_SetItemPixmap(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetItemPixmapSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetItemPixmapSwigExplicitWidget")]
   public static extern void Widget_SetItemPixmapSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddNode__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddNode__SWIG_0")]
   public static extern global::System.IntPtr Widget_AddNode__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddNodeSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddNodeSwigExplicitWidget__SWIG_0")]
   public static extern global::System.IntPtr Widget_AddNodeSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddNode__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddNode__SWIG_1")]
   public static extern global::System.IntPtr Widget_AddNode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddNodeSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddNodeSwigExplicitWidget__SWIG_1")]
   public static extern global::System.IntPtr Widget_AddNodeSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetInteractive")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetInteractive")]
   public static extern void Widget_SetInteractive(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetInteractiveSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetInteractiveSwigExplicitWidget")]
   public static extern void Widget_SetInteractiveSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SelectText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SelectText")]
   public static extern void Widget_SelectText(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SelectTextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SelectTextSwigExplicitWidget")]
   public static extern void Widget_SelectTextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetParent__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetParent__SWIG_1")]
   public static extern void Widget_SetParent__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetParentSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetParentSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetParentSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Reload")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Reload")]
   public static extern bool Widget_Reload(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ReloadSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ReloadSwigExplicitWidget")]
   public static extern bool Widget_ReloadSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Save")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Save")]
   public static extern bool Widget_Save(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SaveSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SaveSwigExplicitWidget")]
   public static extern bool Widget_SaveSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRadius")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRadius")]
   public static extern void Widget_SetRadius(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRadiusSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRadiusSwigExplicitWidget")]
   public static extern void Widget_SetRadiusSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetRadius")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetRadius")]
   public static extern int Widget_GetRadius(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetRadiusSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetRadiusSwigExplicitWidget")]
   public static extern int Widget_GetRadiusSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPointer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPointer")]
   public static extern void Widget_SetPointer(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPointerSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPointerSwigExplicitWidget")]
   public static extern void Widget_SetPointerSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FilterItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FilterItems")]
   public static extern void Widget_FilterItems(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FilterItemsSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FilterItemsSwigExplicitWidget")]
   public static extern void Widget_FilterItemsSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetNext")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetNext")]
   public static extern global::System.IntPtr Widget_GetNext(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetNextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetNextSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetNextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPrev")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPrev")]
   public static extern global::System.IntPtr Widget_GetPrev(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPrevSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPrevSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetPrevSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CursorBlink")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CursorBlink")]
   public static extern void Widget_CursorBlink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CursorBlinkSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CursorBlinkSwigExplicitWidget")]
   public static extern void Widget_CursorBlinkSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ModifyItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ModifyItem")]
   public static extern void Widget_ModifyItem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ModifyItemSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ModifyItemSwigExplicitWidget")]
   public static extern void Widget_ModifyItemSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_WindowDragBegin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_WindowDragBegin")]
   public static extern void Widget_WindowDragBegin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_WindowDragBeginSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_WindowDragBeginSwigExplicitWidget")]
   public static extern void Widget_WindowDragBeginSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ProcessEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ProcessEvent")]
   public static extern bool Widget_ProcessEvent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ProcessEventSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ProcessEventSwigExplicitWidget")]
   public static extern bool Widget_ProcessEventSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseMove")]
   public static extern void Widget_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseMoveSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseMoveSwigExplicitWidget")]
   public static extern void Widget_MouseMoveSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseEnter")]
   public static extern void Widget_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseEnterSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseEnterSwigExplicitWidget")]
   public static extern void Widget_MouseEnterSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseLeave")]
   public static extern void Widget_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseLeaveSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseLeaveSwigExplicitWidget")]
   public static extern void Widget_MouseLeaveSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseDown")]
   public static extern void Widget_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseDownSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseDownSwigExplicitWidget")]
   public static extern void Widget_MouseDownSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseRepeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseRepeat")]
   public static extern void Widget_MouseRepeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseRepeatSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseRepeatSwigExplicitWidget")]
   public static extern void Widget_MouseRepeatSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseUp")]
   public static extern void Widget_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseUpSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseUpSwigExplicitWidget")]
   public static extern void Widget_MouseUpSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_LoseFocus")]
   public static extern void Widget_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_LoseFocusSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_LoseFocusSwigExplicitWidget")]
   public static extern void Widget_LoseFocusSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_DoubleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_DoubleClick")]
   public static extern void Widget_DoubleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_DoubleClickSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_DoubleClickSwigExplicitWidget")]
   public static extern void Widget_DoubleClickSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_TripleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_TripleClick")]
   public static extern void Widget_TripleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_TripleClickSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_TripleClickSwigExplicitWidget")]
   public static extern void Widget_TripleClickSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GainFocus")]
   public static extern void Widget_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GainFocusSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GainFocusSwigExplicitWidget")]
   public static extern void Widget_GainFocusSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyDown")]
   public static extern void Widget_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyDownSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyDownSwigExplicitWidget")]
   public static extern void Widget_KeyDownSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyUp")]
   public static extern void Widget_KeyUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyUpSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyUpSwigExplicitWidget")]
   public static extern void Widget_KeyUpSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyChar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyChar")]
   public static extern void Widget_KeyChar(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_KeyCharSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_KeyCharSwigExplicitWidget")]
   public static extern void Widget_KeyCharSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseWheel")]
   public static extern void Widget_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_MouseWheelSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_MouseWheelSwigExplicitWidget")]
   public static extern void Widget_MouseWheelSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Activate")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Activate")]
   public static extern void Widget_Activate(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ActivateSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ActivateSwigExplicitWidget")]
   public static extern void Widget_ActivateSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FindOK")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FindOK")]
   public static extern bool Widget_FindOK(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FindOKSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FindOKSwigExplicitWidget")]
   public static extern bool Widget_FindOKSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Paint__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Paint__SWIG_0")]
   public static extern void Widget_Paint__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_PaintSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_PaintSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_PaintSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Paint__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Paint__SWIG_1")]
   public static extern void Widget_Paint__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_PaintSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_PaintSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_PaintSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FindCancel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FindCancel")]
   public static extern bool Widget_FindCancel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_FindCancelSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_FindCancelSwigExplicitWidget")]
   public static extern bool Widget_FindCancelSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetSensitivity")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetSensitivity")]
   public static extern void Widget_SetSensitivity(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetSensitivitySwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetSensitivitySwigExplicitWidget")]
   public static extern void Widget_SetSensitivitySwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Sort__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Sort__SWIG_0")]
   public static extern void Widget_Sort__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SortSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SortSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SortSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Hide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Hide")]
   public static extern void Widget_Hide(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_HideSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_HideSwigExplicitWidget")]
   public static extern void Widget_HideSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Show")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Show")]
   public static extern void Widget_Show(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ShowSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ShowSwigExplicitWidget")]
   public static extern void Widget_ShowSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Sort__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Sort__SWIG_1")]
   public static extern void Widget_Sort__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SortSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SortSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SortSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_0")]
   public static extern int Widget_AddBlock__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_0")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_1")]
   public static extern int Widget_AddBlock__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_1")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_2")]
   public static extern int Widget_AddBlock__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_2")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_3")]
   public static extern int Widget_AddBlock__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_3")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_4")]
   public static extern int Widget_AddBlock__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_4")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_5")]
   public static extern int Widget_AddBlock__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5, float jarg6, float jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_5")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5, float jarg6, float jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_6")]
   public static extern int Widget_AddBlock__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5, float jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_6")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5, float jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_7")]
   public static extern int Widget_AddBlock__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_7")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, bool jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_8")]
   public static extern int Widget_AddBlock__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_8")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_9")]
   public static extern int Widget_AddBlock__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_9")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_10")]
   public static extern int Widget_AddBlock__SWIG_10(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_10")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_10(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_11")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlock__SWIG_11")]
   public static extern int Widget_AddBlock__SWIG_11(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_11")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddBlockSwigExplicitWidget__SWIG_11")]
   public static extern int Widget_AddBlockSwigExplicitWidget__SWIG_11(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Invalidate__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Invalidate__SWIG_0")]
   public static extern void Widget_Invalidate__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_InvalidateSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_InvalidateSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_InvalidateSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Invalidate__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Invalidate__SWIG_1")]
   public static extern void Widget_Invalidate__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_InvalidateSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_InvalidateSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_InvalidateSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Refresh")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Refresh")]
   public static extern void Widget_Refresh(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_RefreshSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_RefreshSwigExplicitWidget")]
   public static extern void Widget_RefreshSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Debug")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Debug")]
   public static extern string Widget_Debug(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_DebugSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_DebugSwigExplicitWidget")]
   public static extern string Widget_DebugSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetFontScale")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetFontScale")]
   public static extern void Widget_SetFontScale(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetFontScaleSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetFontScaleSwigExplicitWidget")]
   public static extern void Widget_SetFontScaleSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetFontWeight")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetFontWeight")]
   public static extern void Widget_SetFontWeight(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetFontWeightSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetFontWeightSwigExplicitWidget")]
   public static extern void Widget_SetFontWeightSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Lock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Lock")]
   public static extern void Widget_Lock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_LockSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_LockSwigExplicitWidget")]
   public static extern void Widget_LockSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Unlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Unlock")]
   public static extern void Widget_Unlock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_UnlockSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_UnlockSwigExplicitWidget")]
   public static extern void Widget_UnlockSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Expand")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Expand")]
   public static extern void Widget_Expand(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ExpandSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ExpandSwigExplicitWidget")]
   public static extern void Widget_ExpandSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Collapse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Collapse")]
   public static extern void Widget_Collapse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CollapseSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CollapseSwigExplicitWidget")]
   public static extern void Widget_CollapseSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Collapsed")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Collapsed")]
   public static extern bool Widget_Collapsed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CollapsedSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CollapsedSwigExplicitWidget")]
   public static extern bool Widget_CollapsedSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_0")]
   public static extern void Widget_SetColor__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4, float jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetColorSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4, float jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_1")]
   public static extern void Widget_SetColor__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4, float jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetColorSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4, float jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_2")]
   public static extern void Widget_SetColor__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_2")]
   public static extern void Widget_SetColorSwigExplicitWidget__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_3")]
   public static extern void Widget_SetColor__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_3")]
   public static extern void Widget_SetColorSwigExplicitWidget__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColor__SWIG_4")]
   public static extern void Widget_SetColor__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetColorSwigExplicitWidget__SWIG_4")]
   public static extern void Widget_SetColorSwigExplicitWidget__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetState__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetState__SWIG_0")]
   public static extern void Widget_SetState__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetStateSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetStateSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetStateSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetState__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetState__SWIG_1")]
   public static extern void Widget_SetState__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetStateSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetStateSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetStateSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetState")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetState")]
   public static extern int Widget_GetState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetStateSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetStateSwigExplicitWidget")]
   public static extern int Widget_GetStateSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_0")]
   public static extern void Widget_SetIcon__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetIconSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, float jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_1")]
   public static extern void Widget_SetIcon__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetIconSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIcon__SWIG_2")]
   public static extern void Widget_SetIcon__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetIconSwigExplicitWidget__SWIG_2")]
   public static extern void Widget_SetIconSwigExplicitWidget__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_0")]
   public static extern void Widget_SetPixmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetPixmapSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_1")]
   public static extern void Widget_SetPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetPixmapSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmap__SWIG_2")]
   public static extern void Widget_SetPixmap__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPixmapSwigExplicitWidget__SWIG_2")]
   public static extern void Widget_SetPixmapSwigExplicitWidget__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPixmap")]
   public static extern global::System.IntPtr Widget_GetPixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPixmapSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPixmapSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetPixmapSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Enable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Enable")]
   public static extern void Widget_Enable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_EnableSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_EnableSwigExplicitWidget")]
   public static extern void Widget_EnableSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Disable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Disable")]
   public static extern void Widget_Disable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_DisableSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_DisableSwigExplicitWidget")]
   public static extern void Widget_DisableSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetDisabled")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetDisabled")]
   public static extern bool Widget_GetDisabled(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetDisabledSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetDisabledSwigExplicitWidget")]
   public static extern bool Widget_GetDisabledSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRange")]
   public static extern void Widget_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRangeSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRangeSwigExplicitWidget")]
   public static extern void Widget_SetRangeSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetValue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetValue")]
   public static extern void Widget_SetValue(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetValueSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetValueSwigExplicitWidget")]
   public static extern void Widget_SetValueSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetValue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetValue")]
   public static extern int Widget_GetValue(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetValueSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetValueSwigExplicitWidget")]
   public static extern int Widget_GetValueSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetRange")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetRange")]
   public static extern global::System.IntPtr Widget_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetRangeSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetRangeSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetRangeSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetSelectedItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetSelectedItem")]
   public static extern int Widget_GetSelectedItem(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetSelectedItemSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetSelectedItemSwigExplicitWidget")]
   public static extern int Widget_GetSelectedItemSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SelectItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SelectItem")]
   public static extern void Widget_SelectItem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SelectItemSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SelectItemSwigExplicitWidget")]
   public static extern void Widget_SelectItemSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddItem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddItem__SWIG_0")]
   public static extern int Widget_AddItem__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddItemSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddItemSwigExplicitWidget__SWIG_0")]
   public static extern int Widget_AddItemSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddItem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddItem__SWIG_1")]
   public static extern int Widget_AddItem__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddItemSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddItemSwigExplicitWidget__SWIG_1")]
   public static extern int Widget_AddItemSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetParent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetParent")]
   public static extern global::System.IntPtr Widget_GetParent(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetParentSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetParentSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetParentSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetText")]
   public static extern void Widget_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetTextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetTextSwigExplicitWidget")]
   public static extern void Widget_SetTextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CountItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CountItems")]
   public static extern int Widget_CountItems(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CountItemsSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CountItemsSwigExplicitWidget")]
   public static extern int Widget_CountItemsSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ClearItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ClearItems")]
   public static extern void Widget_ClearItems(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ClearItemsSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ClearItemsSwigExplicitWidget")]
   public static extern void Widget_ClearItemsSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_RemoveItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_RemoveItem")]
   public static extern void Widget_RemoveItem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_RemoveItemSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_RemoveItemSwigExplicitWidget")]
   public static extern void Widget_RemoveItemSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetProgress")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetProgress")]
   public static extern void Widget_SetProgress(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetProgressSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetProgressSwigExplicitWidget")]
   public static extern void Widget_SetProgressSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetProgress")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetProgress")]
   public static extern double Widget_GetProgress(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetProgressSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetProgressSwigExplicitWidget")]
   public static extern double Widget_GetProgressSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRedrawFrequency")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRedrawFrequency")]
   public static extern void Widget_SetRedrawFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetRedrawFrequencySwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetRedrawFrequencySwigExplicitWidget")]
   public static extern void Widget_SetRedrawFrequencySwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddText")]
   public static extern void Widget_AddText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_AddTextSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_AddTextSwigExplicitWidget")]
   public static extern void Widget_AddTextSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Redraw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Redraw")]
   public static extern void Widget_Redraw(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_RedrawSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_RedrawSwigExplicitWidget")]
   public static extern void Widget_RedrawSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPadding")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPadding")]
   public static extern void Widget_SetPadding(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetPaddingSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetPaddingSwigExplicitWidget")]
   public static extern void Widget_SetPaddingSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPadding")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPadding")]
   public static extern global::System.IntPtr Widget_GetPadding(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPaddingSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPaddingSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetPaddingSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPosition__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPosition__SWIG_0")]
   public static extern global::System.IntPtr Widget_GetPosition__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPositionSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPositionSwigExplicitWidget__SWIG_0")]
   public static extern global::System.IntPtr Widget_GetPositionSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPosition__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPosition__SWIG_1")]
   public static extern global::System.IntPtr Widget_GetPosition__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetPositionSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetPositionSwigExplicitWidget__SWIG_1")]
   public static extern global::System.IntPtr Widget_GetPositionSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetSize")]
   public static extern global::System.IntPtr Widget_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetSizeSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetSizeSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetSizeSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Cut")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Cut")]
   public static extern void Widget_Cut(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CutSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CutSwigExplicitWidget")]
   public static extern void Widget_CutSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Copy")]
   public static extern void Widget_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_CopySwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_CopySwigExplicitWidget")]
   public static extern void Widget_CopySwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Paste")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Paste")]
   public static extern void Widget_Paste(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_PasteSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_PasteSwigExplicitWidget")]
   public static extern void Widget_PasteSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ClientSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ClientSize")]
   public static extern global::System.IntPtr Widget_ClientSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_ClientSizeSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_ClientSizeSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_ClientSizeSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetInterface")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetInterface")]
   public static extern global::System.IntPtr Widget_GetInterface(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetInterfaceSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetInterfaceSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetInterfaceSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetText__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetText__SWIG_0")]
   public static extern global::System.IntPtr Widget_GetText__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetTextSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetTextSwigExplicitWidget__SWIG_0")]
   public static extern global::System.IntPtr Widget_GetTextSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetText__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetText__SWIG_1")]
   public static extern global::System.IntPtr Widget_GetText__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetTextSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetTextSwigExplicitWidget__SWIG_1")]
   public static extern global::System.IntPtr Widget_GetTextSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetLayout")]
   public static extern void Widget_SetLayout(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetLayoutSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetLayoutSwigExplicitWidget")]
   public static extern void Widget_SetLayoutSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetShape__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetShape__SWIG_0")]
   public static extern void Widget_SetShape__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetShapeSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetShapeSwigExplicitWidget__SWIG_0")]
   public static extern void Widget_SetShapeSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetShape__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetShape__SWIG_1")]
   public static extern void Widget_SetShape__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SetShapeSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SetShapeSwigExplicitWidget__SWIG_1")]
   public static extern void Widget_SetShapeSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Hidden__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Hidden__SWIG_0")]
   public static extern bool Widget_Hidden__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_HiddenSwigExplicitWidget__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_HiddenSwigExplicitWidget__SWIG_0")]
   public static extern bool Widget_HiddenSwigExplicitWidget__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Hidden__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Hidden__SWIG_1")]
   public static extern bool Widget_Hidden__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_HiddenSwigExplicitWidget__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_HiddenSwigExplicitWidget__SWIG_1")]
   public static extern bool Widget_HiddenSwigExplicitWidget__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetWidgetAtPoint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetWidgetAtPoint")]
   public static extern global::System.IntPtr Widget_GetWidgetAtPoint(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_GetWidgetAtPointSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_GetWidgetAtPointSwigExplicitWidget")]
   public static extern global::System.IntPtr Widget_GetWidgetAtPointSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_UpdateLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_UpdateLayout")]
   public static extern void Widget_UpdateLayout(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_UpdateLayoutSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_UpdateLayoutSwigExplicitWidget")]
   public static extern void Widget_UpdateLayoutSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Draw")]
   public static extern void Widget_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_DrawSwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_DrawSwigExplicitWidget")]
   public static extern void Widget_DrawSwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Draw__")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Draw__")]
   public static extern void Widget_Draw__(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_Draw__SwigExplicitWidget")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_Draw__SwigExplicitWidget")]
   public static extern void Widget_Draw__SwigExplicitWidget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_director_connect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_director_connect")]
   public static extern void Widget_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, Widget.SwigDelegateWidget_0 delegate0, Widget.SwigDelegateWidget_1 delegate1, Widget.SwigDelegateWidget_2 delegate2, Widget.SwigDelegateWidget_3 delegate3, Widget.SwigDelegateWidget_4 delegate4, Widget.SwigDelegateWidget_5 delegate5, Widget.SwigDelegateWidget_6 delegate6, Widget.SwigDelegateWidget_7 delegate7, Widget.SwigDelegateWidget_8 delegate8, Widget.SwigDelegateWidget_9 delegate9, Widget.SwigDelegateWidget_10 delegate10, Widget.SwigDelegateWidget_11 delegate11, Widget.SwigDelegateWidget_12 delegate12, Widget.SwigDelegateWidget_13 delegate13, Widget.SwigDelegateWidget_14 delegate14, Widget.SwigDelegateWidget_15 delegate15, Widget.SwigDelegateWidget_16 delegate16, Widget.SwigDelegateWidget_17 delegate17, Widget.SwigDelegateWidget_18 delegate18, Widget.SwigDelegateWidget_19 delegate19, Widget.SwigDelegateWidget_20 delegate20, Widget.SwigDelegateWidget_21 delegate21, Widget.SwigDelegateWidget_22 delegate22, Widget.SwigDelegateWidget_23 delegate23, Widget.SwigDelegateWidget_24 delegate24, Widget.SwigDelegateWidget_25 delegate25, Widget.SwigDelegateWidget_26 delegate26, Widget.SwigDelegateWidget_27 delegate27, Widget.SwigDelegateWidget_28 delegate28, Widget.SwigDelegateWidget_29 delegate29, Widget.SwigDelegateWidget_30 delegate30, Widget.SwigDelegateWidget_31 delegate31, Widget.SwigDelegateWidget_32 delegate32, Widget.SwigDelegateWidget_33 delegate33, Widget.SwigDelegateWidget_34 delegate34, Widget.SwigDelegateWidget_35 delegate35, Widget.SwigDelegateWidget_36 delegate36, Widget.SwigDelegateWidget_37 delegate37, Widget.SwigDelegateWidget_38 delegate38, Widget.SwigDelegateWidget_39 delegate39, Widget.SwigDelegateWidget_40 delegate40, Widget.SwigDelegateWidget_41 delegate41, Widget.SwigDelegateWidget_42 delegate42, Widget.SwigDelegateWidget_43 delegate43, Widget.SwigDelegateWidget_44 delegate44, Widget.SwigDelegateWidget_45 delegate45, Widget.SwigDelegateWidget_46 delegate46, Widget.SwigDelegateWidget_47 delegate47, Widget.SwigDelegateWidget_48 delegate48, Widget.SwigDelegateWidget_49 delegate49, Widget.SwigDelegateWidget_50 delegate50, Widget.SwigDelegateWidget_51 delegate51, Widget.SwigDelegateWidget_52 delegate52, Widget.SwigDelegateWidget_53 delegate53, Widget.SwigDelegateWidget_54 delegate54, Widget.SwigDelegateWidget_55 delegate55, Widget.SwigDelegateWidget_56 delegate56, Widget.SwigDelegateWidget_57 delegate57, Widget.SwigDelegateWidget_58 delegate58, Widget.SwigDelegateWidget_59 delegate59, Widget.SwigDelegateWidget_60 delegate60, Widget.SwigDelegateWidget_61 delegate61, Widget.SwigDelegateWidget_62 delegate62, Widget.SwigDelegateWidget_63 delegate63, Widget.SwigDelegateWidget_64 delegate64, Widget.SwigDelegateWidget_65 delegate65, Widget.SwigDelegateWidget_66 delegate66, Widget.SwigDelegateWidget_67 delegate67, Widget.SwigDelegateWidget_68 delegate68, Widget.SwigDelegateWidget_69 delegate69, Widget.SwigDelegateWidget_70 delegate70, Widget.SwigDelegateWidget_71 delegate71, Widget.SwigDelegateWidget_72 delegate72, Widget.SwigDelegateWidget_73 delegate73, Widget.SwigDelegateWidget_74 delegate74, Widget.SwigDelegateWidget_75 delegate75, Widget.SwigDelegateWidget_76 delegate76, Widget.SwigDelegateWidget_77 delegate77, Widget.SwigDelegateWidget_78 delegate78, Widget.SwigDelegateWidget_79 delegate79, Widget.SwigDelegateWidget_80 delegate80, Widget.SwigDelegateWidget_81 delegate81, Widget.SwigDelegateWidget_82 delegate82, Widget.SwigDelegateWidget_83 delegate83, Widget.SwigDelegateWidget_84 delegate84, Widget.SwigDelegateWidget_85 delegate85, Widget.SwigDelegateWidget_86 delegate86, Widget.SwigDelegateWidget_87 delegate87, Widget.SwigDelegateWidget_88 delegate88, Widget.SwigDelegateWidget_89 delegate89, Widget.SwigDelegateWidget_90 delegate90, Widget.SwigDelegateWidget_91 delegate91, Widget.SwigDelegateWidget_92 delegate92, Widget.SwigDelegateWidget_93 delegate93, Widget.SwigDelegateWidget_94 delegate94, Widget.SwigDelegateWidget_95 delegate95, Widget.SwigDelegateWidget_96 delegate96, Widget.SwigDelegateWidget_97 delegate97, Widget.SwigDelegateWidget_98 delegate98, Widget.SwigDelegateWidget_99 delegate99, Widget.SwigDelegateWidget_100 delegate100, Widget.SwigDelegateWidget_101 delegate101, Widget.SwigDelegateWidget_102 delegate102, Widget.SwigDelegateWidget_103 delegate103, Widget.SwigDelegateWidget_104 delegate104, Widget.SwigDelegateWidget_105 delegate105, Widget.SwigDelegateWidget_106 delegate106, Widget.SwigDelegateWidget_107 delegate107, Widget.SwigDelegateWidget_108 delegate108, Widget.SwigDelegateWidget_109 delegate109, Widget.SwigDelegateWidget_110 delegate110, Widget.SwigDelegateWidget_111 delegate111, Widget.SwigDelegateWidget_112 delegate112, Widget.SwigDelegateWidget_113 delegate113, Widget.SwigDelegateWidget_114 delegate114, Widget.SwigDelegateWidget_115 delegate115, Widget.SwigDelegateWidget_116 delegate116, Widget.SwigDelegateWidget_117 delegate117, Widget.SwigDelegateWidget_118 delegate118, Widget.SwigDelegateWidget_119 delegate119, Widget.SwigDelegateWidget_120 delegate120, Widget.SwigDelegateWidget_121 delegate121, Widget.SwigDelegateWidget_122 delegate122, Widget.SwigDelegateWidget_123 delegate123, Widget.SwigDelegateWidget_124 delegate124, Widget.SwigDelegateWidget_125 delegate125, Widget.SwigDelegateWidget_126 delegate126, Widget.SwigDelegateWidget_127 delegate127, Widget.SwigDelegateWidget_128 delegate128, Widget.SwigDelegateWidget_129 delegate129, Widget.SwigDelegateWidget_130 delegate130, Widget.SwigDelegateWidget_131 delegate131, Widget.SwigDelegateWidget_132 delegate132);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_7")]
   public static extern int BinaryOR__SWIG_7(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Panel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Panel")]
   public static extern global::System.IntPtr new_Panel();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Panel_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Panel_Draw")]
   public static extern void Panel_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Panel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Panel")]
   public static extern void delete_Panel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreatePanel__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreatePanel__SWIG_0")]
   public static extern global::System.IntPtr CreatePanel__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreatePanel__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreatePanel__SWIG_1")]
   public static extern global::System.IntPtr CreatePanel__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_8")]
   public static extern int BinaryOR__SWIG_8(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Slider")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Slider")]
   public static extern global::System.IntPtr new_Slider();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_SetValue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_SetValue")]
   public static extern void Slider_SetValue(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseMove")]
   public static extern void Slider_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseDown")]
   public static extern void Slider_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseRepeat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseRepeat")]
   public static extern void Slider_MouseRepeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseUp")]
   public static extern void Slider_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_KeyDown")]
   public static extern void Slider_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseWheel")]
   public static extern void Slider_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_MouseLeave")]
   public static extern void Slider_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_GetValueAtPosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_GetValueAtPosition")]
   public static extern int Slider_GetValueAtPosition(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_Draw")]
   public static extern void Slider_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Slider")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Slider")]
   public static extern void delete_Slider(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateSlider__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateSlider__SWIG_0")]
   public static extern global::System.IntPtr CreateSlider__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateSlider__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateSlider__SWIG_1")]
   public static extern global::System.IntPtr CreateSlider__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_9")]
   public static extern int BinaryOR__SWIG_9(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Label")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Label")]
   public static extern global::System.IntPtr new_Label();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Label_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Label_Draw")]
   public static extern void Label_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Label")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Label")]
   public static extern void delete_Label(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateLabel__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateLabel__SWIG_0")]
   public static extern global::System.IntPtr CreateLabel__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateLabel__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateLabel__SWIG_1")]
   public static extern global::System.IntPtr CreateLabel__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_10")]
   public static extern int BinaryOR__SWIG_10(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Button")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Button")]
   public static extern global::System.IntPtr new_Button();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_MouseMove")]
   public static extern void Button_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_MouseEnter")]
   public static extern void Button_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_MouseLeave")]
   public static extern void Button_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_MouseDown")]
   public static extern void Button_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_MouseUp")]
   public static extern void Button_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_LoseFocus")]
   public static extern void Button_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_Draw")]
   public static extern void Button_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_KeyDown")]
   public static extern void Button_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_SetState")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_SetState")]
   public static extern void Button_SetState(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Button")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Button")]
   public static extern void delete_Button(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateButton__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateButton__SWIG_0")]
   public static extern global::System.IntPtr CreateButton__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateButton__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateButton__SWIG_1")]
   public static extern global::System.IntPtr CreateButton__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_11")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_11")]
   public static extern int BinaryOR__SWIG_11(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TextField")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TextField")]
   public static extern global::System.IntPtr new_TextField();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_GetText__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_GetText__SWIG_0")]
   public static extern global::System.IntPtr TextField_GetText__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_GetText__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_GetText__SWIG_1")]
   public static extern global::System.IntPtr TextField_GetText__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_SelectText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_SelectText")]
   public static extern void TextField_SelectText(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_KeyUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_KeyUp")]
   public static extern void TextField_KeyUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_MouseDown")]
   public static extern void TextField_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_DoubleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_DoubleClick")]
   public static extern void TextField_DoubleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_TripleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_TripleClick")]
   public static extern void TextField_TripleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_MouseUp")]
   public static extern void TextField_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_MouseMove")]
   public static extern void TextField_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_GainFocus")]
   public static extern void TextField_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_LoseFocus")]
   public static extern void TextField_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_MouseEnter")]
   public static extern void TextField_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_MouseLeave")]
   public static extern void TextField_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_KeyDown")]
   public static extern void TextField_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_KeyChar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_KeyChar")]
   public static extern void TextField_KeyChar(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_CursorBlink")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_CursorBlink")]
   public static extern void TextField_CursorBlink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_Cut")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_Cut")]
   public static extern void TextField_Cut(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_Copy")]
   public static extern void TextField_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_Paste")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_Paste")]
   public static extern void TextField_Paste(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_SetText")]
   public static extern void TextField_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_Draw")]
   public static extern void TextField_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_TextField")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_TextField")]
   public static extern void delete_TextField(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTextField__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTextField__SWIG_0")]
   public static extern global::System.IntPtr CreateTextField__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTextField__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTextField__SWIG_1")]
   public static extern global::System.IntPtr CreateTextField__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_12")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BinaryOR__SWIG_12")]
   public static extern int BinaryOR__SWIG_12(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_root_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_root_get")]
   public static extern global::System.IntPtr TreeView_root_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TreeView")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TreeView")]
   public static extern global::System.IntPtr new_TreeView();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_UpdateColors")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_UpdateColors")]
   public static extern void TreeView_UpdateColors(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseWheel")]
   public static extern void TreeView_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_SelectNode__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_SelectNode__SWIG_0")]
   public static extern void TreeView_SelectNode__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_SelectNode__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_SelectNode__SWIG_1")]
   public static extern void TreeView_SelectNode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_FilterItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_FilterItems")]
   public static extern void TreeView_FilterItems(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_GetSelectedNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_GetSelectedNode")]
   public static extern global::System.IntPtr TreeView_GetSelectedNode(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_GetSelectedNodes")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_GetSelectedNodes")]
   public static extern global::System.IntPtr TreeView_GetSelectedNodes(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseDown")]
   public static extern void TreeView_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_DoubleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_DoubleClick")]
   public static extern void TreeView_DoubleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseUp")]
   public static extern void TreeView_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseMove")]
   public static extern void TreeView_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_GainFocus")]
   public static extern void TreeView_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_LoseFocus")]
   public static extern void TreeView_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseEnter")]
   public static extern void TreeView_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_MouseLeave")]
   public static extern void TreeView_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_KeyDown")]
   public static extern void TreeView_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_KeyUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_KeyUp")]
   public static extern void TreeView_KeyUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_KeyChar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_KeyChar")]
   public static extern void TreeView_KeyChar(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_UpdateLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_UpdateLayout")]
   public static extern void TreeView_UpdateLayout(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_Draw")]
   public static extern void TreeView_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_0")]
   public static extern int TreeView_DrawNode__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_1")]
   public static extern int TreeView_DrawNode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_DrawNode__SWIG_2")]
   public static extern int TreeView_DrawNode__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_TreeView")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_TreeView")]
   public static extern void delete_TreeView(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TreeViewNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TreeViewNode")]
   public static extern global::System.IntPtr new_TreeViewNode();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_userdata_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_userdata_set")]
   public static extern void TreeViewNode_userdata_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_userdata_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_userdata_get")]
   public static extern global::System.IntPtr TreeViewNode_userdata_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_SetParent__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_SetParent__SWIG_0")]
   public static extern void TreeViewNode_SetParent__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_Reset")]
   public static extern void TreeViewNode_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_SetText")]
   public static extern void TreeViewNode_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_Expand")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_Expand")]
   public static extern void TreeViewNode_Expand(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_Collapse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_Collapse")]
   public static extern void TreeViewNode_Collapse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_Toggle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_Toggle")]
   public static extern void TreeViewNode_Toggle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_ClearNodes")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_ClearNodes")]
   public static extern void TreeViewNode_ClearNodes(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_AddNode__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_AddNode__SWIG_0")]
   public static extern global::System.IntPtr TreeViewNode_AddNode__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_AddNode__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_AddNode__SWIG_1")]
   public static extern global::System.IntPtr TreeViewNode_AddNode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_SetParent__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_SetParent__SWIG_1")]
   public static extern bool TreeViewNode_SetParent__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_TestSetParent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_TestSetParent")]
   public static extern bool TreeViewNode_TestSetParent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_TreeViewNode")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_TreeViewNode")]
   public static extern void delete_TreeViewNode(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTreeView__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTreeView__SWIG_0")]
   public static extern global::System.IntPtr CreateTreeView__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTreeView__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTreeView__SWIG_1")]
   public static extern global::System.IntPtr CreateTreeView__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_TextArea")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_TextArea")]
   public static extern global::System.IntPtr new_TextArea();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_AddText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_AddText")]
   public static extern void TextArea_AddText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_UpdateLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_UpdateLayout")]
   public static extern void TextArea_UpdateLayout(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_SetShape")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_SetShape")]
   public static extern void TextArea_SetShape(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_SetText")]
   public static extern void TextArea_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_KeyDown")]
   public static extern void TextArea_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_Draw")]
   public static extern void TextArea_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_MouseWheel")]
   public static extern void TextArea_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_TextArea")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_TextArea")]
   public static extern void delete_TextArea(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTextArea__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTextArea__SWIG_0")]
   public static extern global::System.IntPtr CreateTextArea__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTextArea__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTextArea__SWIG_1")]
   public static extern global::System.IntPtr CreateTextArea__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Tabber")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Tabber")]
   public static extern global::System.IntPtr new_Tabber();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_AddItem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_AddItem__SWIG_0")]
   public static extern int Tabber_AddItem__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_AddItem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_AddItem__SWIG_1")]
   public static extern int Tabber_AddItem__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_MouseDown")]
   public static extern void Tabber_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_MouseMove")]
   public static extern void Tabber_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_KeyDown")]
   public static extern void Tabber_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_Draw")]
   public static extern void Tabber_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Tabber")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Tabber")]
   public static extern void delete_Tabber(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTabber__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTabber__SWIG_0")]
   public static extern global::System.IntPtr CreateTabber__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTabber__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTabber__SWIG_1")]
   public static extern global::System.IntPtr CreateTabber__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ListBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ListBox")]
   public static extern global::System.IntPtr new_ListBox();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_FilterItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_FilterItems")]
   public static extern void ListBox_FilterItems(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_ModifyItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_ModifyItem")]
   public static extern void ListBox_ModifyItem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_ClearItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_ClearItems")]
   public static extern void ListBox_ClearItems(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_ProcessEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_ProcessEvent")]
   public static extern bool ListBox_ProcessEvent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseWheel")]
   public static extern void ListBox_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_UpdateLayout")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_UpdateLayout")]
   public static extern void ListBox_UpdateLayout(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_SelectItem")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_SelectItem")]
   public static extern void ListBox_SelectItem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_AddItem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_AddItem__SWIG_0")]
   public static extern int ListBox_AddItem__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_AddItem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_AddItem__SWIG_1")]
   public static extern int ListBox_AddItem__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_GainFocus")]
   public static extern void ListBox_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_KeyDown")]
   public static extern void ListBox_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseEnter")]
   public static extern void ListBox_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseLeave")]
   public static extern void ListBox_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseMove")]
   public static extern void ListBox_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseDown")]
   public static extern void ListBox_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_MouseUp")]
   public static extern void ListBox_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_LoseFocus")]
   public static extern void ListBox_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_Draw")]
   public static extern void ListBox_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_SetShape")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_SetShape")]
   public static extern void ListBox_SetShape(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_OK")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_OK")]
   public static extern bool ListBox_OK(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ListBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ListBox")]
   public static extern void delete_ListBox(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateListBox__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateListBox__SWIG_0")]
   public static extern global::System.IntPtr CreateListBox__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateListBox__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateListBox__SWIG_1")]
   public static extern global::System.IntPtr CreateListBox__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ProgressBar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ProgressBar")]
   public static extern global::System.IntPtr new_ProgressBar();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ProgressBar_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ProgressBar_Draw")]
   public static extern void ProgressBar_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ProgressBar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ProgressBar")]
   public static extern void delete_ProgressBar(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateProgressBar__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateProgressBar__SWIG_0")]
   public static extern global::System.IntPtr CreateProgressBar__SWIG_0(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateProgressBar__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateProgressBar__SWIG_1")]
   public static extern global::System.IntPtr CreateProgressBar__SWIG_1(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_ComboBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_ComboBox")]
   public static extern global::System.IntPtr new_ComboBox();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_FilterItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_FilterItems")]
   public static extern void ComboBox_FilterItems(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_ClearItems")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_ClearItems")]
   public static extern void ComboBox_ClearItems(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_AddItem__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_AddItem__SWIG_0")]
   public static extern int ComboBox_AddItem__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_AddItem__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_AddItem__SWIG_1")]
   public static extern int ComboBox_AddItem__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_MouseWheel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_MouseWheel")]
   public static extern void ComboBox_MouseWheel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_GainFocus")]
   public static extern void ComboBox_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_KeyDown")]
   public static extern void ComboBox_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_MouseEnter")]
   public static extern void ComboBox_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_MouseLeave")]
   public static extern void ComboBox_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_MouseDown")]
   public static extern void ComboBox_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_MouseUp")]
   public static extern void ComboBox_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_LoseFocus")]
   public static extern void ComboBox_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_Draw")]
   public static extern void ComboBox_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_WindowDragBegin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_WindowDragBegin")]
   public static extern void ComboBox_WindowDragBegin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_ComboBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_ComboBox")]
   public static extern void delete_ComboBox(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateComboBox")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateComboBox")]
   public static extern global::System.IntPtr CreateComboBox(int jarg1, int jarg2, int jarg3, int jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_MenuPanel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_MenuPanel")]
   public static extern global::System.IntPtr new_MenuPanel();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_MouseLeave")]
   public static extern void MenuPanel_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_MouseMove")]
   public static extern void MenuPanel_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_MouseUp")]
   public static extern void MenuPanel_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_MouseDown")]
   public static extern void MenuPanel_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_Draw")]
   public static extern void MenuPanel_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_MenuPanel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_MenuPanel")]
   public static extern void delete_MenuPanel(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Menu")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Menu")]
   public static extern global::System.IntPtr new_Menu();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_MouseDown")]
   public static extern void Menu_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_DoubleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_DoubleClick")]
   public static extern void Menu_DoubleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_TripleClick")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_TripleClick")]
   public static extern void Menu_TripleClick(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_MouseUp")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_MouseUp")]
   public static extern void Menu_MouseUp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_MouseMove")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_MouseMove")]
   public static extern void Menu_MouseMove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_GainFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_GainFocus")]
   public static extern void Menu_GainFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_LoseFocus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_LoseFocus")]
   public static extern void Menu_LoseFocus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_MouseEnter")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_MouseEnter")]
   public static extern void Menu_MouseEnter(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_MouseLeave")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_MouseLeave")]
   public static extern void Menu_MouseLeave(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_KeyDown")]
   public static extern void Menu_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_KeyChar")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_KeyChar")]
   public static extern void Menu_KeyChar(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_WindowDragBegin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_WindowDragBegin")]
   public static extern void Menu_WindowDragBegin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_Draw")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_Draw")]
   public static extern void Menu_Draw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Menu")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Menu")]
   public static extern void delete_Menu(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateMenu__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateMenu__SWIG_0")]
   public static extern global::System.IntPtr CreateMenu__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateMenu__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateMenu__SWIG_1")]
   public static extern global::System.IntPtr CreateMenu__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WINVER_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WINVER_get")]
   public static extern int WINVER_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CORE_FONT_DEFAULT_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CORE_FONT_DEFAULT_get")]
   public static extern int CORE_FONT_DEFAULT_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CORE_FONT_MENU_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CORE_FONT_MENU_get")]
   public static extern int CORE_FONT_MENU_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CORE_FONT_STATUS_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CORE_FONT_STATUS_get")]
   public static extern int CORE_FONT_STATUS_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CORE_FONT_MESSAGE_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CORE_FONT_MESSAGE_get")]
   public static extern int CORE_FONT_MESSAGE_get();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_text_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_text_get")]
   public static extern global::System.IntPtr Window_text_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_display_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_display_get")]
   public static extern global::System.IntPtr Window_display_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_kids_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_kids_get")]
   public static extern global::System.IntPtr Window_kids_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Window")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Window")]
   public static extern global::System.IntPtr new_Window();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Window")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Window")]
   public static extern void delete_Window(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Enable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Enable")]
   public static extern void Window_Enable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Disable")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Disable")]
   public static extern void Window_Disable(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetText")]
   public static extern void Window_SetText(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetText")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetText")]
   public static extern global::System.IntPtr Window_GetText(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetParent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetParent")]
   public static extern global::System.IntPtr Window_GetParent(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetParent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetParent")]
   public static extern void Window_SetParent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetMouseAxis__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetMouseAxis__SWIG_0")]
   public static extern global::System.IntPtr Window_GetMouseAxis__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetMouseAxis__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetMouseAxis__SWIG_1")]
   public static extern global::System.IntPtr Window_GetMouseAxis__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetPointer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetPointer")]
   public static extern void Window_SetPointer(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Paint")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Paint")]
   public static extern void Window_Paint(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetBorder")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetBorder")]
   public static extern global::System.IntPtr Window_GetBorder(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetSize")]
   public static extern global::System.IntPtr Window_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_ClientSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_ClientSize")]
   public static extern global::System.IntPtr Window_ClientSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetPosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetPosition")]
   public static extern global::System.IntPtr Window_GetPosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetMinSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetMinSize")]
   public static extern void Window_SetMinSize(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetMinSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetMinSize")]
   public static extern global::System.IntPtr Window_GetMinSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_HideMouse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_HideMouse")]
   public static extern void Window_HideMouse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_ShowMouse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_ShowMouse")]
   public static extern void Window_ShowMouse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_FlushKeys")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_FlushKeys")]
   public static extern void Window_FlushKeys(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_FlushMouse")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_FlushMouse")]
   public static extern void Window_FlushMouse(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_KeyHit")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_KeyHit")]
   public static extern bool Window_KeyHit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_KeyDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_KeyDown")]
   public static extern bool Window_KeyDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_MouseHit")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_MouseHit")]
   public static extern bool Window_MouseHit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_MouseDown")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_MouseDown")]
   public static extern bool Window_MouseDown(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Activate")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Activate")]
   public static extern void Window_Activate(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetSize")]
   public static extern void Window_SetSize(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetShape__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetShape__SWIG_0")]
   public static extern void Window_SetShape__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetShape__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetShape__SWIG_1")]
   public static extern void Window_SetShape__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetHandle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetHandle")]
   public static extern  System.IntPtr  Window_GetHandle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Maximize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Maximize")]
   public static extern void Window_Maximize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Minimize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Minimize")]
   public static extern void Window_Minimize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Restore")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Restore")]
   public static extern void Window_Restore(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Minimized")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Minimized")]
   public static extern bool Window_Minimized(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Maximized")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Maximized")]
   public static extern bool Window_Maximized(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Close")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Close")]
   public static extern void Window_Close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Closed")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Closed")]
   public static extern bool Window_Closed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Hidden")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Hidden")]
   public static extern bool Window_Hidden(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Show")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Show")]
   public static extern void Window_Show(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_Hide")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_Hide")]
   public static extern void Window_Hide(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_GetMousePosition")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_GetMousePosition")]
   public static extern global::System.IntPtr Window_GetMousePosition(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetMousePosition__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetMousePosition__SWIG_0")]
   public static extern void Window_SetMousePosition__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SetMousePosition__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SetMousePosition__SWIG_1")]
   public static extern void Window_SetMousePosition__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_WndProc")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_WndProc")]
   public static extern  System.IntPtr  Window_WndProc( System.IntPtr  jarg1, uint jarg2,  int  jarg3,  int  jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_TimerCallback")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_TimerCallback")]
   public static extern bool Window_TimerCallback(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TransformCoord__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TransformCoord__SWIG_0")]
   public static extern global::System.IntPtr TransformCoord__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TransformCoord__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TransformCoord__SWIG_1")]
   public static extern global::System.IntPtr TransformCoord__SWIG_1(int jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ActiveWindow")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ActiveWindow")]
   public static extern global::System.IntPtr ActiveWindow();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_0")]
   public static extern global::System.IntPtr CreateWindow__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_1")]
   public static extern global::System.IntPtr CreateWindow__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_2")]
   public static extern global::System.IntPtr CreateWindow__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_3")]
   public static extern global::System.IntPtr CreateWindow__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateWindow__SWIG_4")]
   public static extern global::System.IntPtr CreateWindow__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Timer_frequency_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Timer_frequency_get")]
   public static extern int Timer_frequency_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Timer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Timer")]
   public static extern global::System.IntPtr new_Timer();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Timer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Timer")]
   public static extern void delete_Timer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateTimer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateTimer")]
   public static extern global::System.IntPtr CreateTimer(int jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PipeStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PipeStream")]
   public static extern global::System.IntPtr new_PipeStream();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_PipeStream")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_PipeStream")]
   public static extern void delete_PipeStream(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PipeStream_GetSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PipeStream_GetSize")]
   public static extern ulong PipeStream_GetSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PipeStream_Close")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PipeStream_Close")]
   public static extern void PipeStream_Close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PipeStream_Write")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PipeStream_Write")]
   public static extern ulong PipeStream_Write(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_path_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_path_get")]
   public static extern global::System.IntPtr Process_path_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_readstream_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_readstream_get")]
   public static extern global::System.IntPtr Process_readstream_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_writestream_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_writestream_get")]
   public static extern global::System.IntPtr Process_writestream_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_errorstream_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_errorstream_get")]
   public static extern global::System.IntPtr Process_errorstream_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Process")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Process")]
   public static extern global::System.IntPtr new_Process();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Process")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Process")]
   public static extern void delete_Process(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_GetHandle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_GetHandle")]
   public static extern System.IntPtr Process_GetHandle(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_GetStatus")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_GetStatus")]
   public static extern int Process_GetStatus(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_Wait")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_Wait")]
   public static extern int Process_Wait(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_Close")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_Close")]
   public static extern int Process_Close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateProcess__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateProcess__SWIG_0")]
   public static extern global::System.IntPtr CreateProcess__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateProcess__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateProcess__SWIG_1")]
   public static extern global::System.IntPtr CreateProcess__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Save")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Save")]
   public static extern bool StreamBuffer_Save(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Resize__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Resize__SWIG_0")]
   public static extern bool StreamBuffer_Resize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Resize__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Resize__SWIG_1")]
   public static extern bool StreamBuffer_Resize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Poke")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Poke")]
   public static extern void StreamBuffer_Poke(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, string jarg3, ulong jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Peek")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Peek")]
   public static extern void StreamBuffer_Peek(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, string jarg3, ulong jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Copy")]
   public static extern void StreamBuffer_Copy(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, ulong jarg4, ulong jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_Clear")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_Clear")]
   public static extern void StreamBuffer_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_data")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_data")]
   public static extern string StreamBuffer_data(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_StreamBuffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_StreamBuffer")]
   public static extern global::System.IntPtr new_StreamBuffer();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_StreamBuffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_StreamBuffer")]
   public static extern void delete_StreamBuffer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateStreamBuffer")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateStreamBuffer")]
   public static extern global::System.IntPtr CreateStreamBuffer(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2, ulong jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MaxThreads")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MaxThreads")]
   public static extern int MaxThreads();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Thread")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Thread")]
   public static extern global::System.IntPtr new_Thread();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Thread")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Thread")]
   public static extern void delete_Thread(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_GetResult")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_GetResult")]
   public static extern global::System.IntPtr Thread_GetResult(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_Wait")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_Wait")]
   public static extern void Thread_Wait(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_Resume")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_Resume")]
   public static extern void Thread_Resume(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_Pause")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_Pause")]
   public static extern void Thread_Pause(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_GetState")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_GetState")]
   public static extern int Thread_GetState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Mutex")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Mutex")]
   public static extern global::System.IntPtr new_Mutex();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Mutex")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Mutex")]
   public static extern void delete_Mutex(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mutex_Wait")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mutex_Wait")]
   public static extern void Mutex_Wait(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mutex_Lock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mutex_Lock")]
   public static extern void Mutex_Lock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mutex_Unlock")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mutex_Unlock")]
   public static extern void Mutex_Unlock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateMutex")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateMutex")]
   public static extern global::System.IntPtr CreateMutex();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_dpi_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_dpi_set")]
   public static extern void Loader_dpi_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_dpi_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_dpi_get")]
   public static extern float Loader_dpi_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_extensions_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_extensions_set")]
   public static extern void Loader_extensions_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_extensions_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_extensions_get")]
   public static extern global::System.IntPtr Loader_extensions_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_mimetype_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_mimetype_set")]
   public static extern void Loader_mimetype_set(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_mimetype_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_mimetype_get")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string Loader_mimetype_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_plugin_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_plugin_set")]
   public static extern void Loader_plugin_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_plugin_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_plugin_get")]
   public static extern global::System.IntPtr Loader_plugin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Loader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Loader")]
   public static extern global::System.IntPtr new_Loader();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_Reload__SWIG_0")]
   public static extern bool Loader_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_Reload__SWIG_1")]
   public static extern bool Loader_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_Continue")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_Continue")]
   public static extern void Loader_Continue(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Loader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Loader")]
   public static extern void delete_Loader(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwSize_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwSize_set")]
   public static extern void DDS_PIXELFORMAT_dwSize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwSize_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwSize_get")]
   public static extern uint DDS_PIXELFORMAT_dwSize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFlags_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFlags_set")]
   public static extern void DDS_PIXELFORMAT_dwFlags_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFlags_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFlags_get")]
   public static extern uint DDS_PIXELFORMAT_dwFlags_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFourCC_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFourCC_set")]
   public static extern void DDS_PIXELFORMAT_dwFourCC_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFourCC_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwFourCC_get")]
   public static extern uint DDS_PIXELFORMAT_dwFourCC_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRGBBitCount_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRGBBitCount_set")]
   public static extern void DDS_PIXELFORMAT_dwRGBBitCount_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRGBBitCount_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRGBBitCount_get")]
   public static extern uint DDS_PIXELFORMAT_dwRGBBitCount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRBitMask_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRBitMask_set")]
   public static extern void DDS_PIXELFORMAT_dwRBitMask_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRBitMask_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwRBitMask_get")]
   public static extern uint DDS_PIXELFORMAT_dwRBitMask_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwGBitMask_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwGBitMask_set")]
   public static extern void DDS_PIXELFORMAT_dwGBitMask_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwGBitMask_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwGBitMask_get")]
   public static extern uint DDS_PIXELFORMAT_dwGBitMask_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwBBitMask_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwBBitMask_set")]
   public static extern void DDS_PIXELFORMAT_dwBBitMask_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwBBitMask_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwBBitMask_get")]
   public static extern uint DDS_PIXELFORMAT_dwBBitMask_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwABitMask_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwABitMask_set")]
   public static extern void DDS_PIXELFORMAT_dwABitMask_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwABitMask_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_PIXELFORMAT_dwABitMask_get")]
   public static extern uint DDS_PIXELFORMAT_dwABitMask_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_DDS_PIXELFORMAT")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_DDS_PIXELFORMAT")]
   public static extern global::System.IntPtr new_DDS_PIXELFORMAT();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_DDS_PIXELFORMAT")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_DDS_PIXELFORMAT")]
   public static extern void delete_DDS_PIXELFORMAT(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_dxgiFormat_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_dxgiFormat_set")]
   public static extern void DDS_HEADER_DXT10_dxgiFormat_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_dxgiFormat_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_dxgiFormat_get")]
   public static extern int DDS_HEADER_DXT10_dxgiFormat_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_resourceDimension_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_resourceDimension_set")]
   public static extern void DDS_HEADER_DXT10_resourceDimension_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_resourceDimension_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_resourceDimension_get")]
   public static extern int DDS_HEADER_DXT10_resourceDimension_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlag_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlag_set")]
   public static extern void DDS_HEADER_DXT10_miscFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlag_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlag_get")]
   public static extern uint DDS_HEADER_DXT10_miscFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_arraySize_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_arraySize_set")]
   public static extern void DDS_HEADER_DXT10_arraySize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_arraySize_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_arraySize_get")]
   public static extern uint DDS_HEADER_DXT10_arraySize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlags2_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlags2_set")]
   public static extern void DDS_HEADER_DXT10_miscFlags2_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlags2_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDS_HEADER_DXT10_miscFlags2_get")]
   public static extern uint DDS_HEADER_DXT10_miscFlags2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_DDS_HEADER_DXT10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_DDS_HEADER_DXT10")]
   public static extern global::System.IntPtr new_DDS_HEADER_DXT10();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_DDS_HEADER_DXT10")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_DDS_HEADER_DXT10")]
   public static extern void delete_DDS_HEADER_DXT10(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapmiplevel_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapmiplevel_set")]
   public static extern void DDSTextureLoader_loadpixmapmiplevel_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapmiplevel_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapmiplevel_get")]
   public static extern int DDSTextureLoader_loadpixmapmiplevel_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapface_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapface_set")]
   public static extern void DDSTextureLoader_loadpixmapface_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapface_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_loadpixmapface_get")]
   public static extern int DDSTextureLoader_loadpixmapface_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_DDSTextureLoader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_DDSTextureLoader")]
   public static extern global::System.IntPtr new_DDSTextureLoader();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_Reload__SWIG_0")]
   public static extern bool DDSTextureLoader_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_Reload__SWIG_1")]
   public static extern bool DDSTextureLoader_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_GetDXGIFormat")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_GetDXGIFormat")]
   public static extern int DDSTextureLoader_GetDXGIFormat(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_DDSTextureLoader")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_DDSTextureLoader")]
   public static extern void delete_DDSTextureLoader(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Reset")]
   public static extern void Asset_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Destroy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Destroy")]
   public static extern void Asset_Destroy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_DestroySwigExplicitAsset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_DestroySwigExplicitAsset")]
   public static extern void Asset_DestroySwigExplicitAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_0")]
   public static extern bool Asset_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_1")]
   public static extern bool Asset_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_path_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_path_get")]
   public static extern global::System.IntPtr Asset_path_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Asset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Asset")]
   public static extern global::System.IntPtr new_Asset();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Asset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Asset")]
   public static extern void delete_Asset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_GetPath")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_GetPath")]
   public static extern global::System.IntPtr Asset_GetPath(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_GetPathSwigExplicitAsset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_GetPathSwigExplicitAsset")]
   public static extern global::System.IntPtr Asset_GetPathSwigExplicitAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_2")]
   public static extern bool Asset_Reload__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Reload__SWIG_3")]
   public static extern bool Asset_Reload__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Copy")]
   public static extern global::System.IntPtr Asset_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Save__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Save__SWIG_0")]
   public static extern bool Asset_Save__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_SaveSwigExplicitAsset__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_SaveSwigExplicitAsset__SWIG_0")]
   public static extern bool Asset_SaveSwigExplicitAsset__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_Save__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_Save__SWIG_1")]
   public static extern bool Asset_Save__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_SaveSwigExplicitAsset__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_SaveSwigExplicitAsset__SWIG_1")]
   public static extern bool Asset_SaveSwigExplicitAsset__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_director_connect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_director_connect")]
   public static extern void Asset_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, Asset.SwigDelegateAsset_0 delegate0, Asset.SwigDelegateAsset_1 delegate1, Asset.SwigDelegateAsset_2 delegate2, Asset.SwigDelegateAsset_3 delegate3, Asset.SwigDelegateAsset_4 delegate4, Asset.SwigDelegateAsset_5 delegate5, Asset.SwigDelegateAsset_6 delegate6, Asset.SwigDelegateAsset_7 delegate7, Asset.SwigDelegateAsset_8 delegate8, Asset.SwigDelegateAsset_9 delegate9);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FindCachedAsset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FindCachedAsset")]
   public static extern global::System.IntPtr FindCachedAsset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_title_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_title_get")]
   public static extern global::System.IntPtr Plugin_title_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_description_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_description_set")]
   public static extern void Plugin_description_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_description_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_description_get")]
   public static extern string Plugin_description_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_properties_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_properties_set")]
   public static extern void Plugin_properties_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_properties_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_properties_get")]
   public static extern global::System.IntPtr Plugin_properties_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Plugin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Plugin")]
   public static extern global::System.IntPtr new_Plugin();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Plugin")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Plugin")]
   public static extern void delete_Plugin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_CreateContext")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_CreateContext")]
   public static extern System.IntPtr Plugin_CreateContext(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_FreeContext")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_FreeContext")]
   public static extern void Plugin_FreeContext(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_SaveTexture")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_SaveTexture")]
   public static extern bool Plugin_SaveTexture(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7, int jarg8, int jarg9);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_ConvertPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_ConvertPixmap__SWIG_0")]
   public static extern bool Plugin_ConvertPixmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_LoadPixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_LoadPixmap")]
   public static extern global::System.IntPtr Plugin_LoadPixmap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3, int jarg4, int jarg5, float jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_ConvertPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_ConvertPixmap__SWIG_1")]
   public static extern global::System.IntPtr Plugin_ConvertPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_0")]
   public static extern bool Plugin_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_1")]
   public static extern bool Plugin_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Copy")]
   public static extern global::System.IntPtr Plugin_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_GetFunction")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_GetFunction")]
   public static extern System.IntPtr Plugin_GetFunction(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Reset")]
   public static extern void Plugin_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_2")]
   public static extern bool Plugin_Reload__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_Reload__SWIG_3")]
   public static extern bool Plugin_Reload__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPlugin__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPlugin__SWIG_0")]
   public static extern global::System.IntPtr LoadPlugin__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPlugin__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPlugin__SWIG_1")]
   public static extern global::System.IntPtr LoadPlugin__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_texcoords_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_texcoords_set")]
   public static extern void Character_texcoords_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_texcoords_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_texcoords_get")]
   public static extern global::System.IntPtr Character_texcoords_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_id_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_id_set")]
   public static extern void Character_id_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_id_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_id_get")]
   public static extern int Character_id_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_spacing_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_spacing_set")]
   public static extern void Character_spacing_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_spacing_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_spacing_get")]
   public static extern int Character_spacing_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_x_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_x_set")]
   public static extern void Character_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_x_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_x_get")]
   public static extern int Character_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_y_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_y_set")]
   public static extern void Character_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_y_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_y_get")]
   public static extern int Character_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_width_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_width_set")]
   public static extern void Character_width_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_width_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_width_get")]
   public static extern int Character_width_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_height_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_height_set")]
   public static extern void Character_height_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Character_height_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Character_height_get")]
   public static extern int Character_height_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Character")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Character")]
   public static extern global::System.IntPtr new_Character();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Character")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Character")]
   public static extern void delete_Character(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Font")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Font")]
   public static extern global::System.IntPtr new_Font();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Font")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Font")]
   public static extern void delete_Font(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Font_GetTextWidth__SWIG_0")]
-  public static extern int Font_GetTextWidth__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, int jarg3);
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Font_GetTextWidth")]
+  public static extern int Font_GetTextWidth(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Font_GetHeight")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Font_GetHeight")]
   public static extern float Font_GetHeight(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Font_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Font_GetTextWidthW")]
+  public static extern int Font_GetTextWidthW(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Font_Copy")]
   public static extern global::System.IntPtr Font_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_0")]
   public static extern global::System.IntPtr LoadFont__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_1")]
   public static extern global::System.IntPtr LoadFont__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_2")]
   public static extern global::System.IntPtr LoadFont__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadFont__SWIG_3")]
   public static extern global::System.IntPtr LoadFont__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_path_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_path_set")]
   public static extern void PackageFile_path_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_path_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_path_get")]
   public static extern global::System.IntPtr PackageFile_path_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_type_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_type_set")]
   public static extern void PackageFile_type_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_type_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_type_get")]
   public static extern int PackageFile_type_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_index_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_index_set")]
   public static extern void PackageFile_index_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_index_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_index_get")]
   public static extern int PackageFile_index_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_size_set")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_size_set")]
   public static extern void PackageFile_size_set(global::System.Runtime.InteropServices.HandleRef jarg1, ulong jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PackageFile_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PackageFile_size_get")]
   public static extern ulong PackageFile_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_PackageFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_PackageFile")]
   public static extern global::System.IntPtr new_PackageFile();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_PackageFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_PackageFile")]
   public static extern void delete_PackageFile(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Package")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Package")]
   public static extern global::System.IntPtr new_Package();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Package")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Package")]
   public static extern void delete_Package(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Reset")]
   public static extern void Package_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_0")]
   public static extern bool Package_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_1")]
   public static extern bool Package_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Copy")]
   public static extern global::System.IntPtr Package_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_2")]
   public static extern bool Package_Reload__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_Reload__SWIG_3")]
   public static extern bool Package_Reload__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_FileType")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_FileType")]
   public static extern int Package_FileType(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_FileSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_FileSize")]
   public static extern ulong Package_FileSize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_LoadDir")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_LoadDir")]
   public static extern global::System.IntPtr Package_LoadDir(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_ReadFile")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_ReadFile")]
   public static extern global::System.IntPtr Package_ReadFile(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPackage__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPackage__SWIG_0")]
   public static extern global::System.IntPtr LoadPackage__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPackage__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPackage__SWIG_1")]
   public static extern global::System.IntPtr LoadPackage__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Pixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Pixmap")]
   public static extern global::System.IntPtr new_Pixmap();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_format_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_format_get")]
   public static extern int Pixmap_format_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_size_get")]
   public static extern global::System.IntPtr Pixmap_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_blocks_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_blocks_get")]
   public static extern global::System.IntPtr Pixmap_blocks_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_pixels_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_pixels_get")]
   public static extern global::System.IntPtr Pixmap_pixels_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_blocksize_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_blocksize_get")]
   public static extern int Pixmap_blocksize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Reload__SWIG_0")]
   public static extern bool Pixmap_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Reload__SWIG_1")]
   public static extern bool Pixmap_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Reset")]
   public static extern void Pixmap_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_ApplyFilter__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_ApplyFilter__SWIG_0")]
   public static extern bool Pixmap_ApplyFilter__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_ApplyFilter__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_ApplyFilter__SWIG_1")]
   public static extern bool Pixmap_ApplyFilter__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Swizzle")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Swizzle")]
   public static extern void Pixmap_Swizzle(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_0")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6, int jarg7, int jarg8, global::System.Runtime.InteropServices.HandleRef jarg9, global::System.Runtime.InteropServices.HandleRef jarg10);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_1")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6, int jarg7, int jarg8, global::System.Runtime.InteropServices.HandleRef jarg9);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_2")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6, int jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_3")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6, int jarg7);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_4")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5, int jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_5")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_6")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_7")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_8")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_8")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_9")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_MakeNormalMap__SWIG_9")]
   public static extern global::System.IntPtr Pixmap_MakeNormalMap__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Resize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Resize")]
   public static extern global::System.IntPtr Pixmap_Resize(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Copy")]
   public static extern global::System.IntPtr Pixmap_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Convert")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Convert")]
   public static extern global::System.IntPtr Pixmap_Convert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Save__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Save__SWIG_0")]
   public static extern bool Pixmap_Save__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Save__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Save__SWIG_1")]
   public static extern bool Pixmap_Save__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_CopyRect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_CopyRect")]
   public static extern void Pixmap_CopyRect(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, int jarg7, int jarg8);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_ReadPixel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_ReadPixel")]
   public static extern int Pixmap_ReadPixel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_WritePixel")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_WritePixel")]
   public static extern void Pixmap_WritePixel(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_Fill")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_Fill")]
   public static extern void Pixmap_Fill(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_GetDataSize")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_GetDataSize")]
   public static extern ulong Pixmap_GetDataSize(ulong jarg1, ulong jarg2, ulong jarg3, ulong jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Pixmap")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Pixmap")]
   public static extern void delete_Pixmap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_0")]
   public static extern bool SaveTexture__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_1")]
   public static extern bool SaveTexture__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_2")]
   public static extern bool SaveTexture__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_3")]
   public static extern bool SaveTexture__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_4")]
   public static extern bool SaveTexture__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4, int jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_5")]
   public static extern bool SaveTexture__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_SaveTexture__SWIG_6")]
   public static extern bool SaveTexture__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_0")]
   public static extern global::System.IntPtr CreatePixmap__SWIG_0(int jarg1, int jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_1")]
   public static extern global::System.IntPtr CreatePixmap__SWIG_1(int jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreatePixmap__SWIG_2")]
   public static extern global::System.IntPtr CreatePixmap__SWIG_2(int jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_0")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_1")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_2")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_3")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_4")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_4")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_5")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_5")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_5(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_6")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_6")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_7")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadPixmap__SWIG_7")]
   public static extern global::System.IntPtr LoadPixmap__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_Icon")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_Icon")]
   public static extern global::System.IntPtr new_Icon();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_Icon")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_Icon")]
   public static extern void delete_Icon(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_size_get")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_size_get")]
   public static extern global::System.IntPtr Icon_size_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Save__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Save__SWIG_0")]
   public static extern bool Icon_Save__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Save__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Save__SWIG_1")]
   public static extern bool Icon_Save__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Rasterize__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Rasterize__SWIG_0")]
   public static extern global::System.IntPtr Icon_Rasterize__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Rasterize__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Rasterize__SWIG_1")]
   public static extern global::System.IntPtr Icon_Rasterize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Reload__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Reload__SWIG_0")]
   public static extern bool Icon_Reload__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Reload__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Reload__SWIG_1")]
   public static extern bool Icon_Reload__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Reset")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Reset")]
   public static extern void Icon_Reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_Copy")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_Copy")]
   public static extern global::System.IntPtr Icon_Copy(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_0")]
   public static extern global::System.IntPtr LoadIcon__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_1")]
   public static extern global::System.IntPtr LoadIcon__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_2")]
   public static extern global::System.IntPtr LoadIcon__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_LoadIcon__SWIG_3")]
   public static extern global::System.IntPtr LoadIcon__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FunctionDelegate_Execute")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FunctionDelegate_Execute")]
   public static extern void FunctionDelegate_Execute(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_new_FunctionDelegate")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_new_FunctionDelegate")]
   public static extern global::System.IntPtr new_FunctionDelegate();
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_delete_FunctionDelegate")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_delete_FunctionDelegate")]
   public static extern void delete_FunctionDelegate(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FunctionDelegate_director_connect")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FunctionDelegate_director_connect")]
   public static extern void FunctionDelegate_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, FunctionDelegate.SwigDelegateFunctionDelegate_0 delegate0);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListenEvent")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListenEvent")]
   public static extern void ListenEvent(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListenEvent_Internal__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListenEvent_Internal__SWIG_0")]
   public static extern void ListenEvent_Internal__SWIG_0(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ProcessEventHandlerDelegate jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListenEvent_Internal__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListenEvent_Internal__SWIG_1")]
   public static extern void ListenEvent_Internal__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ProcessEventHandlerDelegate jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_0")]
   public static extern global::System.IntPtr CreateThread_Internal__SWIG_0(EntryPointHandlerDelegate jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_1")]
   public static extern global::System.IntPtr CreateThread_Internal__SWIG_1(EntryPointHandlerDelegate jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateThread_Internal__SWIG_2")]
   public static extern global::System.IntPtr CreateThread_Internal__SWIG_2(EntryPointHandlerDelegate jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateThread__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateThread__SWIG_0")]
   public static extern global::System.IntPtr CreateThread__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_CreateThread__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_CreateThread__SWIG_1")]
   public static extern global::System.IntPtr CreateThread__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_String_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_String_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr String_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WString_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WString_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr WString_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Display_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Display_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Display_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_IDSystem_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_IDSystem_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr IDSystem_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Language_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Language_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Language_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Stream_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Stream_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Stream_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_BufferStream_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_BufferStream_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr BufferStream_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_FileSystemWatcher_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_FileSystemWatcher_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr FileSystemWatcher_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_GameEngine_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_GameEngine_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr GameEngine_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Clock_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Clock_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Clock_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Buffer_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Buffer_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Buffer_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Interface_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Interface_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Interface_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_WidgetItem_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_WidgetItem_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr WidgetItem_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Widget_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Widget_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Widget_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Panel_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Panel_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Panel_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Slider_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Slider_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Slider_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Label_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Label_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Label_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Button_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Button_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Button_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextField_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextField_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr TextField_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeView_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeView_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr TreeView_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TreeViewNode_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TreeViewNode_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr TreeViewNode_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_TextArea_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_TextArea_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr TextArea_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Tabber_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Tabber_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Tabber_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ListBox_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ListBox_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ListBox_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ProgressBar_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ProgressBar_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ProgressBar_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_ComboBox_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_ComboBox_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr ComboBox_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_MenuPanel_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_MenuPanel_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr MenuPanel_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Menu_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Menu_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Menu_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Window_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Window_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Window_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Timer_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Timer_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Timer_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_PipeStream_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_PipeStream_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr PipeStream_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Process_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Process_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Process_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_StreamBuffer_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_StreamBuffer_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr StreamBuffer_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Thread_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Thread_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Thread_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Mutex_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Mutex_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Mutex_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Loader_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Loader_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Loader_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_DDSTextureLoader_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_DDSTextureLoader_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr DDSTextureLoader_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Asset_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Asset_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Asset_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Plugin_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Plugin_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Plugin_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Font_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Font_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Font_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Package_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Package_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Package_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Pixmap_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Pixmap_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Pixmap_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath, EntryPoint="CSharp_UltraEngine_Icon_SWIGSmartPtrUpcast")]
+  [global::System.Runtime.InteropServices.DllImport(WrapperConstants.DllPath , EntryPoint="CSharp_UltraEngine_Icon_SWIGSmartPtrUpcast")]
   public static extern global::System.IntPtr Icon_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 

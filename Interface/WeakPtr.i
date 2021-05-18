@@ -22,7 +22,6 @@ public:
 };
 }
 
-
 %template(AssetWeakPtr) weak_ptr<UltraEngine::Asset>;
 %template(PackageWeakPtr) weak_ptr<UltraEngine::Package>;
 %template(PixmapWeakPtr) weak_ptr<UltraEngine::Pixmap>;
@@ -31,8 +30,6 @@ public:
 %template(PluginWeakPtr) weak_ptr<UltraEngine::Plugin>;
 %template(WidgetWeakPtr) weak_ptr<UltraEngine::Widget>;
 %template(WindowWeakPtr) weak_ptr<UltraEngine::Window>;
-//%template(WidgetStdWeakPtr) std::weak_ptr<UltraEngine::Widget>;
-
 
 %template(WidgetColorArray) std::array<UltraEngine::Vec4,UltraEngine::WIDGETCOLOR_POPUP + 1>;
 %template(IntFourArray) std::array<int,4>;

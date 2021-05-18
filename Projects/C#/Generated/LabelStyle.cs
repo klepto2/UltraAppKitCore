@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum LabelStyle {
   LABEL_LEFT = 0,
   LABEL_DEFAULT = LABEL_LEFT,

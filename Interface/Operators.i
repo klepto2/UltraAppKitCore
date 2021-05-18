@@ -28,6 +28,7 @@
 %rename(BinaryOR) operator |; 
 %rename(BinaryNot) operator ~; 
 %rename(BinaryAnd) operator &; 
+%rename(ExclusiveOR) operator ^; 
 %rename(IndexInto) *::operator[](unsigned idx); // some languages have a %rename *::operator[] already in place, which seems to takes precedence over the above %rename operator[].
 %rename(_ToWString) operator std::wstring() const;
 

@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum WindowStyles {
   WINDOW_TITLEBAR = 1,
   WINDOW_RESIZABLE = 2,

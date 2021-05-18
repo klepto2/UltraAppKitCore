@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum TreeViewStyle {
   TREEVIEW_DEFAULT = 0,
   TREEVIEW_MULTISELECT = 1,

@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum SliderStyle {
   SLIDER_HORIZONTAL = 0,
   SLIDER_TRACKBAR = 0,

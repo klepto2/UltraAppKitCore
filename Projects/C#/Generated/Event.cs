@@ -88,7 +88,6 @@ public class Event : global::System.IDisposable {
       PInvoke.Event_position_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Event_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
@@ -100,7 +99,6 @@ public class Event : global::System.IDisposable {
       PInvoke.Event_size_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Event_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;

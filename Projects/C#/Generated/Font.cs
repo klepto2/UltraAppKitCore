@@ -40,13 +40,19 @@ public class Font : Asset {
   }
 
   public virtual int GetTextWidth(string text, int size) {
-    int ret = PInvoke.Font_GetTextWidth__SWIG_0(swigCPtr, text, size);
+    int ret = PInvoke.Font_GetTextWidth(swigCPtr, text, size);
     if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual float GetHeight(int size) {
     float ret = PInvoke.Font_GetHeight(swigCPtr, size);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual int GetTextWidthW(string text, int size) {
+    int ret = PInvoke.Font_GetTextWidthW(swigCPtr, text, size);
     if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }

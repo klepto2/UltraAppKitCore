@@ -105,7 +105,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_position_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
@@ -117,7 +116,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_size_set(swigCPtr, iVec2.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       return ret;
@@ -141,7 +139,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_color_set(swigCPtr, Vec4.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_color_get(swigCPtr);
       Vec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vec4(cPtr, false);
       return ret;
@@ -213,7 +210,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_clipregion_set(swigCPtr, iVec4.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_clipregion_get(swigCPtr);
       iVec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec4(cPtr, false);
       return ret;
@@ -238,7 +234,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_edgepadding_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_edgepadding_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;
@@ -250,7 +245,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_alignment_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_alignment_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;
@@ -262,7 +256,6 @@ public class WidgetBlock : global::System.IDisposable {
       PInvoke.WidgetBlock_edgedistance_set(swigCPtr, IntFourArray.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.WidgetBlock_edgedistance_get(swigCPtr);
       IntFourArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new IntFourArray(cPtr, false);
       return ret;

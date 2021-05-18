@@ -67,7 +67,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_timers_get(swigCPtr);
       MapTimer ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapTimer(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -118,7 +117,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_widgets_get(swigCPtr);
       ListWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListWidget(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -132,7 +130,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_windowhandle_get(swigCPtr);
       MapWindow ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapWindow(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -146,7 +143,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_settings_get(swigCPtr);
       JSONWrapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new JSONWrapper(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -160,7 +156,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_bonematrices_get(swigCPtr);
       VectorFloat ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorFloat(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -174,7 +169,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_textureloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -188,7 +182,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_modelloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -202,7 +195,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_soundloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -216,7 +208,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_materialloaders_get(swigCPtr);
       VectorLoader ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorLoader(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -255,7 +246,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_eventqueue_get(swigCPtr);
       ListEvent ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListEvent(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -269,7 +259,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_properties_get(swigCPtr);
       MapProperties ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapProperties(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -283,7 +272,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_packages_get(swigCPtr);
       ListPackage ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListPackage(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -297,7 +285,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_plugins_get(swigCPtr);
       ListPlugin ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListPlugin(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -380,7 +367,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_cachedassets_get(swigCPtr);
       MapAsset ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapAsset(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -394,7 +380,6 @@ public class GameEngine : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.GameEngine_cachedpixmaps_get(swigCPtr);
       MapCachedPixmaps ret = (cPtr == global::System.IntPtr.Zero) ? null : new MapCachedPixmaps(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

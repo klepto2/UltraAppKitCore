@@ -62,7 +62,6 @@ public class Plugin : Asset {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Plugin_properties_get(swigCPtr);
       JSONWrapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new JSONWrapper(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

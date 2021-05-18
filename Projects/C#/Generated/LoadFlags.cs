@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum LoadFlags {
   LOAD_DEFAULT = 0,
   LOAD_UNMANAGED = 1,

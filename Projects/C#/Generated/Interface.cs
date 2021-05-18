@@ -101,7 +101,6 @@ public class Interface : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Interface_hoverwidget_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -115,7 +114,6 @@ public class Interface : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Interface_focusedwidget_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -129,7 +127,6 @@ public class Interface : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Interface_window_get(swigCPtr);
       WindowWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WindowWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -143,7 +140,6 @@ public class Interface : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Interface_colors_get(swigCPtr);
       WidgetColorArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetColorArray(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -217,7 +213,6 @@ public class Interface : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Interface_rootwidgets_get(swigCPtr);
       ListWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new ListWidget(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

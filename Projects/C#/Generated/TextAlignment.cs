@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum TextAlignment {
   TEXT_LEFT = 0,
   TEXT_TOP = 0,

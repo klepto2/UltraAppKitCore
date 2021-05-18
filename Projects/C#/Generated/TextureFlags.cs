@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum TextureFlags {
   TEXTURE_DEFAULT = 0,
   TEXTURE_BUFFER = 1,

@@ -27,7 +27,7 @@ Start-Process -NoNewWindow -Wait -FilePath ".\SWIG\swig.exe" -ArgumentList "-hel
 Start-Process -NoNewWindow -Wait -FilePath ".\SWIG\swig.exe" -ArgumentList "-Fmicrosoft", "-v","-namespace  `"UltraEngine`"", "-csharp","-c++","-v", "-outdir `"Projects\C#\Generated`"", "-o `"Projects\C++\Source\main.cpp`"","-D_WIN32", "-D_ULTRA_APPKIT","-cpperraswarn", "-ignoremissing", "-I`"$ultrappkitPath`"\Include", "Interface/UltraAppKit.i"
 
 $Source = '.DllImport("Functions"'
-$Target = ,'.DllImport(WrapperConstants.DllPath'
+$Target = ,'.DllImport(WrapperConstants.DllPath '
 $filePath = "Projects\C#\Generated\PINVOKE.cs"
 (Get-Content $filePath).Replace($Source,$Target) | Set-Content $filePath
 

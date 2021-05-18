@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum TextFieldStyle {
   TEXTFIELD_READONLY = 1,
   TEXTFIELD_TEXTCHANGEACTIONEVENT = 4,

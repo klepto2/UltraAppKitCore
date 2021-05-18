@@ -2658,12 +2658,10 @@ public:
 	}
 };
 
-
 void ListenEvent(const UltraEngine::EventID id, shared_ptr<UltraEngine::Object> source, FunctionDelegate* callback)
 {
 	UltraEngine::ListenEvent(id, source, FunctionHandler(callback));
 }
-
 
 void ListenEvent_Internal(const UltraEngine::EventID id, shared_ptr<UltraEngine::Object> source, ProcessEventHandler callback, shared_ptr<UltraEngine::Object> extra = NULL)
 {
@@ -15469,6 +15467,24 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_UltraEngine_Vec3_EqualEqual(void * ja
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Vec3_ExclusiveOR(void * jarg1, void * jarg2) {
+  void * jresult ;
+  UltraEngine::Vec3 *arg1 = (UltraEngine::Vec3 *) 0 ;
+  UltraEngine::Vec3 *arg2 = 0 ;
+  UltraEngine::Vec3 result;
+  
+  arg1 = (UltraEngine::Vec3 *)jarg1; 
+  arg2 = (UltraEngine::Vec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "UltraEngine::Vec3 const & type is null", 0);
+    return 0;
+  } 
+  result = (arg1)->operator ^((UltraEngine::Vec3 const &)*arg2);
+  jresult = new UltraEngine::Vec3((const UltraEngine::Vec3 &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Vec3_Minus__SWIG_0(void * jarg1, void * jarg2) {
   void * jresult ;
   UltraEngine::Vec3 *arg1 = (UltraEngine::Vec3 *) 0 ;
@@ -18719,13 +18735,13 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_0() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_1(char * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_1(wchar_t * jarg1) {
   void * jresult ;
-  char *arg1 = (char *) 0 ;
+  wchar_t *arg1 = (wchar_t *) 0 ;
   UltraEngine::WString *result = 0 ;
   
-  arg1 = (char *)jarg1; 
-  result = (UltraEngine::WString *)new UltraEngine::WString((char const *)arg1);
+  arg1 = (wchar_t *)jarg1; 
+  result = (UltraEngine::WString *)new UltraEngine::WString((wchar_t const *)arg1);
   
   jresult = result ? new std::shared_ptr<  UltraEngine::WString >(result SWIG_NO_NULL_DELETER_1) : 0;
   
@@ -18733,7 +18749,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_1(char * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_5(char jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_4(char jarg1) {
   void * jresult ;
   char arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18747,7 +18763,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_5(char jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_6(unsigned char jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_5(unsigned char jarg1) {
   void * jresult ;
   unsigned char arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18761,7 +18777,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_6(unsigned ch
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_7(short jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_6(short jarg1) {
   void * jresult ;
   short arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18775,7 +18791,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_7(short jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_8(unsigned short jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_7(unsigned short jarg1) {
   void * jresult ;
   unsigned short arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18789,7 +18805,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_8(unsigned sh
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_9(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_8(int jarg1) {
   void * jresult ;
   int arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18803,7 +18819,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_9(int jarg1) 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_10(unsigned int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_9(unsigned int jarg1) {
   void * jresult ;
   unsigned int arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18817,7 +18833,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_10(unsigned i
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_11(long long jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_10(long long jarg1) {
   void * jresult ;
   int64_t arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18831,7 +18847,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_11(long long 
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_12(unsigned long long jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_11(unsigned long long jarg1) {
   void * jresult ;
   uint64_t arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18845,7 +18861,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_12(unsigned l
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_13(double jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_12(double jarg1) {
   void * jresult ;
   double arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -18859,7 +18875,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_13(double jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_14(float jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_new_WString__SWIG_13(float jarg1) {
   void * jresult ;
   float arg1 ;
   UltraEngine::WString *result = 0 ;
@@ -22380,7 +22396,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UltraEngine_Language_AddTerm(void * jarg1, wc
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Language_Translate__SWIG_0(void * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Language_Translate(void * jarg1, char * jarg2) {
   void * jresult ;
   UltraEngine::Language *arg1 = (UltraEngine::Language *) 0 ;
   std::string *arg2 = 0 ;
@@ -22397,6 +22413,28 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Language_Translate__SWIG_0(void
   std::string arg2_str(jarg2);
   arg2 = &arg2_str; 
   result = (arg1)->Translate((std::string const &)*arg2);
+  jresult = SWIG_csharp_wstring_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_UltraEngine_Language_TranslateW(void * jarg1, wchar_t * jarg2) {
+  void * jresult ;
+  UltraEngine::Language *arg1 = (UltraEngine::Language *) 0 ;
+  std::wstring *arg2 = 0 ;
+  std::shared_ptr< UltraEngine::Language > *smartarg1 = 0 ;
+  std::wstring result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Language > *)jarg1;
+  arg1 = (UltraEngine::Language *)(smartarg1 ? smartarg1->get() : 0); 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return 0;
+  }
+  std::wstring arg2_str(jarg2);
+  arg2 = &arg2_str; 
+  result = (arg1)->Translate((std::wstring const &)*arg2);
   jresult = SWIG_csharp_wstring_callback((&result)->c_str()); 
   return jresult;
 }
@@ -39016,7 +39054,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_UltraEngine_delete_Font(void * jarg1) {
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_UltraEngine_Font_GetTextWidth__SWIG_0(void * jarg1, char * jarg2, int jarg3) {
+SWIGEXPORT int SWIGSTDCALL CSharp_UltraEngine_Font_GetTextWidth(void * jarg1, char * jarg2, int jarg3) {
   int jresult ;
   UltraEngine::Font *arg1 = (UltraEngine::Font *) 0 ;
   std::string *arg2 = 0 ;
@@ -39052,6 +39090,30 @@ SWIGEXPORT float SWIGSTDCALL CSharp_UltraEngine_Font_GetHeight(void * jarg1, int
   arg1 = (UltraEngine::Font *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (int)jarg2; 
   result = (float)(arg1)->GetHeight(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_UltraEngine_Font_GetTextWidthW(void * jarg1, wchar_t * jarg2, int jarg3) {
+  int jresult ;
+  UltraEngine::Font *arg1 = (UltraEngine::Font *) 0 ;
+  std::wstring *arg2 = 0 ;
+  int arg3 ;
+  std::shared_ptr< UltraEngine::Font > *smartarg1 = 0 ;
+  int result;
+  
+  
+  smartarg1 = (std::shared_ptr<  UltraEngine::Font > *)jarg1;
+  arg1 = (UltraEngine::Font *)(smartarg1 ? smartarg1->get() : 0); 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return 0;
+  }
+  std::wstring arg2_str(jarg2);
+  arg2 = &arg2_str; 
+  arg3 = (int)jarg3; 
+  result = (int)(arg1)->GetTextWidth((std::wstring const &)*arg2,arg3);
   jresult = result; 
   return jresult;
 }

@@ -130,7 +130,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_color_get(swigCPtr);
       WidgetColorArray ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetColorArray(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -156,7 +155,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_range_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -206,7 +204,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_position_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -220,7 +217,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_size_get(swigCPtr);
       iVec2 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec2(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -247,7 +243,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_window_get(swigCPtr);
       WindowWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WindowWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -261,7 +256,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_parent_get(swigCPtr);
       WidgetWeakPtr ret = (cPtr == global::System.IntPtr.Zero) ? null : new WidgetWeakPtr(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -275,7 +269,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_m_kids_get(swigCPtr);
       VectorWidget ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidget(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -289,7 +282,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_items_get(swigCPtr);
       VectorWidgetItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetItem(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -303,7 +295,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_filtereditems_get(swigCPtr);
       VectorWidgetItem ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetItem(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -317,7 +308,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_padding_get(swigCPtr);
       iVec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new iVec4(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
@@ -416,7 +406,6 @@ public class Widget : Object {
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Widget_blocks_get(swigCPtr);
       VectorWidgetBlock ret = (cPtr == global::System.IntPtr.Zero) ? null : new VectorWidgetBlock(cPtr, false);
       if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

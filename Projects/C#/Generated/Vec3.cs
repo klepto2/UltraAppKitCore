@@ -225,6 +225,12 @@ public class Vec3 : global::System.IDisposable {
     return ret;
   }
 
+  public Vec3 ExclusiveOR(Vec3 v) {
+    Vec3 ret = new Vec3(PInvoke.Vec3_ExclusiveOR(swigCPtr, Vec3.getCPtr(v)), true);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   private Vec3 Minus(Vec3 v) {
     Vec3 ret = new Vec3(PInvoke.Vec3_Minus__SWIG_0(swigCPtr, Vec3.getCPtr(v)), true);
     if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();

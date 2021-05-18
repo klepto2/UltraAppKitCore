@@ -51,34 +51,34 @@ public class WString : Object {
   public WString(string c) : this(PInvoke.new_WString__SWIG_1(c), true) {
   }
 
-  public WString(char i) : this(PInvoke.new_WString__SWIG_5(i), true) {
+  public WString(char i) : this(PInvoke.new_WString__SWIG_4(i), true) {
   }
 
-  public WString(byte i) : this(PInvoke.new_WString__SWIG_6(i), true) {
+  public WString(byte i) : this(PInvoke.new_WString__SWIG_5(i), true) {
   }
 
-  public WString(short i) : this(PInvoke.new_WString__SWIG_7(i), true) {
+  public WString(short i) : this(PInvoke.new_WString__SWIG_6(i), true) {
   }
 
-  public WString(ushort i) : this(PInvoke.new_WString__SWIG_8(i), true) {
+  public WString(ushort i) : this(PInvoke.new_WString__SWIG_7(i), true) {
   }
 
-  public WString(int i) : this(PInvoke.new_WString__SWIG_9(i), true) {
+  public WString(int i) : this(PInvoke.new_WString__SWIG_8(i), true) {
   }
 
-  public WString(uint i) : this(PInvoke.new_WString__SWIG_10(i), true) {
+  public WString(uint i) : this(PInvoke.new_WString__SWIG_9(i), true) {
   }
 
-  public WString(long i) : this(PInvoke.new_WString__SWIG_11(i), true) {
+  public WString(long i) : this(PInvoke.new_WString__SWIG_10(i), true) {
   }
 
-  public WString(ulong i) : this(PInvoke.new_WString__SWIG_12(i), true) {
+  public WString(ulong i) : this(PInvoke.new_WString__SWIG_11(i), true) {
   }
 
-  public WString(double f) : this(PInvoke.new_WString__SWIG_13(f), true) {
+  public WString(double f) : this(PInvoke.new_WString__SWIG_12(f), true) {
   }
 
-  public WString(float f) : this(PInvoke.new_WString__SWIG_14(f), true) {
+  public WString(float f) : this(PInvoke.new_WString__SWIG_13(f), true) {
   }
 
   private void PlusEqual(string s) {

@@ -42,7 +42,13 @@ public class Language : Object {
   }
 
   public virtual string Translate(string text) {
-    string ret = PInvoke.Language_Translate__SWIG_0(swigCPtr, text);
+    string ret = PInvoke.Language_Translate(swigCPtr, text);
+    if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual string TranslateW(string text) {
+    string ret = PInvoke.Language_TranslateW(swigCPtr, text);
     if (PInvoke.SWIGPendingException.Pending) throw PInvoke.SWIGPendingException.Retrieve();
     return ret;
   }

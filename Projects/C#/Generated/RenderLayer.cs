@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum RenderLayer {
   RENDERLAYER_NONE = 0,
   RENDERLAYER_0 = 1,

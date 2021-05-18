@@ -49,7 +49,6 @@ public class Character : global::System.IDisposable {
       PInvoke.Character_texcoords_set(swigCPtr, Vec4.getCPtr(value));
     } 
     get {
-      //Test
       global::System.IntPtr cPtr = PInvoke.Character_texcoords_get(swigCPtr);
       Vec4 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vec4(cPtr, false);
       return ret;

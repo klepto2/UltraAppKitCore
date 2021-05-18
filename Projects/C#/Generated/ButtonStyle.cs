@@ -10,6 +10,7 @@
 
 namespace UltraEngine {
 
+[System.Flags]
 public enum ButtonStyle {
   BUTTON_DEFAULT = 0,
   BUTTON_TOGGLE = 1,

@@ -56,7 +56,7 @@ namespace UltraAppKitCore.Sample
     {
         public override void Execute()
         {
-            Console.WriteLine("Master of FunctionPtr");
+            Console.WriteLine("Hello Event");
         }
     }
 
@@ -65,6 +65,8 @@ namespace UltraAppKitCore.Sample
 
         static void Main(string[] args)
         {
+            WString test = new WString("\U0001F4C1");
+
             string json = ParseCommandLine(args.Length, args).dump();
 
             var t = CreateThread(o =>
@@ -77,7 +79,7 @@ namespace UltraAppKitCore.Sample
                         System.Threading.Thread.Sleep(500);
                     }
                 }
-            }, new MyObject("Hello 111111"), true);
+            }, new MyObject("Hello World"), true);
 
             var t2 = CreateThread(o =>
             {
@@ -112,7 +114,7 @@ namespace UltraAppKitCore.Sample
             label.SetLayout(1, 1, 1, 1);
             
 
-            var button = CreateButton("Button", 0, 0, 100, 20, ui.root,
+            var button = CreateButton("🖫", 0, 0, 100, 20, ui.root,
                 ButtonStyle.BUTTON_DEFAULT);
             button.SetLayout(1, 0, 1, 0);
 

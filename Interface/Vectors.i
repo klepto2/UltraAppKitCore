@@ -1,4 +1,4 @@
-SWIG_STD_VECTOR_ENHANCED(float)
+//SWIG_STD_VECTOR_ENHANCED(float)
 %template(VectorFloat) std::vector<float>;
 SWIG_STD_VECTOR_ENHANCED(std::shared_ptr<UltraEngine::Display>)
 %template(VectorDisplay) std::vector<std::shared_ptr<UltraEngine::Display>>;
@@ -13,9 +13,9 @@ SWIG_STD_VECTOR_ENHANCED(std::shared_ptr<UltraEngine::Widget>)
 SWIG_STD_VECTOR_ENHANCED(std::shared_ptr<UltraEngine::Window>)
 %template(VectorWindow) std::vector<std::shared_ptr<UltraEngine::Window>>;
 
-SWIG_STD_VECTOR_ENHANCED(std::string)
+//SWIG_STD_VECTOR_ENHANCED(std::string)
 %template(VectorStdString) std::vector<std::string>;
-SWIG_STD_VECTOR_ENHANCED(std::wstring)
+//SWIG_STD_VECTOR_ENHANCED(std::wstring)
 %template(VectorStdWString) std::vector<std::wstring>;
 
 SWIG_STD_VECTOR_ENHANCED(UltraEngine::iVec2)
